@@ -1,0 +1,32 @@
+---
+permalink: manage/task_remove_storage_from_a_vvols_datastore.html 
+sidebar: sidebar 
+keywords: Remove vVol datastore 
+summary: VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームが複数ある場合、データストアは削除せずに、一部の FlexVol を VVOL データストアから削除することができます。 
+---
+= vVol データストアからストレージを削除する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームが複数ある場合、データストアは削除せずに、一部の FlexVol を VVOL データストアから削除することができます。
+
+* このタスクについて *
+
+VVOL データストアは、データストアに使用可能な FlexVol ボリュームが少なくとも 1 つあれば配置されます。HA クラスタの VVOL データストアを削除する場合は、まず HA クラスタ内のすべてのホストからデータストアをアンマウントし、最後に vCenter Server のユーザインターフェイスを使用して該当する vSphere-HA フォルダを手動で削除する必要があります。その後、 VVOL データストアを削除できます。
+
+* 手順 *
+
+. vSphere Client のホームページで、 * Hosts and Clusters * をクリックします。
+. 変更する VVOL データストアを右クリックし、 * NetApp ONTAP ツール * > * vVol データストアからのストレージの削除 * を選択します。
++
+vVol データストアからのストレージの削除ダイアログボックスが表示されます。
+
+. vVol データストアから削除する FlexVol を選択し、 * 削除 * をクリックします。
+. 確認ダイアログボックスで * OK * をクリックする。
++
+
+NOTE: すべての FlexVol ボリュームを選択した場合は、処理が失敗することを示すエラーメッセージが表示されます。
+
+

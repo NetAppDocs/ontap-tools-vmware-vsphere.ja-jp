@@ -1,0 +1,76 @@
+---
+permalink: deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console, Storage Replication Adapter 
+summary: ここに記載されている手順に従って、既存の 9.7 セットアップから 9.8 リリースの ONTAP ツールへのインプレースアップグレードを実行できます。 
+---
+= ONTAP ツールの最新リリースにアップグレードします
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ここに記載されている手順に従って、既存の 9.7 セットアップから 9.8 リリースの ONTAP ツールへのインプレースアップグレードを実行できます。
+
+* 必要なもの *
+
+* 9.8 リリースの ONTAP ツール用の .iso ファイルをダウンロードしておく必要があります。
+* ONTAP ツールがアップグレード後に最適に機能するためには、 12GB 以上の RAM を確保する必要があります。
+* vSphere Client のブラウザキャッシュをクリーンアップする必要があります。
++
+link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします"]
+
+
+
+VASA Provider のステータスは、アップグレード後も既存の導入環境と同じになります。アップグレード後に要件に基づいて VASA Provider を手動で有効または無効にする必要があります。ただし、従来のデータストアのプロビジョニングやストレージアラームのストレージ機能プロファイルが有効になるため、 VASA Provider は VMware 仮想ボリューム（ vVol ）を使用していない場合でも有効にすることを推奨します。
+
+
+NOTE: 9.8 リリースの ONTAP ツールへのインプレースアップグレードは、既存の 9.7 バージョンからのみ実行できます。ONTAP ツールを 9.7.1 リリースにアップグレードし、 VVOL レプリケーションを使用する場合は、 Site Recovery Manager （ SRM ）がインストールされた ONTAP ツールを使用して vCenter Server をもう 1 つセットアップする必要があります。
+
+* 手順 *
+
+. ダウンロードした .iso ファイルを ONTAP ツールにマウントします。
++
+.. [ 設定の編集 *>*DVD/CD-ROM ドライブ *] をクリックします。
+.. ドロップダウンリストから * Datastore ISO * file を選択します。
+.. ダウンロードした .iso ファイルを参照して選択し、 * パワーオン時に接続 * チェックボックスを選択します。
+
+
+. 導入した ONTAP ツールの [Summary] タブにアクセスします。
+. * をクリックしますimage:../media/launch_maintenance_console.gif[""]* メンテナンスコンソールを起動します。
+. 「ドメインメニュー」プロンプトで、「システム構成」に「 2 」オプションを入力し、「アップグレード」に「 8 」オプションを入力します。
++
+アップグレードが終了すると、 ONTAP ツールが再起動します。ONTAP ツールは、アップグレード前と同じ IP アドレスで vCenter Server に登録されます。
+
+. IPv6 アドレスを使用して ONTAP ツールを vCenter Server に登録するには、次の手順を実行する必要があります。
++
+.. ONTAP ツールの登録を解除します。
+.. 登録 * ページを使用して、 ONTAP ツールの IPv6 アドレスを vCenter Server に登録します。
+.. 登録後、 VSC と VASA Provider の証明書を再生成します。
+
+
++
+
+IMPORTANT: IPv6 は vCenter Server 6.7 以降でのみサポートされます。
+
+. vSphere Client からログアウトして再度ログインすると、導入した ONTAP ツールが表示されます。
++
+.. 既存の vSphere Web Client または vSphere Client からログアウトし、ウィンドウを閉じます。
+.. vSphere Client にログインします。
++
+vSphere Client でプラグインが更新されるまでに数分かかる場合があります。
+
+
+
+
+
+[NOTE]
+====
+* ONTAP ツール 7.0 から最新バージョンの ONTAP ツールにアップグレードする場合は、既存の VM ストレージポリシーを編集する前にストレージ機能プロファイルを作成する必要があります。プロファイルを作成しないと、値が正しくないか値がないというエラーが表示されることがあります。
+* 以前のバージョンから 9.8 バージョンの ONTAP ツールにアップグレードすると 'vvol.rebalance .threshold プロパティーが vvol.properties ファイルにないことがわかります
++
+プロパティのデフォルト値は 85% に設定されています。
+
+
+
+====

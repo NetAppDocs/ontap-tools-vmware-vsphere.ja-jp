@@ -1,0 +1,15 @@
+---
+permalink: release_notes.html 
+sidebar: sidebar 
+keywords: release notes, ontap tools for VMware vSphere 
+summary: このリリースの VMware vSphere 用 ONTAP ツールに関する重要な情報を提供します。新機能と機能拡張、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。 
+---
+= リリースノート
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+解決済みの問題、既知の問題、注意事項、および制限事項など、 VMware vSphere 用のこのリリースの ONTAP ツールに関する重要な情報を提供します。
+
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2875589["『 ONTAP Tools for VMware vSphere 9.8 Release Notes 』を参照してください"^]。

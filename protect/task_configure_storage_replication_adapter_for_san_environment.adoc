@@ -1,0 +1,71 @@
+---
+permalink: protect/task_configure_storage_replication_adapter_for_san_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Site Recovery Manager 用の Storage Replication Adapter \ （ SRA \ ）を実行するには、事前にストレージシステムのセットアップが必要です。 
+---
+= SAN 環境向けの Storage Replication Adapter の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Site Recovery Manager （ SRM ）向け Storage Replication Adapter （ SRA ）を実行するには、事前にストレージシステムのセットアップが必要です。
+
+* 必要なもの *
+
+保護対象サイトとリカバリサイトに次のプログラムがインストールされている必要があります。
+
+* SRM の場合
++
+SRM のインストールについては、 VMware サイトのドキュメントを参照してください。
+
++
+https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager のドキュメント"]
+
+* SRA
++
+アダプタは SRM にインストールされます。
+
+
+
+* 手順 *
+
+. 保護対象サイトで、プライマリ ESXi ホストがプライマリストレージシステムの LUN に接続されていることを確認します。
+. プライマリ・ストレージ・システムで、「 ostype 」オプションが _vmware_ に設定されている igroup に、 LUN が含まれていることを確認します。
+. リカバリサイトの ESXi ホストが FC または iSCSI を使用して Storage Virtual Machine （ SVM ）に適切に接続されていることを確認します。
++
+そのためには、 ESXi ホストの SVM 上にローカル LUN が接続されていることを確認するか、 SVM 上で「 fcp show initiators 」コマンドまたは「 iscsi show initiators 」コマンドを使用します。
+
+
+
+
+
+== NAS 環境向けの Storage Replication Adapter の設定
+
+* 必要なもの *
+
+保護対象サイトとリカバリサイトに次のプログラムがインストールされている必要があります。
+
+* SRM の場合
++
+SRM のインストールに関するドキュメントは、 VMware のサイトで入手できます。
+
++
+https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager のドキュメント"]
+
+* SRA
++
+SRM と SRA サーバにアダプタをインストールします。
+
+
+
+* 手順 *
+
+. 保護対象サイトのデータストアに、 vCenter Server に登録された仮想マシンがあることを確認します。
+. 保護対象サイトの ESXi ホストに、 Storage Virtual Machine （ SVM ）の NFS エクスポートボリュームがマウントされていることを確認します。
+. Array Manager ウィザードを使用して SRM にアレイを追加するときに、 NFS エクスポートが存在する IP アドレス、ホスト名、 FQDN などの有効なアドレスが *NFS Address* フィールドに指定されていることを確認します。
+. リカバリサイトの各 ESXi ホストで「 ping 」コマンドを実行して、 SVM から NFS エクスポートへの接続に使用される IP アドレスにホストの VMkernel ポートからアクセスできることを確認します。
+
+
+https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]

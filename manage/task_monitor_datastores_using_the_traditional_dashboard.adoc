@@ -1,0 +1,52 @@
+---
+permalink: manage/task_monitor_datastores_using_the_traditional_dashboard.html 
+sidebar: sidebar 
+keywords:  
+summary: 従来のデータストアと仮想マシンは、 ONTAP ツールの従来のダッシュボードを使用して監視できます。ダッシュボードのデータを使用して、データストアの使用状況を分析し、仮想マシンでスペースに関する制約が発生しないように対処できます。 
+---
+= 従来のダッシュボードを使用してパフォーマンスデータを分析
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+従来のデータストアと仮想マシンは、 ONTAP ツールの従来のダッシュボードを使用して監視できます。ダッシュボードのデータを使用して、データストアの使用状況を分析し、仮想マシンでスペースに関する制約が発生しないように対処できます。
+
+* 必要なもの *
+
+Configure Storage I/O Control （ストレージ I/O 制御の設定）ダイアログボックスで、 Enable Storage I/O Control and statistics collection （ストレージ I/O 制御と統計の収集を有効にする） * または * Disable Storage I/O Control but enable statistics collection * のいずれかのオプションを選択する必要があります。Storage I/O Control は、 VMware の Enterprise Plus ライセンスがある場合にのみ有効にできます。
+
+https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-BB5D9BAB-9E0E-4204-A76A-54634CD8AD51.html["VMware vSphere のドキュメント：「 Storage I/O Control を有効にする"]
+
+従来のダッシュボードには、 vCenter Server から取得した IOPS 、使用スペース、レイテンシ、およびコミット済み容量の指標が表示されます。ONTAP は、従来のダッシュボードにアグリゲートのスペース削減の指標を提供します。特定のアグリゲートのスペース削減量を表示できます。これらのパフォーマンスパラメータを使用すると、仮想環境におけるパフォーマンスのボトルネックを特定し、問題を解決するための対処を行うことができます。
+
+
+NOTE: 直接接続の Storage Virtual Machine （ SVM ）に設定された FlexGroup データストアではファイル監視はサポートされていません。
+
+ONTAP ツールの従来のダッシュボードを使用すると、 NFS データストアまたは VMFS データストアを表示できます。データストアをクリックすると、 vCenter Server インスタンスのデータストアの詳細画面に移動して、 vCenter Server 内のデータストアに関する問題を確認および修正できます。
+
+* 手順 *
+
+. vSphere Client のホームページで、 * ONTAP tools for VMware vSphere* をクリックします。
+. vCenter Server ドロップダウンメニューを使用して必要な vCenter Server を選択し、データストアを表示します。
+. [* 従来のダッシュボード * ] をクリックします。
++
+Datastores ポートレットには次の詳細が表示されます。
+
++
+** vCenter Server インスタンスの VSC で管理されている従来のデータストアの数とパフォーマンス指標
+** リソースの使用状況と変更可能なパフォーマンスパラメータに基づく上位 5 つのデータストア。必要に応じて、使用スペース、 IOPS 、またはレイテンシに基づいて、必要な順序でデータストアのリストを変更できます。
+
+
++
+仮想マシンのポートレットには以下の詳細が表示されます。
+
++
+** vCenter Server のネットアップのデータストアを使用している仮想マシンの数
+** コミット済み容量、レイテンシ、 IOPS 、スループット、およびアップタイムに基づく上位 5 つの仮想マシン
++
+仮想マシンポートレットの IOPS とスループットのデータは、 FlexGroup でバックアップされたボリュームに作成されたデータストアでのみ使用できます。
+
+
+
+

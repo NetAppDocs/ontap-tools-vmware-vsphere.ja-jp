@@ -1,0 +1,66 @@
+---
+settings:
+  name: ONTAP Tools for VMware vSphere
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: true
+    langs: ja-jp,us-en,zh-cn
+sidebar:
+  entries:
+  - title: VMware vSphere ドキュメント用の ONTAP ツール
+    url: "/index.html"
+  - title: リリースノート
+    url: "/release_notes.html"
+  - section: concepts
+  - section: deploy
+  - section: configure
+  - section: protect
+  - section: manage
+  - title: 法的通知
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: はじめに
+    links:
+    - title: リリースノート
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2875589
+    - title: VMware vSphere 向け ONTAP ツールについて説明します
+      url: "/concepts/concept_virtual_storage_console_overview.html"
+    - title: ONTAP ツールを導入
+      url: "/deploy/task_deploy_ontap_tools.html"
+    - title: ONTAP ツールをアップグレードする
+      url: "/deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html"
+  - title: ONTAP ツールを使用する
+    links:
+    - title: 従来のデータストアをプロビジョニングする
+      url: "/configure/task_provision_datastores.html"
+    - title: vVol データストアをプロビジョニングする
+      url: "/configure/task_provision_vvols_datastores.html"
+    - title: ロールベースアクセス制御を設定する
+      url: "/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html"
+    - title: リモート診断を設定します
+      url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
+    - title: ハイアベイラビリティを設定する
+      url: "/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html"
+  - title: データストアの保護と管理
+    links:
+    - title: データストアを保護
+      url: "/protect/task_enable_storage_replication_adapter.html"
+    - title: 仮想マシンを保護
+      url: "/protect/concept_configure_replication_for_vvols_datastore.html"
+    - title: 従来のデータストアと仮想マシンを監視する
+      url: "/manage/task_monitor_datastores_using_the_traditional_dashboard.html"
+    - title: VVol データストアと仮想マシンを監視する
+      url: "/manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html"
+  - title: リソースの追加
+    links:
+    - title: 以前のバージョンの VMware 用 ONTAP ツールに関するドキュメント
+      url: https://docs.netapp.com/vapp-98/index.jsp?topic=%2Fcom.netapp.ndc.vapp-vers%2FGUID-DEB0FBD4-89B8-4EA1-98BF-685190F79086.html
+    - title: ネットアップのナレッジベース - ONTAP ツール
+      url: https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/VSC_and_VASA_Provider
+    - title: NetApp Import Utility - ビデオ
+      url: https://www.youtube.com/watch?v=CEQmIEzNVfA
+    - title: ネットアップコミュニティ - ONTAP ツール
+      url: https://community.netapp.com/t5/VMware-Solutions-Discussions/bd-p/vmware-solutions-discussions

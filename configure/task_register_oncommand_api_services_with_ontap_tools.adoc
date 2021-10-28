@@ -1,0 +1,47 @@
+---
+permalink: configure/task_register_oncommand_api_services_with_ontap_tools.html 
+sidebar: sidebar 
+keywords: virtual volume datastores 
+summary: ONTAP 9.6 以前を使用している場合、 vVol ダッシュボードに VMware 仮想ボリューム（ vVol ）データストアと仮想マシンの詳細を表示するには、 VASA Provider の OnCommand API サービスを登録して vVol VM およびデータストアのレポートのデータを取得する必要があります。 
+---
+= OnCommand API サービスを ONTAP ツールに登録します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP 9.6 以前を使用している場合、 VMware 仮想ボリューム（ vVol ）データストアと仮想マシンの詳細を vVol ダッシュボードに表示するためには、 VASA Provider の OnCommand API サービスを登録して vVol の VM およびデータストアのレポートのデータを取得する必要があります。
+
+* 必要なもの *
+
+ネットアップサポートサイトから OnCommand API サービス 2.1 以降をダウンロードしておく必要があります。
+
+
+NOTE: vVol ダッシュボードには、 ONTAP 9.3 以降を使用して SAN vVol データストアと仮想マシンが設定されている場合にのみパフォーマンス指標が表示されます。
+
+* 手順 *
+
+. ONTAP ツールのホームページで、 * 設定 * をクリックします。
+. [ 管理設定 ] タブの [ 拡張機能の管理 ] をクリックします。
+. [API サービスの登録（ Register OnCommand API Services ） ] スライダを使用して、 OnCommand API サービスを有効にします。
+. OnCommand API サービスの IP アドレス、サービスポート、およびクレデンシャルを入力します。
++
+VASA Provider 拡張機能の管理ダイアログボックスを使用して、次の変更を行うこともできます。
+
++
+** クレデンシャルに変更があったときに OnCommand API サービスの登録を更新する。
+** vVol ダッシュボードが不要になったときに OnCommand API サービスの登録を解除する。
++
+VASA Provider への OnCommand API サービスの登録を解除するには、 OnCommand API サービスの登録チェックボックスをオフにする必要があります。
+
+
+
+. [ 適用（ Apply ） ] をクリックします。
++
+vVol ダッシュボードには、 OnCommand API サービスの登録が完了した時点で初めて、 ONTAP 9.6 以前の SAN vVol データストアの指標が表示されます。
+
+
+
+* 関連情報 *
+
+https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]

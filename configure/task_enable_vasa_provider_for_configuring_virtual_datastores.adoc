@@ -1,0 +1,40 @@
+---
+permalink: configure/task_enable_vasa_provider_for_configuring_virtual_datastores.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware vSphere 用の ONTAP ツールでは、 VASA Provider 機能がデフォルトで有効になっています。VMware 仮想ボリューム（ vVol ）データストアは、各 vVol データストアに必要なストレージ機能プロファイルを使用して設定できます。 
+---
+= <strong> 仮想データストアを設定するための VASA Provider の有効化 </strong>
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 用の ONTAP ツールでは、 VASA Provider 機能がデフォルトで有効になっています。VMware 仮想ボリューム（ vVol ）データストアは、それぞれの vVol データストアに必要なストレージ機能プロファイルを使用して設定できます。
+
+* 必要なもの *
+
+* vCenter Server インスタンスをセットアップし、 ESXi を設定しておく必要があります。
+* ONTAP ツールを導入しておく必要があります。
+
+
+* このタスクについて *
+
+ONTAP ツール 9.7.1 にアップグレードする前に VASA Provider 機能を無効にしていた場合は、アップグレード後も VASA Provider 機能は無効なままになります。本リリースでは、 VVOL データストアに対する vVol のレプリケーション機能を有効にすることができます。
+
+* 手順 *
+
+. VMware vSphere の Web ユーザインターフェイスにログインします。
+. vSphere Client で、 * Menu * > * ONTAP tools Console * の順にクリックします。
+. [* 設定 * ] をクリックします。
+. [ 管理設定 ] タブの [ 機能の管理 ] をクリックします。
+. Manage Capabilities ダイアログボックスで、有効にする VASA Provider 拡張機能を選択します。
+. VVOL データストアのレプリケーション機能を使用する場合は、「 * VVol レプリケーションを有効にする * 」切り替えボタンを使用します。
+. ONTAP ツールの IP アドレスと管理者パスワードを入力し、 * 適用 * をクリックします。
++
+
+NOTE: VASA Provider 拡張機能を有効にしたあとも VASA Provider のステータスが「オフライン」と表示される場合は、 /var/log/vmware/vmware-SPS / sps.log ファイルで VASA Provider との接続エラーを確認するか、「 vmware-sps 」サービスを再起動してください。
+
+
+
+ONTAP 9.6 以前のクラスタを使用している場合は、 OnCommand API サービスを VASA Provider に登録して、 SAN vVol VM および SAN vVol データストアのレポートで使用される vVol データストアと仮想マシンの詳細を取得する必要があります。ただし、 ONTAP 9.7 以降を使用している場合は、 OnCommand API サービスを VASA Provider に登録する必要はありません。

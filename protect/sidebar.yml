@@ -1,0 +1,46 @@
+---
+section: protect
+title: データストアと仮想マシンを保護
+entries:
+- title: データストアを保護するには、 Storage Replication Adapter を有効にします
+  url: "/protect/task_enable_storage_replication_adapter.html"
+- title: ディザスタリカバリ用にストレージシステムを設定する
+  entries:
+  - title: SAN および NAS のストレージシステムを設定する
+    url: "/protect/task_configure_storage_replication_adapter_for_san_environment.html"
+  - title: 大規模な環境向けにストレージを構成
+    url: "/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html"
+- title: SRM アプライアンスで SRA を設定する
+  url: "/protect/task_configure_sra_on_srm_appliance.html"
+- title: SRA クレデンシャルを更新する
+  url: "/protect/task_update_sra_credentials.html"
+- title: Windows SRM を SRM アプライアンスに移行します
+  url: "/protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html"
+- title: 仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
+  url: "/protect/concept_configure_replication_for_vvols_datastore.html"
+- title: 保護されていない仮想マシンを保護
+  url: "/protect/task_protect_non_protected_virtual_machines.html"
+- title: 保護対象サイトとリカバリサイトを設定
+  entries:
+  - title: 仮想マシンストレージポリシーを設定
+    url: "/protect/task_configure_vm_storage_policies.html"
+  - title: 保護グループを設定します
+    url: "/protect/task_configure_protection_groups.html"
+  - title: 保護対象サイトとリカバリサイトをペアリング
+    url: "/protect/task_pair_protected_and_recovery_sites.html"
+  - title: 保護対象サイトとリカバリサイトのリソースを設定
+    entries:
+    - title: ネットワークマッピングを設定します
+      url: "/protect/task_configure_network_mappings.html"
+    - title: フォルダマッピングを設定します
+      url: "/protect/task_configure_folder_mappings.html"
+    - title: リソースマッピングを設定する
+      url: "/protect/task_configure_resource_mappings.html"
+    - title: ストレージポリシーをマッピングする
+      url: "/protect/task_map_storage_policies.html"
+    - title: プレースホルダデータストアを設定します
+      url: "/protect/task_configure_placeholder_datastores.html"
+    - title: アレイマネージャを使用して SRA を設定する
+      url: "/protect/task_configure_array_manager.html"
+  - title: レプリケートされたストレージシステムを確認
+    url: "/protect/task_verify_the_replicated_storage_environment.html"

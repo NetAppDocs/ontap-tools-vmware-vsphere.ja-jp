@@ -1,0 +1,89 @@
+---
+permalink: concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。VMware vSphere 用の ONTAP ® ツールでは、 ONTAP RBAC と vCenter Server RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる Virtual Storage Console （ VSC ）タスクが決まります。 
+---
+= ONTAP ストレージシステムおよび vSphere オブジェクトの権限
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。VMware vSphere 用の ONTAP ® ツールでは、 ONTAP RBAC と vCenter Server RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる Virtual Storage Console （ VSC ）タスクが決まります。
+
+VSC では、各ストレージシステムの認証とそのストレージシステムで実行できるストレージ操作の判別に、 VSC で設定したクレデンシャル（ユーザ名とパスワード）が使用されます。ストレージシステムごとに 1 組のクレデンシャルが使用され、そのクレデンシャルに基づいて、ストレージシステムで実行できる VSC タスクが決まります。つまり、このクレデンシャルは VSC のクレデンシャルであり、個々の VSC ユーザに対するものではありません。
+
+ONTAP RBAC は、ストレージシステムへのアクセス、および仮想マシンのプロビジョニングなど、ストレージに関連する VSC タスクの実行にのみ適用されます。それぞれのストレージシステムに対する適切な ONTAP RBAC 権限がないと、そのストレージシステムでホストされる vSphere オブジェクトに対してタスクを実行することはできません。ONTAP RBAC と VSC 固有の権限を組み合わせることで、ユーザが実行できる VSC タスクを制御することができます。
+
+* ストレージまたはストレージシステムに格納されている vCenter Server オブジェクトの監視と設定
+* ストレージシステムに格納されている vSphere オブジェクトのプロビジョニング
+
+
+ONTAP RBAC と VSC 固有の権限を使用すると、ストレージ主体のセキュリティレイヤをストレージ管理者が管理できるようになります。これにより、 ONTAP RBAC または vCenter Server RBAC のどちらか一方のアクセス制御だけを使用した場合に比べ、よりきめ細かい制御が可能になります。たとえば、 vCenter Server RBAC を使用して、ネットアップストレージでのデータストアのプロビジョニングを vCenterUserB には許可し、 vCenterUserA には許可しないように設定したとします。この場合、特定のストレージシステムのクレデンシャルに対してストレージの作成を禁止すれば、 vCenterUserB と vCenterUserA のどちらもそのストレージシステムでデータストアのプロビジョニングを実行することはできません。
+
+VSC タスクを開始すると、最初にそのタスクに対する正しい vCenter Server アクセス許可がユーザにあるかどうかが検証されます。タスクを実行するための十分な vCenter Server アクセス許可がなければ、最初の vCenter Server のセキュリティチェックをパスできないため、そのストレージシステムの ONTAP 権限は確認されません。そのため、ストレージシステムにアクセスできません。
+
+十分な vCenter Server アクセス許可がある場合は、次にストレージシステムのクレデンシャル（ユーザ名とパスワード）に関連付けられた ONTAP RBAC 権限（ ONTAP ロール）が確認されます。 その VSC タスクで必要なストレージ処理をストレージシステムで実行するための十分な権限があるかどうかを確認すること。適切な ONTAP 権限があれば、ストレージシステムにアクセスして VSC タスクを実行できます。ストレージシステムで実行できる VSC タスクは ONTAP ロールで決まります。
+
+各ストレージシステムには、一連の ONTAP 権限が関連付けられます。
+
+ONTAP RBAC と vCenter Server RBAC の両方を使用すると、次のような利点があります。
+
+* セキュリティ
++
+どのユーザがどのタスクを実行できるかを、 vCenter Server オブジェクトレベルおよびストレージシステムレベルで制御できます。
+
+* 監査情報
++
+多くの場合、 VSC はストレージシステムについての監査証跡を提供します。これにより、ストレージに対して変更を行った vCenter Server ユーザまでさかのぼってイベントを追跡できます。
+
+* 使いやすさ
++
+コントローラのクレデンシャルをすべて集約して一元管理できます。
+
+
+
+
+
+== VMware vSphere 用の ONTAP ツールを使用する際に推奨される ONTAP ロール
+
+VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、 Virtual Storage Console （ VSC ）タスクで実行するストレージ処理に必要な ONTAP 権限が含まれています。
+
+新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。次のいずれかを使用して ONTAP ロールを作成できます。
+
+* ONTAP System Manager 9.7 以降が必要です
++
+link:../configure/task_configure_user_role_and_privileges.html["ユーザロールと権限を設定"]
+
+* RBAC User Creator for ONTAP ツール（ ONTAP 9.6 以前を使用している場合）
++
+https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203["VSC 、 VASA Provider 、 Storage Replication Adapter 7.0 for VMware vSphere 用の RBAC User Creator ツール"]
+
+
+
+各 ONTAP ロールには、ロールのクレデンシャルを構成するユーザ名とパスワードのペアが関連付けられています。このクレデンシャルを使用してログインしないと、ロールに関連付けられたストレージ処理にアクセスできません。
+
+セキュリティ対策として、 VSC 固有の ONTAP ロールは階層構造になっています。最初のロールは最も制限のあるロールで、 VSC の最も基本的なストレージ処理に関連する権限だけを含みます。次のロールには、そのロール独自の権限と、前のロールに関連付けられているすべての権限が含まれます。以降、上位のロールほど制限が少なく、より多くのストレージ処理をサポートします。
+
+VSC を使用する際に推奨される ONTAP RBAC ロールのいくつかを次に示します。ロールを作成したら、仮想マシンのプロビジョニングなど、ストレージに関するタスクを実行する必要があるユーザにそのロールを割り当てることができます。
+
+. 検出
++
+ストレージシステムを追加できます。
+
+. ストレージを作成します
++
+ストレージを作成できます。また、 Discovery ロールに関連付けられているすべての権限が含まれます。
+
+. ストレージを変更します
++
+ストレージを変更できます。また、 Discovery ロールと Create Storage ロールに関連付けられているすべての権限が含まれます。
+
+. ストレージを破棄します
++
+ストレージを破棄できます。また、 Discovery ロール、 Create Storage ロール、 Modify Storage ロールに関連付けられているすべての権限が含まれます。
+
+
+
+VASA Provider for ONTAP を使用する場合は、 Policy-Based Management （ PBM ；ポリシーベース管理）ロールも設定します。ストレージポリシーを使用してストレージを管理できます。このロールを使用するには、「検出」ロールも設定する必要があります。

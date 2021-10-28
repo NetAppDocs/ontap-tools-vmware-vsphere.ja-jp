@@ -1,0 +1,36 @@
+---
+section: deploy
+title: ONTAP ツールを導入してアップグレード
+entries:
+- title: VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
+  url: "/deploy/concept_installation_workflow_for_new_users.html"
+- title: ONTAP ツールの既存ユーザ向けの導入ワークフロー
+  url: "/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html"
+- title: ONTAP ツールを導入するための要件
+  entries:
+  - title: VSC のポート要件
+    url: "/deploy/reference_port_requirements_for_vsc.html"
+  - title: ONTAP ツールのスペースとサイジングの要件
+    url: "/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html"
+  - title: ONTAP ツールでサポートされているストレージシステム、ライセンス、およびアプリケーション
+    url: "/deploy/concept_supported_storage_system_and_applications.html"
+  - title: ONTAP ツールの導入に関する考慮事項
+    url: "/deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html"
+- title: ONTAP ツールを導入
+  entries:
+  - title: ONTAP ツールのダウンロード方法
+    url: "/deploy/concept_how_to_download_ontap_tools.html"
+  - title: ONTAP ツールの導入方法
+    url: "/deploy/task_deploy_ontap_tools.html"
+  - title: 仮想データストアを設定するための VASA Provider の有効化
+    url: "/deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html"
+  - title: NFS VAAI プラグインをインストールします
+    url: "/deploy/task_install_the_nfs_vaai_plug_in.html"
+  - title: vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします
+    url: "/deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html"
+- title: ONTAP ツールをアップグレードする
+  entries:
+  - title: ONTAP ツールの最新リリースにアップグレードします
+    url: "/deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html"
+  - title: Storage Replication Adapter をアップグレードする
+    url: "/deploy/task_upgrade_storage_replication_adapter.html"

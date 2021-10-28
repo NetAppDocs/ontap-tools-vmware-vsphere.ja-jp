@@ -1,0 +1,51 @@
+---
+permalink: deploy/task_upgrade_storage_replication_adapter.html 
+sidebar: sidebar 
+keywords: SRA, upgrade 
+summary: ONTAP ツールをアップグレードするか最新バージョンの ONTAP ツールを導入したら、 Storage Replication Adapter \ （ SRA \ ）をアップグレードする必要があります。 
+---
+= Storage Replication Adapter をアップグレードする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP ツールをアップグレードするか最新バージョンの ONTAP ツールを導入したら、 Storage Replication Adapter （ SRA ）をアップグレードする必要があります。
+
+* ステップ *
+
+. アダプタに応じて、次のいずれかの手順で最新のアダプタにアップグレードする必要があります。
++
+|===
+
+
+| * は ...* のため | * 次の手順を実行します。 * 
+
+
+ a| 
+Windows の場合
+ a| 
+.. SRM Windows Server にログインします。
+.. 既存の SRA _.msi インストーラを SRM サーバからアンインストールします。
+.. システム・パスを C:\Program Files\VMware\VMware vCenter Site Recovery Manager\external\perl\c\bin' に変更します
+.. ネットアップサポートサイトからダウンロードした .msi インストーラをダブルクリックして、画面に表示される手順に従います。
+.. 導入した ONTAP ツールの IP アドレスとパスワードを入力します。
+
+
+
+
+ a| 
+アプライアンスベースのアダプタ
+ a| 
+.. SRM Appliance Management ページにログインします。
+.. Storage Replication Adapter * をクリックし、 * Delete * をクリックして既存の SRA を削除します。
+.. [ * 新しいアダプター * ] 、 [ * 参照 ] の順にクリックします。
+.. ネットアップサポートサイトからダウンロードした最新の SRA tar ファイルをクリックして選択し、 * Install * をクリックします。
+.. SRM アプライアンスで SRA を設定する
++
+link:../protect/task_configure_sra_on_srm_appliance.html["SRM アプライアンスで SRA を設定する"]
+
+
+
+|===
+

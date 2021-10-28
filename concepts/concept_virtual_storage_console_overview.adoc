@@ -1,0 +1,73 @@
+---
+permalink: concepts/concept_virtual_storage_console_overview.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware vSphere 用の ONTAP ツールは、ネットアップストレージシステムを使用する VMware 環境の仮想マシンに対して、エンドツーエンドのライフサイクル管理を提供します。管理者が vCenter Server 内でストレージを直接管理できるため、 VMware 環境のストレージとデータの管理が簡単になります。 
+---
+= ONTAP ツールの概要
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 用の ONTAP ツールは、ネットアップストレージシステムを使用する VMware 環境の仮想マシンに対して、エンドツーエンドのライフサイクル管理を提供します。管理者が vCenter Server 内でストレージを直接管理できるため、 VMware 環境のストレージとデータの管理が簡単になります。
+
+VMware は vSphere 6.5 で vSphere Client という名前の新しい HTML5 ベースのクライアントを導入しました。ONTAP ツール 9.6 では、 vSphere Client のみがサポートされます。ONTAP ツールは vSphere Client と統合されており、シングルサインオン（ SSO ）サービスを利用できます。複数の vCenter Server インスタンスがある環境では、管理する vCenter Server インスタンスごとに固有の VSC インスタンスを登録する必要があります。
+
+ONTAP ツールの各コンポーネントは、ストレージをより効率的に管理するための機能を提供します。
+
+
+
+== Virtual Storage Console （ VSC ）
+
+VSC では次の作業を実行できます。
+
+* SRA と VASA Provider の両方で利用できるストレージコントローラを追加し、クレデンシャルを割り当て、 VSC のストレージコントローラのアクセス許可を設定する
+* データストアをプロビジョニング
+* vCenter Server 環境でデータストアと仮想マシンのパフォーマンスを監視します
+* Role-Based Access Control （ RBAC ；ロールベースアクセス制御）を使用して、次の 2 つのレベルで vCenter Server オブジェクトへの管理者アクセスを制御します。
++
+** 仮想マシンやデータストアなどの vSphere オブジェクト
++
+これらのオブジェクトの管理には vCenter Server RBAC を使用します。
+
+** ONTAP ストレージ
++
+ストレージシステムの管理には ONTAP RBAC を使用します。
+
+
+
+* ネットアップストレージに接続されている ESXi ホストのホスト設定を表示および更新します
+
+
+NFS Plug-in for VMware vStorage APIs for Array Integration （ VAAI ）を使用することは、 VSC のプロビジョニング処理にメリットがあります。NFS Plug-in for VAAI は、 ESXi ホストにインストールされている VMware の仮想ディスクライブラリを統合するソフトウェアライブラリです。VMware VAAI パッケージを使用すると、特定のタスクを物理ホストからストレージアレイにオフロードできます。シンプロビジョニングやハードウェアアクセラレーションなどのタスクをアレイレベルで実行して、 ESXi ホスト上のワークロードを削減できます。コピーオフロード機能やスペースリザベーション機能によって、 VSC の処理のパフォーマンスが向上します。
+
+NetApp NFS Plug-in for VAAI は VSC に付属していません。ただし、ネットアップサポートサイトから、このプラグインのインストールパッケージをダウンロードして、インストール手順を確認できます。
+
+
+
+== VASA Provider
+
+VASA Provider for ONTAP は、 VMware vSphere APIs for Storage Awareness （ VASA ）を使用して、 VMware vSphere で使用されているストレージに関する情報を vCenter Server に送信します。ONTAP のツールには、 VASA Provider と VSC が統合されています。VASA Provider では次の作業を実行できます。
+
+* VMware 仮想ボリューム（ vVol ）データストアをプロビジョニングする
+* 環境に応じた異なるストレージのサービスレベル目標（ SLO ）を定義するストレージ機能プロファイルを作成して使用します
+* データストアがストレージ機能プロファイルに準拠しているかどうかを確認する
+* ボリュームやアグリゲートがしきい値に近づいたときに警告するようにアラームを設定します
+* VVol データストアに作成された仮想マシンディスク（ VMDK ）と仮想マシンのパフォーマンスを監視する
+
+
+ONTAP 9.6 以前を使用している場合、 VASA Provider は VASA API を使用して vCenter Server と通信し、 ZAPI と呼ばれるネットアップの API を使用して ONTAP と通信します。ONTAP 9.6 以前の vVol ダッシュボードを表示するためには、 OnCommand API サービスをインストールして vCenter Server に登録しておく必要があります。ONTAP 9.7 を使用している場合、 vVol ダッシュボードを表示するために OnCommand API サービスを VASA Provider に登録する必要はありません。
+
+
+NOTE: ONTAP 9.6 以前では、 VASA Provider に専用の OnCommand API サービスインスタンスが必要です。OnCommand API サービスの 1 つのインスタンスを複数の VASA Provider インスタンスで共有することはできません。
+
+
+
+== Storage Replication Adapter （ SRA ）
+
+SRA を有効にして VMware Site Recovery Manager （ SRM ）と一緒に使用している場合、障害時に vCenter Server のデータストアと仮想マシンをリカバリできます。SRA を使用すると、障害時のディザスタリカバリに、保護対象サイトとリカバリサイトにアレイベースのレプリケーション（ ABR ）を使用できます。
+
+* 関連情報 *
+
+https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]

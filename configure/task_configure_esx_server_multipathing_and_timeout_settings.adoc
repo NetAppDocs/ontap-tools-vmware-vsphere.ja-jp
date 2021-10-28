@@ -1,0 +1,31 @@
+---
+permalink: configure/task_configure_esx_server_multipathing_and_timeout_settings.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware vSphere 用の ONTAP ® ツールは、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに最も適した設定を行います。 
+---
+= ESXi サーバのマルチパスとタイムアウトを設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに最も適した設定を行います。
+
+* このタスクについて *
+
+構成やシステムの負荷によっては、この処理に長時間かかることがあります。タスクの進行状況が [ 最近のタスク ] パネルに表示されます。タスクが完了すると、ホストのステータスアラートアイコンが Normal アイコンまたは Pending Reboot アイコンに変わります。
+
+* 手順 *
+
+. VMware vSphere Web Client のホームページで、 * vCenter * > * Hosts * をクリックします。
+. ホストを右クリックし、 * Actions * > * NetApp VSC * > * Set Recommended Values * を選択します。
+. NetApp Recommended Settings （ネットアップの推奨設定）ダイアログボックスで、システムに最も適した値を選択します。
++
+標準の推奨値がデフォルトで設定されます。
+
++
+image::../media/vsc_recommended_hosts_settings.gif[VSC で推奨されるホスト設定]
+
+. [OK] をクリックします。
+

@@ -1,0 +1,58 @@
+---
+permalink: concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP ツールはハイアベイラビリティ（ HA ）構成をサポートしており、障害時に ONTAP ツールが中断なく機能するようにします。 
+---
+= ONTAP ツールのハイアベイラビリティを設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP ツールは、障害時に ONTAP ツールの機能を中断させないためのハイアベイラビリティ（ HA ）構成をサポートしています。
+
+ONTAP ツールは、 VMware vSphere のハイアベイラビリティ（ HA ）機能とフォールトトレランス（ FT ）機能を活用することで高可用性を実現します。ハイアベイラビリティ（ HA ）解決策は、以下のような理由で発生するシステム停止からの迅速なリカバリを可能にします。
+
+* ホスト障害です
+* ネットワーク障害
+* 仮想マシンの障害（ゲスト OS の障害）
+* アプリケーション（ ONTAP ツール）がクラッシュする
+
+
+高可用性を実現するために ONTAP ツールを使用する場合、追加の設定は必要ありません。要件に応じて、 vCenter Server ホストと ESXi ホストで VMware vSphere HA または vSphere FT を設定する必要があります。HA と FT のどちらにも、クラスタホストと共有ストレージが必要です。FT には追加の要件と制限事項があります。
+
+VMware vSphere HA 解決策および vSphere FT 解決策に加え、 ONTAP ツールを使用することで、 ONTAP Tools のサービスを常時実行できます。ONTAP ツールの watchdog プロセスが 3 つのサービスをすべて定期的に監視し、何らかの障害を検出するとサービスを自動的に再起動します。これにより、アプリケーションの障害を防止できます。
+
+
+NOTE: vCenter HA は、 ONTAP ツールではサポートされていません。
+
+
+
+== VMware vSphere HA の場合
+
+VMware vSphere 用の ONTAP ツールを導入した vSphere 環境をハイアベイラビリティ（ HA ）構成にすることができます。VMware HA は、仮想環境でハードウェアやオペレーティングシステムの障害が発生した場合にフェイルオーバー保護を提供します。
+
+仮想マシンを監視してオペレーティングシステムの障害やハードウェアの障害を検出し、リソースプール内の他の物理サーバ上の仮想マシンを再起動します。サーバの障害が検出された場合、手動での対応は不要です。
+
+VMware HA を設定する手順は、 vCenter Server のバージョンによって異なります。VMware HA の設定手順を確認するには、次の参照先で必要な vCenter Server のバージョンを選択してください。
+
+https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["VMware vSphere のドキュメント：「 vSphere HA クラスタの作成と使用"]
+
+
+
+== VMware vSphere フォールトトレランス
+
+VMware vSphere フォールトトレランス（ FT ）機能を使用すると、高度なハイアベイラビリティ（ HA ）を実現し、データや接続が失われないよう仮想マシンを保護することができます。vSphere FT for ONTAP ツールは vCenter Server から有効または無効にする必要があります。
+
+環境内の ONTAP ツールに必要な数の vCPU （少なくとも 2 個、大規模環境の場合は 4 個）と FT が vSphere ライセンスでサポートされていることを確認してください。
+
+vSphere FT を使用すると、サーバの障害時にも仮想マシンを継続的に稼働できます。仮想マシンで vSphere FT が有効になっている場合は、 Distributed Resource Scheduler （ DRS ）で選択された別のホスト（セカンダリ仮想マシン）にプライマリ仮想マシンのコピーが自動的に作成されます。DRS が有効になっていない場合は、使用可能なホストの中からターゲットホストが選択されます。vSphere FT では、プライマリ仮想マシンとセカンダリ仮想マシンをロックステップモードで運用し、それぞれの仮想マシンの実行状態をセカンダリ仮想マシンにミラーリングします。
+
+ハードウェアに障害が発生してプライマリ仮想マシンに障害が発生すると、セカンダリ仮想マシンはプライマリ仮想マシンが停止した場所をすぐに検出します。ネットワーク接続、トランザクション、データが失われることなく、セカンダリ仮想マシンの実行が継続されます。
+
+vCenter Server インスタンスで vSphere FT を設定するには、システムが CPU 要件、仮想マシンの制限要件、およびライセンス要件を満たしている必要があります。
+
+HA を設定する手順は、 vCenter Server のバージョンによって異なります。HA の設定手順を確認するには、次の参照先で必要な vCenter Server のバージョンを選択してください。
+
+https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-57929CF0-DA9B-407A-BF2E-E7B72708D825.html["VMware vSphere のドキュメント：「 Fault Tolerance の要件、制限、およびライセンス"]

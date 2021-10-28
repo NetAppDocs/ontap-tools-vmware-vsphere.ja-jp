@@ -1,0 +1,25 @@
+---
+permalink: protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html 
+sidebar: sidebar 
+keywords: Migration 
+summary: ディザスタリカバリに Windows ベースの Site Recovery Manager （ SRM ）を使用している場合、同じセットアップで SRM アプライアンスを使用するには、 Windows のディザスタリカバリセットアップをアプライアンスベースの SRM に移行する必要があります。 
+---
+= Windows SRM から SRM アプライアンスへの移行
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ディザスタリカバリに Windows ベースの Site Recovery Manager （ SRM ）を使用している場合、同じセットアップで SRM アプライアンスを使用するには、 Windows のディザスタリカバリセットアップをアプライアンスベースの SRM に移行する必要があります。
+
+ディザスタリカバリの移行に必要な手順は次のとおりです。
+
+. 既存の ONTAP ツールを 9.7.1 リリースにアップグレードします。
++
+link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["ONTAP ツールの最新リリースにアップグレードします"]
+
+. Windows ベースの Storage Replication Adapter をアプライアンスベースの SRA に移行します。
+. Windows SRM のデータを SRM アプライアンスに移行します。
+
+
+を参照してください https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-F39A84D3-2E3D-4018-97DD-5D7F7E041B43.html["Site Recovery Manager for Windows から Site Recovery Manager Virtual Appliance に移行します"] を参照してください。

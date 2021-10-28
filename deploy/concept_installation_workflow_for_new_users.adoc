@@ -1,0 +1,15 @@
+---
+permalink: deploy/concept_installation_workflow_for_new_users.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware を初めて導入し、ネットアップの VSC 製品を使用したことがない場合は、 ONTAP ツールを導入して設定する前に、 vCenter Server を設定して ESXi ホストをセットアップする必要があります。 
+---
+= VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware を初めて導入し、ネットアップの VSC 製品を使用したことがない場合は、 ONTAP ツールを導入して設定する前に、 vCenter Server を設定して ESXi ホストをセットアップする必要があります。
+
+image::../media/new_user_deployment_workflow_vsc_vp_and_sra_7_0.gif[新規ユーザ導入ワークフロー： VSC VP および SRA 7 0]

@@ -1,0 +1,40 @@
+---
+permalink: protect/task_configure_storage_replication_adapter_for_nas_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: VMware vCenter Site Recovery Manager 用の Storage Replication Adapter （ SRA ）を実行するには、ストレージシステムを設定する必要があります（ SRM ）。 
+---
+= NAS 環境向けの Storage Replication Adapter の設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vCenter Site Recovery Manager （ SRM ）向け Storage Replication Adapter （ SRA ）を実行するには、事前にストレージシステムの設定が必要です。
+
+* 必要なもの *
+
+保護対象サイトとリカバリサイトに次のプログラムがインストールされている必要があります。
+
+* SRM の場合
++
+SRM のインストールに関するドキュメントは、 VMware のサイトで入手できます。
+
++
+https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager のドキュメント"]
+
+* SRA
++
+SRM と SRA サーバにアダプタをインストールします。
+
+
+
+* 手順 *
+
+. 保護対象サイトのデータストアに、 vCenter Server に登録された仮想マシンがあることを確認します。
+. 保護対象サイトの ESXi ホストに、 Storage Virtual Machine （ SVM ）の NFS エクスポートボリュームがマウントされていることを確認します。
+. Array Manager ウィザードを使用して SRM にアレイを追加するときに、 NFS エクスポートが存在する IP アドレス、ホスト名、 FQDN などの有効なアドレスが *NFS Address* フィールドに指定されていることを確認します。
+. リカバリサイトの各 ESXi ホストで ping コマンドを実行して、 SVM が NFS エクスポートへの接続に使用する IP アドレスにホストの VMkernel ポートからアクセスできることを確認します。
+
+
+https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]

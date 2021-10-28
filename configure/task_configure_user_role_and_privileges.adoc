@@ -1,0 +1,44 @@
+---
+permalink: configure/task_configure_user_role_and_privileges.html 
+sidebar: sidebar 
+keywords: user roles 
+summary: ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。 
+---
+= ユーザロールと権限を設定
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。
+
+* 必要なもの *
+
+* https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip を使用して、 ONTAP ツールから ONTAP Privileges ファイルをダウンロードしておく必要があります。
+* ONTAP 9.8 のストレージを設定しておく必要があります。
+* ストレージシステムの管理者権限でログインしている必要があります。
+
+
+* 手順 *
+
+. ダウンロードした「 \https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip` 」ファイルを解凍します。
+. ONTAP システムマネージャにアクセスします。
+. クラスター * > * 設定 * > * ユーザーと役割 * をクリックします。
+. [ ユーザーの追加 ] をクリックします。
+. [ ユーザーの追加 ] ダイアログボックスで、 [ 仮想化製品 ] を選択します。
+. [* Browse] をクリックして、 ONTAP 権限 JSON ファイルを選択し、アップロードします。
++
+プロダクトフィールドには、自動的に値が入力されます。
+
+. 製品機能ドロップダウンメニューから必要な機能を選択します。
++
+[ * 役割 * （ * role * ） ] フィールドは、選択したプロダクト機能に基づいて自動的に入力されます。
+
+. 必要なユーザ名とパスワードを入力します。
+. ユーザに必要な権限（ Discovery 、 Create Storage 、 Modify Storage 、 Destroy Storage ）を選択し、 * Add * をクリックします。
+
+
+新しいロールとユーザが追加され、設定したロールの詳細な権限が表示されます。
+
+
+NOTE: アンインストール処理では VSC ロールは削除されませんが、 VSC 固有の権限からローカライズ名が削除され、「 XXX missing privilege 」というプレフィックスが追加されます。これは、 vCenter Server に権限を削除するオプションがないためです。VSC を再インストールするか新しいバージョンにアップグレードすると、標準の VSC ロールと VSC 固有の権限がすべてリストアされます。

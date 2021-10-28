@@ -1,0 +1,37 @@
+---
+permalink: manage/concept_decide_whether_to_use_this_guide.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: このガイドを使用すると、ストレージのプロビジョニングと最適化、およびデータストアと仮想マシンの監視に関連するタスクの情報を簡単に見つけることができます。 
+---
+= このガイドを使用するかどうかを決定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+このガイドを使用すると、ストレージのプロビジョニングと最適化、およびデータストアと仮想マシンの監視に関連するタスクの情報を簡単に見つけることができます。
+
+このガイドの内容は、システム管理者ではなく、 VSC のユーザを対象としています。このガイドでは、 VMware vSphere 向け ONTAP ® ツールの導入後のすべてのタスクについて説明します。
+
+* このガイドを使用するための要件 *
+
+このガイドの説明は、次の前提に基づいています。
+
+* VSC のインストールと設定が完了している。
+* 実行するタスクに必要な機能がインストールされている。
++
+NFS Plug-in for VMware VAAI 、 VASA Provider for ONTAP 、および Storage Replication Adapter などが該当します。
+
+* 使用しているストレージシステムが VSC で検出されている。
+* vCenter Server と ONTAP の両方に対してロールベースアクセス制御（ RBAC ）がセットアップされている。
++
+必要な権限とアクセス許可がすべてない場合、ウィザードでの設定時には機能しているように見えても、実際には正常に完了しないことがあります。
+
+
+
+また、このガイドで紹介するほとんどのタスクは、ターゲットのデータストアまたは仮想マシンに対して一度に 1 回のみ実行する必要があります。
+
+VSC に関して不明な点がある場合や、他の VSC ユーザと情報を共有したい場合は、ネットアップコミュニティフォーラムをご利用ください。
+
+https://community.netapp.com/t5/Products-and-Services/ct-p/products-and-solutions["ネットアップコミュニティ： Virtual Storage Console for VMware vSphere"]

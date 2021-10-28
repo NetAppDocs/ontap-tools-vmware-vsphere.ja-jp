@@ -1,0 +1,44 @@
+---
+permalink: configure/task_discover_storage_systems_and_hosts.html 
+sidebar: sidebar 
+keywords:  
+summary: vSphere Client で Virtual Storage Console （ VSC\ ）を初めて実行すると、 ESXi ホスト、その LUN と NFS エクスポート、および LUN とエクスポートを所有するネットアップストレージシステムが VSC によって検出されます。 
+---
+= ストレージシステムとホストを検出
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vSphere Client で Virtual Storage Console （ VSC ）を初めて実行すると、 ESXi ホスト、その LUN と NFS エクスポート、および LUN とエクスポートを所有するネットアップストレージシステムが VSC によって検出されます。
+
+* 必要なもの *
+
+* すべての ESXi ホストの電源をオンにして接続しておく必要があります。
+* 検出するすべての Storage Virtual Machine （ SVM ）を実行しておく必要があります。また、使用中のストレージプロトコル（ NFS 、 iSCSI 、または FC ）用のデータ LIF を各クラスタノードに少なくとも 1 つ設定しておく必要があります。
+
+
+* このタスクについて *
+
+新しいストレージシステムの検出や既存のストレージシステムの情報の更新はいつでも実行でき、容量や設定に関する最新の情報を確認することができます。VSC でストレージシステムへのログインに使用されるクレデンシャルを変更することもできます。
+
+ストレージシステムの検出時に、 vCenter Server インスタンスで管理している ESXi ホストから情報が収集されます。
+
+* 手順 *
+
+. vSphere Client のホームページで、「 * Hosts and Clusters * 」を選択します。
+. 必要なデータセンターを右クリックし、 * NetApp VSC * > * ホストおよびストレージデータの更新 * を選択します。
++
+この処理に時間がかかることを通知する確認ダイアログボックスが表示されます。
+
+. [OK] をクリックします。
+. ステータスが「認証エラー」の検出されたストレージコントローラを選択し、 * 処置 * > * 変更 * をクリックします。
+. Modify Storage System （ストレージシステムの変更）ダイアログボックスに必要な情報を入力します。
+. ステータスが「認証エラー」のすべてのストレージコントローラについて、手順 4 と 5 を繰り返します。
+
+
+検出プロセスが完了したら、次の手順を実行します。
+
+* VSC を使用して、 Adapter Settings 列、 MPIO Settings 列、または NFS Settings 列に Alert アイコンが表示されるホストの ESXi ホスト設定を行います。
+* ストレージシステムのクレデンシャルを入力します。
+

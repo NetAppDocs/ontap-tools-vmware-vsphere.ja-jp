@@ -1,0 +1,26 @@
+---
+permalink: manage/task_configure_vasa_provider_to_work_with_ssh.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP ツールを設定することで、セキュアなアクセスに SSH を使用するように VASA Provider を設定できます。 
+---
+= SSH を使用するように VASA Provider を設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP ツールを設定することで、セキュアなアクセスに SSH を使用するように VASA Provider を設定できます。
+
+* このタスクについて *
+
+SSH の設定を行うときは、 maintenance ユーザとしてログインする必要があります。VASA Provider へのルートアクセスは無効になっているためです。他のログインクレデンシャルを使用すると、 SSH を使用して VASA Provider にアクセスできません。
+
+* 手順 *
+
+. vCenter Server で、 ONTAP ツールへのコンソールを開きます。
+. maintenance ユーザとしてログインします。
+. 「 3 」を入力して、「 * システム構成 * 」を選択します。
+. 「 6 」と入力して、「 SSH アクセスを有効にする」を選択します。
+. 確認ダイアログボックスに「 y 」と入力します。
+

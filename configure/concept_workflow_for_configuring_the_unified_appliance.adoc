@@ -1,0 +1,15 @@
+---
+permalink: configure/concept_workflow_for_configuring_the_unified_appliance.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP ツールの設定では、ストレージシステムの設定、ストレージ機能プロファイルの作成、データストアのプロビジョニング、および必要に応じてディザスタリカバリのための SRA の設定を行います。 
+---
+= ONTAP ツールを設定するためのワークフロー
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP ツールの設定では、ストレージシステムの設定、ストレージ機能プロファイルの作成、データストアのプロビジョニング、および必要に応じてディザスタリカバリのための SRA の設定を行います。
+
+image::../media/use_case_vsc_users.gif[ONTAP ツールの設定ワークフロー]

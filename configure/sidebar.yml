@@ -1,0 +1,70 @@
+---
+section: configure
+title: ONTAP ツールを設定する
+entries:
+- title: ONTAP ツールを設定するためのワークフロー
+  url: "/configure/concept_workflow_for_configuring_the_unified_appliance.html"
+- title: ESXi を設定します
+  entries:
+  - title: ESXi サーバのマルチパスとタイムアウトを設定
+    url: "/configure/task_configure_esx_server_multipathing_and_timeout_settings.html"
+  - title: ONTAP ツールを使用して設定される ESXi ホストの値
+    url: "/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html"
+- title: ゲストオペレーティングシステムを設定する
+  entries:
+  - title: ゲストオペレーティングシステムスクリプトを設定する
+    url: "/configure/reference_configure_guest_operating_system_scripts.html"
+  - title: Windows ゲストオペレーティングシステムのタイムアウト値を設定します
+    url: "/configure/task_run_the_gos_timeout_scripts_for_windows.html"
+  - title: Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
+    url: "/configure/task_run_the_gos_timeout_scripts_for_solaris.html"
+  - title: Linux ゲストオペレーティングシステムのタイムアウト値を設定します
+    url: "/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html"
+- title: 複数の vCenter Server 環境で VSC を登録するための要件
+  url: "/configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html"
+- title: ONTAP ツールプリファレンスファイルを設定します
+  entries:
+  - title: プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
+    url: "/configure/reference_set_ipv4_or_ipv6.html"
+  - title: 異なるサブネット間でのデータストアのマウントを有効にする
+    url: "/configure/task_enable_datastore_mounting_across_different_subnets.html"
+  - title: VSC の SSL 証明書の再生成
+    url: "/configure/task_regenerate_an_ssl_certificate_for_vsc.html"
+- title: ストレージシステムを設定する
+  entries:
+  - title: ONTAP ツール用のストレージシステムの概要
+    url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
+  - title: ストレージシステムのデフォルトクレデンシャルを設定
+    url: "/configure/task_set_default_credentials_for_storage_systems.html"
+  - title: ストレージシステムを VSC に追加
+    url: "/configure/task_add_storage_systems.html"
+  - title: ストレージシステムとホストを検出
+    url: "/configure/task_discover_storage_systems_and_hosts.html"
+  - title: ストレージシステムの表示を更新します
+    url: "/configure/task_refresh_the_storage_system_display.html"
+  - title: アラームしきい値を設定する
+    url: "/configure/task_configure_alarm_thresholds.html"
+- title: ユーザロールと権限を設定
+  url: "/configure/task_configure_user_role_and_privileges.html"
+- title: ストレージ機能プロファイルを設定する
+  entries:
+  - title: ストレージ機能プロファイルの概要
+    url: "/configure/concept_configure_storage_capability_profiles.html"
+  - title: ストレージ機能プロファイルを作成する
+    url: "/configure/task_create_storage_capability_profiles.html"
+  - title: ストレージ機能プロファイルを自動的に生成する
+    url: "/configure/task_automatically_generating_scps.html"
+- title: データストアを設定する
+  entries:
+  - title: 従来のデータストアをプロビジョニングする
+    url: "/configure/task_provision_datastores.html"
+  - title: データストアとストレージ機能プロファイルのマッピング
+    url: "/configure/task_map_storage_to_storage_capability_profiles.html"
+  - title: QoS ポリシーを割り当てる
+    url: "/configure/task_assign_qos_policies.html"
+  - title: マッピングしたストレージ機能プロファイルにデータストアが準拠しているかどうかを確認する
+    url: "/configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html"
+  - title: vVol データストアをプロビジョニングする
+    url: "/configure/task_provision_vvols_datastores.html"
+  - title: VVol データストアのリバランシング
+    url: "/configure/reference_rebalance_vvols_datastore.html"

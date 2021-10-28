@@ -1,0 +1,28 @@
+---
+permalink: deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console,Storage Replication Adapter 
+summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件について理解しておく必要があります。 
+---
+= ONTAP ツールのスペースとサイジングの要件
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件について理解しておく必要があります。
+
+* * インストールパッケージのスペース要件 *
++
+** シンプロビジョニングの場合は 2.1GB
+** シックプロビジョニングの場合は 54.0GB
+
+
+* * ホスト・システムのサイジング要件 *
++
+** ESXi 6.5U3 以降
+** 推奨メモリ： 12GB RAM
+** 推奨 CPU 数： 2
+
+
+

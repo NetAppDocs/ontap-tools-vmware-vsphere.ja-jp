@@ -1,0 +1,27 @@
+---
+permalink: manage/task_mount_a_vvols_datastore.html 
+sidebar: sidebar 
+keywords: Mount vVol 
+summary: VMware 仮想ボリューム（ vvols ）データストアは、 Mount VVOLs Datastore （ VVol データストアのマウント）ダイアログボックスを使用して、 1 つ以上の追加のホストにマウントできます。データストアをマウントすると、他のホストからストレージにアクセスできるようになります。 
+---
+= VVOL データストアをマウントする
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware 仮想ボリューム（ vVol ）データストアは、 Mount VVOLs Datastore （ vVol データストアのマウント）ダイアログボックスを使用して、 1 つ以上の追加のホストにマウントできます。データストアをマウントすると、他のホストからストレージにアクセスできるようになります。
+
+* 手順 *
+
+. vSphere Client のホームページで、 * Hosts and Clusters * をクリックします。
+. マウントするデータストアを右クリックし、 * NetApp ONTAP tools * > * Mount VVOLs Datastore * を選択します。
++
+VVol データストアのマウントダイアログボックスが表示されます。このダイアログボックスには、データストアをマウントできるデータセンターで使用できるホストのリストが表示されます。この一覧には、データストアがすでにマウントされているホスト、 5.x 以前の ESX を実行しているホスト、データストアのプロトコルをサポートしていないホストは含まれません。たとえば、ホストで FC プロトコルがサポートされていなければ、 FC データストアをホストにマウントすることはできません。
+
++
+
+IMPORTANT: vSphere Client にも vCenter Server 用のマウントダイアログボックスがありますが、必ず VASA Provider のダイアログボックスを使用してください。VASA Provider により、 ONTAP ソフトウェアを実行しているストレージシステムへのアクセスが設定されます。
+
+. データストアをマウントするホストを選択し、「 * OK 」をクリックします。
+

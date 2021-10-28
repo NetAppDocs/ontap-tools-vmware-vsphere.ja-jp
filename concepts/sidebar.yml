@@ -1,0 +1,30 @@
+---
+section: concepts
+title: 概念
+entries:
+- title: ONTAP ツールの概要
+  url: "/concepts/concept_virtual_storage_console_overview.html"
+- title: VVOL 向けの VASA Provider の設定
+  url: "/concepts/concept_configure_vvols_datastores.html"
+- title: ディザスタリカバリ用の Storage Replication Adapter
+  url: "/concepts/concept_manage_disaster_recovery_setup_using_srm.html"
+- title: ロールベースアクセス制御
+  entries:
+  - title: ONTAP ツールのロールベースアクセス制御の概要
+    url: "/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html"
+  - title: vCenter Server アクセス許可の要素
+    url: "/concepts/reference_components_that_make_up_vcenter_server_permissions.html"
+  - title: vCenter Server のアクセス許可の割り当てと変更に関する要点
+    url: "/concepts/reference_key_points_about_assigning_and_modifying_permissions.html"
+  - title: ONTAP ツールに付属の標準ロール
+    url: "/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html"
+  - title: VSC タスクに必要な権限
+    url: "/concepts/concept_privileges_required_for_vsc_tasks.html"
+  - title: ONTAP ストレージシステムおよび vSphere オブジェクトの権限
+    url: "/concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html"
+  - title: ONTAP ツールのロールベースアクセス制御の設定方法
+    url: "/concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html"
+- title: ONTAP ツールのハイアベイラビリティを設定する
+  url: "/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html"
+- title: ONTAP ツールでサポートされる MetroCluster 構成
+  url: "/concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html"

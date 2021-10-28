@@ -1,0 +1,19 @@
+---
+permalink: deploy/concept_configure_storage_replication_adapter_for_disaster_recovery.html 
+sidebar: sidebar 
+keywords:  
+summary: ディザスタリカバリ用に vCenter Server を設定する場合は、導入後に Storage Replication Adapter \ （ SRA \ ）を有効にする必要があります。ONTAP ツールを導入すると、デフォルトで VSC がインストールされます。ONTAP ツールの導入後に、 vCenter Server に対して SRA を有効にする必要があります。 
+---
+= ディザスタリカバリ用の Storage Replication Adapter を設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ディザスタリカバリ用に vCenter Server を設定する場合は、導入後に Storage Replication Adapter （ SRA ）を有効にする必要があります。ONTAP ツールを導入すると、デフォルトで VSC がインストールされます。ONTAP ツールの導入後に、 vCenter Server に対して SRA を有効にする必要があります。
+
+* 関連情報 *
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Storage_Replication_Adapter_for_Data_ONTAP/SRA_4.0P1_client_plugin_(netapp_sra_4.0P1_ontap_64bit.msi)_hangs_at_the_server_IP["SRA 4.0P1 クライアントプラグイン（ netapp_sra_4.0P1_ontap_64bit-upgrade .msi ）のインストールがサーバの IP およびパスワードの画面で停止します"]
+
+link:../protect/task_enable_storage_replication_adapter.html["Storage Replication Adapter を有効にする"]

@@ -1,0 +1,22 @@
+---
+permalink: configure/concept_configure_vsc_for_vmware_vsphere_environment.html 
+sidebar: sidebar 
+keywords:  
+summary: Virtual Storage Console （ VSC ）はさまざまな環境に対応しています。これらの環境の機能によっては、追加の設定が必要になることがあります。 
+---
+= VMware vSphere 用の ONTAP ツールを設定します
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Virtual Storage Console （ VSC ）はさまざまな環境に対応しています。これらの環境の機能によっては、追加の設定が必要になることがあります。
+
+ESXi ホスト、ゲストオペレーティングシステム、 VSC を設定するには、次の作業の一部が必要になることがあります。
+
+* UNMAP 設定を含む ESXi ホストの設定の確認
+* ゲストオペレーティングシステムのタイムアウト値の追加
+* VSC の SSL 証明書を再生成します
+* ストレージ機能プロファイルとしきい値アラームの作成
+* 異なるサブネット間でのデータストアのマウントを有効にするためのプリファレンスファイルの変更
+

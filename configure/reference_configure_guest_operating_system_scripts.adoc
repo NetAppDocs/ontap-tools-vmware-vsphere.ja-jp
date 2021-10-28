@@ -1,0 +1,49 @@
+---
+permalink: configure/reference_configure_guest_operating_system_scripts.html 
+sidebar: sidebar 
+keywords: Guest operating system 
+summary: ゲストオペレーティングシステム（ OS ）スクリプトの ISO イメージは、 VMware vSphere サーバ用の ONTAP ® ツールにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。 
+---
+= ゲストオペレーティングシステムスクリプトを設定する
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ゲストオペレーティングシステム（ OS ）スクリプトの ISO イメージは、 VMware vSphere サーバ用の ONTAP ® ツールにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。
+
+|===
+
+
+| * オペレーティング・システム・タイプ * | *60 秒のタイムアウト設定 * | * 190 秒のタイムアウト設定 * 
+
+
+ a| 
+Linux の場合
+ a| 
+\ https://<appliance_ip>:8143/vsc/public/writable/linux_gos_timeout-install.iso
+ a| 
+\ https://<appliance_ip>:8143/vsc/public/writable/linux_gos_timeout_190-install.iso
+
+
+
+ a| 
+Windows の場合
+ a| 
+\ https://<appliance_ip>:8143/vsc/public/writable/windows_gos_timeout.iso
+ a| 
+\ https://<appliance_ip>:8143/vsc/public/writable/windows_gos_timeout_190.iso
+
+
+
+ a| 
+Solaris の場合
+ a| 
+\ https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout-install.iso
+ a| 
+\ https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
+
+|===
+仮想マシンを管理している vCenter Server に登録されている VSC インスタンスのコピーからスクリプトをインストールする必要があります。環境に複数の vCenter Server が含まれている場合は、ストレージのタイムアウト値を設定する仮想マシンを含むサーバを選択する必要があります。
+
+仮想マシンにログインし、スクリプトを実行してストレージのタイムアウト値を設定します。

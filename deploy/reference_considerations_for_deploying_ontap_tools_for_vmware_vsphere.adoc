@@ -1,0 +1,167 @@
+---
+permalink: deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html 
+sidebar: sidebar 
+keywords: Virtual Storage Console,Storage Replication Adapter 
+summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入計画を作成し、環境で ONTAP ツールをどのように設定するかを決めておくことを推奨します。 
+---
+= ONTAP ツールの導入に関する考慮事項
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VMware vSphere 用の ONTAP ツールを導入する前に、導入計画を作成し、環境で ONTAP ツールをどのように設定するかを決めておくことを推奨します。
+
+次の表に、 ONTAP ツールを導入する前に検討が必要な事項について、その概要を示します。
+
+|===
+
+
+| * 考慮事項 * | * 概要 * 
+
+
+ a| 
+ONTAP ツールを初めて導入する場合
+ a| 
+ONTAP ツールを導入すると、 VSC の機能が自動的にインストールされます。
+
+link:../deploy/concept_deploy_or_upgrade_ontap_tools.html["ONTAP ツールを導入してアップグレード"]
+
+link:../deploy/concept_installation_workflow_for_new_users.html["VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー"]
+
+
+
+ a| 
+VSC の既存の導入環境からアップグレードする
+ a| 
+VSC の既存の導入環境から ONTAP ツールにアップグレードする場合の手順のバージョンは、 VSC のバージョンと、 ONTAP ツールが導入済みかどうかによって異なります。詳細については、導入ワークフローとアップグレードに関するセクションを参照してください。
+
+link:../deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html["ONTAP ツールの既存ユーザ向けの導入ワークフロー"]
+
+アップグレード前に実施しておくべき作業：
+
+* 使用しているストレージシステムとそのクレデンシャルに関する情報を記録しておく必要があります。
++
+アップグレード後に、すべてのストレージシステムが自動的に検出され、正しいクレデンシャルが付与されていることを確認する必要があります。
+
+* 標準の VSC ロールに変更を加えた場合、変更を保存するにはそのロールをコピーする必要があります。
++
+標準のロールは、 VSC サービスを再起動するたびに現在のデフォルトで上書きされます。
+
+
+
+
+
+ a| 
+VSC の SSL 証明書の再生成
+ a| 
+SSL 証明書は、 ONTAP ツールの導入時に自動的に生成されます。サイト専用の証明書を作成するには、 SSL 証明書の再生成が必要になることがあります。
+
+link:../configure/task_regenerate_an_ssl_certificate_for_vsc.html["Virtual Storage Console の SSL 証明書を再生成する"]
+
+
+
+ a| 
+ESXi サーバの値を設定しています
+ a| 
+ESXi サーバの値のほとんどはデフォルトで設定されますが、値を検証しておくことを推奨します。これらの値は、内部テストに基づいています。環境によっては、パフォーマンスを向上させるために値を変更しなければならない場合があります。
+
+* link:../configure/task_configure_esx_server_multipathing_and_timeout_settings.html["ESXi サーバのマルチパスとタイムアウトを設定"]
+* link:../configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html["VMware vSphere 用の ONTAP ® ツールを使用して設定される ESXi ホストの値"]
+
+
+
+
+ a| 
+ゲストオペレーティングシステムのタイムアウト値
+ a| 
+ゲストオペレーティングシステム（ゲスト OS ）のタイムアウトスクリプトは、フェイルオーバーが適切に動作するように、サポートされている Linux 、 Solaris 、 Windows の各ゲストオペレーティングシステムの SCSI I/O タイムアウト値を設定します。
+
+|===
+次の表に、 ONTAP ツールを設定するために必要な事項について、その概要を示します。
+
+|===
+
+
+| * 考慮事項 * | * 概要 * 
+
+
+ a| 
+Role-Based Access Control （ RBAC ；ロールベースアクセス制御）の要件
+ a| 
+VSC は、 vCenter Server RBAC と ONTAP RBAC の両方をサポートしています。VSC を vCenter Server に登録する際に使用するアカウント（ https://<appliance_ip>:8143/Register.html` ）は、 vCenter Server 管理者（ vCenter Server の管理者ロールまたは管理者ロールに割り当てられている）である必要があります。管理者として VSC を実行する場合は、すべてのタスクに必要なアクセス許可と権限がすべて付与されている必要があります。
+
+vSphere オブジェクトへのアクセスを制限する必要がある場合、 vCenter Server の要件に一致する標準の VSC ロールを作成してユーザに割り当てることができます。
+
+ONTAP ツールに付属の JSON ファイルを使用して、 ONTAP System Manager で推奨される ONTAP ロールを作成できます。
+
+適切な権限とアクセス許可を持たないユーザがタスクを実行しようとした場合、そのタスクのオプションはグレー表示されます。
+
+* link:../concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html["ONTAP ツールに付属の標準ロール"]
+* link:../concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html["ONTAP ストレージシステムおよび vSphere オブジェクトの権限"]
+
+
+
+
+ a| 
+ONTAP バージョン
+ a| 
+ストレージシステムで ONTAP 9.3 、 9.5 、 9.6 、 9.7 、 9.8P1 以降が実行されている必要があります。
+
+
+
+ a| 
+ストレージ機能プロファイル
+ a| 
+ストレージ機能プロファイルを使用する場合やアラームを設定する場合は、 VASA Provider for ONTAP を有効にする必要があります。VASA Provider を有効にすると、 VMware Virtual Volumes （ VVol ）データストアを設定できるようになり、ストレージ機能プロファイルやアラームの作成と管理も可能になります。ボリュームやアグリゲートの容量が残り少なくなったときや、データストアが関連付けられているストレージ機能プロファイルに準拠しなくなったときに、アラームによって警告されます。
+
+|===
+
+
+== 導入に関するその他の考慮事項
+
+導入 ONTAP ツールをカスタマイズするときは、いくつかの要件について考慮する必要があります。
+
+
+
+=== アプライアンスの管理者ユーザのパスワード
+
+管理者パスワードにはスペースは使用できません。
+
+
+
+=== アプライアンスのメンテナンスコンソールのクレデンシャル
+
+メンテナンスコンソールにアクセスするには、「 maint 」ユーザ名を使用する必要があります。導入時に「 maint 」ユーザのパスワードを設定できます。パスワードを変更するには、 ONTAP ツールのメンテナンスコンソールの [ アプリケーションの設定 ] メニューを使用します。
+
+
+
+=== vCenter Server 管理者のクレデンシャル
+
+ONTAP ツールの導入時に vCenter Server の管理者クレデンシャルを設定できます。
+
+vCenter Server のパスワードが変更された場合は、 https://<IP>:8143/Register.html` の URL を使用して管理者のパスワードを更新できます。 IP アドレスは、導入時に指定した ONTAP ツールの IP アドレスです。
+
+
+
+=== vCenter Server の IP アドレス
+
+* ONTAP ツールを登録する vCenter Server インスタンスの IP アドレス（ IPv4 または IPv6 ）を指定する必要があります。
++
+生成される VSC 証明書と VASA 証明書のタイプは、導入時に指定した IP アドレス（ IPv4 または IPv6 ）によって異なります。ONTAP ツールの導入時に静的 IP の詳細と DHCP を入力しなかった場合は、 IPv4 アドレスと IPv6 アドレスの両方がネットワークから提供されます。
+
+* vCenter Server への登録に使用する ONTAP ツールの IP アドレスは、導入ウィザードで入力した vCenter Server の IP アドレスのタイプ（ IPv4 または IPv6 ）によって異なります。
++
+vCenter Server の登録時に使用したものと同じタイプの IP アドレスを使用して、 VSC と VASA の両方の証明書が生成されます。
+
++
+
+NOTE: IPv6 は vCenter Server 6.7 以降でのみサポートされます。
+
+
+
+
+
+=== アプライアンスのネットワーク・プロパティ
+
+DHCP を使用していない場合は、有効な DNS ホスト名（非修飾）と ONTAP ツールの静的 IP アドレス、およびその他のネットワークパラメータを指定します。これらのパラメータはすべて、適切なインストールと運用のために必要です。

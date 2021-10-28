@@ -1,0 +1,11 @@
+---
+permalink: manage/index.html 
+sidebar: sidebar 
+keywords:  
+summary:  
+---
+= 管理ガイド
+:icons: font
+:imagesdir: ../media/
+
+
