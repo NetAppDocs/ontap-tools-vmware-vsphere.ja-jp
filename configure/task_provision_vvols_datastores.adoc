@@ -16,7 +16,7 @@ summary: データストアのプロビジョニングウィザードを使用�
 
 * ESXi ホストの接続先のすべてのネットワークのサブネットの詳細が kaminoprefs.xml に入力されていることを確認する必要があります。
 +
-「異なるサブネット間でのデータストアのマウントの有効化」の項を参照し ONTAP てください。
+各種サブネット間でのデータストアのマウントの有効化 * のセクションを参照してください。
 
 * 逆方向のレプリケーションが成功するように、ソースサイトとターゲットサイトの両方のデータストアで同様のレプリケーションポリシーとスケジュールを設定する必要があります。
 
@@ -111,4 +111,4 @@ VVOL データストアの設定時にバックエンドでレプリケーショ
 
 * 関連情報 *
 
-link:../manage/reference_verify_vvol_dashboard_data_requirements.html["vVol ダッシュボードのデータ要件"]
+link:../manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html["vVol ダッシュボードを使用してパフォーマンスデータを分析します"]

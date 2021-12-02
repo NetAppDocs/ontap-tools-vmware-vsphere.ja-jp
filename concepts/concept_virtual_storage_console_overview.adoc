@@ -12,7 +12,7 @@ summary: VMware vSphere 用の ONTAP ツールは、ネットアップストレ�
 [role="lead"]
 VMware vSphere 用の ONTAP ツールは、ネットアップストレージシステムを使用する VMware 環境の仮想マシンに対して、エンドツーエンドのライフサイクル管理を提供します。管理者が vCenter Server 内でストレージを直接管理できるため、 VMware 環境のストレージとデータの管理が簡単になります。
 
-VMware は vSphere 6.5 で vSphere Client という名前の新しい HTML5 ベースのクライアントを導入しました。ONTAP ツール 9.6 では、 vSphere Client のみがサポートされます。ONTAP ツールは vSphere Client と統合されており、シングルサインオン（ SSO ）サービスを利用できます。複数の vCenter Server インスタンスがある環境では、管理する vCenter Server インスタンスごとに固有の VSC インスタンスを登録する必要があります。
+VMware は vSphere 6.5 で vSphere Client という名前の新しい HTML5 ベースのクライアントを導入しました。ONTAP ツール 9.6 以降のリリースでは、 vSphere Client のみがサポートされます。ONTAP ツールは vSphere Client と統合されており、シングルサインオン（ SSO ）サービスを利用できます。複数の vCenter Server インスタンスがある環境では、管理する vCenter Server インスタンスごとに固有の VSC インスタンスを登録する必要があります。
 
 ONTAP ツールの各コンポーネントは、ストレージをより効率的に管理するための機能を提供します。
 
@@ -57,7 +57,7 @@ VASA Provider for ONTAP は、 VMware vSphere APIs for Storage Awareness （ VAS
 * VVol データストアに作成された仮想マシンディスク（ VMDK ）と仮想マシンのパフォーマンスを監視する
 
 
-ONTAP 9.6 以前を使用している場合、 VASA Provider は VASA API を使用して vCenter Server と通信し、 ZAPI と呼ばれるネットアップの API を使用して ONTAP と通信します。ONTAP 9.6 以前の vVol ダッシュボードを表示するためには、 OnCommand API サービスをインストールして vCenter Server に登録しておく必要があります。ONTAP 9.7 を使用している場合、 vVol ダッシュボードを表示するために OnCommand API サービスを VASA Provider に登録する必要はありません。
+ONTAP 9.6 以前を使用している場合、 VASA Provider は VASA API を使用して vCenter Server と通信し、 ZAPI と呼ばれるネットアップの API を使用して ONTAP と通信します。ONTAP 9.6 以前の vVol ダッシュボードを表示するためには、 OnCommand API サービスをインストールして vCenter Server に登録しておく必要があります。ONTAP 9.7 以降のバージョンを使用している場合、 vVol ダッシュボードを表示するために OnCommand API サービスを VASA Provider に登録する必要はありません。
 
 
 NOTE: ONTAP 9.6 以前では、 VASA Provider に専用の OnCommand API サービスインスタンスが必要です。OnCommand API サービスの 1 つのインスタンスを複数の VASA Provider インスタンスで共有することはできません。

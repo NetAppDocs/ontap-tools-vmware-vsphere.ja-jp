@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords:  
 summary: VMware vSphere 用の ONTAP ® ツールでロールベースアクセス制御を使用する場合は、ストレージシステムで ONTAP RBAC を設定する必要があります。ONTAP RBAC 機能を使用すると、アクセス権限を制限したカスタムユーザアカウントを 1 つ以上作成できます。 
 ---
-= VMware vSphere 向け ONTAP ® ツール用の ONTAP RBAC の設定方法
+= VMware vSphere 用の ONTAP ツール用に ONTAP の RBAC を設定する方法
 :icons: font
 :imagesdir: ../media/
 
@@ -76,12 +76,5 @@ VSC では、 ONTAP の権限を以下に示す VSC ロールに分類します�
 == SRA ロール
 
 SRA では、 ONTAP 権限をクラスタレベルまたは SVM レベルで SAN または NAS ロールに分類します。これにより、ユーザは SRM 処理を実行できるようになります。
-
-
-NOTE: ONTAP コマンドを使用してロールと権限を手動で設定する場合は、ネットアップナレッジベースの記事を参照してください。
-
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/VSC%2C_VASA%2C_and_SRA_7.0_ONTAP_RBAC_Configuration_Version_1["VSC 、 VASA 、 SRA 7.0 の ONTAP RBAC 設定"]
-* https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Roll_up_of_all_commands_for_VSC_and_SRA_for_SVM_level["SVM レベルで VSC と SRA に対するすべてのコマンドを集計します"]
-
 
 VSC にクラスタを追加する場合は、 ONTAP RBAC ロールの権限の初期検証が実行されます。直接接続の SVM のストレージ IP を追加した場合、初期検証は実行されません。タスクワークフローの段階で権限が確認されて適用されます。

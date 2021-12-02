@@ -2,7 +2,7 @@
 permalink: concepts/concept_privileges_required_for_vsc_tasks.html 
 sidebar: sidebar 
 keywords:  
-summary: ONTAP ® のタスクを実行するために必要な権限の組み合わせは、 Virtual Storage Console \ （ VSC\ ）に固有の権限と vCenter Server の標準権限の組み合わせと異なります。 
+summary: VMware vSphere のタスク用の各種 ONTAP ツールに必要な権限の組み合わせは、 Virtual Storage Console \ （ VSC\ ）固有の権限と vCenter Server の標準権限の組み合わせと異なります。 
 ---
 = VSC タスクに必要な権限
 :icons: font
@@ -10,7 +10,7 @@ summary: ONTAP ® のタスクを実行するために必要な権限の組み�
 
 
 [role="lead"]
-ONTAP ® のタスクを実行するために必要な権限の組み合わせは、 Virtual Storage Console （ VSC ）固有の権限と vCenter Server 標準の権限の組み合わせと異なります。
+VMware vSphere のタスクを実行するために必要な ONTAP ツールの権限の組み合わせは、 Virtual Storage Console （ VSC ）に固有の権限と vCenter Server 標準の権限の組み合わせと異なります。
 
 VSC タスクに必要な権限については、ネットアップの技術情報アーティクル 1032542 を参照してください。
 
@@ -18,9 +18,9 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_S
 
 
 
-== VMware vSphere 用の ONTAP ® ツールで必要な製品レベルの権限
+== VMware vSphere 用の ONTAP ツールで必要な製品レベルの権限
 
-VMware vSphere GUI の ONTAP ® ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。
+VMware vSphere GUI の ONTAP ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。
 
 次の表に、 VSC の製品レベルの View 権限について説明します。
 

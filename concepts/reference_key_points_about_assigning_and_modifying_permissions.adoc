@@ -2,7 +2,7 @@
 permalink: concepts/reference_key_points_about_assigning_and_modifying_permissions.html 
 sidebar: sidebar 
 keywords:  
-summary: vCenter Server のアクセス許可を使用する際にはいくつかの点に注意する必要があります。VMware vSphere タスク用の ONTAP ® ツールを使用するかどうかは、アクセス許可を割り当てた場所、およびアクセス許可の変更後にユーザが実行した操作によって決まります。 
+summary: vCenter Server のアクセス許可を使用する際にはいくつかの点に注意する必要があります。VMware vSphere タスク用の ONTAP ツールを使用できるかどうかは、アクセス許可を割り当てた場所、およびアクセス許可の変更後にユーザが実行した操作によって決まります。 
 ---
 = vCenter Server のアクセス許可の割り当てと変更に関する要点
 :icons: font
@@ -10,7 +10,7 @@ summary: vCenter Server のアクセス許可を使用する際にはいくつ�
 
 
 [role="lead"]
-vCenter Server のアクセス許可を使用する際にはいくつかの点に注意する必要があります。VMware vSphere タスク用の ONTAP ® ツールを使用するかどうかは、アクセス許可を割り当てた場所、およびアクセス許可の変更後にユーザが実行した操作によって決まります。
+vCenter Server のアクセス許可を使用する際にはいくつかの点に注意する必要があります。VMware vSphere タスク用の ONTAP ツールを使用できるかどうかは、アクセス許可を割り当てた場所、およびアクセス許可の変更後にユーザが実行した操作によって決まります。
 
 
 

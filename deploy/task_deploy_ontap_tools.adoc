@@ -20,16 +20,13 @@ summary: アプライアンスを使用するには、環境に ONTAP ツール�
 NOTE: ONTAP ツールは、 Windows 環境の vCenter Server または VMware vCenter Server Virtual Appliance （ vCSA ）環境に登録できます。
 
 +
-https://mysupport.netapp.com/matrix/imt.jsp?components=97563;&solution=56&isHWU&src=IMT["Interoperability Matrix Tool ： VSC 9.7"]
+https://mysupport.netapp.com/matrix/imt.jsp?components=99343;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool ： OTV 9.8"]
 
 * vCenter Server 環境を設定およびセットアップしておく必要があります。
 * 仮想マシン用の ESXi ホストのセットアップが完了している必要があります。
 * .ova ファイルをダウンロードしておく必要があります。
 * vCenter Server インスタンスの管理者のログインクレデンシャルが必要です。
 * vSphere Client のすべてのブラウザセッションからログアウトして、ブラウザを閉じておきます。また、 ONTAP ツールの導入時にブラウザキャッシュの問題がブラウザキャッシュに表示されないように、ブラウザキャッシュを削除しておく必要があります。
-+
-link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします"]
-
 * Internet Control Message Protocol （ ICMP ）を有効にしておく必要があります。
 +
 ICMP が無効になっていると、 ONTAP ツールの初期設定が失敗し、導入後に VSC が VSC サービスと VASA Provider サービスを開始できなくなります。導入後に、 VSC サービスと VASA Provider サービスを手動で有効にする必要があります。
@@ -70,7 +67,7 @@ ONTAP ツールの _.ova ファイルを保存先から選択します。
 |===
 . 詳細を入力して、導入ウィザードをカスタマイズします。
 +
-を参照してください link:../deploy/reference_deployment_customization_requirements.html["導入のカスタマイズに関する考慮事項"] を参照してください。
+を参照してください link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["導入のカスタマイズに関する考慮事項"] を参照してください。
 
 . 構成データを確認し、 [ 次へ * ] をクリックして導入を終了します。
 +
@@ -94,7 +91,7 @@ link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["v
 
 NOTE: ONTAP 9.6 以前を使用している場合、 vVol ダッシュボードを表示するには、 OnCommand API サービスをダウンロードしてインストールする必要があります。ただし、 ONTAP 9.7 の場合は、 OnCommand API サービスを VASA Provider に登録する必要はありません。
 
-link:../deploy/task_register_oncommand_api_services_with_ONTAP_tools.html["ONTAP ツールへの OnCommand API サービスの登録"]
+link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["仮想データストアを設定するための VASA Provider の有効化"]
 
 * 関連情報 *
 

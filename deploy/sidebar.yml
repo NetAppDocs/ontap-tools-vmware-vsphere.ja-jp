@@ -6,6 +6,8 @@ entries:
   url: "/deploy/concept_installation_workflow_for_new_users.html"
 - title: ONTAP ツールの既存ユーザ向けの導入ワークフロー
   url: "/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html"
+- title: ONTAP ツールクイックスタート
+  url: "/qsg.html"
 - title: ONTAP ツールを導入するための要件
   entries:
   - title: VSC のポート要件
