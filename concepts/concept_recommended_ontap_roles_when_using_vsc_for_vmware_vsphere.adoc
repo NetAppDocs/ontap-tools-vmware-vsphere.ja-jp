@@ -2,7 +2,7 @@
 permalink: concepts/concept_recommended_ontap_roles_when_using_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: VMware vSphere およびロールベースアクセス制御（ RBAC ）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールを設定できます。これらのロールには、 Virtual Storage Console\(VSC\) タスクで実行するストレージ操作に必要な ONTAP 権限が含まれています。 
+summary: 'VMware vSphere およびロールベースアクセス制御（ RBAC ）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールを設定できます。これらのロールには、 Virtual Storage Console\(VSC\) タスクで実行するストレージ操作に必要な ONTAP 権限が含まれています。' 
 ---
 = VMware vSphere 用の ONTAP ツールを使用する際に推奨される ONTAP ロール
 :icons: font
