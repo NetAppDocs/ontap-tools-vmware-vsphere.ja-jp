@@ -15,7 +15,7 @@ ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用�
 * 必要なもの *
 
 * https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip を使用して、 ONTAP ツールから ONTAP Privileges ファイルをダウンロードしておく必要があります。
-* ONTAP 9.8 のストレージを設定しておく必要があります。
+* ONTAP 9.8P1 以降のストレージを設定しておく必要があります。
 * ストレージシステムの管理者権限でログインしている必要があります。
 
 

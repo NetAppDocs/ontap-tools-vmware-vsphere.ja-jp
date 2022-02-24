@@ -20,7 +20,7 @@ summary: アプライアンスを使用するには、環境に ONTAP ツール�
 NOTE: ONTAP ツールは、 Windows 環境の vCenter Server または VMware vCenter Server Virtual Appliance （ vCSA ）環境に登録できます。
 
 +
-https://mysupport.netapp.com/matrix/imt.jsp?components=99343;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool ： OTV 9.8"]
+https://imt.netapp.com/matrix/imt.jsp?components=103229;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"]
 
 * vCenter Server 環境を設定およびセットアップしておく必要があります。
 * 仮想マシン用の ESXi ホストのセットアップが完了している必要があります。
@@ -67,7 +67,12 @@ ONTAP ツールの _.ova ファイルを保存先から選択します。
 |===
 . 詳細を入力して、導入ウィザードをカスタマイズします。
 +
-を参照してください link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["導入のカスタマイズに関する考慮事項"] を参照してください。
+（オプション） Configure vCenter （ vCenter の構成）または Enable VCF （ VCF を有効にする）セクションで、 * Enable VMware Cloud Foundation （ VCF ） * チェックボックスを選択し、 ONTAP ツールの資格情報のパスワードを入力します。IP アドレスを指定する必要はありませんが、パスワードを指定する必要があります。詳細については、以下を参照してください。
+
++
+** link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["導入のカスタマイズに関する考慮事項"]
+** link:../deploy/vmware_cloud_foundation_mode_deployment.html["ONTAP ツールの VMware Cloud Foundation 配置モード"]
+
 
 . 構成データを確認し、 [ 次へ * ] をクリックして導入を終了します。
 +

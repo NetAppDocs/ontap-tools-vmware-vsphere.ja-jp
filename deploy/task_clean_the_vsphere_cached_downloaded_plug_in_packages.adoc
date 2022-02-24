@@ -41,7 +41,7 @@ vCSA
 .. SSH で VCSA アプライアンスに接続します。
 .. cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity を使用して、 vCenter Web Client UI 拡張ディレクトリにディレクトリを変更します
 .. 「 rm -rf 」コマンドを使用して、ネットアップに固有のキャッシュされたプラグインパッケージを削除します。例：ここで、 x.x.x.xxxx はプラグインのバージョンです。--rm -rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx rm -rf com.netapp.nvpf.webclient-x.x.x.xxxx rm -rf com.netapp.vsch5-x.x.x.xxxx ----
-.. 「 cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity 」を使用して、ディレクトリを vCenter クライアント（ HTML5 ） UI 拡張ディレクトリに変更します
+.. 「 cd /etc/vmware/vsphere-clientui/vc-packages/vsphere-client-serenity 」を使用して、ディレクトリを vCenter クライアント（ HTML5 ） UI 拡張ディレクトリに変更します
 .. 「 rm -rf 」コマンドを使用して、ネットアッププラグインに固有のキャッシュされたプラグインパッケージを削除します。例： here x.x.x.xxxx は、プラグインのバージョンです。 --rm -rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx rm -rf com.netapp.nvpf.webclient-x.x.x.xxxx rm -rf com.netapp.vsch5-x.x.x.xxxx ----
 
 

@@ -1,0 +1,23 @@
+---
+permalink: configure/add_different_subnets.html 
+sidebar: sidebar 
+keywords:  
+summary: ONTAP ツールのインターフェイスを使用して、データストアのマウント用に別のサブネットを追加できるようになりました。 
+---
+= 別のサブネットを追加してください
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP ツールインターフェイスまたは REST API を使用して、 ESXi ホストの異なるサブネットを追加できます。これにより、ストレージシステムのプロビジョニング後にデータストアのマウント処理用のサブネットを許可または制限できます。ESXi ホストのサブネットを追加しないと、それらのサブネットに対するデータストアのマウント処理が ONTAP ツールによってブロックされます。
+
+* 手順 *
+
+. vCenter Server インスタンスにログインし、 ONTAP ツールにアクセスします。
+. ホームページで、 [* 設定 *>* サブネットアクセスの管理 *] をクリックします。
+. [Manage Subnet Access] ダイアログボックスで、 [Allowed Subnets for NFS Subnets Access] の [*Selected] オプションをクリックします。
+. 必要なサブネットの値を入力し、 * add * をクリックします。
+. 制限付きサブネットの場合は、 [* なし（ None ） ] または [* 選択済み（ * Selected ） ] を選択
+. iSCSI Subnets Access に対して上記の手順を繰り返し、 * Apply * をクリックします。
+

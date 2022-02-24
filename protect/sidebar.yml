@@ -18,6 +18,8 @@ entries:
   url: "/protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html"
 - title: 仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
   url: "/protect/concept_configure_replication_for_vvols_datastore.html"
+- title: 既存のデータストア用に VVol レプリケーションを設定する
+  url: "/protect/configure_vvols_replication_existing_datastore.html"
 - title: 保護されていない仮想マシンを保護
   url: "/protect/task_protect_non_protected_virtual_machines.html"
 - title: 保護対象サイトとリカバリサイトを設定

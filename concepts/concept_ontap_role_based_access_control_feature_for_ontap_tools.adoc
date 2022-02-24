@@ -52,7 +52,7 @@ VMware vSphere および Role-Based Access Control （ RBAC ；ロールベー�
 
 新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。次のいずれかを使用して ONTAP ロールを作成できます。
 
-* ONTAP System Manager 9.7 以降が必要です
+* ONTAP システムマネージャ 9.8P1 以降
 +
 link:../configure/task_configure_user_role_and_privileges.html["ユーザロールと権限を設定"]
 

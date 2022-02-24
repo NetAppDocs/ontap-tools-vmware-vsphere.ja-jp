@@ -79,10 +79,10 @@ ONTAP ツールで使用されるデフォルトの双方向 TCP ポートは次
 | * ストレージ、ホスト、アプリケーション * | * バージョン要件 * 
 
 
-| ONTAP | ONTAP 9.1 、 9.3 、 9.5 、 9.6 、 9.7 、 9.8P1 以降。 
+| ONTAP | ONTAP 9.3 、 9.5 、 9.6 、 9.7 、 9.8P1 以降。 
 
 
-| VMware vSphere 、 vCenter Server 、 ESXi ホスト、 Site Recovery Manager （ SRM ）、プラグインアプリケーション、およびデータベース列 1 | を参照してください https://mysupport.netapp.com/matrix/imt.jsp?components=99343;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^] 
+| VMware vSphere 、 vCenter Server 、 ESXi ホスト、 Site Recovery Manager （ SRM ）、プラグインアプリケーション、およびデータベース列 1 | を参照してください https://imt.netapp.com/matrix/imt.jsp?components=103229;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool ： OTV 9.10"] 
 |===
 
 
@@ -117,9 +117,12 @@ SRA を導入する場合は ' ソース・サイトとデスティネーショ�
 . .ova ファイルの URL を入力するか、 .ova ファイルが保存されているフォルダを参照して、 * Next * をクリックします。
 . 必要な詳細を入力して導入を完了します。
 +
+
+NOTE: （オプション） vCenter Server に登録せずにコンテナを作成する場合は、 Configure vCenter または Enable VCF セクションで Enable VMware Cloud Foundation （ VCF ）チェックボックスをオンにします。
+
+
+
 導入の進捗状況は、 [* タスク * ] タブで確認でき、導入が完了するまで待つことができます。
-
-
 
 
 

@@ -2,7 +2,7 @@
 permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: VMware vSphere 用の ONTAP ® ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。Virtual Storage Console （ VSC\ ）で設定される値は、ネットアップ独自のテスト結果に基づいています。 
+summary: VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。Virtual Storage Console （ VSC\ ）で設定される値は、ネットアップ独自のテスト結果に基づいています。 
 ---
 = ONTAP ツールを使用して設定される ESXi ホストの値
 :icons: font
@@ -10,7 +10,7 @@ summary: VMware vSphere 用の ONTAP ® ツールを使用して ESXi ホスト�
 
 
 [role="lead"]
-VMware vSphere 用の ONTAP ® ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。Virtual Storage Console （ VSC ）で設定される値は、ネットアップ独自のテスト結果に基づいています。
+VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。ONTAP ツールで設定される値は、ネットアップ独自のテスト結果に基づいています。
 
 ESXi ホストでは、次の値を設定できます。
 
@@ -38,7 +38,7 @@ vSphere 6.0 以降を使用している場合は、この値を 32 に設定し�
 
 * * Net.TcpipHeapMax *
 +
-vSphere 6.0 以降を使用している場合は、この値を 1536 に設定します。
+vSphere 6.0 以降を使用している場合は、 ESXi ホスト 6.x の場合は値を 512 に、 ESXi 7.x の場合は 1024 に設定します。
 
 * * NFS.MaxVolumes *
 +

@@ -24,7 +24,7 @@ https://mysupport.netapp.com/site/global/dashboard[]
 * ONTAP 9.3 以降をストレージシステムとして使用している必要があります。
 
 
-ONTAP から取得された IOPS データは四捨五入されて、 vVol ダッシュボードに表示されます。ONTAP から取得される実際の IOPS 値と vVol ダッシュボードに表示される IOPS 値は異なる可能性があります。9.8 リリースの ONTAP ツールでは、 NFS ベースの VVol データストアについてパフォーマンス監視を実行できます。
+ONTAP から取得された IOPS データは四捨五入されて、 vVol ダッシュボードに表示されます。ONTAP から取得される実際の IOPS 値と vVol ダッシュボードに表示される IOPS 値は異なる可能性があります。ONTAP ツールを使用すると、 NFS ベースの VVol データストアのパフォーマンスを監視できます。
 
 
 NOTE: OnCommand API サービスを初めて登録する場合、 vVol ダッシュボードに SAN vVol データストアのすべてのパフォーマンス指標データが表示されるまでに 15~30 分かかります。

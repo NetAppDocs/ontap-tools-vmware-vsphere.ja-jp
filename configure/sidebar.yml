@@ -26,6 +26,8 @@ entries:
   entries:
   - title: プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
     url: "/configure/reference_set_ipv4_or_ipv6.html"
+  - title: 別のサブネットを追加してください
+    url: "/configure/add_different_subnets.html"
   - title: 異なるサブネット間でのデータストアのマウントを有効にする
     url: "/configure/task_enable_datastore_mounting_across_different_subnets.html"
   - title: VSC の SSL 証明書の再生成

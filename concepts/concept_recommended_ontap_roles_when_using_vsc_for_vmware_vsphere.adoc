@@ -10,11 +10,11 @@ summary: 'VMware vSphere およびロールベースアクセス制御（ RBAC �
 
 
 [role="lead"]
-VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、 Virtual Storage Console （ VSC ）タスクで実行するストレージ処理に必要な ONTAP 権限が含まれています。
+VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、 Virtual Storage Console （ VSC ）タスクで実行するストレージ処理に必要な ONTAP 権限が含まれています。
 
 新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。次のいずれかを使用して ONTAP ロールを作成できます。
 
-* ONTAP System Manager 9.7 以降が必要です
+* ONTAP システムマネージャ 9.8P1 以降
 +
 link:../configure/task_configure_user_role_and_privileges.html["ユーザロールと権限を設定"]
 
