@@ -436,6 +436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -625,6 +627,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -790,6 +794,8 @@
 
 </ul>
   
+
+
 
 
 
@@ -1061,7 +1067,7 @@
   });
 </script><div class="sidebar-nav-container">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/index.html">
-        VMware vSphere ドキュメント用の ONTAP ツール
+        VMware vSphere 9.10 ドキュメント用の ONTAP ツール
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/release_notes.html">
         リリースノート
       </a></li><li class="subfolders "><a href="#">
@@ -1101,6 +1107,8 @@
         VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html">
         ONTAP ツールの既存ユーザ向けの導入ワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html">
+        ONTAP ツールの VMware Cloud Foundation 配置モード
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/qsg.html">
         ONTAP ツールクイックスタート
       </a></li><li class="subfolders "><a href="#">
@@ -1164,6 +1172,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_set_ipv4_or_ipv6.html">
         プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html">
+        別のサブネットを追加してください
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_enable_datastore_mounting_across_different_subnets.html">
         異なるサブネット間でのデータストアのマウントを有効にする
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_regenerate_an_ssl_certificate_for_vsc.html">
@@ -1229,6 +1239,8 @@
         Windows SRM を SRM アプライアンスに移行します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/concept_configure_replication_for_vvols_datastore.html">
         仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html">
+        既存のデータストア用に VVol レプリケーションを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_protect_non_protected_virtual_machines.html">
         保護されていない仮想マシンを保護
       </a></li><li class="subfolders "><a href="#">
@@ -1343,7 +1355,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere</a>
+          <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;9.10</a>
         </li>
         <li class="n-breadcrumb__list-item">
           SRM アプライアンスで SRA を設定する
@@ -1376,7 +1388,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 18:26:10 +0000">01/31/2022</time>
+    <time datetime="2022-02-24 06:13:57 +0000">02/24/2022</time>
     
   
 
@@ -1405,10 +1417,8 @@
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p>SRM アプライアンスに .tar.gz ファイルをアップロードしておく必要があります。</p>
-</div>
 <div class="ulist">
+<div class="title">tar.gz ファイルをからダウンロードしておく必要があります <a href="https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab">"ネットアップサポートサイト"</a>。</div>
 <ul>
 <li>
 <p>このタスクについて *</p>
@@ -1425,19 +1435,28 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
+<p>SRM アプライアンス画面で、 * Storage Replication Adapter * &gt; * New Adapter * をクリックします。</p>
+</li>
+<li>
+<p>SRM に .tar.gz_file をアップロードします。</p>
+</li>
+<li>
+<p>アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。</p>
+</li>
+<li>
 <p>putty を使用して、管理者アカウントで SRM アプライアンスにログインします。</p>
 </li>
 <li>
 <p>root ユーザに切り替えます。 root ユーザには「 root 」コマンドを使用します</p>
 </li>
 <li>
-<p>ログの場所で、次のコマンドを入力して、 SRA Docker 「 ps -l 」で使用される Docker ID を取得します</p>
+<p>ログの場所で次のコマンドを入力して、 SRA で使用されている Docker ID を取得します：「 docker ps -l 」</p>
 </li>
 <li>
-<p>コンテナ ID にログインするには、 docker 「 exec-it-u SRM &lt;container id&gt;sh` 」コマンドを入力します</p>
+<p>コンテナ ID にログインするには、次のコマンドを入力します。「 docker exec-it-u SRM &lt;container id&gt;sh`</p>
 </li>
 <li>
-<p>コマンド「 perl command.pl -i &lt;va-IP&gt; administrator &lt;va-password&gt;`` 」を使用して、 ONTAP ツールの IP アドレスとパスワードで SRM を設定します</p>
+<p>次のコマンドを使用して、 ONTAP ツールの IP アドレスとパスワードで SRM を設定します。「 perl command.pl -i &lt;va-IP&gt; administrator &lt;va-password&gt;`</p>
 <div class="paragraph">
 <p>ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。SRA は、指定された IP アドレス、ポート、およびクレデンシャルを使用して SRA サーバと通信できます。</p>
 </div>

@@ -436,6 +436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -625,6 +627,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -788,6 +792,8 @@
     
 
   
+
+
 
 
 
@@ -1061,7 +1067,7 @@
   });
 </script><div class="sidebar-nav-container">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/index.html">
-        VMware vSphere ドキュメント用の ONTAP ツール
+        VMware vSphere 9.10 ドキュメント用の ONTAP ツール
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/release_notes.html">
         リリースノート
       </a></li><li class="subfolders "><a href="#">
@@ -1101,6 +1107,8 @@
         VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html">
         ONTAP ツールの既存ユーザ向けの導入ワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html">
+        ONTAP ツールの VMware Cloud Foundation 配置モード
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/qsg.html">
         ONTAP ツールクイックスタート
       </a></li><li class="subfolders "><a href="#">
@@ -1164,6 +1172,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_set_ipv4_or_ipv6.html">
         プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html">
+        別のサブネットを追加してください
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_enable_datastore_mounting_across_different_subnets.html">
         異なるサブネット間でのデータストアのマウントを有効にする
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_regenerate_an_ssl_certificate_for_vsc.html">
@@ -1229,6 +1239,8 @@
         Windows SRM を SRM アプライアンスに移行します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/concept_configure_replication_for_vvols_datastore.html">
         仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html">
+        既存のデータストア用に VVol レプリケーションを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_protect_non_protected_virtual_machines.html">
         保護されていない仮想マシンを保護
       </a></li><li class="subfolders "><a href="#">
@@ -1343,7 +1355,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere</a>
+          <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;9.10</a>
         </li>
         <li class="n-breadcrumb__list-item">
           ストレージ機能プロファイルを作成する
@@ -1376,7 +1388,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 18:26:10 +0000">01/31/2022</time>
+    <time datetime="2022-02-24 06:13:57 +0000">02/24/2022</time>
     
   
 
@@ -1406,7 +1418,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>VASA Provider インスタンスを VMware vSphere 用の ONTAP ® ツールに登録しておく必要があります。</p>
+<p>VASA Provider インスタンスを VMware vSphere 用の ONTAP ツールに登録しておく必要があります。</p>
 </div>
 <div class="paragraph">
 <p>プロファイルを設定したら、必要に応じてプロファイルを編集できます。</p>
@@ -1458,27 +1470,26 @@
 </ol>
 </div>
 </li>
-<li>
-<p>注： *</p>
-<div class="ulist">
-<ul>
-<li>
-<p>既存のプロファイルに関連付けられている値を表示するには、ストレージ機能のプロファイルページでプロファイル名をクリックします。VASA Provider には、そのプロファイルの概要ページが表示されます。</p>
-</li>
-<li>
-<p>9.6 ONTAP ツールよりも前に作成された既存のストレージ機能プロファイルは変更できません。</p>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-tools-vmware-vsphere/images/note.svg" alt="注記">
+</td>
+<td class="content">
+既存のプロファイルに関連付けられている値を表示するには、ストレージ機能のプロファイルページでプロファイル名をクリックします。VASA Provider には、そのプロファイルの概要ページが表示されます。
+</td>
+</tr>
+</table>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>ストレージ機能プロファイルの作成ウィザードの手順に従って、プロファイルを設定するか、既存のプロファイルの値を編集して変更します。</p>
 <div class="paragraph">
 <p>このウィザード内のフィールドのほとんどはわかりやすいもので、説明を必要としません。以下は、説明が必要な一部のフィールドのリストです。</p>
-</div>
-</li>
-</ol>
-</div>
-</li>
-</ul>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1514,6 +1525,14 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>プロトコル</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>リストされている使用可能なプロトコルの中から、ストレージシステムに対して選択したプラットフォームに基づいて選択できます。仮想マシンを設定する際に、ストレージ機能プロファイルを使用して VM ストレージポリシーを設定できます。プロトコルフィールドでは、特定のプロトコルに基づいてデータストアがフィルタリングされます。フィールド「 any 」を使用すると、すべてのプロトコルを使用できます。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>パフォーマンス</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
@@ -1527,7 +1546,7 @@
 <li>
 <p>QoS ポリシーグループを選択すると、従来の QoS ポリシーが VVOL に適用されます。</p>
 <div class="paragraph">
-<p>QoS 機能を使用できるように、 * Max IOPS * と * Min IOPS * の値を設定できます。Infinite IOPS を選択した場合、 Max IOPS フィールドは無効になります。従来のデータストアの場合は、「最大 IOPS 」の値が設定された QoS ポリシーが作成され、 FlexVol ボリュームに割り当てられます。VVOL データストアで使用すると、各データ VVol に対して最大 IOPS と最小 IOPS の値が設定された QoS ポリシーが作成されます。</p>
+<p>QoS 機能を使用できるように、 * Max IOPS * と * Min IOPS * の値を設定できます。Infinite IOPS を選択した場合、 Max IOPS フィールドは無効になります。従来のデータストアの場合は、「最大 IOPS 」の値が設定された QoS ポリシーが作成され、 FlexVol ボリュームに割り当てられます。VVOL データストアで使用すると、各データ VVOL データストアの最大 IOPS と最小 IOPS の値が設定された QoS ポリシーが作成されます。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1568,31 +1587,24 @@
 <li>
 <p>AFF ストレージを選択した場合は、暗号化と階層化を有効にすることができます。</p>
 <div class="paragraph">
-<p>重複排除と圧縮は、 AFF ストレージに対してはデフォルトで有効になり、無効にすることはできません。スペースリザベーションはシンに設定されており、シックに変更することはできません（アグリゲートの効率化と階層化にはシンが必要）。</p>
+<p>重複排除と圧縮は、 AFF ストレージに対してはデフォルトで有効になり、無効にすることはできません。</p>
 </div>
 <div class="paragraph">
 <p>階層化の属性を有効にすると、 FabricPool 対応アグリゲート（ ONTAP 9.4 以降を搭載した VASA Provider for AFF システムでサポート）に含まれるボリュームを使用できるようになります。階層化の属性として、次のいずれかのポリシーを設定できます。</p>
 </div>
 </li>
 <li>
-<p>いずれか： Fabric Pool を使用するかどうかに関係なく、このストレージ機能プロファイルを FlexVol ボリュームで使用できます</p>
-</li>
-<li>
 <p>なし：ボリュームデータを大容量階層に移動しないようにします</p>
 </li>
 <li>
-<p>Snapshot のみ：アクティブなファイルシステムに関連付けられていないボリュームの Snapshot コピーのユーザデータブロックを大容量階層に移動します</p>
-</li>
-<li>
-<p>自動： Snapshot コピー内のコールドユーザデータブロックをアクティブなファイルシステムから大容量階層に移動します</p>
+<p>Snapshot ：アクティブなファイルシステムに関連付けられていないボリューム Snapshot コピーのユーザデータブロックを大容量階層に移動します</p>
 </li>
 </ul>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="olist arabic">
-<ol class="arabic">
+</li>
 <li>
 <p>Summary （サマリ）ページで選択内容を確認し、 * OK * をクリックします。</p>
 <div class="paragraph">
@@ -1600,9 +1612,6 @@
 </div>
 </li>
 </ol>
-</div>
-</li>
-</ul>
 </div>
 
     </article>

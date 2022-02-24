@@ -436,6 +436,8 @@
 
 
 
+
+
     
       <ul class="subfolders" style="display:none;">
         <li class="pdf-ux-container">
@@ -625,6 +627,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -788,6 +792,8 @@
     
 
   
+
+
 
 
 
@@ -1061,7 +1067,7 @@
   });
 </script><div class="sidebar-nav-container">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/index.html">
-        VMware vSphere ドキュメント用の ONTAP ツール
+        VMware vSphere 9.10 ドキュメント用の ONTAP ツール
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/release_notes.html">
         リリースノート
       </a></li><li class="subfolders "><a href="#">
@@ -1101,6 +1107,8 @@
         VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html">
         ONTAP ツールの既存ユーザ向けの導入ワークフロー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html">
+        ONTAP ツールの VMware Cloud Foundation 配置モード
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/qsg.html">
         ONTAP ツールクイックスタート
       </a></li><li class="subfolders "><a href="#">
@@ -1164,6 +1172,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_set_ipv4_or_ipv6.html">
         プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html">
+        別のサブネットを追加してください
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_enable_datastore_mounting_across_different_subnets.html">
         異なるサブネット間でのデータストアのマウントを有効にする
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_regenerate_an_ssl_certificate_for_vsc.html">
@@ -1229,6 +1239,8 @@
         Windows SRM を SRM アプライアンスに移行します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/concept_configure_replication_for_vvols_datastore.html">
         仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html">
+        既存のデータストア用に VVol レプリケーションを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_protect_non_protected_virtual_machines.html">
         保護されていない仮想マシンを保護
       </a></li><li class="subfolders "><a href="#">
@@ -1343,7 +1355,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere</a>
+          <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;9.10</a>
         </li>
         <li class="n-breadcrumb__list-item">
           ストレージ機能プロファイルの概要
@@ -1376,7 +1388,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-01-31 18:26:10 +0000">01/31/2022</time>
+    <time datetime="2022-02-24 06:13:57 +0000">02/24/2022</time>
     
   
 
@@ -1410,10 +1422,13 @@
 <p>VVol データストアの場合、プロビジョニングウィザードでは、複数のストレージ機能プロファイルを使用してデータストア内に異なる FlexVol を作成できます。VM ストレージポリシーを使用すると、その定義に従って、該当する FlexVol に仮想マシン用の VVol を自動的に作成できます。たとえば、代表的なストレージクラス（パフォーマンス制限や暗号化や FabricPool などの機能）用のプロファイルを作成することができます。あとで、仮想マシンのビジネスクラスを表す VM ストレージポリシーを vCenter Server に作成し、該当するストレージ機能プロファイルに名前（ Production 、 Test 、 HR など）でリンクできます。</p>
 </div>
 <div class="paragraph">
-<p>VVol で使用する場合は、ストレージ機能プロファイルによって個々の仮想マシンのストレージパフォーマンスも設定され、パフォーマンス要件を最も満たす VVol データストアの FlexVol に仮想マシンが配置されます。QoS ポリシーにパフォーマンスの最小 IOPS または最大 IOPS を指定できます。仮想マシンを最初にプロビジョニングするときはデフォルトのポリシーを使用できます。また、ビジネス要件の変化に応じてあとから VM ストレージポリシーを変更することもできます。9.8 リリースの ONTAP ツールには、次の新しいデフォルトのストレージ機能プロファイルが用意されています。</p>
+<p>VVol で使用する場合は、ストレージ機能プロファイルによって個々の仮想マシンのストレージパフォーマンスも設定され、パフォーマンス要件を最も満たす VVol データストアの FlexVol に仮想マシンが配置されます。QoS ポリシーにパフォーマンスの最小 IOPS または最大 IOPS を指定できます。仮想マシンを最初にプロビジョニングするときはデフォルトのポリシーを使用できます。また、ビジネス要件の変化に応じてあとから VM ストレージポリシーを変更することもできます。このリリースの ONTAP ツールのデフォルトのストレージ機能プロファイルは次のとおりです。</p>
 </div>
 <div class="ulist">
 <ul>
+<li>
+<p>AFF のシック</p>
+</li>
 <li>
 <p>FAS_MAX20</p>
 </li>
@@ -1435,13 +1450,19 @@
 <li>
 <p>AFF_encrypted_Min50</p>
 </li>
+<li>
+<p>プラチナ</p>
+</li>
+<li>
+<p>ブロンズ</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
 <p>vCenter Server は LUN またはボリュームのストレージ機能を、その LUN またはボリュームでプロビジョニングされるデータストアに関連付けます。これにより、仮想マシンのストレージプロファイルに一致するデータストアに仮想マシンをプロビジョニングして、データストアクラスタ内のすべてのデータストアのストレージサービスレベルを同じにすることができます。</p>
 </div>
 <div class="paragraph">
-<p>VMware vSphere 用の ONTAP ツールを使用すると、すべての仮想ボリューム（ VVOL ）データストアを新しいストレージ機能プロファイルで設定できます。これにより、同じ VVOL データストアに IOPS 要件が異なる仮想マシンをプロビジョニングすることができます。IOPS の要件がある VM のプロビジョニングワークフローを実行する際には、互換性があるデータストアのリストにすべての vVol データストアが表示されます。</p>
+<p>ONTAP ツールでは、すべての仮想ボリューム（ VVol ）データストアを新しいストレージ機能プロファイルで設定できます。これにより、同じ VVol データストアに IOPS 要件が異なる複数の仮想マシンをプロビジョニングすることができます。IOPS の要件がある VM のプロビジョニングワークフローを実行する際には、互換性があるデータストアのリストにすべての vVol データストアが表示されます。</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1477,7 +1498,7 @@
 <li>
 <p>FAS と AFF両方 のデータストアにストレージ機能プロファイルを設定することができます。</p>
 <div class="paragraph">
-<p>FAS システムでは、スペースリザベーションをシックまたはシンに設定できますが、 AFF システムではシンにのみ設定できます。</p>
+<p>FAS システムおよび AFF システムでは、スペースリザベーションをシックまたはシンに設定できます。</p>
 </div>
 </li>
 <li>
@@ -1486,7 +1507,7 @@
 <li>
 <p>以前のバージョンの VMware vSphere 用 ONTAP ツールを最新バージョンの ONTAP ツールにアップグレードしたあとで、既存のストレージ機能プロファイル（ 7.2 より前のバージョンで作成）を変更することはできません。</p>
 <div class="paragraph">
-<p>以前のストレージ機能プロファイルは、下位互換性を確保するために保持されます。デフォルトテンプレートが使用されない場合は、最新バージョンの ONTAP ツールへのアップグレード時に、ストレージ機能プロファイルのパフォーマンスに関連する新しい QoS 指標を反映して既存のテンプレートが上書きされます。</p>
+<p>以前のストレージ機能プロファイルは、下位互換性を確保するために保持されます。デフォルトテンプレートが使用されない場合は、最新バージョンの ONTAP ツールへのアップグレード時に、ストレージ機能プロファイルのパフォーマンスに関連する新しい QoS 指標と階層化ポリシーを反映して既存のテンプレートが上書きされます。</p>
 </div>
 </li>
 <li>

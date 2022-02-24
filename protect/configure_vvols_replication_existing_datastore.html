@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head class="at-element-marker">
-  <title>Solaris ゲストオペレーティングシステムのタイムアウト値を設定します</title>
+  <title>既存のデータストア用に VVol レプリケーションを設定する</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Solaris ゲストオペレーティングシステムのタイムアウト値を設定します" />
+  <meta property="og:title" content="既存のデータストア用に VVol レプリケーションを設定する" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" />
-	<meta property="og:description" content="Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html" />
+	<meta property="og:description" content="Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter \ （ SRA \ ）を設定し、 SRM と Storage Virtual Machine （ SVM \ ）が連携できるようにすることができます。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。">
+  <meta name="description" content="Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter \ （ SRA \ ）を設定し、 SRM と Storage Virtual Machine （ SVM \ ）が連携できるようにすることができます。">
   <meta name="keywords" content=" ">
   
   
@@ -281,13 +281,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -592,15 +592,6 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/pages/configure/task_run_the_gos_timeout_scripts_for_solaris.pdf" >
-    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -802,6 +793,15 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/pages/protect/configure_vvols_replication_existing_datastore.pdf" >
+    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -1161,7 +1161,7 @@
         ゲストオペレーティングシステムスクリプトを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_windows.html">
         Windows ゲストオペレーティングシステムのタイムアウト値を設定します
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
         Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html">
         Linux ゲストオペレーティングシステムのタイムアウト値を設定します
@@ -1239,7 +1239,7 @@
         Windows SRM を SRM アプライアンスに移行します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/concept_configure_replication_for_vvols_datastore.html">
         仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html">
         既存のデータストア用に VVol レプリケーションを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_protect_non_protected_virtual_machines.html">
         保護されていない仮想マシンを保護
@@ -1358,7 +1358,7 @@
           <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;9.10</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
+          既存のデータストア用に VVol レプリケーションを設定する
         </li>
       </ul>
     </div>
@@ -1381,7 +1381,7 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Solaris ゲストオペレーティングシステムのタイムアウト値を設定します</h1>
+  <h1 class="n-doc__component-detail-heading">既存のデータストア用に VVol レプリケーションを設定する</h1>
 </div>
 
 
@@ -1408,17 +1408,32 @@
 
 
 <div class="paragraph lead">
-<p>Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。</p>
+<p>VVOL のレプリケーション機能が強化され、 SRM のセットアップ前に作成された既存の仮想マシンに VVOL のレプリケーションが提供されるようになりました。これにより、既存の仮想マシンをリカバリし、リカバリサイトで保護することができます。</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
 <p>必要なもの *</p>
 </li>
+<li>
+<p>クラスタと SVM のピア関係が設定されている</p>
+</li>
+<li>
+<p>データストアと FlexVol ボリュームは、ソースサイトとターゲットサイトに作成されます。</p>
+</li>
+<li>
+<p>ソースサイトとターゲットサイトには、同じストレージ機能プロファイルがあります。</p>
+</li>
+<li>
+<p>FlexVol ボリュームに同じ SnapMirror スケジュールが設定されています。</p>
+</li>
+<li>
+<p>VVol レプリケーションが有効になります。</p>
+</li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Solaris スクリプトを含む ISO イメージをマウントしておく必要があります。</p>
+<p>既存のデータストアにはレプリケーショングループが作成されていません。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1427,28 +1442,65 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Solaris 仮想マシンのコンソールにアクセスし、 root 権限を持つアカウントでログインします。</p>
+<p>Swagger インターフェイスにアクセスします。</p>
 </li>
 <li>
-<p>「 'olaris _gos_timeout-install.sh 」スクリプトを実行します。</p>
+<p>REST API を実行して、既存のデータストアのレプリケーショングループを設定する。</p>
 <div class="paragraph">
-<p>Solaris 10 の場合、次のようなメッセージが表示されます。</p>
+<p>API ： /3.0/admin/{ datastore } replication groups</p>
+</div>
+</li>
+<li>
+<p>既存の VVOL データストア用の VM ストレージポリシーを作成し、データストアの作成に使用したストレージ機能プロファイルを指定します。</p>
+<div class="paragraph">
+<p>使用可能なリストから、レプリケーションポリシー、レプリケーションスケジュール、互換性があるデータストアを追加します。</p>
 </div>
 </li>
 </ol>
 </div>
-<div class="listingblock">
-<div class="content">
-<pre>Setting I/O Timeout for /dev/s–a - SUCCESS!</pre>
+</li>
+</ul>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-tools-vmware-vsphere/images/note.svg" alt="注記">
+</td>
+<td class="content">
+System Manager を使用して FlexVol ボリュームを保護していて、ストレージ機能プロファイルに「なし」という QoS ポリシーが設定されている場合は、ディザスタリカバリが成功するように「パフォーマンスの制限を適用する」オプションのチェックをオフにしてください。
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>ISO イメージをアンマウントします。</p>
+<p>保護されていない仮想マシンにアクセスし、 VM ストレージポリシーを編集します。</p>
+</li>
+<li>
+<p>VM ストレージポリシーおよびデータストアを選択します。</p>
+</li>
+<li>
+<p>保護されていない仮想マシンにレプリケーショングループを追加します。</p>
 </li>
 </ol>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="../media/vvols_replication_existing_datastore.png" alt="既存のデータストアを vVol でレプリケーションする">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>注： *</p>
+</li>
+<li>
+<p>既存のデータストアのレプリケーションを有効にするように仮想マシンを設定する場合は、設定された VVol がある FlexVol を確認してください。</p>
+</li>
+<li>
+<p>既存の仮想マシンの VVol が複数のデータストアに分散している場合は、レプリケーションを有効にする前に、 vMotion を使用してその仮想マシンのすべての VVol を 1 つのデータストアに移動する必要があります。</p>
 </li>
 </ul>
 </div>
@@ -1462,8 +1514,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/issues/new?body=Page%3A%20[Solaris ゲストオペレーティングシステムのタイムアウト値を設定します](https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/configure/task_run_the_gos_timeout_scripts_for_solaris.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/issues/new?body=Page%3A%20[既存のデータストア用に VVol レプリケーションを設定する](https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/protect/configure_vvols_replication_existing_datastore.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/ontap-tools-vmware-vsphere/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">

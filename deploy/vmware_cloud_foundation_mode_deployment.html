@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head class="at-element-marker">
-  <title>Solaris ゲストオペレーティングシステムのタイムアウト値を設定します</title>
+  <title>ONTAP ツールの VMware Cloud Foundation 配置モード</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Solaris ゲストオペレーティングシステムのタイムアウト値を設定します" />
+  <meta property="og:title" content="ONTAP ツールの VMware Cloud Foundation 配置モード" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" />
-	<meta property="og:description" content="Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html" />
+	<meta property="og:description" content="VMware vSphere 用の ONTAP ツールは、 VMware クラウド基盤環境に導入できます。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。">
+  <meta name="description" content="VMware vSphere 用の ONTAP ツールは、 VMware クラウド基盤環境に導入できます。">
   <meta name="keywords" content=" ">
   
   
@@ -281,13 +281,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -433,6 +433,15 @@
 
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/pages/deploy/vmware_cloud_foundation_mode_deployment.pdf" >
+    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -592,15 +601,6 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/pages/configure/task_run_the_gos_timeout_scripts_for_solaris.pdf" >
-    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -1107,7 +1107,7 @@
         VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html">
         ONTAP ツールの既存ユーザ向けの導入ワークフロー
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html">
         ONTAP ツールの VMware Cloud Foundation 配置モード
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/qsg.html">
         ONTAP ツールクイックスタート
@@ -1161,7 +1161,7 @@
         ゲストオペレーティングシステムスクリプトを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_windows.html">
         Windows ゲストオペレーティングシステムのタイムアウト値を設定します
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
         Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html">
         Linux ゲストオペレーティングシステムのタイムアウト値を設定します
@@ -1358,7 +1358,7 @@
           <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;9.10</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
+          ONTAP ツールの VMware Cloud Foundation 配置モード
         </li>
       </ul>
     </div>
@@ -1381,7 +1381,7 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Solaris ゲストオペレーティングシステムのタイムアウト値を設定します</h1>
+  <h1 class="n-doc__component-detail-heading">ONTAP ツールの VMware Cloud Foundation 配置モード</h1>
 </div>
 
 
@@ -1408,49 +1408,324 @@
 
 
 <div class="paragraph lead">
-<p>Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>必要なもの *</p>
-</li>
-</ul>
+<p>VMware vSphere 用の ONTAP ツールは、 VMware Cloud Foundation （ VCF ）環境に導入できます。VCF の導入の主な目的は、クラウドセットアップで ONTAP ツールを使用し、 vCenter Server なしでコンテナを作成することです。</p>
 </div>
 <div class="paragraph">
-<p>Solaris スクリプトを含む ISO イメージをマウントしておく必要があります。</p>
+<p>VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、 REST API を使用してストレージシステムを追加し、コンテナを作成できます。API 呼び出しを認証する <em>apply-api-token</em> を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>手順 *</p>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Solaris 仮想マシンのコンソールにアクセスし、 root 権限を持つアカウントでログインします。</p>
-</li>
-<li>
-<p>「 'olaris _gos_timeout-install.sh 」スクリプトを実行します。</p>
 <div class="paragraph">
-<p>Solaris 10 の場合、次のようなメッセージが表示されます。</p>
+<p>VCF 展開モードで使用できる API は次のとおりです。</p>
 </div>
-</li>
-</ol>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* API *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* HTTP メソッド *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 新規 / 変更済み *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* セクションヘッダー *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/1.0/admin/containers を使用してください</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>取得</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>新規</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>コンテナ</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/1.0/admin/containers を使用してください</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>投稿（ Post ）</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>新規</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>コンテナ</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/1.0/VCF/user/login</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>投稿（ Post ）</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>新規</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ユーザ認証</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/1.0/admin/storage-systems</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>取得</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>変更されました</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストレージシステム</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/1.0/admin/storage-systems</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>投稿（ Post ）</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>変更されました</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストレージシステム</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/2.0/ ストレージ / クラスタ / 検出</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>投稿（ Post ）</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>変更されました</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストレージシステム</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/2.0/ ストレージ / 機能プロファイル</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>取得</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>変更されました</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストレージ機能プロファイル</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>/2.0/tasks/{id}</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>取得</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>変更されました</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>タスク</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>VCF 導入モードでは、 VVOL データストアのみを使用できます。コンテナを作成するには、 VCF 導入用にカスタマイズした REST API を使用する必要があります。導入完了後、 Swagger インターフェイスから REST API にアクセスできます。VCF モードでコンテナを作成する際には、 Storage VM 、アグリゲート、およびボリュームの名前を指定する必要があります。これらのリソース用の ONTAP ツールは更新されないため、 ONTAP API を使用してこれらの詳細を取得する必要があります。</p>
 </div>
-<div class="listingblock">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* ストレージオブジェクト *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* API *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Storage VM</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>API / SVM</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>アグリゲート</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストレージ / アグリゲート</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ボリューム</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ストレージ / ボリューム</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>コンテナ作成 API の実行中に、コンテナに既存のボリュームを追加できます。ただし、既存のボリュームの圧縮と重複排除の値がコンテナのストレージ機能に一致していることを確認する必要があります。値が一致しない場合、仮想マシンの作成は失敗します。次の表に、対応するストレージ機能プロファイルについて、既存のボリュームに必要な値の詳細を示します。</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* コンテナストレージ機能プロファイル *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 重複排除 *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 圧縮 *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>プラチナ</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>AFF のシック</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>AFF_Default</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>AFF_Tiering</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>AFF_encrypted</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>AFF_encrypted_Tiering</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>AFF_encrypted_Min50</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>両方</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>FAS_DEFAULT</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>背景（ Background ）</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>なし</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>FAS_Max20</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>背景（ Background ）</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>なし</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ブロンズ</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>なし</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>なし</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>ONTAP パッチ API を使用して適切な値を設定できます。</p>
+</div>
+<div class="paragraph">
+<p><a href="https://&lt;machine_IP&gt;/api/storage/volumes/{uuid}`" class="bare">https://&lt;machine_IP&gt;/api/storage/volumes/{uuid}`</a></p>
+</div>
+<div class="paragraph">
+<p>ONTAP ツールの VCF 配置では、コンテナ作成ワークフローのみが可能です。データストアのプロビジョニング、ストレージ機能プロファイルの作成、ディザスタリカバリなどの他のワークフローを使用する場合は、 Register.html ページを使用して vCenter Server に ONTAP ツールを登録する必要があります。VCF モードでの ONTAP ツールの制限事項は、ディザスタリカバリ用に SRA を設定できないことです。</p>
+</div>
+<div class="imageblock">
 <div class="content">
-<pre>Setting I/O Timeout for /dev/s–a - SUCCESS!</pre>
+<img src="../media/VCF_deployment.png" alt="VMware Cloud Foundation の導入ワークフロー">
 </div>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>ISO イメージをアンマウントします。</p>
-</li>
-</ol>
-</div>
-</li>
-</ul>
+<div class="paragraph">
+<p><a href="../deploy/task_deploy_ontap_tools.html">"ONTAP ツールの導入方法"</a></p>
 </div>
 
     </article>
@@ -1462,8 +1737,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/issues/new?body=Page%3A%20[Solaris ゲストオペレーティングシステムのタイムアウト値を設定します](https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/configure/task_run_the_gos_timeout_scripts_for_solaris.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/issues/new?body=Page%3A%20[ONTAP ツールの VMware Cloud Foundation 配置モード](https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/deploy/vmware-cloud-foundation-mode-deployment.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/ontap-tools-vmware-vsphere/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">

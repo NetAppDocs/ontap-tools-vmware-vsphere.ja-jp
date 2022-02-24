@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head class="at-element-marker">
-  <title>Solaris ゲストオペレーティングシステムのタイムアウト値を設定します</title>
+  <title>別のサブネットを追加してください</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Solaris ゲストオペレーティングシステムのタイムアウト値を設定します" />
+  <meta property="og:title" content="別のサブネットを追加してください" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" />
-	<meta property="og:description" content="Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html" />
+	<meta property="og:description" content="ONTAP ツールのインターフェイスを使用して、データストアのマウント用に別のサブネットを追加できるようになりました。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
@@ -18,7 +18,7 @@
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/>
   
-  <meta name="description" content="Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。">
+  <meta name="description" content="ONTAP ツールのインターフェイスを使用して、データストアのマウント用に別のサブネットを追加できるようになりました。">
   <meta name="keywords" content=" ">
   
   
@@ -281,13 +281,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/configure/add_different_subnets.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/configure/add_different_subnets.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/configure/add_different_subnets.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -592,15 +592,6 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/pages/configure/task_run_the_gos_timeout_scripts_for_solaris.pdf" >
-    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
-  
 
 
 
@@ -631,6 +622,15 @@
           
 
 
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/pages/configure/add_different_subnets.pdf" >
+    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
 
 
 
@@ -1161,7 +1161,7 @@
         ゲストオペレーティングシステムスクリプトを設定する
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_windows.html">
         Windows ゲストオペレーティングシステムのタイムアウト値を設定します
-      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
         Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html">
         Linux ゲストオペレーティングシステムのタイムアウト値を設定します
@@ -1172,7 +1172,7 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_set_ipv4_or_ipv6.html">
         プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
-      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html">
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html">
         別のサブネットを追加してください
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_enable_datastore_mounting_across_different_subnets.html">
         異なるサブネット間でのデータストアのマウントを有効にする
@@ -1358,7 +1358,7 @@
           <a href="/ja-jp/ontap-tools-vmware-vsphere/">ONTAP&nbsp;tools&nbsp;for&nbsp;VMware&nbsp;vSphere&nbsp;9.10</a>
         </li>
         <li class="n-breadcrumb__list-item">
-          Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
+          別のサブネットを追加してください
         </li>
       </ul>
     </div>
@@ -1381,7 +1381,7 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">Solaris ゲストオペレーティングシステムのタイムアウト値を設定します</h1>
+  <h1 class="n-doc__component-detail-heading">別のサブネットを追加してください</h1>
 </div>
 
 
@@ -1408,17 +1408,7 @@
 
 
 <div class="paragraph lead">
-<p>Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>必要なもの *</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Solaris スクリプトを含む ISO イメージをマウントしておく必要があります。</p>
+<p>ONTAP ツールインターフェイスまたは REST API を使用して、 ESXi ホストの異なるサブネットを追加できます。これにより、ストレージシステムのプロビジョニング後にデータストアのマウント処理用のサブネットを許可または制限できます。ESXi ホストのサブネットを追加しないと、それらのサブネットに対するデータストアのマウント処理が ONTAP ツールによってブロックされます。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1427,25 +1417,22 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Solaris 仮想マシンのコンソールにアクセスし、 root 権限を持つアカウントでログインします。</p>
+<p>vCenter Server インスタンスにログインし、 ONTAP ツールにアクセスします。</p>
 </li>
 <li>
-<p>「 'olaris _gos_timeout-install.sh 」スクリプトを実行します。</p>
-<div class="paragraph">
-<p>Solaris 10 の場合、次のようなメッセージが表示されます。</p>
-</div>
+<p>ホームページで、 [* 設定 <strong>&gt;</strong> サブネットアクセスの管理 *] をクリックします。</p>
 </li>
-</ol>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>Setting I/O Timeout for /dev/s–a - SUCCESS!</pre>
-</div>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
 <li>
-<p>ISO イメージをアンマウントします。</p>
+<p>[Manage Subnet Access] ダイアログボックスで、 [Allowed Subnets for NFS Subnets Access] の [*Selected] オプションをクリックします。</p>
+</li>
+<li>
+<p>必要なサブネットの値を入力し、 * add * をクリックします。</p>
+</li>
+<li>
+<p>制限付きサブネットの場合は、 [* なし（ None ） ] または [* 選択済み（ * Selected ） ] を選択</p>
+</li>
+<li>
+<p>iSCSI Subnets Access に対して上記の手順を繰り返し、 * Apply * をクリックします。</p>
 </li>
 </ol>
 </div>
@@ -1462,8 +1449,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/issues/new?body=Page%3A%20[Solaris ゲストオペレーティングシステムのタイムアウト値を設定します](https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/configure/task_run_the_gos_timeout_scripts_for_solaris.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/issues/new?body=Page%3A%20[別のサブネットを追加してください](https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/configure/add_different_subnets.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/ontap-tools-vmware-vsphere/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">
