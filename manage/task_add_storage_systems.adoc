@@ -5,6 +5,7 @@ keywords:
 summary: Virtual Storage Console \ （ VSC\ ）には手動でストレージシステムを追加できます。 
 ---
 = ストレージシステムを VSC に追加
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

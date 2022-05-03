@@ -5,6 +5,7 @@ keywords:
 summary: VMware の Site Recovery Manager\ （ SRM\ ）とともに、 vCenter Server でディザスタリカバリの設定を作成および管理できます。 
 ---
 = ディザスタリカバリを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

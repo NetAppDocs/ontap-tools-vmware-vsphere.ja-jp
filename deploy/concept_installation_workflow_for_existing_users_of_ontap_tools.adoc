@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツール 9.x リリースでは、最新バージョンへのインプレースアップグレードがサポートされています。 
 ---
 = ONTAP ツールの既存ユーザ向けの導入ワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

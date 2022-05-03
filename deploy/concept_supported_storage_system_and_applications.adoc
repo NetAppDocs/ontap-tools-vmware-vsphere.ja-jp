@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールの導入を開始する前に、ストレージシステムの基本要件、アプリケーション要件、およびライセンス要件について理解しておく必要があります。 
 ---
 = ONTAP ツールでサポートされているストレージシステム、ライセンス、およびアプリケーション
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

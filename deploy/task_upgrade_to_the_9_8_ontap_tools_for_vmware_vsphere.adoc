@@ -5,6 +5,7 @@ keywords: Virtual Storage Console, Storage Replication Adapter
 summary: ここに記載されている手順に従って、既存の 9.7.1 以降のセットアップから最新リリースの ONTAP ツールへのインプレースアップグレードを実行できます。 
 ---
 = ONTAP ツールの最新リリースにアップグレードします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

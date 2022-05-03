@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールの GUI を使用して、ネットアップ NFS Plug-in for VMware vStorage APIs for Array Integration （ VAAI ）をインストールできます。 
 ---
 = NFS VAAI プラグインをインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: Site Recovery Manager 用の Storage Replication Adapter \ （ SRA \ ）を実行するには、事前にストレージシステムのセットアップが必要です。 
 ---
 = SAN 環境向けの Storage Replication Adapter の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

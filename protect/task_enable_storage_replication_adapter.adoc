@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールには、ディザスタリカバリを設定するために VSC で SRA 機能を使用できるようにするオプションがあります。 
 ---
 = SRA でデータストアを保護する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ® ツールでは、ストレージシステムの検出とストレージクレデンシャルの設定を単一のメカニズムで行います。クレデンシャルに基づいて、 Virtual Storage Console （ VSC ）ユーザがストレージシステムを使用してタスクを実行するために必要な ONTAP 権限が付与されます。 
 ---
 = VMware vSphere ストレージシステム用に ONTAP ® ツールを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

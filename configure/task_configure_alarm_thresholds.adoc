@@ -5,6 +5,7 @@ keywords:
 summary: VSC を使用して、ボリュームやアグリゲートの容量が設定したしきい値に達したときにアラームで通知するように設定できます。 
 ---
 = アラームしきい値を設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

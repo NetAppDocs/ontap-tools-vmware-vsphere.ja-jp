@@ -5,6 +5,7 @@ keywords:
 summary: NFS または iSCSI を使用していて、 ESXi ホストとストレージシステムとでサブネットが異なる場合は、 VMware vSphere のプリファレンスファイル用の ONTAP ツールを変更する必要があります。プリファレンスファイルを変更しないと、 Virtual Storage Console （ VSC ）でデータストアをマウントできないためにデータストアのプロビジョニングが失敗します。 
 ---
 = 異なるサブネット間でのデータストアのマウントを有効にする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

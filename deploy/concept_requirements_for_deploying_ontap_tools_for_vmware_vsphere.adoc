@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP ツールを導入する前に、導入要件を確認し、実行するタスクを決めておく必要があります。タスクに基づいて、 ONTAP ツールを導入するための導入モデルを選択できます 
 ---
 = ONTAP ツールを導入するための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

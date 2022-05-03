@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP ツールのインターフェイスを使用して、データストアのマウント用に別のサブネットを追加できるようになりました。 
 ---
 = 別のサブネットを追加してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

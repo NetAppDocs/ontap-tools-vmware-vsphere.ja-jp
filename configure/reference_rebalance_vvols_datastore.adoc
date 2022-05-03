@@ -5,6 +5,7 @@ keywords: vVols datastore,rebalancing
 summary: ONTAP ツールは、データセンター内の FlexVol ボリュームのリバランシングコマンドをサポートします。主な目的は、 FlexVol ボリューム間でスペースを均等に利用できるようにすることです。ONTAP ツールは、スペース使用量、シンプロビジョニング、 LUN 数、およびストレージ機能プロファイルに基づいて、既存のボリュームに VVOL を再配分します。 
 ---
 = VVol データストアのリバランシング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

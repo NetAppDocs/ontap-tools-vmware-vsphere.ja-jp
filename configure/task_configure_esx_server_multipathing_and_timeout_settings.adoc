@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ® ツールは、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに最も適した設定を行います。 
 ---
 = ESXi サーバのマルチパスとタイムアウトを設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

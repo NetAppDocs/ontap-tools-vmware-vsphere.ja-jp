@@ -5,6 +5,7 @@ keywords: Virtual Storage Console,Storage Replication Adapter
 summary: VMware vSphere 用の ONTAP ツールを導入する前に、導入パッケージのスペース要件とホストシステムのいくつかの基本的な要件について理解しておく必要があります。 
 ---
 = ONTAP ツールのスペースとサイジングの要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: プリファレンスファイル kaminoprefs.xml に新しいオプションが追加されました。 VSC に追加されるすべてのストレージシステムで IPv4 または IPv6 のサポートを有効にするように設定できます。 
 ---
 = プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

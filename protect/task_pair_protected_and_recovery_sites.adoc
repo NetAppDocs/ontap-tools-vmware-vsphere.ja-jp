@@ -5,6 +5,7 @@ keywords:
 summary: Storage Replication Adapter （ SRA ）でストレージシステムを検出できるようにするには、作成された保護対象サイトとリカバリサイトを vSphere Client を使用してペアリングする必要があります。 
 ---
 = 保護対象サイトとリカバリサイトをペアリング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

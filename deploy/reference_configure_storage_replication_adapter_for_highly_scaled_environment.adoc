@@ -5,6 +5,7 @@ keywords:
 summary: 大規模な環境で最適なパフォーマンスを実現するには、 Storage Replication Adapter （ SRA ）の推奨設定に従ってストレージのタイムアウト間隔を設定する必要があります。 
 ---
 = 大規模な環境向けの Storage Replication Adapter の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

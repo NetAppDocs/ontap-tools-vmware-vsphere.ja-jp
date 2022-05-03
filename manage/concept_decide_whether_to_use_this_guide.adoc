@@ -5,6 +5,7 @@ keywords: scope of guide
 summary: このガイドを使用すると、ストレージのプロビジョニングと最適化、およびデータストアと仮想マシンの監視に関連するタスクの情報を簡単に見つけることができます。 
 ---
 = このガイドを使用するかどうかを決定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 単一の VMware vSphere HTML5 クライアントで複数の vCenter Server インスタンスを管理している環境で ONTAP ® Tools for VMware vSphere を使用している場合は、各 vCenter Server に VSC のインスタンスを 1 つずつ登録して、 VSC と vCenter Server を 1 ： 1 のペアにする必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。 
 ---
 = 複数の vCenter Server 環境で VSC を登録するための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

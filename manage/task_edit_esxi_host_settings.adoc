@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールのダッシュボードを使用して、 ESXi ホストの設定を編集できます。 
 ---
 = ONTAP ツールを使用して ESXi ホストの設定を変更します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: Migration
 summary: ディザスタリカバリに Windows ベースの Site Recovery Manager （ SRM ）を使用している場合、同じセットアップで SRM アプライアンスを使用するには、 Windows のディザスタリカバリセットアップをアプライアンスベースの SRM に移行する必要があります。 
 ---
 = Windows SRM から SRM アプライアンスへの移行
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

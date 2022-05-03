@@ -5,6 +5,7 @@ keywords: virtual volume datastores
 summary: ONTAP 9.6 以前を使用している場合、 vVol ダッシュボードに VMware 仮想ボリューム（ vVol ）データストアと仮想マシンの詳細を表示するには、 VASA Provider の OnCommand API サービスを登録して vVol VM およびデータストアのレポートのデータを取得する必要があります。 
 ---
 = OnCommand API サービスを ONTAP ツールに登録します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

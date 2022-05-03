@@ -5,6 +5,7 @@ keywords:
 summary: ストレージ機能プロファイルの作成と編集に関する考慮事項を確認しておく必要があります。 
 ---
 = ストレージ機能プロファイルの作成と編集に関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

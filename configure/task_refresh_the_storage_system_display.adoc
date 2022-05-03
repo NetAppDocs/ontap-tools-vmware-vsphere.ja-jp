@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ® ツールの更新機能を使用して、ストレージシステムに関する情報を更新し、 Virtual Storage Console （ VSC ）でストレージシステムを検出することができます。 
 ---
 = ストレージシステムの表示を更新します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

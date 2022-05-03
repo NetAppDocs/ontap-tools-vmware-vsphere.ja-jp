@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールでは、 ONTAP の MetroCluster IP 構成と FC 構成を使用する環境がサポートされます。このサポートはほぼ自動的に行われます。ただし、 MetroCluster 環境で VSC および VASA Provider を使用している場合はいくつかの違いがあります。 
 ---
 = ONTAP ツールでサポートされる MetroCluster 構成
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

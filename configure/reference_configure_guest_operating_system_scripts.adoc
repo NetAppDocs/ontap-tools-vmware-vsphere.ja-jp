@@ -5,6 +5,7 @@ keywords: Guest operating system
 summary: ゲストオペレーティングシステム（ OS ）スクリプトの ISO イメージは、 VMware vSphere サーバ用の ONTAP ® ツールにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。 
 ---
 = ゲストオペレーティングシステムスクリプトを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

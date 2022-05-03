@@ -5,6 +5,7 @@ keywords: user roles
 summary: ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。 
 ---
 = ユーザロールと権限を設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

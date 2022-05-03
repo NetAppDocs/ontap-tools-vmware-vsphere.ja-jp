@@ -5,6 +5,7 @@ keywords: storage capability profiles
 summary: VASA Provider for ONTAP では、ストレージ機能プロファイルを作成して、ストレージにマッピングすることができます。これにより、ストレージ全体で一貫性を維持できます。また、ストレージがストレージ機能プロファイルに準拠しているかどうかについても、 VASA Provider を使用して確認することができます。 
 ---
 = ストレージ機能プロファイルの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

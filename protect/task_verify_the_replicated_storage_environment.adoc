@@ -5,6 +5,7 @@ keywords:
 summary: Storage Replication Adapter （ SRA ）を設定したら、保護対象サイトとリカバリサイトが正常にペアリングされていることを確認する必要があります。レプリケートされたストレージシステムが保護対象サイトとリカバリサイトの両方から検出可能である必要があります。 
 ---
 = レプリケートされたストレージシステムを検証する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -7,6 +7,7 @@ summary: VMware vSphere 用の ONTAP ツールを使用すると、 vCenter Serv
 ---
 = VMware vSphere ドキュメント用の ONTAP ツール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

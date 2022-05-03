@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP ツールの vVol ダッシュボードを使用すると、パフォーマンスを監視し、選択したパラメータに基づいて vCenter Server 内の上位 5 つの SAN および NAS VMware 仮想ボリューム（ vVol ）データストアを表示できます。 
 ---
 = vVol ダッシュボードを使用してパフォーマンスデータを分析します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

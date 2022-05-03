@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の最新バージョンの ONTAP ツールを使用している場合は、 次に、「最大スループット Mbps 」または「最大スループット IOPS 」 QoS メトリックを使用してプロビジョニングされた仮想マシンを、最新バージョンの ONTAP ツールの「最大 IOPS 」 QoS メトリックを使用してプロビジョニングされた新しい VVOL データストアに移行します。 
 ---
 = 以前のストレージ機能プロファイルを使用して仮想マシンを移行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: 保護対象サイトで仮想マシンのグループを保護するには、保護グループを作成する必要があります。 
 ---
 = 保護グループを設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

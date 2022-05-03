@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere の標準的な ONTAP ® ツールを使用する場合は、一定のガイドラインに従う必要があります。 
 ---
 = VSC の標準ロールの使用に関するガイドライン
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

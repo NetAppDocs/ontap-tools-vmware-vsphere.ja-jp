@@ -5,6 +5,7 @@ keywords:
 summary: Windows ゲストオペレーティングシステムの SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。設定を有効にするには、 Windows ゲスト OS をリブートする必要があります。 
 ---
 = Windows ゲストオペレーティングシステムのタイムアウト値を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

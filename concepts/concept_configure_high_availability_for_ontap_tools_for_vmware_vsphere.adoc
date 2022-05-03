@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP ツールはハイアベイラビリティ（ HA ）構成をサポートしており、障害時に ONTAP ツールが中断なく機能するようにします。 
 ---
 = ONTAP ツールのハイアベイラビリティを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

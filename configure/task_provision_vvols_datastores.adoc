@@ -5,6 +5,7 @@ keywords:
 summary: データストアのプロビジョニングウィザードを使用して VVOL データストアをプロビジョニングできるのは、 ONTAP ツールで VASA Provider が有効になっている場合のみです。 
 ---
 = vVol データストアをプロビジョニングする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

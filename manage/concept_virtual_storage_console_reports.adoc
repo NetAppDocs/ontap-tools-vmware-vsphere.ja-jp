@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP ツールコンソールのレポートメニューを使用して、特定の vCenter Server の選択した VSC インスタンスで管理されているすべてのデータストアに関する事前定義済みのレポートを表示できます。レポートのソートやエクスポートなどの操作を実行できます。 
 ---
 = ONTAP Tools データストアおよび VVol レポートの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

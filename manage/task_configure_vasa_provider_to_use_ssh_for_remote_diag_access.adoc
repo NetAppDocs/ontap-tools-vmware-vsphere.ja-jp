@@ -5,6 +5,7 @@ keywords:
 summary: diag ユーザの SSH アクセスを有効にするように ONTAP ツールを設定することができます。 
 ---
 = リモート診断アクセスを設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

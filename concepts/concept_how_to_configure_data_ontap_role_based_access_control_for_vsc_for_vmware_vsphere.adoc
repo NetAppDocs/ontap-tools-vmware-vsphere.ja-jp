@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ® ツールでロールベースアクセス制御を使用する場合は、ストレージシステムで ONTAP RBAC を設定する必要があります。ONTAP RBAC 機能を使用すると、アクセス権限を制限したカスタムユーザアカウントを 1 つ以上作成できます。 
 ---
 = VMware vSphere 用の ONTAP ツール用に ONTAP の RBAC を設定する方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

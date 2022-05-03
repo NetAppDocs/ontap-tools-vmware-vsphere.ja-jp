@@ -5,6 +5,7 @@ keywords: virtual machines, configuring protection
 summary: レプリケーションを無効にした VM ストレージポリシーを使用して作成された、保護されていない既存の仮想マシンに対して保護を設定できます。保護を提供するには、 VM ストレージポリシーを変更し、レプリケーショングループを割り当てる必要があります。 
 ---
 = 保護されていない仮想マシンを保護
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: アプライアンスを使用するには、環境に ONTAP ツールを導入し、必要なパラメータを指定する必要があります。 
 ---
 = ONTAP ツールの導入方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

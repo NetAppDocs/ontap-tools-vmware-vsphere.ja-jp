@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP ツールの設定では、ストレージシステムの設定、ストレージ機能プロファイルの作成、データストアのプロビジョニング、および必要に応じてディザスタリカバリのための SRA の設定を行います。 
 ---
 = ONTAP ツールを設定するためのワークフロー
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

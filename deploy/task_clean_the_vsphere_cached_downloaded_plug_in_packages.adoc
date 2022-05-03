@@ -5,6 +5,7 @@ keywords: clean up browser cache
 summary: ONTAP ツールの導入またはアップグレード後にプラグインが自動的に更新されない場合は、ブラウザおよび vCenter Server 上にキャッシュされているダウンロード済みプラグインパッケージをクリーンアップして、 vCenter Server プラグインの問題を解決する必要があります。 
 ---
 = vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

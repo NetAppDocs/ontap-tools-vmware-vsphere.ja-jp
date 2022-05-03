@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールは、 VMware クラウド基盤環境に導入できます。 
 ---
 = ONTAP ツールの VMware Cloud Foundation 配置モード
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords:
 summary: vCenter Server の権限と RBAC を簡単に使用できるように、 Virtual Storage Console （ VSC ）には主要な VSC タスクを実行できる標準の VSC ロールが用意されています。また、タスクの実行を制限し、 VSC 情報の表示のみを許可する読み取り専用ロールもあります。 
 ---
 = ONTAP ツールに付属の標準ロール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

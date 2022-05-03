@@ -5,6 +5,7 @@ keywords: port requirements
 summary: ストレージシステムと VMware vCenter Server の間の通信など、 Virtual Storage Console \ （ VSC\ ）のコンポーネント間の通信には、指定のポートがデフォルトで使用されます。ファイアウォールを有効にしている場合は、例外を許可するようにファイアウォールを設定する必要があります。 
 ---
 = VSC のポート要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

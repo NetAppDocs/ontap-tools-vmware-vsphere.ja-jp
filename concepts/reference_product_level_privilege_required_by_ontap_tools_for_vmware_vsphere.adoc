@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere GUI の ONTAP ® ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。 
 ---
 = VMware vSphere 用の ONTAP ツールで必要な製品レベルの権限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

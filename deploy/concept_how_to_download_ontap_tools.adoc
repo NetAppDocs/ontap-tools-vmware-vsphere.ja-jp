@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールの .ova ファイルは、ネットアップサポートサイトからダウンロードできます。 
 ---
 = ONTAP ツールのダウンロード方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

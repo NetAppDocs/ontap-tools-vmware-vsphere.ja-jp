@@ -5,6 +5,7 @@ keywords:
 summary: FlexGroup データストアをプロビジョニングしても、データストアにストレージ機能プロファイルを割り当てることはできません。ただし、 FlexGroup ベースのデータストアに作成された仮想マシンに QoS ポリシーを割り当てることができます。 
 ---
 = QoS ポリシーを割り当てる
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

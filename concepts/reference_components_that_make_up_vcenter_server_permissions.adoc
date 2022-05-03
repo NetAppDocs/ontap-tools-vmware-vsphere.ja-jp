@@ -5,6 +5,7 @@ keywords:
 summary: vCenter Server で認識されるのはアクセス許可で、権限ではありません。vCenter Server アクセス許可は 3 つの要素で構成されます。 
 ---
 = vCenter Server アクセス許可の要素
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

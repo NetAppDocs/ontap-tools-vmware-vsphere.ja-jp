@@ -5,6 +5,7 @@ keywords:
 summary: vSphere Client で Virtual Storage Console （ VSC\ ）を初めて実行すると、 ESXi ホスト、その LUN と NFS エクスポート、および LUN とエクスポートを所有するネットアップストレージシステムが VSC によって検出されます。 
 ---
 = ストレージシステムとホストを検出
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

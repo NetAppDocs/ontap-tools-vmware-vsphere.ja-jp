@@ -5,6 +5,7 @@ keywords:
 summary: VASA Provider for ONTAP を使用して、 VMware 仮想ボリューム（ vVol ）の作成と管理を行うことができます。VVOL データストアをプロビジョニング、編集、マウント、削除できます。また、 VVOL データストアへのストレージの追加や VVOL データストアからのストレージの削除も行うことができます。柔軟性を高めることができます。すべての仮想マシンおよび関連する VMDK をプロビジョニングおよび管理できます。 
 ---
 = VVOL 向けの VASA Provider の設定
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: SRA, upgrade
 summary: ONTAP ツールをアップグレードするか最新バージョンの ONTAP ツールを導入したら、 Storage Replication Adapter \ （ SRA \ ）をアップグレードする必要があります。 
 ---
 = Storage Replication Adapter をアップグレードする
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

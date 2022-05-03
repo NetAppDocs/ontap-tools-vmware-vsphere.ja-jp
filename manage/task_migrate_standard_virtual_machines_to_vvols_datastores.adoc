@@ -5,6 +5,7 @@ keywords: Migrate traditional virtual machines
 summary: 仮想マシンを従来のデータストアから Virtual Volumes （ VVol ）データストアに移行して、ポリシーベースの VM の管理やその他の VVol の機能を利用できます。vVol データストアを使用すると、増加分のワークロード要件に対処できます。 
 ---
 = 従来の仮想マシンを VVOL データストアに移行する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

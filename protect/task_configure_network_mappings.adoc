@@ -5,6 +5,7 @@ keywords:
 summary: 保護対象サイトとリカバリサイトの間の通信を有効にするには、それらのサイトのネットワークをマッピングする必要があります。 
 ---
 = ネットワークマッピングを設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

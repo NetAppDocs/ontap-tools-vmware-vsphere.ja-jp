@@ -5,6 +5,7 @@ keywords:
 summary: Red Hat Enterprise Linux バージョン 4 、 5 、 6 、 7 および SUSE Linux Enterprise Server バージョン 9 、 10 、 11 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステムのタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。Linux を新しいバージョンにアップグレードしたときは、必ずこのスクリプトを実行する必要があります。 
 ---
 = Linux ゲストオペレーティングシステムのタイムアウト値を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

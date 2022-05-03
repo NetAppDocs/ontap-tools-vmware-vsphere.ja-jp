@@ -5,6 +5,7 @@ keywords:
 summary: VASA Provider for ONTAP に関連付けられているデータストアを、ストレージ機能プロファイルにマッピングできます。ストレージ機能プロファイルに関連付けられていないデータストアにプロファイルを割り当てることができます。 
 ---
 = データストアとストレージ機能プロファイルのマッピング
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

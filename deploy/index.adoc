@@ -5,6 +5,7 @@ keywords:
 summary:  
 ---
 = 『導入およびセットアップガイド』
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

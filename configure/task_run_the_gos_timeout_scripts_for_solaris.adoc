@@ -5,6 +5,7 @@ keywords:
 summary: Solaris 10 の SCSI I/O タイムアウト設定は、ゲストオペレーティングシステム（ OS ）のタイムアウトスクリプトで設定されます。タイムアウトは 60 秒または 190 秒のどちらかを指定できます。 
 ---
 = Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: preferences files
 summary: プリファレンスファイルには、 VMware vSphere の処理用に ONTAP ® ツールを制御する設定が含まれています。ほとんどの場合、これらのファイルの設定を変更する必要はありません。Virtual Storage Console （ VSC ）で使用されるプリファレンスファイルを確認しておくと役立ちます。 
 ---
 = VSC プリファレンスファイルを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

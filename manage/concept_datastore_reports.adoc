@@ -5,6 +5,7 @@ keywords: Datastore Reports
 summary: データストアレポートには、従来のデータストアと、これらのデータストアに作成された仮想マシンに関する詳細情報が表示されます。 
 ---
 = データストアレポート
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

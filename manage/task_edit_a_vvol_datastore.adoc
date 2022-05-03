@@ -5,6 +5,7 @@ keywords:
 summary: 既存の VMware 仮想ボリューム（ vVol ）データストアを編集してデフォルトのストレージ機能プロファイルを変更することができます。デフォルトのストレージ機能プロファイルは、主にスワップ vVol に使用されます。 
 ---
 = vVol データストアを編集する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

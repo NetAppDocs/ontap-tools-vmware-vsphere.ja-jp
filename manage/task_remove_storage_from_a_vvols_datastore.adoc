@@ -5,6 +5,7 @@ keywords: Remove vVol datastore
 summary: VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームが複数ある場合、データストアは削除せずに、一部の FlexVol を VVOL データストアから削除することができます。 
 ---
 = vVol データストアからストレージを削除する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: VSC
 summary: VMware vSphere フォールトトレランス \ （ FT \ ）機能を使用すると、より高いレベルでハイアベイラビリティ \ （ HA ）を実現し、データや接続が失われないよう仮想マシンを保護することができます。vSphere FT for ONTAP ツールは vCenter Server から有効または無効にする必要があります。 
 ---
 = VMware vSphere フォールトトレランス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

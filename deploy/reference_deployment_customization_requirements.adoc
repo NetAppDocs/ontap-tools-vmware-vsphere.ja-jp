@@ -5,6 +5,7 @@ keywords:
 summary: 導入 ONTAP ツールをカスタマイズするときは、いくつかの制限事項について考慮する必要があります。 
 ---
 = 導入のカスタマイズに関する考慮事項
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

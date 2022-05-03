@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールは、ネットアップストレージシステムを使用する VMware 環境の仮想マシンに対して、エンドツーエンドのライフサイクル管理を提供します。管理者が vCenter Server 内でストレージを直接管理できるため、 VMware 環境のストレージとデータの管理が簡単になります。 
 ---
 = ONTAP ツールの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

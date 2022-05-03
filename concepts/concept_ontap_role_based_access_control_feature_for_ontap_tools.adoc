@@ -5,6 +5,7 @@ keywords:
 summary: ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。VMware vSphere 用の ONTAP ® ツールでは、 ONTAP RBAC と vCenter Server RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる Virtual Storage Console （ VSC ）タスクが決まります。 
 ---
 = ONTAP ストレージシステムおよび vSphere オブジェクトの権限
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

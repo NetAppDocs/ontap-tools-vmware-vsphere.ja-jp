@@ -5,6 +5,7 @@ keywords:
 summary: ストレージシステムを ONTAP のツールに追加し、必要に応じて VSC インターフェイスを使用してデフォルトクレデンシャルを設定します。 
 ---
 = ONTAP ツール用のストレージシステムの概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

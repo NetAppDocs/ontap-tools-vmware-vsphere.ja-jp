@@ -5,6 +5,7 @@ keywords:
 summary: Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter \ （ SRA \ ）を設定し、 SRM と Storage Virtual Machine （ SVM \ ）が連携できるようにすることができます。 
 ---
 = 既存のデータストア用に VVol レプリケーションを設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

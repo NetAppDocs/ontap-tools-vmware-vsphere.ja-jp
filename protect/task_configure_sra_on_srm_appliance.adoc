@@ -5,6 +5,7 @@ keywords:
 summary: SRM アプライアンスを導入したら、 SRM アプライアンスに SRA を設定する必要があります。SRA を正しく設定すると、ディザスタリカバリ管理のために SRM アプライアンスが SRA と通信できるようになります。SRM アプライアンスと SRA の間の通信を有効にするためには、 ONTAP ツールのクレデンシャル（ IP アドレスと管理者パスワード）を SRM アプライアンスに保存する必要があります。 
 ---
 = SRM アプライアンスで SRA を設定する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

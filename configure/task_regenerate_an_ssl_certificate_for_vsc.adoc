@@ -5,6 +5,7 @@ keywords:
 summary: Virtual Storage Console （ VSC ）をインストールすると SSL 証明書が生成されます。SSL 証明書用に生成される識別名（ DN ）は、クライアントマシンで認識される共通名（ CN ）とは異なる場合があります。キーストアと秘密鍵のパスワードを変更して証明書を再生成し、サイト固有の証明書を作成することができます。 
 ---
 = Virtual Storage Console の SSL 証明書を再生成する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

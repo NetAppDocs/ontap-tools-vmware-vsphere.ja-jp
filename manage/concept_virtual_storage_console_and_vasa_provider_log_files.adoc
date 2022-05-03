@@ -5,6 +5,7 @@ keywords:
 summary: エラーが発生した場合は、 /opt/netapp/vscserver/log ディレクトリおよび /opt/netapp/vpserver/log ディレクトリにあるログファイルを確認できます。 
 ---
 = Virtual Storage Console と VASA Provider のログファイル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

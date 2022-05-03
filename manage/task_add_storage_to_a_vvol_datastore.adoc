@@ -5,6 +5,7 @@ keywords: virtual volume datastores
 summary: ストレージの追加ウィザードを使用して既存の VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームを追加することで、利用可能なストレージ容量を増やすことができます。 
 ---
 = vVol データストアにストレージを追加する
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

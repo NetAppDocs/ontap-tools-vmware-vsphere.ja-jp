@@ -5,6 +5,7 @@ keywords:
 summary: vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。VMware vSphere 用の ONTAP ® ツールでは、 vCenter Server RBAC と ONTAP RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる VSC タスクが決まります。 
 ---
 = ONTAP ツールでのロールベースアクセス制御の概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

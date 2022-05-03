@@ -5,6 +5,7 @@ keywords:
 summary: VMware vSphere 用の ONTAP ツールでは、 VASA Provider 機能がデフォルトで有効になっています。VMware 仮想ボリューム（ vVol ）データストアは、各 vVol データストアに必要なストレージ機能プロファイルを使用して設定できます。 
 ---
 = 仮想データストアを設定するための VASA Provider の有効化
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
