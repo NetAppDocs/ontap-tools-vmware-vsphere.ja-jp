@@ -1105,27 +1105,11 @@
   <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">解決済みの問題、既知の問題、注意事項、および制限事項など、 VMware vSphere 用のこのリリースの ONTAP ツールに関する重要な情報を提供します。</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
-  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
-  <block id="bb66384fc72d3c628df8a5f0f82af691" category="paragraph"><block ref="bb66384fc72d3c628df8a5f0f82af691" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。</block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="inline-link"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
-  <block id="e895a12067be0bbd74a4e8b2b0aa1151" category="paragraph"><block ref="e895a12067be0bbd74a4e8b2b0aa1151" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">特許</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">ネットアップが所有する特許の最新リストは、次のサイトで入手できます。</block>
-  <block id="547ea2e305891e64d8e744949b0aca2c" category="inline-link"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
-  <block id="f48d97bbf0d920d837c970ab54fcbf14" category="paragraph"><block ref="f48d97bbf0d920d837c970ab54fcbf14" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">プライバシーポリシー</block>
-  <block id="50921fca0d376fca62102a5e608994e2" category="inline-link"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
-  <block id="3440f69304b6f0194e5502be93aede3f" category="paragraph"><block ref="3440f69304b6f0194e5502be93aede3f" category="inline-link-rx"></block></block>
-  <block id="b4de17ead867a3cf0b9d11e57e562672" category="section-title">機械翻訳</block>
-  <block id="19d4bd8b5bc76a91b74c1aa69ecea894" category="paragraph">翻訳版のコンテンツに関する重要な情報。</block>
-  <block id="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link"><block ref="db9bfd81e26275c9db26e2db3ac172c3" category="inline-link-rx"></block></block>
-  <block id="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="paragraph"><block ref="53028fa3036b4b4d8b4ba1c27bf5f0f8" category="inline-link-rx"></block></block>
-  <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
-  <block id="0d06100a9c9a8a7758a0d58988e99d2f" category="paragraph">本製品で使用されているサードパーティの著作権およびライセンスに関する情報を提供します。お使いの製品では、必ずしも以下に示すすべてのソフトウェアコンポーネントを使用しているわけではありません。</block>
-  <block id="64c6ddc210e10224f0d332d29e9010bc" category="inline-link">SnapCenter 4.5 に関する注意事項を参照してください</block>
-  <block id="3cf6934ea14c435e103764252b785bcc" category="paragraph"><block ref="3cf6934ea14c435e103764252b785bcc" category="inline-link-rx"></block></block>
   <block id="8f7be3c874feb6ef0fd5f20afd8d5fbb" category="summary">VMware vSphere 用の ONTAP ツールを使用すると、 vCenter Server 環境内の仮想データストアを設定、管理、保護できます。</block>
   <block id="46c4d9bfa1c229940459326940489ab0" category="doc">VMware vSphere ドキュメント用の ONTAP ツール</block>
   <block id="5a26627e54a06d78a8fc3c6d0b650e36" category="summary">導入後、メンテナンスコンソールを使用して ONTAP ツールの管理者パスワードを変更することができます。</block>
@@ -1923,7 +1907,6 @@
   <block id="07e86e3a6e2b9123cf44bd39073dcf67" category="paragraph">単一の VMware vSphere HTML5 クライアントで複数の vCenter Server インスタンスを管理している環境で VMware vSphere 用の ONTAP ツールを使用している場合は、各 vCenter Server に VSC のインスタンスを 1 つずつ登録して、 VSC と vCenter Server を 1 ： 1 のペアにする必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。</block>
   <block id="1242e163636ceb52703fad8214a2bedc" category="list-text">ONTAP 9.8P1 以降のストレージを設定しておく必要があります。</block>
   <block id="b1be7fedf2bae707bc5e880facde39f0" category="inline-link">VMware vSphere 9.10 用の ONTAP ツールに関する注意事項</block>
-  <block id="e28321b20146417dee6e7820cb1031c3" category="paragraph"><block ref="e28321b20146417dee6e7820cb1031c3" category="inline-link-rx"></block></block>
   <block id="169debc36900220172817b74d871e07b" category="summary">ここに記載されている手順に従って、既存の 9.7.1 以降のセットアップから最新リリースの ONTAP ツールへのインプレースアップグレードを実行できます。</block>
   <block id="c5910340b269c593d16e5bb21c2ce618" category="paragraph">ここに記載された手順に従って、既存の 9.7P1 以降のリリースから最新リリースの ONTAP ツールへのインプレースアップグレードを実行できます。</block>
   <block id="2dc470ea65bfb20ee49093121123d780" category="list-text">最新リリースの ONTAP ツールの .iso ファイルをダウンロードしておく必要があります。</block>
@@ -1994,4 +1977,5 @@
   <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="adc8e197d36a3b2270201bc307f60f15" category="paragraph"><block ref="adc8e197d36a3b2270201bc307f60f15" category="inline-link-rx"></block></block>
 </blocks>
