@@ -1,6 +1,6 @@
 ---
 settings:
-  name: ONTAP tools for VMware vSphere 9.10
+  name: ONTAP tools for VMware vSphere 9.11
   internal:
     pdf_enabled: true
   prod:
@@ -9,7 +9,7 @@ settings:
   langs: ja-jp,us-en,zh-cn,zh-tw,ko-kr
 sidebar:
   entries:
-  - title: VMware vSphere 9.10 ドキュメント用の ONTAP ツール
+  - title: VMware vSphere 9.11ドキュメント用のONTAP ツール
     url: "/index.html"
   - title: リリースノート
     url: "/release_notes.html"

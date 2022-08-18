@@ -41,8 +41,6 @@ NOTE: リモート診断をイネーブルにするときは、「 ````ip` 」�
 . Virtual Storage Console サービスのログレベルを変更します
 . VASA Provider サービスと SRA サービスのログレベルを変更します
 . TLS 設定を表示する
-. TLS プロトコルを有効にします
-. TLS プロトコルを無効にします
 
 
 

@@ -359,7 +359,6 @@
   <block id="944df66e06b22f6332bfa0c03f99d5cf" category="list-text">必要なデータストアまたは仮想マシンを右クリックし、 * NetApp ONTAP ツール * &gt; * QoS の割り当て * をクリックします。</block>
   <block id="438a5a3c55ac2da39715ccc2098b77d7" category="list-text">Assign QoS （ QoS の割り当て）ダイアログボックスで、必要な IOPS 値を入力し、 * Apply * （適用）をクリックします。</block>
   <block id="18b21d5b06a5a5f79020d85de9c49a5d" category="doc">VVol データストアのリバランシング</block>
-  <block id="fbaf83390e5a4d870b5b750c0656b670" category="paragraph">VVOL データストアのリバランシングは、 LUN の移動またはファイルの移動によって実行されます。VVOL のリバランシングで考慮される基準は次のとおりです。</block>
   <block id="b0b15a5664f313c682449715f8797570" category="list-text">既存の FlexVol ボリュームのサイズは変更されず、新しい FlexVol ボリュームは追加されません</block>
   <block id="5415ed28641dd79c706bfc42b5c7606c" category="list-text">負荷を再分散するのは、ストレージ機能またはボリューム属性が同じ FlexVol ボリュームだけです</block>
   <block id="656a7ca9d5565aff5c4e7369951a72a3" category="list-text">スペース使用量が最も多い FlexVol ボリュームがリバランシングの対象となります</block>
@@ -542,11 +541,7 @@
   <block id="e940bf2d37cbed917a25a040c93e7998" category="paragraph">データセンターを右クリックし、 * NetApp ONTAP tools * &gt; * Provision Datastore * を選択します。</block>
   <block id="fba794904ebef2bde415b1b48535b36a" category="paragraph">ホストクラスタを右クリックし、 * NetApp ONTAP tools * &gt; * Provision Datastore * を選択します。</block>
   <block id="01c940a8320a768f254d17b5ad22e77d" category="paragraph">ホストを右クリックし、 * NetApp ONTAP tools * &gt; * Provision Datastore * を選択します。</block>
-  <block id="5d796cb61105a94007269d4dd1796747" category="paragraph">[New Datastore provisioning （データストアの新規プロビジョニング） ] ダイアログボックスの [General] （全般）セクションには、新しいデータストアのデスティネーション、名前、サイズ、タイプ、およびプロトコルを入力するオプションがあります。NFS * または * VMFS * プロトコルを選択すると、従来のデータストアを設定できます。このリリースでは、最大サイズ 64TB の VMFS データストアを設定できます。「 ONTAP クラスタ全体にわたるデータストアデータ」オプションを選択して、ストレージシステム上で FlexGroup ボリュームをプロビジョニングできます。このオプションを選択すると ' プロビジョニングにストレージ機能プロファイルを使用するチェックボックスが自動的に選択解除されますFlexGroup データストアのプロビジョニングの場合は、 9.8 以降の ONTAP クラスタのみが選択対象として表示されます。vVol データストアの設定には vVol データストアタイプを使用します。VASA Provider が有効になっている場合は、ストレージ機能プロファイルを使用するかどうかも指定できます。* Datastore cluster * オプションは、従来のデータストアに対してのみ使用できます。「 * Advanced * 」オプションを使用して、 * VMFS5 * または * VMFS6 * ファイルシステムを指定する必要があります。</block>
-  <block id="f3a6fc9fb4ad23951edb2fc7ea7ce05b" category="paragraph">「全般」セクションでオプションを選択した場合は、リストされているストレージ機能プロファイルのいずれかを選択できます。FlexGroup データストアをプロビジョニングする場合、このデータストアのストレージ機能プロファイルはサポートされていません。ストレージシステムと Storage Virtual Machine に対する推奨設定があらかじめ選択されています。ただし、必要に応じて値を変更できます。</block>
-  <block id="56b417b201b79abcd233bd24a3f67c7f" category="paragraph">アグリゲート * オプションとボリューム * オプションには、デフォルトで推奨値が設定されます。これらの値は要件に応じてカスタマイズが可能です。アグリゲートの選択は ONTAP で管理されるため、 FlexGroup データストアではアグリゲートの選択はサポートされません。「 * 詳細設定 * 」メニューの「 * スペースリザーブ * 」オプションにも最適な結果が得られます。</block>
   <block id="290612199861c31d1036b185b4e69b75" category="paragraph">まとめ</block>
-  <block id="c00d812223c8931a6abca969bbb9c373" category="paragraph">新しいデータストアについて指定したパラメータの概要を確認できます。Summary （サマリ）ページには、作成したデータストアのタイプを区別するための新しいフィールド「 Volume Style 」が用意されています。「ボリューム・スタイル」には、「 FlexVol 」または「 FlexGroup 」を指定できます。</block>
   <block id="ce9642ced5a02053cc009b2bcdc0de38" category="admonition">従来のデータストアに含まれる FlexGroup を既存のサイズよりも縮小することはできませんが、最大 120% まで拡張できます。これらの FlexGroup ボリュームでは、デフォルトの Snapshot が有効になっています。。[ 概要 ] セクションで、 [ * 完了 ] をクリックします。</block>
   <block id="db25841cad5f4a3789c93e40d334c1b8" category="inline-link">ボリュームステータスがオフラインになるとデータストアにアクセスできなくなります</block>
   <block id="e8f51520d45845b237d7483dd8e847f2" category="paragraph"><block ref="e8f51520d45845b237d7483dd8e847f2" category="inline-link-rx"></block></block>
@@ -1970,12 +1965,48 @@
   <block id="57a78a866bc67d01f079d70f0f08d264" category="paragraph">ONTAP ツールの VCF 配置では、コンテナ作成ワークフローのみが可能です。データストアのプロビジョニング、ストレージ機能プロファイルの作成、ディザスタリカバリなどの他のワークフローを使用する場合は、 Register.html ページを使用して vCenter Server に ONTAP ツールを登録する必要があります。VCF モードでの ONTAP ツールの制限事項は、ディザスタリカバリ用に SRA を設定できないことです。</block>
   <block id="dc6f079855bc9a7477861302bbb0343f" category="image-alt">VMware Cloud Foundation の導入ワークフロー</block>
   <block id="6e87afa480416c8595b0460888551386" category="paragraph"><block ref="6e87afa480416c8595b0460888551386" category="inline-link-macro-rx"></block></block>
-  <block id="afa73da64573c9300600d9dcda03dbca" category="inline-link">『 ONTAP tools for VMware vSphere 9.10 Release Notes 』</block>
-  <block id="1d39c4b0a8cc202b1cc30e5c2df964fb" category="paragraph">詳細については、を参照してください<block ref="8da3a9cd5d4fe240d226b42d5d3c0796" category="inline-link-rx"></block>。</block>
-  <block id="4cf800e4c7e3afad619ba39d635e53c7" category="sidebar">VMware vSphere 9.10 ドキュメント用の ONTAP ツール</block>
   <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
   <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
   <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
   <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
   <block id="adc8e197d36a3b2270201bc307f60f15" category="paragraph"><block ref="adc8e197d36a3b2270201bc307f60f15" category="inline-link-rx"></block></block>
+  <block id="1415c1c83a97d2309236d6acbf410723" category="list-text">Kerberos認証を使用する場合は、次のものが必要です。</block>
+  <block id="232c27acd8cefdcf2eab2fd4448e58b7" category="list-text">Active Directory（AD）を使用したWindowsマシン</block>
+  <block id="3b190489626bc91788e69bde26b23e49" category="list-text">ドメインネームサーバ（DNS）</block>
+  <block id="c33ec8bbf1e9679441ee7b5780300148" category="list-text">キー配布センター（KDC）</block>
+  <block id="ffc5820bec391adec4d3ea0c0b487f5c" category="list-text">Kerberosが設定されたONTAP ストレージシステム（クラスタ</block>
+  <block id="87e73a2e34acfaa495847cdc56b91075" category="list-text">Kerberosが設定されたESXiホスト</block>
+  <block id="247ab06aaf332c4dffa16f9e44bfb784" category="paragraph">[New Datastore provisioning （データストアの新規プロビジョニング） ] ダイアログボックスの [General] （全般）セクションには、新しいデータストアのデスティネーション、名前、サイズ、タイプ、およびプロトコルを入力するオプションがあります。</block>
+  <block id="b8f85eda1edc7ce9e1da9898d153444e" category="paragraph">従来のデータストアを設定する際には、プロトコルの* nfs *または* vmfs *のいずれかのタイプを選択できます。NFSの場合は、nfs3またはnfs 4.1を選択できます。</block>
+  <block id="d728bb03f29ad9ea3295bc22a35d9cb0" category="paragraph">このリリースでは、最大サイズ 64TB の VMFS データストアを設定できます。「 ONTAP クラスタ全体にわたるデータストアデータ」オプションを選択して、ストレージシステム上で FlexGroup ボリュームをプロビジョニングできます。このオプションを選択すると ' プロビジョニングにストレージ機能プロファイルを使用するチェックボックスが自動的に選択解除されますFlexGroup データストアのプロビジョニングの場合は、 9.8 以降の ONTAP クラスタのみが選択対象として表示されます。vVol データストアの設定には vVol データストアタイプを使用します。VASA Provider が有効になっている場合は、ストレージ機能プロファイルを使用するかどうかも指定できます。* Datastore cluster * オプションは、従来のデータストアに対してのみ使用できます。「 * Advanced * 」オプションを使用して、 * VMFS5 * または * VMFS6 * ファイルシステムを指定する必要があります。</block>
+  <block id="ad37ded9046268d8e5ea7cb253bb5dda" category="paragraph">Kerberos 認証</block>
+  <block id="3ea519f69263ba3e63c00ba026dfbb01" category="paragraph">[*General]ページでNFS 4.1を選択した場合は、セキュリティ・レベルを選択します。</block>
+  <block id="12f4ceb4f1dabc544795882faae863af" category="paragraph">Kerberos認証はFlexVolでのみサポートされます。</block>
+  <block id="cd506470f5e5655bb026fe078bbbcdd3" category="paragraph">「全般」セクションでオプションを選択した場合は、リストされているストレージ機能プロファイルのいずれかを選択できます。</block>
+  <block id="90a7ec5aa6debb1e9f051b3011306ea5" category="list-text">FlexGroup データストアをプロビジョニングする場合、このデータストアのストレージ機能プロファイルはサポートされていません。ストレージシステムと Storage Virtual Machine に対する推奨設定があらかじめ選択されています。ただし、必要に応じて値を変更できます。</block>
+  <block id="395cd4e6b9788357ea9b4875980f0735" category="list-text">Kerberos認証の場合、Kerberosで有効になっているストレージシステムが一覧表示されます。</block>
+  <block id="d656972a3bb8dc447ca461f90894a1c0" category="paragraph">アグリゲート * オプションとボリューム * オプションには、デフォルトで推奨値が設定されます。これらの値は要件に応じてカスタマイズが可能です。アグリゲートの選択は ONTAP で管理されるため、 FlexGroup データストアではアグリゲートの選択はサポートされません。</block>
+  <block id="11d67c18b6ade2844dac7ac6e8d8e996" category="paragraph">「 * 詳細設定 * 」メニューの「 * スペースリザーブ * 」オプションにも最適な結果が得られます。</block>
+  <block id="8f0960fd537565d013c63b424e32e545" category="paragraph">（オプション）イニシエータグループ名は、「*イニシエータグループ名の変更*」フィールドで指定できます。</block>
+  <block id="ff34df29001826a51c55234f7899a5c8" category="list-text">この名前の新しいイニシエータグループがない場合は作成されます。</block>
+  <block id="87d50d4aca5654404d2bd923ef01f39d" category="list-text">指定したイニシエータグループ名にプロトコル名が追加されます。</block>
+  <block id="fddf43b7509a27a580ae5b8204ed1b6e" category="list-text">選択したイニシエータで既存のigroupが見つかった場合は、指定した名前でigroupの名前が変更され、再利用されます。</block>
+  <block id="66f5d92a1b6d185f278cc7e3df89631f" category="list-text">igroup名を指定しない場合は、デフォルト名でigroupが作成されます。</block>
+  <block id="f112f880ee3808f45fa645d31a60919e" category="paragraph">新しいデータストアについて指定したパラメータの概要を確認できます。</block>
+  <block id="d95d2027ad4faa7afb16847cf6829317" category="paragraph">フィールド「Volume style」を使用すると、作成するデータストアのタイプを区別できます。「ボリューム・スタイル」には、「 FlexVol 」または「 FlexGroup 」を指定できます。</block>
+  <block id="fe0891bb90d313b1b9098fdd3e5f531a" category="inline-link">ONTAP での Kerberos のサポート</block>
+  <block id="5e31aad48428786bd6d1afc4fa881f95" category="paragraph"><block ref="5e31aad48428786bd6d1afc4fa881f95" category="inline-link-rx"></block></block>
+  <block id="b492eaf1aa700257b5bd87a0787ffbba" category="inline-link">NFS で Kerberos を設定するための要件</block>
+  <block id="2f9647a83c40cf2ae0233ad123484629" category="paragraph"><block ref="2f9647a83c40cf2ae0233ad123484629" category="inline-link-rx"></block></block>
+  <block id="0503dc7bdab97ba0513cd725666d3394" category="inline-link">System Manager - ONTAP 9.7 以前を使用して Kerberos Realm サービスを管理します</block>
+  <block id="7fe6d5584982526cfe5bb1b708c9e10f" category="paragraph"><block ref="7fe6d5584982526cfe5bb1b708c9e10f" category="inline-link-rx"></block></block>
+  <block id="1a69d38f7b46901c58e85d024e87b034" category="inline-link">データ LIF で Kerberos を有効にします</block>
+  <block id="bcafb10f2c5e3e1c946d39793d902146" category="paragraph"><block ref="bcafb10f2c5e3e1c946d39793d902146" category="inline-link-rx"></block></block>
+  <block id="b292d4b33c15cd5429a4aec0164b62f4" category="inline-link">ESXiホストでKerberos認証を設定</block>
+  <block id="2775eee214a07dd3ad16007a75341d1d" category="paragraph"><block ref="2775eee214a07dd3ad16007a75341d1d" category="inline-link-rx"></block></block>
+  <block id="f05d67a2632f89a349f888bc1abd2314" category="paragraph">VVOL データストアのリバランシングは、 LUN の移動またはファイルの移動によって実行されます。VVOLのリバランシングで考慮される基準は次のとおりです。</block>
+  <block id="4240120fee603161e3f32fa6a4127dc3" category="list-text">NFS VVOLデータストアはサポートされません</block>
+  <block id="325ed2f7ffe6974144615e01682ab317" category="inline-link">『ONTAP tools for VMware vSphere 9.11 Release Notes』</block>
+  <block id="1b4b4851374b4f5e2e06a8e2cdea0bfc" category="paragraph">詳細については、を参照してください<block ref="ef3304265bfcc8fef389579152b8897d" category="inline-link-rx"></block>。</block>
+  <block id="08420002b9383a71acf39a2e9f9d504a" category="sidebar">VMware vSphere 9.11ドキュメント用のONTAP ツール</block>
 </blocks>
