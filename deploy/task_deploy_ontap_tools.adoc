@@ -21,7 +21,7 @@ summary: アプライアンスを使用するには、環境に ONTAP ツール�
 NOTE: ONTAP ツールは、 Windows 環境の vCenter Server または VMware vCenter Server Virtual Appliance （ vCSA ）環境に登録できます。
 
 +
-https://imt.netapp.com/matrix/imt.jsp?components=103229;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"]
+https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
 
 * vCenter Server 環境を設定およびセットアップしておく必要があります。
 * 仮想マシン用の ESXi ホストのセットアップが完了している必要があります。

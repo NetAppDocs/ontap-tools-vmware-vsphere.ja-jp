@@ -1825,8 +1825,6 @@
   <block id="1b837800f24f729eb8e73a102257c0bd" category="admonition">ONTAP 9.9.1 以降で All SAN Array （ ASA ）タイプのストレージプラットフォームを使用している場合、 16TB を超える VMDK サイズの VVOL データストアのみを作成できます。</block>
   <block id="7e4398bcc994aff66c591cf052f8da8c" category="paragraph">ONTAP から取得された IOPS データは四捨五入されて、 vVol ダッシュボードに表示されます。ONTAP から取得される実際の IOPS 値と vVol ダッシュボードに表示される IOPS 値は異なる可能性があります。ONTAP ツールを使用すると、 NFS ベースの VVol データストアのパフォーマンスを監視できます。</block>
   <block id="690357a744b773276381391369196306" category="cell">ONTAP 9.3 、 9.5 、 9.6 、 9.7 、 9.8P1 以降。</block>
-  <block id="b6bdbb42dd11a260ba5e106ec1746d08" category="inline-link">Interoperability Matrix Tool ： OTV 9.10</block>
-  <block id="b6097d7254f8b577b98c43ebf2550517" category="cell">を参照してください<block ref="195a086b43ebc4eb09de5db7eca98aaf" category="inline-link-rx"></block></block>
   <block id="4c59e09d33a14633705995f32d9780b3" category="admonition">（オプション） vCenter Server に登録せずにコンテナを作成する場合は、 Configure vCenter または Enable VCF セクションで Enable VMware Cloud Foundation （ VCF ）チェックボックスをオンにします。</block>
   <block id="a25b09ef62f093cb958512723cf9c709" category="inline-link-macro">既存のデータストア用に VVol レプリケーションを設定する</block>
   <block id="d54b1afb8378e7fe0084d91e5e715292" category="paragraph"><block ref="d54b1afb8378e7fe0084d91e5e715292" category="inline-link-macro-rx"></block></block>
@@ -1909,7 +1907,6 @@
   <block id="9eed5a43956cb1df77adfee8b3733333" category="list-text">FIPS がイネーブルになっている最新の OTV （ 9.10 ）リリースにアップグレードしても、 FIPS がサポートされていない古いバージョンの vCenter を使用している場合、展開は引き続き機能します。ただし、 vCenter を最新の FIPS サポートバージョンにアップグレードした場合に、以前のバージョンの ONTAP ツールを使用していれば、 FIPS が vCenter で無効になっていれば導入は機能します。</block>
   <block id="a7189062665fe6b8b3263ee857e62834" category="paragraph">VMware を初めて導入し、ネットアップの ONTAP ツール製品を使用したことがない場合は、 ONTAP ツールを導入して設定する前に、 vCenter Server を設定して ESXi ホストをセットアップする必要があります。</block>
   <block id="78b9c306d2b9e90dc4612872a3412b17" category="image-alt">新規ユーザの導入</block>
-  <block id="213681fae7ab740d065d6128157952d7" category="paragraph"><block ref="97e9e497c6215eaee7f74a091f9793db" category="inline-link-rx"></block></block>
   <block id="bd102b609640a336d673bcb7001cf07e" category="list-text">「 cd /etc/vmware/vsphere-clientui/vc-packages/vsphere-client-serenity 」を使用して、ディレクトリを vCenter クライアント（ HTML5 ） UI 拡張ディレクトリに変更します</block>
   <block id="5584c9cd70ee56e5a5efd81211571c12" category="paragraph">Virtual Storage Console 6.x 、 Storage Replication Adapter 2.x 、 3.x 、 4.x 、 VASA Provider 6.x などの個々のアプリケーションの以前のリリースでは、異なるアップグレードプロセスが使用されます。これらの旧バージョンの VSC 、 VASA Provider 、または SRA が環境にインストールされている場合は、次の処理を実行する必要があります。</block>
   <block id="7f92b985b9e4bff91f2d31ae0cc7bdd7" category="list-text">SRA 4.0P1 を使用している場合は、まず SRA 9.6 にアップグレードしてから、 SRA 9.6 リリースのインプレースアップグレードを実行する必要があります。あとで、 ONTAP ツールの最新リリースにアップグレードできます。</block>
@@ -2010,4 +2007,6 @@
   <block id="f6d09a6ca81951d147ef393d3877b8d5" category="inline-link">VMware vSphere 9.11用のONTAP ツールに関する注意事項</block>
   <block id="02994633d024cf9b53f3747d971a0667" category="paragraph"><block ref="02994633d024cf9b53f3747d971a0667" category="inline-link-rx"></block></block>
   <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">VMware vSphere 用の ONTAP ツール</block>
+  <block id="d9feb2b730ded2731ab499f4b64cca33" category="paragraph"><block ref="ccafd2400edf7c1aa273a76ad605940f" category="inline-link-rx"></block></block>
+  <block id="8cd78caf975d066200418cff9639fdef" category="cell">を参照してください<block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block></block>
 </blocks>
