@@ -568,12 +568,8 @@
   <block id="400fae8e788b3721b9ac25fe01f04f50" category="list-text">[ 適用（ Apply ） ] をクリックします。</block>
   <block id="aea7780202aad9f17865502971d71ddb" category="paragraph">vVol ダッシュボードには、 OnCommand API サービスの登録が完了した時点で初めて、 ONTAP 9.6 以前の SAN vVol データストアの指標が表示されます。</block>
   <block id="5239d77bc203f1ccbb06d46c0327b099" category="summary">ONTAP ツールのメンテナンスコンソールを使用して、アプリケーション、システム、およびネットワークの構成を管理できます。管理者パスワードとメンテナンスパスワードを変更することができます。サポートバンドルの生成、異なるログレベルの設定、 TLS 設定の表示と管理、およびリモート診断の開始を行うこともできます。</block>
-  <block id="0c99c2d41b42b35f0be071f1b29ac58a" category="doc">ONTAP ツールのメンテナンスコンソールのオプション</block>
   <block id="417ba69cd3cff33af12fb92ce9169d33" category="paragraph">ONTAP ツールを導入したあと、メンテナンスコンソールにアクセスするために VMware ツールをインストールしておく必要があります。ONTAP ツールのメンテナンスコンソールにログインするには、導入時に設定したユーザ名とパスワードに「パスワード」を使用する必要があります。</block>
   <block id="2e5b406e34be2192a717470c0af8e621" category="admonition">リモート診断をイネーブルにするときは、「 ````ip` 」ユーザのパスワードを設定する必要があります。</block>
-  <block id="3a8f5c62d9ad72e1e28c71f8d0a4451b" category="paragraph">導入した ONTAP ツールの * Summary * タブを使用して、メンテナンスコンソールにアクセスする必要があります。をクリックします <block ref="646d51cfcc95b274401d8044823da1c3" category="inline-image-macro-rx" type="image"></block>をクリックすると、メンテナンスコンソールが起動します。</block>
-  <block id="b01a305eaba26950499c18ed4f42608f" category="cell">コンソールメニュー</block>
-  <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="cell">オプション（ Options ）</block>
   <block id="8771bccdcac2e3ecfec998ef1fff4833" category="paragraph">アプリケーションの設定</block>
   <block id="be26199d886066a84db4063998d2f165" category="list-text">サーバステータスの概要を表示します</block>
   <block id="7eb3185a1570bf537b78f8ccb0697633" category="list-text">Virtual Storage Console サービスを開始します</block>
@@ -582,13 +578,10 @@
   <block id="c5f5f62fa8098788ec639d85e5f58b17" category="list-text">VASA Provider および SRA サービスを停止する</block>
   <block id="47143644236f774216e54ca22d1cd883" category="list-text">「管理者」ユーザのパスワードを変更します</block>
   <block id="2b85c9deceb1ac9fcc6fd6ff2bda7190" category="list-text">証明書を再生成します</block>
-  <block id="f4cbc772b7acc2c81f673e2eb77a6ca8" category="list-text">キーストアと証明書をハードリセットします</block>
   <block id="3edfaa1d35137d169aaa6dadbc1e0fe3" category="list-text">データベースをハードリセットしました</block>
   <block id="5ba55d604880b0b6ad27a48df8bfc5a9" category="list-text">Virtual Storage Console サービスのログレベルを変更します</block>
   <block id="293ad933a5979b221ce4825406b4e447" category="list-text">VASA Provider サービスと SRA サービスのログレベルを変更します</block>
   <block id="aea013b92d5d9e0908613c12a6ef462e" category="list-text">TLS 設定を表示する</block>
-  <block id="35d170dc4d56336951ac7a99f310afce" category="list-text">TLS プロトコルを有効にします</block>
-  <block id="6f5b9f5237a43bee958b38be8626f249" category="list-text">TLS プロトコルを無効にします</block>
   <block id="9b685fecb65f77899f1ea4fd1e767722" category="paragraph">System Configuration （システム設定）</block>
   <block id="978968aa0140e7645f3db01d1e5743c3" category="list-text">仮想マシンをリブートします</block>
   <block id="c795b3f02d3ba272bf89b7228980a7c6" category="list-text">仮想マシンをシャットダウンします</block>
@@ -618,7 +611,6 @@
   <block id="d32b692a228c985bcc53d0e3be7f3ee9" category="list-text">診断シェルにアクセスします</block>
   <block id="fc50930a1e8c2b869ad303b5b5234574" category="list-text">リモート診断アクセスを有効にします</block>
   <block id="234464a5fac0a1ef3a08301b88046660" category="inline-link-macro">Virtual Storage Console と VASA Provider のログファイル</block>
-  <block id="3588d8f1b7af566c4b91addbce496cd0" category="paragraph"><block ref="3588d8f1b7af566c4b91addbce496cd0" category="inline-link-macro-rx"></block></block>
   <block id="855a790093b915b2672c967da47d34c8" category="summary">Virtual Storage Console \ （ VSC\ ）には手動でストレージシステムを追加できます。</block>
   <block id="0f700202b00d956398e3d2d111decca2" category="doc">ストレージシステムを VSC に追加</block>
   <block id="723456cd23133acf945d5daf4f883e37" category="paragraph">Virtual Storage Console （ VSC ）には手動でストレージシステムを追加できます。</block>
@@ -1014,12 +1006,7 @@
   <block id="2a60e4df2b66e723fc502252815fd80f" category="list-text">既存の設定データを移行します。</block>
   <block id="2ce72eb7080f033d37c840a728de9539" category="paragraph">構成データにはストレージ・システムのクレデンシャルのほかに 'kaminoprefs.xml ファイルおよび vscPreferences.xml ファイルで使用されるプリファレンスも含まれます</block>
   <block id="9f9554604b180d4f12390e136147beb7" category="paragraph"><block ref="9f9554604b180d4f12390e136147beb7" category="inline-link-macro-rx"></block></block>
-  <block id="f0257f32dc0bfda00ae02ce78c8c7f9e" category="paragraph">多くの場合、設定データを移行する必要はありません。ただし、以前にプリファレンスファイルをカスタマイズした場合は、それらのファイルを確認し、新しく導入した ONTAP ツールに対しても同様の変更を行うことを推奨します。次のいずれかを実行できます。</block>
-  <block id="2612149a04c869d4a60c63a5b19cc6b2" category="inline-link">SnapCenter および Virtual Storage Console 用の NetApp インポートユーティリティ</block>
-  <block id="9731cece65b178e7bf213f0f3d5e891d" category="list-text">使用<block ref="29824d14e430788052b1250d1e3cc9dc" category="inline-link-rx"></block> をクリックして、ストレージシステムのクレデンシャルを VSC 6.X および SRA 4.X から新しい導入環境に移行します。</block>
-  <block id="60caf4ce70cf77e2e70855a9ad54064a" category="list-text">新しく導入した ONTAP ツールにストレージシステムを追加し、クレデンシャルを指定して追加します。</block>
   <block id="b306db6d6bcaf976db5689e930b5aee2" category="paragraph">VASA Provider 6.X からアップグレードする場合は、アップグレード前に VASA Provider の登録を解除する必要があります。詳細については、ご使用のリリースのドキュメントを参照してください。</block>
-  <block id="4aa2239dda37e378c2fd9033db9ad2f7" category="paragraph">SRA 4.0 以前からのアップグレードも実施する場合は、次の手順を実行します。</block>
   <block id="6db555bae030dd891aa85762ae9d5b14" category="paragraph"><block ref="6db555bae030dd891aa85762ae9d5b14" category="inline-link-macro-rx"></block></block>
   <block id="5df401ea01c055d3d0545c3236d0342d" category="list-text">SRA 2.1 または 3.0 を使用している場合は、最初に既存のサイトの設定をメモしておく必要があります。</block>
   <block id="29207911ce269dda752ac4d44a979ae1" category="paragraph">ONTAP 用 Storage Replication Adapter 4.0 のインストールおよびセットアップガイドの詳細な手順については、「アップグレードの概要」を参照してください。これらの SRA リリースも VASA Provider を使用するため、 VASA Provider の登録を解除してから最新バージョンの ONTAP ツールを導入する必要があります。アップグレードが完了したら、以前のリリースのサーバ（「 .ova 」）を削除できます。</block>
@@ -1310,7 +1297,6 @@
   <block id="1b779c313afbdbc7de30f9feaac2b8b8" category="paragraph">レポート内の各仮想マシン名は、選択した仮想マシンの [ モニタ ] タブへのリンクです。仮想マシンのレポートを要件に応じてソートし、 .csv ファイルにエクスポートしてローカルシステムに保存することができます。保存したレポートには、レポートのタイムスタンプも追加されます。</block>
   <block id="f81c7969fdefea8a13463f2714b8bc6f" category="paragraph">FlexGroup ボリュームをベースとする仮想マシンでは、新しい仮想マシンの電源をオンにすると、 ONTAP で監視するためのファイルが登録されます。レイテンシ、スループット、および IOPS の履歴指標は、 VM レポートに ONTAP からアクセスしたときに取得されます。</block>
   <block id="1160aea292cdf3dd55420a7a7bafa77e" category="doc">ONTAP ツールメンテナンスコンソールの概要</block>
-  <block id="53a0316200f9542f29bdba91612e8744" category="paragraph">導入した ONTAP ツールの [Summary] タブを使用して、メンテナンスコンソールにアクセスする必要があります。をクリックします <block ref="646d51cfcc95b274401d8044823da1c3" category="inline-image-macro-rx" type="image"></block>をクリックすると、メンテナンスコンソールが起動します。</block>
   <block id="0b8a80106a177e9178ec383905046532" category="cell">* コンソール・メニュー *</block>
   <block id="2c639d8cf692c100e3eba8b611821414" category="cell">* オプション *</block>
   <block id="d2a90b891e76a96b4b7f2eb26a53b356" category="list-text">キーストアと証明書をハードリセットします</block>
@@ -1545,8 +1531,6 @@
   <block id="5964a20b29586f71f419711aae6ae487" category="paragraph">アダプタは SRM にインストールされます。</block>
   <block id="39d642e40fbcd108eb0ab15715ee349d" category="list-text">保護対象サイトで、プライマリ ESXi ホストがプライマリストレージシステムの LUN に接続されていることを確認します。</block>
   <block id="c295c005211b8c46c7e8ae09f97dae78" category="list-text">プライマリ・ストレージ・システムで、「 ostype 」オプションが _vmware_ に設定されている igroup に、 LUN が含まれていることを確認します。</block>
-  <block id="83e07e8dd229d7dad2fa5d0574490b80" category="list-text">リカバリサイトの ESXi ホストが FC または iSCSI を使用して Storage Virtual Machine （ SVM ）に適切に接続されていることを確認します。</block>
-  <block id="94d40bdd7b43645e14cbce746d040edf" category="paragraph">そのためには、 ESXi ホストの SVM 上にローカル LUN が接続されていることを確認するか、 SVM 上で「 fcp show initiators 」コマンドまたは「 iscsi show initiators 」コマンドを使用します。</block>
   <block id="c15f6cdb57f72faef1aa17926a9bf11b" category="list-text">リカバリサイトの各 ESXi ホストで「 ping 」コマンドを実行して、 SVM から NFS エクスポートへの接続に使用される IP アドレスにホストの VMkernel ポートからアクセスできることを確認します。</block>
   <block id="090d563c49141ab020a2a13fed6d62cc" category="summary">ディザスタリカバリに Windows ベースの Site Recovery Manager （ SRM ）を使用している場合、同じセットアップで SRM アプライアンスを使用するには、 Windows のディザスタリカバリセットアップをアプライアンスベースの SRM に移行する必要があります。</block>
   <block id="b1615a1d50989bbe005256e6352c9d57" category="doc">Windows SRM から SRM アプライアンスへの移行</block>
@@ -2009,4 +1993,13 @@
   <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">VMware vSphere 用の ONTAP ツール</block>
   <block id="d9feb2b730ded2731ab499f4b64cca33" category="paragraph"><block ref="ccafd2400edf7c1aa273a76ad605940f" category="inline-link-rx"></block></block>
   <block id="8cd78caf975d066200418cff9639fdef" category="cell">を参照してください<block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block></block>
+  <block id="c84e3f1fce618833b2fe90a7026984c3" category="paragraph">導入した ONTAP ツールの * Summary * タブを使用して、メンテナンスコンソールにアクセスする必要があります。をクリックします <block ref="646d51cfcc95b274401d8044823da1c3" category="inline-image-macro-rx" type="image"></block>をクリックすると、メンテナンスコンソールが起動します。</block>
+  <block id="5cd110d372988e6fedf83dab3b77194b" category="list-text">コマンドcd /var/log/vmware/srmを実行して'ログ・ディレクトリに移動します</block>
+  <block id="ecf618584c0254b7edf0733670fcb0f8" category="list-text">リカバリサイトの ESXi ホストが FC または iSCSI を使用して Storage Virtual Machine （ SVM ）に適切に接続されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスできる必要があります。同様に、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。</block>
+  <block id="785694280aa2f361cd62ad2d7aadb3a7" category="paragraph">そのためには、 ESXi ホストの SVM 上にローカル LUN が接続されていることを確認するか、 SVM 上で「 fcp show initiators 」コマンドまたは「 iscsi show initiators 」コマンドを使用します。ESXiでマッピングされたLUNに対するLUNアクセスを確認し、FCおよびiSCSI接続を確認します。</block>
+  <block id="34ab17700f5d219ac84124b2c9f0b173" category="paragraph">多くの場合、設定データを移行する必要はありません。ただし、以前にプリファレンスファイルをカスタマイズした場合は、それらのファイルを確認し、新しく導入した ONTAP ツールに対しても同様の変更を行うことを推奨します。新しく導入したONTAP ツールにストレージシステムを追加し、その際にクレデンシャルを指定できます。</block>
+  <block id="d09d8dd95e7b4f1ec5ecf89bb65d374e" category="paragraph">SRA 4.0以前からアップグレードする場合は、次の手順を実行します。</block>
+  <block id="f41a0f70d00fe5c4c096315736c1c5f5" category="paragraph">ユーザインターフェイスを使用してIPv4またはIPv6を設定するには、次のセクションを参照してください。</block>
+  <block id="9e61293b777b055e3576d637f3d16625" category="list-text"><block ref="9e61293b777b055e3576d637f3d16625" category="inline-link-macro-rx"></block></block>
+  <block id="c012b5b3ff136d3277c106ffd47bf52e" category="list-text"><block ref="c012b5b3ff136d3277c106ffd47bf52e" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -63,3 +63,8 @@ IPv6
 
 
 |===
+ユーザインターフェイスを使用してIPv4またはIPv6を設定するには、次のセクションを参照してください。
+
+* link:../configure/add_different_subnets.html["別のサブネットを追加してください"]
+* link:../configure/task_enable_datastore_mounting_across_different_subnets.html["異なるサブネット間でのデータストアのマウントを有効にする"]
+

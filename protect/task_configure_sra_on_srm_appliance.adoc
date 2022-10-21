@@ -28,6 +28,7 @@ SRM アプライアンスで SRA を設定すると、 SRA クレデンシャル
 . アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。
 . putty を使用して、管理者アカウントで SRM アプライアンスにログインします。
 . root ユーザに切り替えます。 root ユーザには「 root 」コマンドを使用します
+. コマンドcd /var/log/vmware/srmを実行して'ログ・ディレクトリに移動します
 . ログの場所で次のコマンドを入力して、 SRA で使用されている Docker ID を取得します：「 docker ps -l 」
 . コンテナ ID にログインするには、次のコマンドを入力します。「 docker exec-it-u SRM <container id>sh`
 . 次のコマンドを使用して、 ONTAP ツールの IP アドレスとパスワードで SRM を設定します。「 perl command.pl -i <va-IP> administrator <va-password>`
