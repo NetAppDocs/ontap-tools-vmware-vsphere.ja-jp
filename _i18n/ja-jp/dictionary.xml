@@ -1851,7 +1851,6 @@
   <block id="2efb0fa4cef9462e9a212abf6778b626" category="list-text">iSCSI Subnets Access に対して上記の手順を繰り返し、 * Apply * をクリックします。</block>
   <block id="481a4353946c90ce05d5219831e46abe" category="summary">VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。Virtual Storage Console （ VSC\ ）で設定される値は、ネットアップ独自のテスト結果に基づいています。</block>
   <block id="e9df7d5252c2104198351b64e368569b" category="paragraph">VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。ONTAP ツールで設定される値は、ネットアップ独自のテスト結果に基づいています。</block>
-  <block id="b38bf8be6e7b723590f1617ac2c54cc5" category="paragraph">vSphere 6.0 以降を使用している場合は、 ESXi ホスト 6.x の場合は値を 512 に、 ESXi 7.x の場合は 1024 に設定します。</block>
   <block id="56cfa018d4e9a7aa0b73e64b0dd88f77" category="paragraph">「異なるサブネット間でのデータストアのマウントの有効化」を参照してください。</block>
   <block id="8df76ca12987982377e22db05992acb3" category="paragraph">このプリファレンスファイルは vVol データストアの作成時にも当てはまります。詳細については、「異なるサブネット間でのデータストアのマウントの有効化」および「 VSC プリファレンスファイルの設定」を参照してください。</block>
   <block id="ec2fa05ad1e1cd992e000b32058b54e0" category="list-text">ONTAP ツールでは、 ASA および ONTAP 9.8 以降を実行する承認済みの AFF システムで使用する場合、 VMFS5 および VMFS6 のデータストアのプロビジョニングがサポートされます。最大 VMFS LUN およびボリュームサイズは 64TB です。</block>
@@ -2002,4 +2001,5 @@
   <block id="f41a0f70d00fe5c4c096315736c1c5f5" category="paragraph">ユーザインターフェイスを使用してIPv4またはIPv6を設定するには、次のセクションを参照してください。</block>
   <block id="9e61293b777b055e3576d637f3d16625" category="list-text"><block ref="9e61293b777b055e3576d637f3d16625" category="inline-link-macro-rx"></block></block>
   <block id="c012b5b3ff136d3277c106ffd47bf52e" category="list-text"><block ref="c012b5b3ff136d3277c106ffd47bf52e" category="inline-link-macro-rx"></block></block>
+  <block id="9ed575bd998ffefe31b2b6708094410d" category="paragraph">vSphere 6.Xリリースでは、6.5U3リリースおよび6.7U3リリースを除く、この値を512MBに設定する必要があります。vSphere 6.5U3および6.7U3リリースでは、この値を1024MBに設定しました。vSphere 7.0以降のバージョンを使用している場合は、この値を1024MBに設定します。</block>
 </blocks>
