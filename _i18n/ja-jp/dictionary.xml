@@ -1816,7 +1816,6 @@
   <block id="d75bd630a4a4d5d445ca5dcb7d3bf5c4" category="list-text">SRM に .tar.gz_file をアップロードします。</block>
   <block id="9d58dbd20800ce51e37de67c2297da5f" category="list-text">ログの場所で次のコマンドを入力して、 SRA で使用されている Docker ID を取得します：「 docker ps -l 」</block>
   <block id="7202896d218d74a45a1995fe74164f61" category="list-text">コンテナ ID にログインするには、次のコマンドを入力します。「 docker exec-it-u SRM &lt;container id&gt;sh`</block>
-  <block id="6408528f5006f0df83e2b2cc7b5f3eae" category="list-text">次のコマンドを使用して、 ONTAP ツールの IP アドレスとパスワードで SRM を設定します。「 perl command.pl -i &lt;va-IP&gt; administrator &lt;va-password&gt;`</block>
   <block id="8ec4d083f1f58ff4d24863f551d313e7" category="paragraph">VVOL のレプリケーション機能が強化され、 SRM のセットアップ前に作成された既存の仮想マシンに VVOL のレプリケーションが提供されるようになりました。これにより、既存の仮想マシンをリカバリし、リカバリサイトで保護することができます。</block>
   <block id="7bb0ac2008249d1c5d6777d0a276762d" category="list-text">クラスタと SVM のピア関係が設定されている</block>
   <block id="66f6503e9d4345aa09d4da6511c79764" category="list-text">データストアと FlexVol ボリュームは、ソースサイトとターゲットサイトに作成されます。</block>
@@ -2002,4 +2001,5 @@
   <block id="c012b5b3ff136d3277c106ffd47bf52e" category="list-text"><block ref="c012b5b3ff136d3277c106ffd47bf52e" category="inline-link-macro-rx"></block></block>
   <block id="9ed575bd998ffefe31b2b6708094410d" category="paragraph">vSphere 6.Xリリースでは、6.5U3リリースおよび6.7U3リリースを除く、この値を512MBに設定する必要があります。vSphere 6.5U3および6.7U3リリースでは、この値を1024MBに設定しました。vSphere 7.0以降のバージョンを使用している場合は、この値を1024MBに設定します。</block>
   <block id="ed2b91672ee08a221afee30153dc24a9" category="paragraph">ONTAP tools 9.10以降からアップグレードするには、仮想アプライアンス9.7P1以降を実行します。仮想アプライアンス 9.7P1 より前のバージョンからのアップグレードはサポートされていません。</block>
+  <block id="65f6fb9b3fd7c8798ba4a7010e84a65b" category="list-text">次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="2ca82e2fa9750815c3356b6e1692f9ca" prefix=" " category="inline-code"></block></block>
 </blocks>
