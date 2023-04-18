@@ -1556,7 +1556,6 @@
   <block id="bc5ad92fecd3f6eeb4473c9df6479d46" category="list-text">「 rm -rf * 」と入力します</block>
   <block id="42f35b3ef9c82737da1f02ca0b45f308" category="list-text">perl コマンドを実行して、 SRA に新しいクレデンシャルを設定します。</block>
   <block id="325c22d13dffac10de126d900c39ff29" category="list-text">「 cd /SRM/SRA/ 」</block>
-  <block id="000595390ba91f5d02fbc87c52ad2a40" category="list-text">「 perl command.pl -i &lt;va-IP&gt; administrator &lt;va-password&gt;` 」と入力します</block>
   <block id="56432a21668094f186d5ab119b91103a" category="summary">Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter \ （ SRA \ ）を設定し、 SRM と Storage Virtual Machine （ SVM \ ）が連携できるようにすることができます。</block>
   <block id="e19aa5b1d5cc9af071d6a8aaa3d6133b" category="doc">アレイマネージャを使用して SRA を設定する</block>
   <block id="162e9c2c35038a17f958fbf922755a04" category="paragraph">Site Recovery Manager （ SRM ）の Array Manager ウィザードを使用して Storage Replication Adapter （ SRA ）を設定し、 SRM と Storage Virtual Machine （ SVM ）が連携できるようにすることができます。</block>
@@ -1796,7 +1795,6 @@
   <block id="be280321d69d14f5dfce8709e117a691" category="list-text">root ユーザ「 root 」に切り替えます</block>
   <block id="9d7f1b1965b299ca0f83a93983a67fa9" category="list-text">ログの場所で、次のコマンドを入力して、 SRA Docker で使用される Docker ID を取得します。 `d Occker PS-l`</block>
   <block id="a3fbfd6ca26f7eba2deb3733ea046eb1" category="list-text">コンテナ ID 「 dOccker exec-it-u SRM &lt;container ID&gt; sh 」にログインします</block>
-  <block id="c93a0f0ebeda9ccb76c7ccdb97a1b6fc" category="list-text">ONTAP ツールの IP アドレスとパスワードを使用して SRM を設定します。「 perl command.pl -i &lt;va-IP&gt; administrator &lt;va-password&gt; 」「 storage credentials are stored 」というメッセージが表示されます。</block>
   <block id="3849324d415efa553fdff378e6dd712e" category="section-title">SRA クレデンシャルを更新する</block>
   <block id="744ec7526945686620ba725a3be0778f" category="list-text">次のコマンドを使用して、 /SRM / SRA / conf ディレクトリの内容を削除します。</block>
   <block id="9394c3b706fe8eb791b91c156fbd1c93" category="section-title">VASA Provider と SRA を有効にする</block>
@@ -2001,5 +1999,7 @@
   <block id="c012b5b3ff136d3277c106ffd47bf52e" category="list-text"><block ref="c012b5b3ff136d3277c106ffd47bf52e" category="inline-link-macro-rx"></block></block>
   <block id="9ed575bd998ffefe31b2b6708094410d" category="paragraph">vSphere 6.Xリリースでは、6.5U3リリースおよび6.7U3リリースを除く、この値を512MBに設定する必要があります。vSphere 6.5U3および6.7U3リリースでは、この値を1024MBに設定しました。vSphere 7.0以降のバージョンを使用している場合は、この値を1024MBに設定します。</block>
   <block id="ed2b91672ee08a221afee30153dc24a9" category="paragraph">ONTAP tools 9.10以降からアップグレードするには、仮想アプライアンス9.7P1以降を実行します。仮想アプライアンス 9.7P1 より前のバージョンからのアップグレードはサポートされていません。</block>
-  <block id="65f6fb9b3fd7c8798ba4a7010e84a65b" category="list-text">次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="2ca82e2fa9750815c3356b6e1692f9ca" prefix=" " category="inline-code"></block></block>
+  <block id="a88efd6c9b7763df783d278ede79c4a6" category="list-text">SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。</block>
+  <block id="092016eb57c00c965fc19b3bff7ff343" category="list-text"><block ref="4222690b3b5a5c9afb047223bc02154e" prefix="" category="inline-code"></block></block>
+  <block id="b8e3b3982008f247b4868b6fd9b104d8" category="list-text">次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block></block>
 </blocks>
