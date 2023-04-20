@@ -1,0 +1,29 @@
+---
+permalink: configure/reference_delete_vvols.html 
+sidebar: sidebar 
+keywords: vVols datastore,delete vVol 
+summary: ONTAP toolsでは、データセンター内のFlexVol ボリュームを削除するコマンドがサポートされています。 
+---
+= vVolデータストアを削除する
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+vCenterのONTAP toolsからVVolデータストアを削除すると、次の処理が実行されます。
+
+* VVolコンテナをアンマウントします。
+* igroupをクリーンアップします。igroupを使用していない場合は、iqnをigroupから削除します。
+* VVolコンテナを削除します。
+* Flexボリュームをストレージアレイに残します。
+
+
+vCenterからONTAP ツールからVVOLデータストアを削除するには、次の手順を実行します。
+
+手順
+
+. [インベントリ]*ビュー*で、データストアを選択します。
+. VVOLデータストアを右クリックし、*[NetApp ONTAP tools]*>*[vVolデータストアの削除]*を選択します。
+. ストレージアレイとigroupでFlexボリュームをクリーンアップします。
+

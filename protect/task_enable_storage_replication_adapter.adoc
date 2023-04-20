@@ -17,7 +17,7 @@ VMware vSphere 用の ONTAP ツールには、ディザスタリカバリを設�
 
 * vCenter Server インスタンスをセットアップし、 ESXi を設定しておく必要があります。
 * ONTAP ツールを導入しておく必要があります。
-* Site Recovery Manager （ SRM ）ディザスタリカバリ解決策を設定する場合のみ、 SRA プラグインの .msi ファイル、または SRM アプライアンスの .tar.gz ファイルをダウンロードしておく必要があります。
+* をダウンロードしておく必要があります `.tar.gz` SRMアプライアンス用のファイル。Site Recovery Manager（SRM）ディザスタリカバリ解決策 を設定する場合にのみ使用します。
 +
 https://docs.vmware.com/en/Site-Recovery-Manager/8.2/com.vmware.srm.install_config.doc/GUID-B3A49FFF-E3B9-45E3-AD35-093D896596A0.html["Site Recovery Manager Installation and Configuration Site Recovery Manager 8.2 』を参照してください"] に詳細を示します。
 
@@ -30,38 +30,25 @@ VASA Provider と SRA の機能を柔軟に有効化できるため、必要な�
 * 手順 *
 
 . VMware vSphere の Web ユーザインターフェイスにログインします。
-. vSphere Client で、 * Menu * > * ONTAP tools Console * の順にクリックします。
+. vSphere Clientで、*[メニュー]*>*[NetApp ONTAP tools]*[コンソール]をクリックします。
 . [* 設定 * ] をクリックします。
 . [ 管理設定 *] タブの [ 機能の管理 *] をクリックします。
 . Manage Capabilities * ダイアログボックスで、有効にする SRA 拡張機能を選択します。
 . ONTAP ツールの IP アドレスと管理者パスワードを入力し、 * 適用 * をクリックします。
 . SRA を導入するには、次のいずれかの方法を使用します。
 +
-|===
+* SRM アプライアンスの場合 *
 
-
- a| 
-* Windows SRM * 用
-| * SRM アプライアンスの場合 * 
-
-
- a| 
-.. ダウンロードした SRA プラグインの .msi インストーラをダブルクリックします。
-.. 画面に表示される指示に従います。
-.. 導入した ONTAP ツールの IP アドレスとパスワードを入力します。
-
- a| 
++
 .. SRM アプライアンスページにアクセスし、 SRM アプライアンスの Storage Replication Adapters ページに移動します。
 .. [ 新しいアダプタ ] をクリックします。
 .. SRA プラグインの .tar.gz_installer を SRM にアップロードします。
 .. アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。
 
 
-|===
-+
+
+
 選択した拡張機能が設定可能になったかどうかを確認するには、 vSphere Client からログアウトして、再度ログインする必要があります。
-
-
 
 * 関連情報 *
 

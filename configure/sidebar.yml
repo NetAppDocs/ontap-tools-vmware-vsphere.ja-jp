@@ -38,8 +38,12 @@ entries:
     url: "/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html"
   - title: ストレージシステムのデフォルトクレデンシャルを設定
     url: "/configure/task_set_default_credentials_for_storage_systems.html"
-  - title: ストレージシステムを VSC に追加
+  - title: ストレージシステムを追加
     url: "/configure/task_add_storage_systems.html"
+  - title: ストレージシステムを変更
+    url: "/configure/task_modify_storage_system.html"
+  - title: 証明書を更新します
+    url: "/configure/task_update_certificate.html"
   - title: ストレージシステムとホストを検出
     url: "/configure/task_discover_storage_systems_and_hosts.html"
   - title: ストレージシステムの表示を更新します
@@ -70,3 +74,5 @@ entries:
     url: "/configure/task_provision_vvols_datastores.html"
   - title: VVol データストアのリバランシング
     url: "/configure/reference_rebalance_vvols_datastore.html"
+  - title: vVolデータストアを削除する
+    url: "/configure/reference_delete_vvols.html"

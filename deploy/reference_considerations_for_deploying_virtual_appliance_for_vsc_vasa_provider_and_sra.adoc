@@ -26,8 +26,6 @@ ONTAP ツールを初めて導入する場合
  a| 
 ONTAP ツールを導入すると、 VSC の機能が自動的にインストールされます。
 
-link:../deploy/concept_deploy_or_upgrade_ontap_tools.html["VMware vSphere 用の ONTAP ツールを導入またはアップグレードする"]
-
 link:../deploy/concept_installation_workflow_for_new_users.html["VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー"]
 
 
@@ -107,7 +105,7 @@ ONTAP ツールに付属の JSON ファイルを使用して、 ONTAP System Man
  a| 
 ONTAP バージョン
  a| 
-ストレージシステムで ONTAP 9.3 、 9.5 、 9.6 、 9.7 、 9.8P1 以降が実行されている必要があります。
+ストレージシステムでONTAP 9.7、9.8P1以降が実行されている必要があります。
 
 
 

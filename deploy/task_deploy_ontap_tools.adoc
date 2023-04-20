@@ -28,7 +28,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * .ova ファイルをダウンロードしておく必要があります。
 * vCenter Server インスタンスの管理者のログインクレデンシャルが必要です。
 * vSphere Client のすべてのブラウザセッションからログアウトして、ブラウザを閉じておきます。また、 ONTAP ツールの導入時にブラウザキャッシュの問題がブラウザキャッシュに表示されないように、ブラウザキャッシュを削除しておく必要があります。
-* Internet Control Message Protocol （ ICMP ）を有効にしておく必要があります。
+* Internet Control Message Protocol（ICMP）を有効にしておく必要があります。
 +
 ICMP が無効になっていると、 ONTAP ツールの初期設定が失敗し、導入後に VSC が VSC サービスと VASA Provider サービスを開始できなくなります。導入後に、 VSC サービスと VASA Provider サービスを手動で有効にする必要があります。
 
@@ -43,8 +43,8 @@ link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html
 * 手順 *
 
 . vSphere Client にログインします。
-. ホーム *>* ホストおよびクラスタ * を選択します。
-. 必要なデータセンターを右クリックし、 * OVA テンプレートの導入 * をクリックします。
+. [ホーム]*>*[ホストおよびクラスタ]*を選択します。
+. 目的のデータセンターを右クリックし、*[OVFテンプレートのデプロイ...]*をクリックします。
 . ONTAP ツールの導入ファイルを提供する方法を選択し、 * 次へ * をクリックします。
 +
 |===
@@ -63,7 +63,7 @@ ONTAP ツールの _.ova ファイルの URL を指定します。
  a| 
 フォルダ
  a| 
-ONTAP ツールの _.ova ファイルを保存先から選択します。
+.ovaファイルを含む.zipファイルをローカルシステムに展開します。[Select an OVF template]ページで、解凍したフォルダ内の.ovaファイルの場所を指定します。
 
 |===
 . 詳細を入力して、導入ウィザードをカスタマイズします。
@@ -81,7 +81,7 @@ ONTAP ツールの _.ova ファイルを保存先から選択します。
 
 . ONTAP Tools 仮想マシンの電源をオンにし、 ONTAP ツールを実行している仮想マシンのコンソールを開きます。
 . 導入の完了後に、 ONTAP ツールが実行されていることを確認します。
-. ONTAP ツールがどの vCenter Server にも登録されていない場合は、 https://appliance_ip:8143/Register.html` を使用して VSC インスタンスを登録します。
+. ONTAP toolsがどのvCenter Serverにも登録されていない場合は、を使用します `\https://appliance_ip:8143/Register.html` をクリックしてVSCインスタンスを登録します。Register.htmlに、swaggerページにリダイレクトされます。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。
 . vSphere Client からログアウトして再度ログインすると、導入した ONTAP ツールが表示されます。
 +
 vSphere Client でプラグインが更新されるまでに数分かかる場合があります。
@@ -93,9 +93,6 @@ vSphere Client でプラグインが更新されるまでに数分かかる場�
 link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします"]
 
 
-
-
-NOTE: ONTAP 9.6 以前を使用している場合、 vVol ダッシュボードを表示するには、 OnCommand API サービスをダウンロードしてインストールする必要があります。ただし、 ONTAP 9.7 の場合は、 OnCommand API サービスを VASA Provider に登録する必要はありません。
 
 link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["仮想データストアを設定するための VASA Provider の有効化"]
 

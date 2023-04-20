@@ -17,16 +17,14 @@ NFS または iSCSI を使用していて、 ESXi ホストとストレージシ
 
 データストアのプロビジョニングに失敗した場合、以下のエラーメッセージが記録されます。
 
-' 続行できません。コントローラ上のカーネル IP アドレスとアドレスの相互参照時に IP アドレスが見つかりませんでした。
-
-NFS マウント・ボリュームと一致するネットワークが ' これらのホストに見つかりません
+'続行できません。コントローラ上のカーネル IP アドレスとアドレスの相互参照時に IP アドレスが見つかりませんでした。これらのホストへのNFSマウントボリュームに対応するネットワークが見つかりません。'
 
 * 手順 *
 
 . vCenter Server インスタンスにログインします。
 . 統合アプライアンス仮想マシンを使用してメンテナンスコンソールを起動します。
 +
-link:reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html["VMware vSphere 用 ONTAP ツールのメンテナンスコンソール"]
+link:../manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html["VMware vSphere 用 ONTAP ツールのメンテナンスコンソール"]
 
 . 「 4 」を入力して、 Support and Diagnostics オプションにアクセスします。
 . 「 2 」を入力して、 Access Diagnostic Shell オプションにアクセスします。

@@ -2,7 +2,7 @@
 permalink: deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords: Virtual Storage Console, Storage Replication Adapter 
-summary: ここに記載されている手順に従って、既存の 9.7.1 以降のセットアップから最新リリースの ONTAP ツールへのインプレースアップグレードを実行できます。 
+summary: ここに記載されている手順に従って、既存の9.10以降の環境からONTAP toolsの最新リリースへのインプレースアップグレードを実行できます。 
 ---
 = ONTAP ツールの最新リリースにアップグレードします
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ここに記載されている手順に従って、既存の 9.7.1 以�
 
 
 [role="lead"]
-ここに記載された手順に従って、既存の 9.7P1 以降のリリースから最新リリースの ONTAP ツールへのインプレースアップグレードを実行できます。
+ここに記載されている手順に従って、既存の9.10以降のリリースからONTAP toolsの最新リリースへのインプレースアップグレードを実行できます。
 
 * 必要なもの *
 
@@ -23,10 +23,37 @@ link:../deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html["v
 
 
 
+必要に応じて、次の手順を実行して_.iso_ファイルを検証します。これはオプションの手順です。
+
+. Entrust（otv_iso_cert.pem）openssl x509-in otv_iso_cert.pem-pubkey-noout > csc-prod-otv-sra-tgz.pubから発行したコード署名証明書から公開鍵を抽出します
+. 公開鍵を使用してダイジェスト内の署名を確認します(この手順は、バイナリをインストールする前にエンドユーザシステムで実行する必要があります)。証明書バンドルは導入パッケージに含まれている必要があります）
++
+OpenSSL DGST-SHA256 - Verify CSC-prod-otv-sra-tgz.pub -signature netapp-ontap-tools-for-vmware-vsphere-9.12-9327-upgrade-iso.sig netapp-ontap-tools-for-vmware-vsphere-9.12-9327-upgrade.iso
+
+
+
 VASA Provider のステータスは、アップグレード後も既存の導入環境と同じになります。アップグレード後に要件に基づいて VASA Provider を手動で有効または無効にする必要があります。ただし、従来のデータストアのプロビジョニングやストレージアラームのストレージ機能プロファイルが有効になるため、 VASA Provider は VMware 仮想ボリューム（ vVol ）を使用していない場合でも有効にすることを推奨します。
 
 
-NOTE: ONTAP ツールの最新リリースへのインプレースアップグレードは、既存の 9.7P1 以降のバージョンからのみ実行できます。ONTAP ツールを 9.7.1 リリースにアップグレードし、 VVOL レプリケーションを使用する場合は、 Site Recovery Manager （ SRM ）がインストールされた ONTAP ツールを使用して vCenter Server をもう 1 つセットアップする必要があります。
+NOTE: ONTAP toolsの最新リリースへのインプレースアップグレードは、既存の9.10以降のバージョンからのみ実行できます。
+
+
+NOTE: ONTAP tools 9.12をアップグレードすると、ストレージシステムのすべての認証および通信のプロセスが、ONTAP ストレージ証明書を自動信頼することでベーシック認証から証明書ベースの認証に変更されます。ユーザによる操作は不要です。
+
+証明書認証を使用しないストレージシステムの追加は制限されています。
+
+JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12にアップグレードする場合は、アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。
+
+. _security login role create -role <role-name> -cmddirname "security login show"-access all_
+. _security login role create -role <role-name> -cmddirname "security certificate show"-access all_
+. _security login role create -role <role-name> -cmddirname " security certificate install "-access all_
+
+
+JSONファイルを使用してカスタムで作成したSVMスコープのユーザでストレージシステムを追加し、9.12にアップグレードする場合は、 その後、アップグレードの前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。
+
+. _security login role create -role <role-name> -cmddirname "security certificate install"-access all -vserver <vserver-name> _
+. _security login role create -role <role-name> -cmddirname "security certificate show"-access all -vserver <vserver-name> _
+
 
 * 手順 *
 
@@ -72,7 +99,7 @@ vSphere Client でプラグインが更新されるまでに数分かかる場�
 +
 プロパティのデフォルト値は 85% に設定されています。
 
-* FIPS がイネーブルになっている最新の OTV （ 9.10 ）リリースにアップグレードしても、 FIPS がサポートされていない古いバージョンの vCenter を使用している場合、展開は引き続き機能します。ただし、 vCenter を最新の FIPS サポートバージョンにアップグレードした場合に、以前のバージョンの ONTAP ツールを使用していれば、 FIPS が vCenter で無効になっていれば導入は機能します。
+* FIPSが有効になっている最新のONTAP toolsリリースにアップグレードしたあとも、FIPSがサポートされていない古いバージョンのvCenterを使用していても、導入は引き続き機能します。ただし、 vCenter を最新の FIPS サポートバージョンにアップグレードした場合に、以前のバージョンの ONTAP ツールを使用していれば、 FIPS が vCenter で無効になっていれば導入は機能します。
 
 
 ====

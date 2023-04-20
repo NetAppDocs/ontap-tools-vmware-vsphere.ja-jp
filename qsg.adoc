@@ -80,7 +80,7 @@ ONTAP ツールで使用されるデフォルトの双方向 TCP ポートは次
 | * ストレージ、ホスト、アプリケーション * | * バージョン要件 * 
 
 
-| ONTAP | ONTAP 9.3 、 9.5 、 9.6 、 9.7 、 9.8P1 以降。 
+| ONTAP | ONTAP 9.7、9.8P1以降。 
 
 
 | VMware vSphere 、 vCenter Server 、 ESXi ホスト、 Site Recovery Manager （ SRM ）、プラグインアプリケーション、およびデータベース列 1 | を参照してください https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^] 
@@ -95,51 +95,67 @@ ONTAP ツールで使用されるデフォルトの双方向 TCP ポートは次
 * ブラウザキャッシュを削除して、 ONTAP ツールの導入時にブラウザキャッシュの問題が発生しないようにします。
 * 仮想アプライアンスが ICMP ping に応答するために使用するデフォルトゲートウェイを設定します。
 * 仮想アプライアンスの有効な DNS ホスト名。
-* ONTAP 9.6 以前で vVol ダッシュボードを表示する場合は、 OnCommand API サービスをダウンロードしてインストールします。ONTAP 9.7 以降を使用している場合は、 OnCommand API サービスを VASA Provider に登録する必要はありません。
 
 
 
 
 === SRA に関するオプションの要件
 
-VMware Site Recovery Manager で使用する仮想アプライアンスを導入する場合は、 Site Recovery Manager （ SRM ）ディザスタリカバリ解決策を設定する場合にのみ、 SRA プラグインの「 .msi 」ファイルをダウンロードしておく必要があります。カラム 1 * SRM アプライアンスを使用している場合、 SRA の .tar.gz ファイルをダウンロードしました。
+VMware Site Recovery Managerとともに使用する仮想アプライアンスを導入する場合は、*をダウンロードしておく必要があります `.tar.gz` SRMアプライアンスを使用している場合はSRAのファイル。
 
 
 
 == ONTAP ツールの導入
 
 .手順
-. から「 .ova 」ファイルをダウンロードします https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["ネットアップサポートサイト"^] から vSphere Client システムにアップロードして、 ONTAP ツールを導入できます。
+. ダウンロード `.zip` のバイナリと署名済み証明書を含むファイル https://mysupport.netapp.com/site/products/all/details/otv/downloads-tab["ネットアップサポートサイト"^] から vSphere Client システムにアップロードして、 ONTAP ツールを導入できます。
+. を展開します `.zip` ファイルを作成してを導入します `.ova` ファイル。
 +
 SRA を導入する場合は ' ソース・サイトとデスティネーション・サイトの両方に '.ova ファイルを導入する必要があります
 
-. vSphere Web Client にログインし、 * Home * > * Host & Clusters * を選択します。
+. vSphere Web Clientにログインし、*[ホーム]*>*[ホストおよびクラスタ]*を選択します。
 . 目的のデータセンターを右クリックし、 [* OVF テンプレートの展開 * ] をクリックします。
++
+vCenter7.0u3e以降のリリースを使用している場合は、次の操作を実行します。それ以外の場合は、手順5に進みます。これは、OVAバイナリの整合性が改ざんされていないことを確認するためのオプションの手順です。
+
++
+** NetApp Support Site から_otv_inter_root_cert_chain.pem_ファイルをダウンロードします。
+** [vCenter]*>[administration]*>[certificate management]*に移動します。
+** [信頼されたルート証明書の追加]*オプションをクリックします。
+** [参照]*をクリックし、_otv_inter_root_cert_chain.pem_fileのパスを指定します。
+** [ 追加（ Add ） ] をクリックします。
++
+
+NOTE: Entrust Code Signing - OVCS2（Trusted certificate）というメッセージは、ダウンロードしたOVAファイルの整合性を確認します。「Entrust Code Signing - OVCS2（Invalid certificate）」というメッセージが表示された場合は、VMware vCenter Serverを7.0U3E以降のバージョンにアップグレードしてください。
+
+
+
 . .ova ファイルの URL を入力するか、 .ova ファイルが保存されているフォルダを参照して、 * Next * をクリックします。
 . 必要な詳細を入力して導入を完了します。
-+
+
+
 
 NOTE: （オプション） vCenter Server に登録せずにコンテナを作成する場合は、 Configure vCenter または Enable VCF セクションで Enable VMware Cloud Foundation （ VCF ）チェックボックスをオンにします。
 
-
-
 導入の進捗状況は、 [* タスク * ] タブで確認でき、導入が完了するまで待つことができます。
+
+導入の一環として、チェックサム検証が実行されます。導入に失敗した場合は、次の手順を実行します。
+
+. vpserver /logs/checksum.logを確認します。「checksum verification failed」と表示されている場合は、失敗したjarの検証が同じログに表示されます。
++
+ログファイルには、_sha256sum -c /opt/netapp/vpserver/conf/checksums _の実行が含まれています。
+
+. vscserver/log/checksum.logを確認します。「checksum verification failed」と表示されている場合は、失敗したjarの検証が同じログに表示されます。
++
+ログファイルには、_sha256sum -c /opt/netapp/vscerver/etc/checksums _の実行が含まれています。
+
+
 
 
 
 === SRM に SRA を導入する
 
 SRA は Windows SRM サーバまたは 8.2 SRM アプライアンスに導入できます。
-
-
-
-==== Windows SRM サーバに SRA をインストールします
-
-.手順
-. ネットアップサポートサイトから SRA プラグインの .msi インストーラをダウンロードします。
-. ダウンロードした SRA プラグインの .msi インストーラをダブルクリックして、画面に表示される手順に従います。
-. 導入した仮想アプライアンスの IP アドレスとパスワードを入力して、 SRM サーバへの SRA プラグインのインストールを完了します。
-
 
 
 
@@ -181,9 +197,9 @@ SRA は Windows SRM サーバまたは 8.2 SRM アプライアンスに導入で
 ==== VASA Provider と SRA を有効にする
 
 .手順
-. 導入時に指定した IP アドレスを使用して、 vSphere Web Client にログインします。
-. [*OTV *] アイコンをクリックして、展開時に指定したユーザ名とパスワードを入力し、 [*Sign In*] をクリックします。
-. OTV の左ペインで、 [ 設定 ]>[ 管理設定 ]>[ 機能の管理 *] を選択し、必要な機能を有効にします。
+. OVA ONTAP toolsの導入時に提供されたvCenter IPを使用して、vSphere Web Clientにログインします。
+. ショートカットページで、[plug-ins]セクションの*[NetApp ONTAP tools]*をクリックします。
+. ONTAP ツールの左側のペインで、*[設定]>[管理設定]>[機能の管理]*を選択し、必要な機能を有効にします。
 +
 
 NOTE: VASA Provider は、デフォルトでは有効になっています。VVOL データストアのレプリケーション機能を使用する場合は、「 vVol のレプリケーションを有効にする」切り替えボタンを使用します。

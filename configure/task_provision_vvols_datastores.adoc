@@ -54,21 +54,21 @@ NOTE: 9.10 リリースの ONTAP ツールでは、 All SAN Array （ ASA ）タ
  a| 
 データセンター内のすべてのホスト
  a| 
-データセンターを右クリックし、 * NetApp VSC * > * Provision Datastore * を選択します。
+データセンターを右クリックし、 * NetApp ONTAP tools * > * Provision Datastore * を選択します。
 
 
 
  a| 
 クラスタ内のすべてのホスト
  a| 
-クラスタを右クリックし、 * NetApp VSC * > * Provision Datastore * を選択します。
+クラスタを右クリックし、*[NetApp ONTAP tools]*>*[データストアのプロビジョニング]*を選択します。
 
 
 
  a| 
 単一のホスト
  a| 
-ホストを右クリックし、 * NetApp VSC * > * Provision Datastore * を選択します。
+ホストを右クリックし、*[NetApp ONTAP tools]*>*[データストアのプロビジョニング]*を選択します。
 
 |===
 . データストアを作成するには、新しいデータストアダイアログボックスのフィールドに情報を入力します。
@@ -86,6 +86,11 @@ NOTE: 9.10 リリースの ONTAP ツールでは、 All SAN Array （ ASA ）タ
 全般
  a| 
 新しいデータストアダイアログボックスの全般セクションには、新しいデータストアの場所、名前、概要、タイプ、およびプロトコルを入力するオプションがあります。vVol データストアの設定には vVol データストアタイプを使用します。
+
+vVolデータストアは、VASA Provider機能が有効になっている場合にプロビジョニングできます。を参照してください link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["仮想データストアを設定するための VASA Provider の有効化"] を参照してください。vVolデータストアでは、NFS、iSCSI、FC / FEoE、NVMe/FCの各プロトコルがサポートされます。
+
+
+NOTE: vVolデータストアでNVMe/FCプロトコルを使用できるのは、ONTAP toolsがvCenter 8.0以降に登録されている場合、およびONTAP のバージョンがONTAP 9.91P3以降の場合です。
 
 
 NOTE: VVOL レプリケーション用の iSCSI VVOL データストアをプロビジョニングする場合は、ターゲットサイトで VVOL データストアを作成する前に、 SnapMirror の更新とクラスタの再検出を実行する必要があります。
@@ -115,7 +120,7 @@ SnapMirror のスケジュールと、既存のリストから必要な FlexVol 
 
 
 |===
-. Summary セクションで、 ** Finish ** をクリックします。
+. [ 概要 ] セクションで、 [ * 完了 ] をクリックします。
 
 
 * 結果 *

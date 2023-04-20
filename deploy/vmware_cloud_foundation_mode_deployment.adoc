@@ -13,7 +13,7 @@ summary: VMware vSphere 用の ONTAP ツールは、 VMware クラウド基盤�
 [role="lead"]
 VMware vSphere 用の ONTAP ツールは、 VMware Cloud Foundation （ VCF ）環境に導入できます。VCF の導入の主な目的は、クラウドセットアップで ONTAP ツールを使用し、 vCenter Server なしでコンテナを作成することです。
 
-VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、 REST API を使用してストレージシステムを追加し、コンテナを作成できます。API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。
+VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、 REST API を使用してストレージシステムを追加し、コンテナを作成できます。API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。ONTAP tools 9.12では、Swaggerは1.0 APIをサポートしません。これまで1.0で使用されていたポインタは、2.0または3.0 APIに移動されます。
 
 VCF 展開モードで使用できる API は次のとおりです。
 
@@ -24,7 +24,7 @@ VCF 展開モードで使用できる API は次のとおりです。
 
 
  a| 
-/1.0/admin/containers を使用してください
+/2.0/admin/containersを参照してください
  a| 
 取得
  a| 
@@ -35,7 +35,7 @@ VCF 展開モードで使用できる API は次のとおりです。
 
 
  a| 
-/1.0/admin/containers を使用してください
+/2.0/admin/containersを参照してください
  a| 
 投稿（ Post ）
  a| 
@@ -46,7 +46,7 @@ VCF 展開モードで使用できる API は次のとおりです。
 
 
  a| 
-/1.0/VCF/user/login
+/2.0/vcf/user/login
  a| 
 投稿（ Post ）
  a| 
@@ -57,7 +57,7 @@ VCF 展開モードで使用できる API は次のとおりです。
 
 
  a| 
-/1.0/admin/storage-systems
+/3.0 /ストレージ/クラスタ
  a| 
 取得
  a| 
@@ -68,7 +68,7 @@ VCF 展開モードで使用できる API は次のとおりです。
 
 
  a| 
-/1.0/admin/storage-systems
+/3.0 /ストレージ/クラスタ
  a| 
 投稿（ Post ）
  a| 
@@ -239,7 +239,10 @@ ONTAP パッチ API を使用して適切な値を設定できます。
 
 https://<machine_IP>/api/storage/volumes/{uuid}`
 
-ONTAP ツールの VCF 配置では、コンテナ作成ワークフローのみが可能です。データストアのプロビジョニング、ストレージ機能プロファイルの作成、ディザスタリカバリなどの他のワークフローを使用する場合は、 Register.html ページを使用して vCenter Server に ONTAP ツールを登録する必要があります。VCF モードでの ONTAP ツールの制限事項は、ディザスタリカバリ用に SRA を設定できないことです。
+ONTAP ツールの VCF 配置では、コンテナ作成ワークフローのみが可能です。データストアのプロビジョニング、ストレージ機能プロファイルの作成、ディザスタリカバリなど、他のワークフローを使用する場合は、swaggerページを使用してONTAP toolsをvCenter Serverに登録する必要があります。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。VCFモードのONTAP toolsの制限事項は、プラグインを登録するまでディザスタリカバリ用にSRAを設定できないことです。VCFモードを使用せずにONTAP ツールを展開すると、登録が自動的に行われます。
+
+
+NOTE: ONTAP toolsの今後のリリースでは、Register.htmlが削除されます。
 
 image::../media/VCF_deployment.png[VMware Cloud Foundation の導入ワークフロー]
 

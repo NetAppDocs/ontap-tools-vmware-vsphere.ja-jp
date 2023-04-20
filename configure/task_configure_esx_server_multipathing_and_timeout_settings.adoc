@@ -19,8 +19,8 @@ VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設�
 
 * 手順 *
 
-. VMware vSphere Web Client のホームページで、 * vCenter * > * Hosts * をクリックします。
-. ホストを右クリックし、 * Actions * > * NetApp VSC * > * Set Recommended Values * を選択します。
+. VMware vSphere Web Clientの[ホーム]ページで、*[ホストおよびクラスタ]*をクリックします。
+. ホストを右クリックし、*[操作]*>*[NetApp ONTAP tools]*>*[推奨値に設定]*を選択します。
 . NetApp Recommended Settings （ネットアップの推奨設定）ダイアログボックスで、システムに最も適した値を選択します。
 +
 標準の推奨値がデフォルトで設定されます。

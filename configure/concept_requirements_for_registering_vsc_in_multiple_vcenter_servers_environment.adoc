@@ -11,7 +11,7 @@ summary: 単一の VMware vSphere HTML5 クライアントで複数の vCenter S
 
 
 [role="lead"]
-単一の VMware vSphere HTML5 クライアントで複数の vCenter Server インスタンスを管理している環境で VMware vSphere 用の ONTAP ツールを使用している場合は、各 vCenter Server に VSC のインスタンスを 1 つずつ登録して、 VSC と vCenter Server を 1 ： 1 のペアにする必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。
+単一の VMware vSphere HTML5 クライアントで複数の vCenter Server インスタンスを管理している環境で VMware vSphere 用の ONTAP ツールを使用している場合は、各 vCenter Server に VSC のインスタンスを 1 つずつ登録して、 VSC と vCenter Server を 1 ： 1 のペアにする必要があります。これにより、vCenter 7.0以降を実行するすべてのサーバを、単一のvSphere HTML5クライアントからリンクモードと非リンクモードの両方で管理できます。
 
 
 NOTE: VSC を vCenter Server で使用する場合は、管理する vCenter Server インスタンスごとに VSC インスタンスを 1 つ設定または登録しておく必要があります。登録する各 VSC インスタンスのバージョンを同じにする必要があります。
@@ -36,7 +36,7 @@ VMware インベントリに VSC サーバが登録されていない vCenter Se
 
 
 
-vCenter Server の指定が必要なタスクを実行すると、「 * vCenter Server * 」ドロップダウンボックスに、使用可能な vCenter Server が英数字順に表示されます。デフォルトの vCenter Server が、常にドロップダウンリストの先頭のサーバとなります。
+vCenter Serverの指定を必要とするタスクを実行する場合は、画面左上の*インスタンス*セレクタに、使用可能なvCenter Serverがアルファベット順に表示されます。デフォルトの vCenter Server が、常にドロップダウンリストの先頭のサーバとなります。
 
 ストレージの場所が認識されている場合（たとえば、特定の vCenter Server で管理されているホスト上にデータストアがある状態でプロビジョニングウィザードを使用した場合）は、 vCenter Server の一覧が読み取り専用オプションとして表示されます。これは、 vSphere Web Client で右クリックオプションを使用して項目を選択した場合にのみ該当します。
 

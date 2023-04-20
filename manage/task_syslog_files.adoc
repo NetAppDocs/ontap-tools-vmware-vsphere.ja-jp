@@ -1,0 +1,41 @@
+---
+permalink: manage/task_syslog_files.html 
+sidebar: sidebar 
+keywords:  
+summary: syslogは、一元化されたロギングサーバにシステムログを送信するために使用されます。 
+---
+= syslogを管理します
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+syslogを使用して、一元化されたロギングサーバにシステムログを送信します。
+
+* このタスクについて *
+
+ONTAP tools for VMware vSphere 9.12リリースでは、以前の2.0 syslog APIが削除され、相互認証をサポートする3.0 syslog関連APIが新たに追加されています。syslogを設定するには、次の手順に従います。
+
+* 手順 *
+
+. セッションIDを取得するには、_POST /2.0/security/user/loginを実行します。
+. 上記の応答で受信したセッションIDを渡して、RUN_POST/3.0/appliance-management/logging-client-certificate_を実行します。
++
+これにより、VPサーバとVSCサーバの証明書が生成されます。
+
+. 両方の証明書をsyslogサーバにコピーし、syslogサーバで信頼されるようにします。
++
+syslog-ng dockerで実行する方法の例を次に示します。
+
++
+** JSONで両方の証明書をエスケープ解除し、PEM形式の証明書をca.dディレクトリにコピーします
+** `openssl x509 -noout -hash -in vsccert.pem` 結果はハッシュになります（例：6d2962a8）。
+** `ln -s vsccert.pem 6d2962a8.0` これにより、サフィックス.0のハッシュとして証明書へのシンボリックリンクが作成されます
+** syslogサーバを起動します
+
+
+. サーバのIP、ポート、パターン（オプション）、log_level、およびsyslogサーバのパブリック証明書を渡して、Run_patch/3.0/appliance-management/syslog-config_apiを実行します。
+
+
+ログは指定されたsyslogサーバにルーティングされます。

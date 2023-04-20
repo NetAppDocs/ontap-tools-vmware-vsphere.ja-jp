@@ -9,9 +9,9 @@ entries:
   - title: データストアのサイズを変更
     url: "/manage/task_resize_datastores.html"
   - title: vVol データストアを編集する
-    url: "/manage/task_edit_a_vvols_datastore.html"
+    url: "/manage/task_edit_a_vvol_datastore.html"
   - title: vVol データストアにストレージを追加する
-    url: "/manage/task_add_storage_to_a_vvols_datastore.html"
+    url: "/manage/task_add_storage_to_a_vvol_datastore.html"
   - title: vVol データストアからストレージを削除する
     url: "/manage/task_remove_storage_from_a_vvols_datastore.html"
   - title: VVOL データストアをマウントする
@@ -24,6 +24,8 @@ entries:
     url: "/manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html"
   - title: 以前のストレージ機能プロファイルを使用して仮想マシンを移行する
     url: "/manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html"
+  - title: VASAクリーンアップ
+    url: "/manage/task_delete_virtual_machines.html"
 - title: ESXi ホストの設定の変更
   url: "/manage/task_edit_esxi_host_settings.html"
 - title: ONTAP ツールのメンテナンスコンソールにアクセスします
@@ -40,6 +42,8 @@ entries:
     url: "/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html"
 - title: ログファイルを収集します
   url: "/manage/task_collect_the_log_files.html"
+- title: syslogを管理します
+  url: "/manage/task_syslog_files.html"
 - title: データストアと VVol レポートのパフォーマンスを監視する
   entries:
   - title: ONTAP Tools のデータストアと仮想マシンレポートの概要

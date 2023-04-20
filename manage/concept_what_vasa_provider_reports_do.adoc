@@ -13,7 +13,7 @@ summary: vVol レポートには、 VMware Virtual Volumes \ （ vVol \ ）デ�
 [role="lead"]
 vVol レポートには、 VMware Virtual Volumes （ vVol ）データストアと、それらのデータストアに作成された仮想マシンに関する詳細情報が表示されます。vVol ダッシュボードを使用すると、 vCenter Server 内の vVol データストアおよび仮想マシンの潜在的な問題を確認して特定できます。
 
-レポートを表示、整理、エクスポートできます。vVol データストアおよび仮想マシンのレポートデータは、 OnCommand API サービスと一緒に ONTAP から提供されます。
+レポートを表示、整理、エクスポートできます。vVolデータストアおよび仮想マシンレポートのデータは、ONTAP から提供されます。
 
 vVol には、次の組み込みのレポートが用意されています。
 

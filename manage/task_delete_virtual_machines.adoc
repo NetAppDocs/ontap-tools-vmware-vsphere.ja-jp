@@ -1,0 +1,25 @@
+---
+permalink: manage/task_delete_virtual_machines.html 
+sidebar: sidebar 
+keywords:  
+summary: VASAのクリーンアップを実行するには、このセクションの手順を使用します。 
+---
+= VASAクリーンアップ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VASAのクリーンアップを実行するには、このセクションの手順を使用します。
+
+
+NOTE: VASAクリーンアップを実行する前に、VVOLデータストアを削除することを推奨します。
+
+* 手順 *
+
+. に移動してプラグインの登録を解除します https://OTV_IP:8143/Register.html[]
+. プラグインがvCenterで使用できなくなったことを確認します。
+. ONTAP Tools for VMware vSphere VMをシャットダウンします
+. ONTAP Tools for VMware vSphere VMを削除します
+

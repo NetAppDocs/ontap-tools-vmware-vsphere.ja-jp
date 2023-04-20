@@ -27,9 +27,7 @@ ONTAP ツールをアップグレードするか最新バージョンの ONTAP �
 Windows の場合
  a| 
 .. SRM Windows Server にログインします。
-.. 既存の SRA _.msi インストーラを SRM サーバからアンインストールします。
 .. システム・パスを C:\Program Files\VMware\VMware vCenter Site Recovery Manager\external\perl\c\bin' に変更します
-.. ネットアップサポートサイトからダウンロードした .msi インストーラをダブルクリックして、画面に表示される手順に従います。
 .. 導入した ONTAP ツールの IP アドレスとパスワードを入力します。
 
 

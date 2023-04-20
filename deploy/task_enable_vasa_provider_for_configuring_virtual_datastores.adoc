@@ -26,7 +26,7 @@ ONTAP ツール 9.7.1 にアップグレードする前に VASA Provider 機能�
 * 手順 *
 
 . VMware vSphere の Web ユーザインターフェイスにログインします。
-. vSphere Client で、 * Menu * > * ONTAP tools Console * の順にクリックします。
+. vSphere Clientで、*[メニュー]*>*[NetApp ONTAP tools]*[コンソール]をクリックします。
 . [* 設定 * ] をクリックします。
 . [ 管理設定 ] タブの [ 機能の管理 ] をクリックします。
 . Manage Capabilities ダイアログボックスで、有効にする VASA Provider 拡張機能を選択します。
@@ -35,42 +35,6 @@ ONTAP ツール 9.7.1 にアップグレードする前に VASA Provider 機能�
 +
 
 NOTE: VASA Provider 拡張機能を有効にしても VASA Provider のステータスが「オフライン」と表示される場合は、「 /var/log/vmware/vmware-SPS /SPS .log 」ファイルで VASA Provider との接続エラーを確認するか、「 VMware-ssps 」サービスを再起動してください。
-
-
-
-
-
-== OnCommand API サービスを ONTAP 9.6 以前のリリースに登録します
-
-ONTAP 9.6 以前を使用している場合、 VMware 仮想ボリューム（ vVol ）データストアと仮想マシンの詳細を vVol ダッシュボードに表示するためには、 VASA Provider の OnCommand API サービスを登録して vVol の VM およびデータストアのレポートのデータを取得する必要があります。
-
-* 必要なもの *
-
-ネットアップサポートサイトから OnCommand API サービス 2.1 以降をダウンロードしておく必要があります。
-
-
-NOTE: vVol ダッシュボードには、 ONTAP 9.3 以降を使用して SAN vVol データストアと仮想マシンが設定されている場合にのみパフォーマンス指標が表示されます。
-
-* 手順 *
-
-. ONTAP ツールのホームページで、 * 設定 * をクリックします。
-. [ 管理設定 ] タブの [ 拡張機能の管理 ] をクリックします。
-. [API サービスの登録（ Register OnCommand API Services ） ] スライダを使用して、 OnCommand API サービスを有効にします。
-. OnCommand API サービスの IP アドレス、サービスポート、およびクレデンシャルを入力します。
-+
-VASA Provider 拡張機能の管理ダイアログボックスを使用して、次の変更を行うこともできます。
-
-+
-** クレデンシャルに変更があったときに OnCommand API サービスの登録を更新する。
-** vVol ダッシュボードが不要になったときに OnCommand API サービスの登録を解除する。
-+
-VASA Provider への OnCommand API サービスの登録を解除するには、 OnCommand API サービスの登録チェックボックスをオフにする必要があります。
-
-
-
-. [ 適用（ Apply ） ] をクリックします。
-+
-vVol ダッシュボードには、 OnCommand API サービスの登録が完了した時点で初めて、 ONTAP 9.6 以前の SAN vVol データストアの指標が表示されます。
 
 
 

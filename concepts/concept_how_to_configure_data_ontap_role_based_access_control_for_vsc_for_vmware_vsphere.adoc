@@ -19,22 +19,7 @@ VASA Provider は、クラスタレベルでのみストレージシステムに
 
 新しいユーザを作成し、クラスタまたは SVM を ONTAP ツールに接続するには、次の作業を行う必要があります。
 
-* クラスタ管理者または SVM 管理者ロールを作成する
-+
-
-NOTE: これらのロールは、次のいずれかを使用して作成できます。
-
-+
-** ONTAP システムマネージャ 9.8P1 以降
-+
-link:../configure/task_configure_user_role_and_privileges.html["ユーザロールと権限を設定"]
-
-** RBAC User Creator for ONTAP ツール（ ONTAP 9.6 以前を使用している場合）
-+
-https://community.netapp.com/t5/Virtualization-Articles-and-Resources/RBAC-User-Creator-tool-for-VSC-VASA-Provider-and-Storage-Replication-Adapter-7-0/ta-p/133203/t5/Virtualization-Articles-and-Resources/How-to-use-the-RBAC-User-Creator-for-Data-ONTAP/ta-p/86601["VSC 、 VASA Provider 、 Storage Replication Adapter 7.0 for VMware vSphere 用の RBAC User Creator ツール"]
-
-
-
+* ONTAP System Manager 9.8P1以降を使用して、クラスタ管理者またはSVM管理者ロールを作成します。を参照してください link:../configure/task_configure_user_role_and_privileges.html["ユーザロールと権限を設定"] を参照してください。
 * ONTAP を使用して、ロールが割り当てられ、適切なアプリケーションが設定されたユーザを作成します
 +
 作成したストレージシステムクレデンシャルは、 VSC 用にストレージシステムを構成する際に必要になります。VSC 用のストレージシステムを構成するには、 VSC でクレデンシャルを入力する必要があります。これらのクレデンシャルを使用してストレージシステムにログインすると、クレデンシャルの作成時に ONTAP で設定した VSC 機能に対する権限が付与されます。

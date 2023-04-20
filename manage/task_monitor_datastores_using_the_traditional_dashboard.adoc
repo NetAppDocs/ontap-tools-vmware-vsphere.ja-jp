@@ -29,8 +29,8 @@ ONTAP ツールの従来のダッシュボードを使用すると、 NFS デー
 * 手順 *
 
 . vSphere Client のホームページで、 * ONTAP tools for VMware vSphere* をクリックします。
-. vCenter Server ドロップダウンメニューを使用して必要な vCenter Server を選択し、データストアを表示します。
-. [* 従来のダッシュボード * ] をクリックします。
+. インスタンス*セレクタを使用して、データストアを表示するvCenter Serverを選択します。
+. [概要]>[従来のダッシュボード]*をクリックします。
 +
 Datastores ポートレットには次の詳細が表示されます。
 

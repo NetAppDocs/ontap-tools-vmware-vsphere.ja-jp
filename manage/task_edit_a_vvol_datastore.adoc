@@ -1,5 +1,5 @@
 ---
-permalink: manage/task_edit_a_vvols_datastore.html 
+permalink: manage/task_edit_a_vvol_datastore.html 
 sidebar: sidebar 
 keywords:  
 summary: 既存の VMware 仮想ボリューム（ vVol ）データストアを編集してデフォルトのストレージ機能プロファイルを変更することができます。デフォルトのストレージ機能プロファイルは、主にスワップ vVol に使用されます。 
