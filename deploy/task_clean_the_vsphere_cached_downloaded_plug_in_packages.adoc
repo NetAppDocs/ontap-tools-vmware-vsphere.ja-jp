@@ -8,50 +8,36 @@ summary: ONTAP ツールの導入またはアップグレード後にプラグ�
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
+:firstname: [.lead]
+:author: [.lead]
+:authorinitials: [
+:authors: [.lead]
+:revnumber: 
+:revdate: you should clean up the cached download plug-in packages on the browser and on the vCenter Server to resolve vCenter Server plug-in issues.
 
-
-[role="lead"]
-ONTAP ツールの導入またはアップグレード後にプラグインが自動的に更新されない場合は、ブラウザおよび vCenter Server にキャッシュされているダウンロード済みプラグインパッケージをクリーンアップして、 vCenter Server プラグインの問題を解決する必要があります。
 
 * 手順 *
 
-. 既存の vSphere Web Client または vSphere Client からログアウトします。
+. 既存のvSphere Web ClientまたはvSphere UIからログアウトします。
 . ブラウザキャッシュを削除します。
-. vSphere Client にキャッシュされたプラグインパッケージを削除します。
+. vSphere Client にキャッシュされたプラグインパッケージを削除します。vCSAの場合は、次の手順を実行します。
 +
-|===
-
-
-| * を使用している場合 * | * 次の手順を実行します。 * 
-
-
- a| 
-Windows vCenter Server の場合
- a| 
-次の場所にある com.netapp.vasa.vvol.webclient-x.x.x.xxxx` 、 com.netapp.nvpf.webclient-x.x.x.xxxx` 、および com.netapp.vsch5-x.x.x.xxxx` フォルダを削除します。
-
-** vSphere Web Client のパス： C ： \ProgramData\VMware\vCenterServer\cfg\vsphere-client\vc-packages\vsphere-client-serenity
-** vSphere Client （ HTML5 ）のパス：「 C ： \ProgramData\VMware\vCenterServer\cfg\vsphere-ui\vc-packages\vsphere-client-serenity 」
-
-
-
-
- a| 
-vCSA
- a| 
 .. SSH で VCSA アプライアンスに接続します。
-.. cd /etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity を使用して、 vCenter Web Client UI 拡張ディレクトリにディレクトリを変更します
-.. 「 rm -rf 」コマンドを使用して、ネットアップに固有のキャッシュされたプラグインパッケージを削除します。例：ここで、 x.x.x.xxxx はプラグインのバージョンです。--rm -rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx rm -rf com.netapp.nvpf.webclient-x.x.x.xxxx rm -rf com.netapp.vsch5-x.x.x.xxxx ----
-.. 「 cd /etc/vmware/vsphere-clientui/vc-packages/vsphere-client-serenity 」を使用して、ディレクトリを vCenter クライアント（ HTML5 ） UI 拡張ディレクトリに変更します
-.. 「 rm -rf 」コマンドを使用して、ネットアッププラグインに固有のキャッシュされたプラグインパッケージを削除します。例： here x.x.x.xxxx は、プラグインのバージョンです。 --rm -rf com.netapp.vasa.vvol.webclient-x.x.x.xxxx rm -rf com.netapp.nvpf.webclient-x.x.x.xxxx rm -rf com.netapp.vsch5-x.x.x.xxxx ----
-
-
-|===
-. vSphere にログインし、次のコマンドを使用して vSphere Web Client サービスと vSphere Client サービスを再起動します。
+.. VMware vSphere Clientサービスを停止します。
+`service-control --stop vsphere-ui`
+.. ディレクトリをvCenter Client UI extensionsディレクトリに変更します。 `cd /etc/vmware/vsphere-ui/vc-packages/vsphere-client-serenity`
+.. を使用して、ネットアップ固有のキャッシュ済みプラグインパッケージを削除します `rm -rf` コマンド：
 +
-[listing]
-----
-service-control --stop vsphere-client vsphere-ui
-service-control --start vsphere-client vsphere-ui
-----
+`rm -rf com.netapp.nvpf.webclient-*`
+
++
+`rm -rf com.netapp.vasa.vvol.webclient-*`
+
++
+`rm -rf com.netapp.vsch5-*`
+
+.. VMware vSphere Clientサービスを開始します。
+`service-control --start vsphere-ui`
+
+
 

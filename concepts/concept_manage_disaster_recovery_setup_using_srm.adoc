@@ -20,4 +20,19 @@ VASA Provider に Storage Replication Adapter （ SRA ）の機能が組み込�
 
 NOTE: VMware Site Recovery Manager （ SRM ）では、 VVOL データストアのディザスタリカバリの管理に SRA は使用されません。代わりに、 ONTAP 9.7 以降のクラスタの VVOL データストアのレプリケーションとフェイルオーバー制御に VASA Provider を使用します。
 
-link:../protect/task_enable_storage_replication_adapter.html["Storage Replication Adapter を有効にする"]
+を参照してください link:../protect/task_enable_storage_replication_adapter.html["Storage Replication Adapter を有効にする"] 手順 のセクションを参照してください。
+
+.quick_resync機能のアクティブ化
+quick_resyncフラグを有効にすると、SRAで再保護とリストアの処理を実行できます。これは、非同期SnapMirror関係にあるボリュームから作成されたデータストアにのみ該当します。quick_resyncフラグを指定すると、再同期によって新しいデータが転送される前のストレージ効率のオーバーヘッドが発生しないため、デスティネーションボリュームの再同期時間が短縮されます。quick_resyncはデフォルトでは有効になっていません。quick_resyncフラグを有効にすることを推奨します。
+
+* 再同期のソースでボリューム効率化が有効になっていない場合。
+* 再同期時間を短縮することが、ネットワークで可能なすべてのストレージ効率を維持するよりも重要な場合。
+
+
+quick_resyncフラグを有効にするには、次の手順に従います。
+
+.手順
+. コントロールパネル（_https://<IP address> ：9083_）にログインし、[WebベースのCLIインターフェイス]をクリックします。
+. コマンドを実行します `vp updateconfig -key=snapmirror.quick.resync.enabled -value=true`。
+. コマンドを実行します `vp reloadconfig`。
+

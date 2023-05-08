@@ -46,7 +46,7 @@ VSC 、 VASA Provider 、 SRA 仮想アプライアンス 7.2 または 7.2.1 �
 
 ONTAP tools 9.10以降にアップグレードするには、仮想アプライアンス9.7P1以降を実行している必要があります。仮想アプライアンス 9.7P1 より前のバージョンからのアップグレードはサポートされていません。
 
-最新リリースのONTAP toolsを導入する場合は、のトピックを参照してください link:..deploy/concept_requirements_for_deploying_ontap_tools_for_vmware_vsphere.html["ONTAP ツールを導入するための要件"]。トピック link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["ONTAP ツールの最新リリースにアップグレードします"] インプレースアップグレードの実行方法については、を参照してください。
+最新リリースのONTAP toolsを導入する場合は、のトピックを参照してください link:../deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html["ONTAP ツールのスペースとサイジングの要件"]。トピック link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["ONTAP ツールの最新リリースにアップグレードします"] インプレースアップグレードの実行方法については、を参照してください。
 
 * 関連情報 *
 

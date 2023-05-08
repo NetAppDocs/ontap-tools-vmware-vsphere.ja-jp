@@ -20,6 +20,9 @@ NOTE: ONTAP クラスタでSAMLが有効になっている場合は、ONTAP と�
 
 Virtual Storage Console （ VSC ）を起動するたび、または * rediscover all * オプションを選択するたびに、使用可能なストレージシステムが自動的に検出されます。
 
+
+NOTE: 直接接続のSVMではVVolデータストアはサポートされません。
+
 * 手順 *
 
 . ONTAP toolsの[ホーム]ページのいずれかのオプションを使用して、VSCにストレージシステムを追加します。
