@@ -2,18 +2,18 @@
 permalink: concepts/concept_privileges_required_for_vsc_tasks.html 
 sidebar: sidebar 
 keywords:  
-summary: VMware vSphere のタスク用の各種 ONTAP ツールに必要な権限の組み合わせは、 Virtual Storage Console \ （ VSC\ ）固有の権限と vCenter Server の標準権限の組み合わせと異なります。 
+summary: ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools固有の権限とvCenter Server標準の権限の組み合わせが異なります。 
 ---
-= VSC タスクに必要な権限
+= ONTAP toolsのタスクに必要な権限
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-VMware vSphere のタスクを実行するために必要な ONTAP ツールの権限の組み合わせは、 Virtual Storage Console （ VSC ）に固有の権限と vCenter Server 標準の権限の組み合わせと異なります。
+ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools固有の権限とvCenter Server標準の権限の組み合わせが異なります。
 
-VSC タスクに必要な権限については、ネットアップの技術情報アーティクル 1032542 を参照してください。
+ONTAP toolsのタスクに必要な権限については、NetAppの技術情報アーティクル1032542を参照してください。
 
 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/How_to_configure_RBAC_for_Virtual_Storage_Console["Virtual Storage Console 用の RBAC の設定方法"]
 
@@ -21,12 +21,12 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_S
 
 == VMware vSphere 用の ONTAP ツールで必要な製品レベルの権限
 
-VMware vSphere GUI の ONTAP ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。
+ONTAP tools for VMware vSphere GUIにアクセスするには、製品レベルのONTAP tools固有のView権限が、適切なvSphereオブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、NetAppアイコンをクリックしたときにONTAP toolsにエラーメッセージが表示され、ONTAP toolsにアクセスできなくなります。
 
-View *権限では、VSC GUIにアクセスできます。VSC でタスクを実行することはできません。VSC のタスクを実行するには、タスクで使用する適切な VSC 固有の権限と vCenter Server の標準権限が必要です。
+View *権限では、ONTAPツールGUIにアクセスできます。ONTAP tools内でタスクを実行することはできません。ONTAP toolsのタスクを実行するには、タスクに対して適切なONTAP tools固有の権限とvCenter Server標準の権限が必要です。
 
-割り当てレベルによって、表示できる UI の部分が決まります。ルートオブジェクト（フォルダ）に View 権限が割り当てられている場合、 NetApp アイコンをクリックして VSC にアクセスできます。
+割り当てレベルによって、表示できる UI の部分が決まります。ルートオブジェクト（フォルダ）でView権限を割り当てると、NetAppアイコンをクリックしてONTAP toolsにアクセスできるようになります。
 
-他の vSphere オブジェクトレベルに View 権限を割り当てることもできますが、その場合は表示および使用できる VSC メニューが制限されます。
+別のvSphereオブジェクトレベルにView権限を割り当てることもできますが、その場合は表示および使用できるONTAP toolsメニューが制限されます。
 
 View 権限を含むアクセス許可は、ルートオブジェクトに割り当てることを推奨します。

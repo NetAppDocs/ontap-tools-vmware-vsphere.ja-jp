@@ -19,11 +19,11 @@ VASA Provider のログファイルが必要な場合は、 Vendor Provider Cont
 
 https://vm_ip:9083` にアクセスします
 
-VSC GUI の「 VSC ログのエクスポート」機能を使用して、 VSC のログファイルを収集できます。VASA Provider を有効にして VSC ログバンドルを収集すると、 VSC ログバンドルに VP ログも含まれるようになります。VSC のログファイルを収集する手順は次のとおりです。
+ONTAP Tools for VMware vSphereのログファイルを収集するには、VSC GUIの「ONTAP tools for VMware vSphereログのエクスポート」機能を使用します。VASA Providerを有効にしてONTAP Tools for VMware vSphere Logバンドルを収集すると、ONTAP Tools for VMware vSphere LogバンドルにもVPログが含まれます。次の手順では、ONTAP tools for VMware vSphereのログファイルを収集する方法を説明します。
 
 * 手順 *
 
-. ONTAP ツールのホームページで、 * Configuration * > * Export VSC Logs * をクリックします。
+. ONTAP toolsのホームページで、*[設定]*>*[VMware vSphereログ用ONTAPツールのエクスポート]*をクリックします。
 +
 この処理には数分かかることがあります。
 

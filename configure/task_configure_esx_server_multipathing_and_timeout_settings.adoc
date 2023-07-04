@@ -26,7 +26,7 @@ VMware vSphere 用の ONTAP ツールは、 ESXi ホストのマルチパス設�
 標準の推奨値がデフォルトで設定されます。
 
 +
-image::../media/vsc_recommended_hosts_settings.gif[VSC で推奨されるホスト設定]
+image::../media/vsc_recommended_hosts_settings.gif[[Set Recommended Values]画面]
 
 . [OK] をクリックします。
 

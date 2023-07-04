@@ -26,7 +26,7 @@ ONTAP ツール 9.7.1 にアップグレードする前に VASA Provider 機能�
 * 手順 *
 
 . VMware vSphere の Web ユーザインターフェイスにログインします。
-. vSphere Clientで、*[メニュー]*>*[NetApp ONTAP tools]*[コンソール]をクリックします。
+. vSphere Clientで、*[メニュー]*>*[ NetApp ONTAP tools]*を選択します。
 . [* 設定 * ] をクリックします。
 . [ 管理設定 ] タブの [ 機能の管理 ] をクリックします。
 . Manage Capabilities ダイアログボックスで、有効にする VASA Provider 拡張機能を選択します。

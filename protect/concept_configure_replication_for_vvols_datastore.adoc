@@ -23,6 +23,6 @@ WARNING: 保護されている仮想マシンと保護されていない仮想�
 
 NOTE: VVOL データストアのディザスタリカバリを使用する場合は、 VASA Provider の機能が拡張されて VVOL のレプリケーションが可能になったため、 Storage Replication Adapter （ SRA ）を別途設定する必要はありません。
 
-image::../media/vvols_replication.png[VVOL のレプリケーション]
+image::../media/vvols_replication.png[ONTAPシステムの設定ワークフロー]
 
 link:../protect/configure_vvols_replication_existing_datastore.html["既存のデータストア用に VVol レプリケーションを設定する"]

@@ -14,7 +14,6 @@
   <block id="99f2236cef71d63edd309e83692bae51" category="paragraph">VASA Provider では、 MetroCluster 構成を使用する環境が自動的にサポートされます。VASA Provider 環境では、スイッチオーバーは透過的に行われます。直接接続 SVM を VASA Provider に追加することはできません。</block>
   <block id="aa01ce52a20efe46b8d9f8d571874ece" category="admonition">VASA Provider では、スイッチオーバーの実行後にセカンダリサイトの SVM の名前に「 -mc 」というサフィックスが付加されません。</block>
   <block id="7d95f88d5acd32cda8bb48c562c0a438" category="doc">VSC タスクに必要な権限</block>
-  <block id="04b73aa98bf2f2396de0535eaf3faf8e" category="paragraph">VSC タスクに必要な権限については、ネットアップの技術情報アーティクル 1032542 を参照してください。</block>
   <block id="6b894d7e8f2bb219ece874c3c249c3f7" category="inline-link">Virtual Storage Console 用の RBAC の設定方法</block>
   <block id="14d107055fdbd0aa4ef3c23300469f88" category="paragraph"><block ref="14d107055fdbd0aa4ef3c23300469f88" category="inline-link-rx"></block></block>
   <block id="3cd4a44b3b904a2571f0a38e4172e2af" category="paragraph">VMware vSphere GUI の ONTAP ® ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。</block>
@@ -49,7 +48,6 @@
   <block id="20422418e9f27ff480459f880734075a" category="paragraph"><block ref="20422418e9f27ff480459f880734075a" category="inline-link-rx"></block></block>
   <block id="b903ab0865d53d0fb8088440e2b2c347" category="summary">VMware vSphere およびロールベースアクセス制御（ RBAC ）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールを設定できます。これらのロールには、 Virtual Storage Console\(VSC\) タスクで実行するストレージ操作に必要な ONTAP 権限が含まれています。</block>
   <block id="07cda92265f02dc6b3431f3719b53172" category="doc">VMware vSphere 用の ONTAP ツールを使用する際に推奨される ONTAP ロール</block>
-  <block id="235a8def2260474f71ef08e874bf3aa1" category="paragraph">VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、 Virtual Storage Console （ VSC ）タスクで実行するストレージ処理に必要な ONTAP 権限が含まれています。</block>
   <block id="637136b177eed37009281c2b49416083" category="inline-link-macro">ユーザロールと権限を設定</block>
   <block id="5bc83c5da5e874a1f3cd46def8b7086a" category="paragraph">各 ONTAP ロールには、ロールのクレデンシャルを構成するユーザ名とパスワードのペアが関連付けられています。このクレデンシャルを使用してログインしないと、ロールに関連付けられたストレージ処理にアクセスできません。</block>
   <block id="92bedc01b7222f50b165fadee33a0cdd" category="paragraph">セキュリティ対策として、 VSC 固有の ONTAP ロールは階層構造になっています。最初のロールは最も制限のあるロールで、 VSC の最も基本的なストレージ処理に関連する権限だけを含みます。次のロールには、そのロール独自の権限と、前のロールに関連付けられているすべての権限が含まれます。以降、上位のロールほど制限が少なく、より多くのストレージ処理をサポートします。</block>
@@ -66,32 +64,20 @@
   <block id="74357ddc4a8bb94a1e387cdc464d35b9" category="doc">vCenter Server のアクセス許可の割り当てと変更に関する要点</block>
   <block id="c8ae2664c1636dc82742c9e4a7d61618" category="section-title">権限を割り当てます</block>
   <block id="930763c1a1aa2d8dac9f593b88cc97f3" category="paragraph">vCenter Server のアクセス許可は、 vSphere のオブジェクトおよびタスクへのアクセスを制限したい場合にのみ設定します。それ以外の場合は、管理者としてログインできます。このログインでは、すべての vSphere オブジェクトに自動的にアクセスできます。</block>
-  <block id="fe59038eb9a34529745fdff28894d375" category="paragraph">アクセス許可を割り当てる場所によって、ユーザが実行できる VSC タスクが決まります。</block>
   <block id="2999d34a2175214e4c82aac37d21932b" category="paragraph">タスクによっては、完了を確認するために、ルートオブジェクトなどの上位レベルにアクセス許可を割り当てる必要があります。具体的には、特定の vSphere オブジェクトには適用されない権限（タスクの追跡など）がタスクに必要な場合や、必要な権限環境が vSphere 以外のオブジェクト（ストレージシステムなど）に必要な場合です。</block>
   <block id="2c04f4cf2a358eb25b9eadacab86952c" category="paragraph">このような場合は、子エンティティに継承されるようにアクセス許可を設定できます。子エンティティには、他の権限も割り当てることができます。子エンティティに割り当てたアクセス許可は、親エンティティから継承されたアクセス許可を上書きします。したがって、子エンティティにアクセス許可を割り当てることで、ルートオブジェクトに割り当てられ、子エンティティに継承されたアクセス許可の対象を制限することができます。</block>
   <block id="3cfc0fca04f11488b56caab42cdd61d4" category="admonition">会社のセキュリティポリシーでアクセス許可を厳しく制限することが求められる場合を除き、ルートオブジェクト（ルートフォルダとも呼ばれる）にアクセス許可を割り当てることを推奨します。</block>
   <block id="65e2bf8aa80dc9818c751f89f6af711e" category="section-title">アクセス許可と非 vSphere オブジェクト</block>
-  <block id="77c1bbd024525075bdd272268499ec51" category="paragraph">作成したアクセス許可は、 vSphere 以外のオブジェクトに適用されます。たとえば、ストレージシステムは vSphere オブジェクトではありません。環境ストレージシステムにアクセス許可を割り当てることができる vSphere オブジェクトがないため、権限がある場合は、その権限を含むアクセス許可を VSC ルートオブジェクトに割り当てる必要があります。</block>
-  <block id="fc8078b7efcfc8d791f2b4291e1d4ec0" category="paragraph">たとえば、「 Add/Modify/Skip storage systems 」といった VSC 権限を含む任意のアクセス許可は、ルートオブジェクトレベルに割り当てる必要があります。</block>
   <block id="b9fb193a2e0ec11e6325daf26766f10a" category="section-title">アクセス許可の変更</block>
   <block id="a8e01cabe9b5f1e74700dfe84ecb64df" category="paragraph">一度に変更できるアクセス許可は 1 つです。</block>
   <block id="738c71d468b929e0b80b012e95674531" category="paragraph">アクセス許可に含まれる権限が変更された場合、そのアクセス許可が関連付けられたユーザは、更新されたアクセス許可を有効にするためにログアウトしてログインし直す必要があります。</block>
   <block id="8169f681458fdeab0f3382d2821b913f" category="doc">VMware vSphere 用の ONTAP ツールで必要な製品レベルの権限</block>
   <block id="f205df396c677fd2dbb183f5747cadfa" category="cell">* 権限 *</block>
   <block id="f14c276c07197ebef1394a5a219087a1" category="cell">* 概要 *</block>
-  <block id="41d1595a6193e61f46686c24799acd68" category="summary">vCenter Server の権限と RBAC を簡単に使用できるように、 Virtual Storage Console （ VSC ）には主要な VSC タスクを実行できる標準の VSC ロールが用意されています。また、タスクの実行を制限し、 VSC 情報の表示のみを許可する読み取り専用ロールもあります。</block>
   <block id="80bcb999ba82a6a1735d3b331e492294" category="doc">ONTAP ツールに付属の標準ロール</block>
-  <block id="a9a80aa47fcaa73837cbe598c5ec021b" category="paragraph">vCenter Server の権限と RBAC を簡単に使用できるように、 Virtual Storage Console （ VSC ）には主要な VSC タスクを実行できる標準の VSC ロールが用意されています。また、タスクの実行を制限し、 VSC 情報の表示のみを許可する読み取り専用ロールもあります。</block>
-  <block id="4797f6fbb591d5a8ff4f4cca1e952f0f" category="paragraph">標準の VSC ロールには、ユーザが VSC タスクを実行するために必要な VSC 固有の権限と vCenter Server 標準の権限の両方が含まれています。また、サポートされるどのバージョンの vCenter Server でも必要な権限が付与されるように設定されています。</block>
-  <block id="ed262a17b17027c186d2f4959236b610" category="admonition">VSC を最新バージョンにアップグレードした場合は、新しいバージョンの VSC で使用できるように自動的にアップグレードされます。</block>
-  <block id="788e1de3a7bee65991ce6ac2a2c16df2" category="paragraph">VSC の標準ロールは、 vSphere Client のホームページで * Roles * をクリックすると表示できます。</block>
-  <block id="044cb1a9b7ea095d18f2e6b48cdf4055" category="paragraph">VSC の組み込みのロールで実行できるタスクを次に示します。</block>
   <block id="c9ef8e8cb4e9071b6711dacd2032d148" category="paragraph">VSC 管理者</block>
-  <block id="590c0db1af29adabce858b066a78d2cb" category="paragraph">すべての VSC タスクを実行するために必要な vCenter Server 標準の権限と VSC 固有の権限がすべて含まれています。</block>
   <block id="c1c2bda70ad6cdf12fd6f3f51eed2c3d" category="paragraph">VSC 読み取り専用</block>
-  <block id="c56b0bee3be5c774d802562e22d3f115" category="paragraph">VSC に対する読み取り専用アクセスが許可されます。アクセスが制御された VSC の処理は実行できません。</block>
   <block id="8ac826ebad5c44b12551e1ad81ac67c6" category="paragraph">VSC によるプロビジョニング</block>
-  <block id="ddea7f18ed761ebe3b44ba447c70ff84" category="paragraph">ストレージのプロビジョニングに必要な vCenter Server 標準の権限と VSC 固有の権限がすべて含まれています。次のタスクを実行できます。</block>
   <block id="b444bb84c6347f04bc0fe9b808470c02" category="list-text">新しいデータストアを作成する</block>
   <block id="b269c93fa6b5ac129b588fab76e9b62a" category="list-text">データストアを削除</block>
   <block id="b4ee819aec2169a685f048d59bfe124d" category="list-text">ストレージ機能プロファイルに関する情報を表示する</block>
@@ -108,22 +94,14 @@
   <block id="ed7f08e236934f84eff400f2a6307549" category="list-text">より細分化されたロールを作成します。</block>
   <block id="f934fe4ede361b2778e687b9b91cd305" category="paragraph">標準の VSC ロールよりも少ない権限のロールが必要な場合は、 VSC ロールを使用して新しいロールを作成することができます。</block>
   <block id="52559a3597647289ddc42175b58d675c" category="paragraph">この場合は、必要な VSC ロールのクローンを作成し、そのクローンを編集してユーザに必要な権限だけを残します。</block>
-  <block id="60acc8ec200a03cba0bcec34dbd21cdb" category="summary">ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。VMware vSphere 用の ONTAP ® ツールでは、 ONTAP RBAC と vCenter Server RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる Virtual Storage Console （ VSC ）タスクが決まります。</block>
   <block id="da496c85a4c5475dec77c310cdcb6be9" category="doc">ONTAP ストレージシステムおよび vSphere オブジェクトの権限</block>
-  <block id="b64652024bc922b3d81a43a634cd8b78" category="paragraph">ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。VMware vSphere 用の ONTAP ® ツールでは、 ONTAP RBAC と vCenter Server RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる Virtual Storage Console （ VSC ）タスクが決まります。</block>
-  <block id="ea70a4edb98e06a20b4aa66ebbd21541" category="paragraph">VSC では、各ストレージシステムの認証とそのストレージシステムで実行できるストレージ操作の判別に、 VSC で設定したクレデンシャル（ユーザ名とパスワード）が使用されます。ストレージシステムごとに 1 組のクレデンシャルが使用され、そのクレデンシャルに基づいて、ストレージシステムで実行できる VSC タスクが決まります。つまり、このクレデンシャルは VSC のクレデンシャルであり、個々の VSC ユーザに対するものではありません。</block>
-  <block id="cf2c657b8054c77eb2047febf6dcf2ad" category="paragraph">ONTAP RBAC は、ストレージシステムへのアクセス、および仮想マシンのプロビジョニングなど、ストレージに関連する VSC タスクの実行にのみ適用されます。それぞれのストレージシステムに対する適切な ONTAP RBAC 権限がないと、そのストレージシステムでホストされる vSphere オブジェクトに対してタスクを実行することはできません。ONTAP RBAC と VSC 固有の権限を組み合わせることで、ユーザが実行できる VSC タスクを制御することができます。</block>
   <block id="845e835b372dcd78cff8f20ea48e3ec4" category="list-text">ストレージまたはストレージシステムに格納されている vCenter Server オブジェクトの監視と設定</block>
   <block id="6209ea29783659ad409dca288f7ef0f1" category="list-text">ストレージシステムに格納されている vSphere オブジェクトのプロビジョニング</block>
-  <block id="e23a6962569e72c389019da0b535986b" category="paragraph">ONTAP RBAC と VSC 固有の権限を使用すると、ストレージ主体のセキュリティレイヤをストレージ管理者が管理できるようになります。これにより、 ONTAP RBAC または vCenter Server RBAC のどちらか一方のアクセス制御だけを使用した場合に比べ、よりきめ細かい制御が可能になります。たとえば、 vCenter Server RBAC を使用して、ネットアップストレージでのデータストアのプロビジョニングを vCenterUserB には許可し、 vCenterUserA には許可しないように設定したとします。この場合、特定のストレージシステムのクレデンシャルに対してストレージの作成を禁止すれば、 vCenterUserB と vCenterUserA のどちらもそのストレージシステムでデータストアのプロビジョニングを実行することはできません。</block>
-  <block id="939a23b83676c3479d999e91ad9e3ac0" category="paragraph">VSC タスクを開始すると、最初にそのタスクに対する正しい vCenter Server アクセス許可がユーザにあるかどうかが検証されます。タスクを実行するための十分な vCenter Server アクセス許可がなければ、最初の vCenter Server のセキュリティチェックをパスできないため、そのストレージシステムの ONTAP 権限は確認されません。そのため、ストレージシステムにアクセスできません。</block>
-  <block id="de0ff4ee80ccee1354197493fb2479db" category="paragraph">十分な vCenter Server アクセス許可がある場合は、次にストレージシステムのクレデンシャル（ユーザ名とパスワード）に関連付けられた ONTAP RBAC 権限（ ONTAP ロール）が確認されます。 その VSC タスクで必要なストレージ処理をストレージシステムで実行するための十分な権限があるかどうかを確認すること。適切な ONTAP 権限があれば、ストレージシステムにアクセスして VSC タスクを実行できます。ストレージシステムで実行できる VSC タスクは ONTAP ロールで決まります。</block>
   <block id="73323449688ee575cf05cc2f312e5ff6" category="paragraph">各ストレージシステムには、一連の ONTAP 権限が関連付けられます。</block>
   <block id="f46a8de847ea89539f483ec4e81f61c3" category="paragraph">ONTAP RBAC と vCenter Server RBAC の両方を使用すると、次のような利点があります。</block>
   <block id="2fae32629d4ef4fc6341f1751b405e45" category="list-text">セキュリティ</block>
   <block id="d0caf142a60fe8cbe2a5e159bc77af0c" category="paragraph">どのユーザがどのタスクを実行できるかを、 vCenter Server オブジェクトレベルおよびストレージシステムレベルで制御できます。</block>
   <block id="823d854786bb307b0a8fb9efbf5b6809" category="list-text">監査情報</block>
-  <block id="c64db94c963700314d728f06945369d2" category="paragraph">多くの場合、 VSC はストレージシステムについての監査証跡を提供します。これにより、ストレージに対して変更を行った vCenter Server ユーザまでさかのぼってイベントを追跡できます。</block>
   <block id="16d1034d74164e0d782a4f32f3af3698" category="list-text">使いやすさ</block>
   <block id="2d7d9bf238d879f4a632c0e18e45ae8a" category="paragraph">コントローラのクレデンシャルをすべて集約して一元管理できます。</block>
   <block id="f6583fef730506d9fe22b8e35e52baa4" category="summary">VMware の Site Recovery Manager\ （ SRM\ ）とともに、 vCenter Server でディザスタリカバリの設定を作成および管理できます。</block>
@@ -157,10 +135,7 @@
   <block id="520eedfc708c9b9e975734575ce13112" category="paragraph">NFS 環境の場合は、仮想メモリと同じサイズのファイルです。</block>
   <block id="d061debbb69f1badde16263f7edd67dc" category="list-text">* メモリ *</block>
   <block id="3704cccc9d328731555a0894fdde61bc" category="paragraph">この vVol は、 VM スナップショットの作成時にメモリのスナップショットオプションを選択した場合に作成されます。</block>
-  <block id="93cf0ce401485ea512d0cebd7aa9a5b6" category="summary">vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。VMware vSphere 用の ONTAP ® ツールでは、 vCenter Server RBAC と ONTAP RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる VSC タスクが決まります。</block>
   <block id="a2b6bdbaa7f478b53edca02553c0dd6b" category="doc">ONTAP ツールでのロールベースアクセス制御の概要</block>
-  <block id="f737dbfa4bc20b26d0a2b6647fa12dbb" category="paragraph">vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。VMware vSphere 用の ONTAP ® ツールでは、 vCenter Server RBAC と ONTAP RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる VSC タスクが決まります。</block>
-  <block id="06f90c47c5652bcdb308e3ff60795047" category="paragraph">タスクを完了するには、適切な vCenter Server RBAC アクセス許可が必要です。VSC でのタスクの実行時、まずユーザの vCenter Server アクセス許可が確認され、次にユーザの ONTAP 権限が確認されます。</block>
   <block id="4e97a87c57d50537bba2389e33f34a93" category="paragraph">vCenter Server アクセス許可をルートオブジェクト（ルートフォルダ）に対して設定することができます。その後、アクセス許可が不要な子エンティティのアクセスを禁止することでセキュリティを強化できます。</block>
   <block id="539018505dde88069c03ead0e16d021b" category="doc">ONTAP ツールの概要</block>
   <block id="088edf0a41c67ef0d8cab2de751c7631" category="paragraph">ONTAP ツールの各コンポーネントは、ストレージをより効率的に管理するための機能を提供します。</block>
@@ -200,34 +175,18 @@
   <block id="debdb3ce4a86d0a653cb9af2997ed87b" category="paragraph">タスクを実行できるユーザまたはグループを定義します。</block>
   <block id="f050ff5690e22a95a842525c7cdec28c" category="paragraph">次の図に示すように、 3 つの要素がすべて揃っていないとアクセスは許可されません。</block>
   <block id="83002a8f3da272c6326e5e31c94c7134" category="admonition">グレーのボックスは vCenter Server 側の要素、白のボックスは vCenter Server を実行しているオペレーティングシステム側の要素を表しています。</block>
-  <block id="d6604cece2634ee88b99e28a1cc25369" category="image-alt">アクセス権のグラフィックを更新しました</block>
   <block id="d4613ce1ce58f0172e8a4a07c9582cdf" category="section-title">権限</block>
   <block id="ac38773d017495a97d5b88f242578cb8" category="list-text">vCenter Server 標準の権限</block>
   <block id="812c5d24b89720dbab0e021d979b0bdf" category="paragraph">vCenter Server に付属している権限です。</block>
-  <block id="2ea487293094c000053b7ecdcc4f9d0f" category="list-text">VSC 固有の権限</block>
-  <block id="e31f18ecad0532c28fad839c9b939c8f" category="paragraph">特定の VSC タスク用に定義された、VSC 固有の権限です。</block>
-  <block id="70b39d807e560871dc0c378bc38e13f3" category="paragraph">VSC のタスクを実行するには、 VSC 固有の権限と vCenter Server 標準の権限の両方が必要です。これらの権限は ' ユーザーのロールを構成しますアクセス許可には複数の権限を含めることができます。これらの権限は、 vCenter Server にログインしているユーザを対象としています。</block>
-  <block id="4dc8d442f599c6c18cf7dd10b52fa487" category="admonition">vCenter Server RBAC の使用を簡単にするため、 VSC には、 VSC タスクの実行に必要な VSC 固有の権限と標準の権限をすべて含む標準ロールがいくつか用意されています。</block>
   <block id="a61c7e49f2d62469efe4be0dd2d42a28" category="paragraph">アクセス許可に含まれる権限が変更された場合、そのアクセス許可が関連付けられたユーザは、更新されたアクセス許可を有効にするためにログアウトしてログインし直す必要があります。</block>
   <block id="c5ac298b280c51f301192df10798efec" category="list-text">VSC 読み取り専用</block>
-  <block id="1f0cf4c19fd3048b62df0cf67d5b3434" category="paragraph">VSC および VASA Provider 固有のタスクにはすべて View 権限が必要です。</block>
   <block id="977ab2e24a7487c2a601a55ebc3ad363" category="paragraph">ストレージ機能プロファイルおよびしきい値設定に関連する VSC および VASA Provider のタスク。</block>
   <block id="0c26eb3da0cc8bb038a438623b92ece4" category="section-title">vSphere オブジェクト</block>
-  <block id="6c624932dc6dcc57d998289b2da4f386" category="paragraph">アクセス許可は vSphere オブジェクトに関連付けられます。 vCenter Server 、 ESXi ホスト、仮想マシン、データストア、データセンター、 とフォルダ。任意の vSphere オブジェクトに権限を割り当てることができます。vSphere オブジェクトに割り当てられたアクセス許可に基づいて、そのオブジェクトに対してどのユーザがどのタスクを実行できるかが決まります。VSC 固有のタスクについては、アクセス許可の割り当てと検証はルートフォルダレベル（ vCenter Server ）でのみ行われ、それ以外のエンティティでは行われません。ただし VAAI プラグインの処理は例外で、関連する ESXi に対して権限が検証されます。</block>
   <block id="b7f56258c47d620440751b7faddb209b" category="section-title">ユーザとグループ</block>
-  <block id="879f661c4c82cd6443000f6d69b2141d" category="paragraph">ユーザとグループは、 Active Directory （またはローカルの vCenter Server マシン）を使用して設定できます。その後、設定したユーザまたはグループに vCenter Server アクセス許可を付与することで、特定の VSC タスクの実行を許可することができます。</block>
-  <block id="51713fa15070cba1e70c7fed4efe6782" category="admonition">これらの vCenter Server アクセス許可は、 VSC 管理者以外の VSC vCenter ユーザに適用されます。VSC 管理者には、デフォルトでフルアクセスが許可されるため、アクセス許可を割り当てる必要はありません。</block>
   <block id="c3a3dd532edfb82b4e332bc19f333c01" category="paragraph">ユーザとグループにはロールは割り当てられません。vCenter Server アクセス許可を割り当てることで、間接的にロールが適用されます。</block>
   <block id="431526444f5217c0c4d88bbb5bd31943" category="summary">VMware vSphere 用の ONTAP ツールが導入された vSphere 環境をハイアベイラビリティ（ HA ）構成にすることができます。VMware HA は、仮想環境でハードウェアやオペレーティングシステムの障害が発生した場合にフェイルオーバー保護を提供します。</block>
-  <block id="ef9fe79e06af531fbe18dd870cdb7dc7" category="summary">VMware vSphere 用の ONTAP ® ツールでロールベースアクセス制御を使用する場合は、ストレージシステムで ONTAP RBAC を設定する必要があります。ONTAP RBAC 機能を使用すると、アクセス権限を制限したカスタムユーザアカウントを 1 つ以上作成できます。</block>
-  <block id="b52c90b248d9f62d24671e4edfc2261a" category="paragraph">VSC と SRA は、クラスタレベルまたは Storage Virtual Machine （ SVM ）レベルでストレージシステムにアクセスできます。クラスタレベルでストレージシステムを追加する場合、必要なすべての機能を使用するには、管理者ユーザのクレデンシャルを指定する必要があります。SVM の詳細を直接追加してストレージシステムを追加する場合は、「 vsadmin 」ユーザには特定のタスクを実行するために必要なすべてのロールと機能が付与されるわけではないことに注意してください。</block>
-  <block id="3efaac93d4a2b12bc7bf283063f35f84" category="paragraph">VASA Provider は、クラスタレベルでのみストレージシステムにアクセスできます。特定のストレージコントローラで VASA Provider が必要な場合は、 VSC または SRA を使用している場合でも、クラスタレベルでストレージシステムを VSC に追加する必要があります。</block>
   <block id="ac9f97a99a048cbef4e6c1dd7488effe" category="paragraph">新しいユーザを作成し、クラスタまたは SVM を ONTAP ツールに接続するには、次の作業を行う必要があります。</block>
   <block id="69e3a1dff1352bb06840dbcbff566e40" category="list-text">ONTAP を使用して、ロールが割り当てられ、適切なアプリケーションが設定されたユーザを作成します</block>
-  <block id="a4e90f544f0d8ede6e2023d539fef693" category="paragraph">作成したストレージシステムクレデンシャルは、 VSC 用にストレージシステムを構成する際に必要になります。VSC 用のストレージシステムを構成するには、 VSC でクレデンシャルを入力する必要があります。これらのクレデンシャルを使用してストレージシステムにログインすると、クレデンシャルの作成時に ONTAP で設定した VSC 機能に対する権限が付与されます。</block>
-  <block id="82e8b78ffb3455f0a5df307de255c3dc" category="list-text">VSC にストレージシステムを追加し、作成したユーザのクレデンシャルを指定します</block>
-  <block id="19a470a04ffe94a545dd18fbe203f6b2" category="section-title">VSC ロール</block>
-  <block id="97c0616f06055c544f27b7a5771b5856" category="paragraph">VSC では、 ONTAP の権限を以下に示す VSC ロールに分類します。</block>
   <block id="744d17f996689656ea9299b7759dae8e" category="paragraph">接続されているすべてのストレージコントローラを検出できます</block>
   <block id="f1d26c85be39a772a5049e842f6cbe7d" category="paragraph">ボリュームおよび論理ユニット番号（ LUN ）を作成できます</block>
   <block id="6edb28798e7ae3ebe9053233ddfa3ded" category="paragraph">ストレージシステムのサイズ変更と重複排除を実行できます</block>
@@ -236,7 +195,6 @@
   <block id="6e44145c3e783bea336bc5f349025e9a" category="paragraph">クラスタレベルで作成できるのは Policy Based Management のみです。ストレージ機能プロファイルを使用してポリシーベースでストレージを管理できます。</block>
   <block id="86b7641afb5cdf4c3101910328663b4d" category="section-title">SRA ロール</block>
   <block id="d40b84cd39848a2632ff0f16278a6ad7" category="paragraph">SRA では、 ONTAP 権限をクラスタレベルまたは SVM レベルで SAN または NAS ロールに分類します。これにより、ユーザは SRM 処理を実行できるようになります。</block>
-  <block id="6fa9d4b747333eb053b24b538dfdcdb9" category="paragraph">VSC にクラスタを追加する場合は、 ONTAP RBAC ロールの権限の初期検証が実行されます。直接接続の SVM のストレージ IP を追加した場合、初期検証は実行されません。タスクワークフローの段階で権限が確認されて適用されます。</block>
   <block id="442ea0eca66e22693105f5c322b9b5bc" category="summary">ONTAP ツールの設定では、ストレージシステムの設定、ストレージ機能プロファイルの作成、データストアのプロビジョニング、および必要に応じてディザスタリカバリのための SRA の設定を行います。</block>
   <block id="d9d16dc3acbe809713bf4f3dbd3f8e9a" category="doc">ONTAP ツールを設定するためのワークフロー</block>
   <block id="8aaac5ebacc67a7b948b0cfc0d1ddfb1" category="image-alt">ONTAP ツールの設定ワークフロー</block>
@@ -303,7 +261,6 @@
   <block id="91b8e7b080ca6adf38c0a1a479880c74" category="paragraph">構成やシステムの負荷によっては、この処理に長時間かかることがあります。タスクの進行状況が [ 最近のタスク ] パネルに表示されます。タスクが完了すると、ホストのステータスアラートアイコンが Normal アイコンまたは Pending Reboot アイコンに変わります。</block>
   <block id="4c53150a7d5b0d30a5be88983c1b112f" category="list-text">NetApp Recommended Settings （ネットアップの推奨設定）ダイアログボックスで、システムに最も適した値を選択します。</block>
   <block id="9f13fd3e85b5850ed977035971bc1580" category="paragraph">標準の推奨値がデフォルトで設定されます。</block>
-  <block id="f3cd9f76c304494071881fa300e01737" category="image-alt">VSC で推奨されるホスト設定</block>
   <block id="a72cc47fad7d1846d19b085d2e77e5ba" category="list-text">[OK] をクリックします。</block>
   <block id="5e76a0ccaa822c77f5e23f13a579496f" category="summary">VASA Provider for ONTAP に関連付けられているデータストアを、ストレージ機能プロファイルにマッピングできます。ストレージ機能プロファイルに関連付けられていないデータストアにプロファイルを割り当てることができます。</block>
   <block id="ff83d16bc5d8d21cbb8ed4893d197bbc" category="doc">データストアとストレージ機能プロファイルのマッピング</block>
@@ -574,7 +531,6 @@
   <block id="10fe24e67af2df3bfb206c5863b86c02" category="list-text">Add Storage System * （ストレージ・システムの追加）ダイアログ・ボックスで ' そのストレージ・システムの管理 IP アドレスとクレデンシャルを入力します</block>
   <block id="ad7a9831691c141cf0b7f81d81119f2c" category="list-text">必要な情報をすべて追加したら、「 * OK 」をクリックします。</block>
   <block id="dcc6aeac19fa1bb3898ff0a6c6a84b48" category="doc">異なるサブネット間でのデータストアのマウントを有効にする</block>
-  <block id="7a20db1a9c2e22ef5e236ae38150fc9e" category="paragraph">データストアのプロビジョニングに失敗した場合、以下のエラーメッセージが記録されます。</block>
   <block id="35a2998dbc95ad29cf2c17c7e32ca02a" category="list-text">vCenter Server インスタンスにログインします。</block>
   <block id="ff562f9edd82624104457532dabfa10c" category="list-text">統合アプライアンス仮想マシンを使用してメンテナンスコンソールを起動します。</block>
   <block id="ca5adffd751c55bab8647e73f43c9a6f" category="inline-link-macro">VMware vSphere 用 ONTAP ツールのメンテナンスコンソール</block>
@@ -835,7 +791,6 @@
   <block id="a254dba35541de0f870ec6ae78a16d10" category="list-text">ドロップダウンリストから * Datastore ISO * file を選択します。</block>
   <block id="35a9802991888891ffd72bb52960f2ea" category="list-text">ダウンロードした .iso ファイルを参照して選択し、 * パワーオン時に接続 * チェックボックスを選択します。</block>
   <block id="a712ca4fc0423909791945d003ec86e3" category="list-text">導入した ONTAP ツールの [Summary] タブにアクセスします。</block>
-  <block id="5a292ef9cc75c93b76a300ae60bd07e6" category="list-text">* をクリックします<block ref="646d51cfcc95b274401d8044823da1c3" category="inline-image-macro-rx" type="image"></block>* メンテナンスコンソールを起動します。</block>
   <block id="3b9c2bcd5dc2c652ec5cfd176b0cbb9d" category="list-text">「ドメインメニュー」プロンプトで、「システム構成」に「 2 」オプションを入力し、「アップグレード」に「 8 」オプションを入力します。</block>
   <block id="52d69c6566efc61232124f37f6b8aadb" category="paragraph">アップグレードが終了すると、 ONTAP ツールが再起動します。ONTAP ツールは、アップグレード前と同じ IP アドレスで vCenter Server に登録されます。</block>
   <block id="24e7885391999df72b5723c443057435" category="list-text">IPv6 アドレスを使用して ONTAP ツールを vCenter Server に登録するには、次の手順を実行する必要があります。</block>
@@ -1020,8 +975,6 @@
   <block id="84fd2e9f48ced2057b35ca005d2e23dd" category="doc">ログファイルを収集します</block>
   <block id="ef1070995ad39c34df59dcf7aa1fbea4" category="paragraph">VASA Provider のログファイルが必要な場合は、 Vendor Provider Control Panel 画面からサポートバンドルを生成できます。このページは VASA Provider のメンテナンスメニューの一部で、仮想アプライアンスのコンソールからアクセスできます。</block>
   <block id="8f124924c0fbddac76336e23aaeb30d9" category="paragraph">https://vm_ip:9083` にアクセスします</block>
-  <block id="6d74a8de1959d0b43477e06a0ef27565" category="paragraph">VSC GUI の「 VSC ログのエクスポート」機能を使用して、 VSC のログファイルを収集できます。VASA Provider を有効にして VSC ログバンドルを収集すると、 VSC ログバンドルに VP ログも含まれるようになります。VSC のログファイルを収集する手順は次のとおりです。</block>
-  <block id="bc82adfccc21009861c92dae0e7f162d" category="list-text">ONTAP ツールのホームページで、 * Configuration * &gt; * Export VSC Logs * をクリックします。</block>
   <block id="5f3b52e4c0acfbc3bae5a10aef3314ae" category="paragraph">この処理には数分かかることがあります。</block>
   <block id="18531314ab2ad4b124be981bc848c3fe" category="list-text">プロンプトが表示されたら、ローカルコンピュータにファイルを保存します。</block>
   <block id="d4dd1a3c4b1981df0b96e615bedef8d9" category="paragraph">これで、テクニカルサポートに .zip ファイルを送ることができます。</block>
@@ -1291,7 +1244,6 @@
   <block id="9b5de986e60b871fe7abaa3678c90552" category="list-text">vCenter Server にログインし、 * Site Recovery * &gt; * Sites * をクリックします。</block>
   <block id="bb11372d84393cda662c1a6ada5caf20" category="list-text">保護されたサイトを選択し、 * 管理 * をクリックします。</block>
   <block id="2ad1cb1a025f61d83d0ce7d7ec4e1775" category="list-text">[ 管理 ] タブで、 [ ネットワークマッピング *] を選択します。</block>
-  <block id="4fc058d5aabb89cec1a8ecf09e3e10ed" category="list-text">をクリックします <block ref="59be0f5e0f28a9bdc3a1ff2cbdacc90c" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、新しいネットワークマッピングを作成します。</block>
   <block id="6753f4982155708aac37a1bd3bef1245" category="paragraph">Create Network Mapping ウィザードが表示されます。</block>
   <block id="6211d5bb29b9c1509eb64e37fd1af6f4" category="list-text">Create Network Mapping ウィザードで、次の手順を実行します。</block>
   <block id="fa3c2dff2aa64bf77790451d4ad4e2a6" category="list-text">[ 一致する名前を持つネットワークのマッピングを自動的に準備する *] を選択し、 [ 次へ *] をクリックします。</block>
@@ -1324,7 +1276,6 @@
   <block id="d50592c91e3b0e5662b620ee7ab3dbc4" category="paragraph">プレースホルダデータストアを設定して、リカバリサイトの vCenter インベントリに保護対象の仮想マシン（ VM ）用の場所を確保する必要があります。プレースホルダ VM はサイズが小さく、数百 KB 以下なので、大容量のプレースホルダデータストアは必要ありません。</block>
   <block id="cc033bcfc189c3eea2b7a910b7c5f057" category="list-text">リソースマッピングの設定が完了している必要があります。</block>
   <block id="1492b0392ea61287f2885789d58f0cb2" category="list-text">[ 管理 ] タブで、 [ プレースホルダデータストア ] を選択します。</block>
-  <block id="73a81863dedf94f58450aa0c3ecef2f8" category="list-text">をクリックします <block ref="cdb88dc1087a6f5aa8a2aa5b28bdc94e" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、新しいプレースホルダデータストアを作成します。</block>
   <block id="63d79daa70d7585f9f91ede52fe2cecc" category="list-text">適切なデータストアを選択し、「 * OK 」をクリックします。</block>
   <block id="9f300d87b0b24027951fafe07e70031d" category="admonition">プレースホルダデータストアはローカルまたはリモートに作成し、レプリケートはしないでください。</block>
   <block id="5de92fca08ac717a6277a6303e846d53" category="list-text">手順 3~5 を繰り返して、リカバリサイトにプレースホルダデータストアを設定します。</block>
@@ -1403,9 +1354,6 @@
   <block id="b1615a1d50989bbe005256e6352c9d57" category="doc">Windows SRM から SRM アプライアンスへの移行</block>
   <block id="f728e6376c02d0120eb394fe6b65bfd0" category="paragraph">ディザスタリカバリに Windows ベースの Site Recovery Manager （ SRM ）を使用している場合、同じセットアップで SRM アプライアンスを使用するには、 Windows のディザスタリカバリセットアップをアプライアンスベースの SRM に移行する必要があります。</block>
   <block id="fa7482ecdf6cd8902f31cda90682fe24" category="paragraph">ディザスタリカバリの移行に必要な手順は次のとおりです。</block>
-  <block id="7649d59a52d07134510f2699764f49b5" category="list-text">既存の ONTAP ツールを 9.7.1 リリースにアップグレードします。</block>
-  <block id="1b57ce58bd15cb0830a07b3ff30354e6" category="list-text">Windows ベースの Storage Replication Adapter をアプライアンスベースの SRA に移行します。</block>
-  <block id="f5f343bc2137f12db9cb09a476fdf405" category="list-text">Windows SRM のデータを SRM アプライアンスに移行します。</block>
   <block id="3061b3ff6d3a7fe53051f50f814b02de" category="inline-link">Site Recovery Manager for Windows から Site Recovery Manager Virtual Appliance に移行します</block>
   <block id="e98071b2fdde8378fcd32e609913ab66" category="paragraph">を参照してください<block ref="7cf7ce0cd4f57deb650bf40ef131cabd" category="inline-link-rx"></block> を参照してください。</block>
   <block id="ec693a334ebe41a6ec4d900861dd2669" category="summary">SRM アプライアンスを導入したら、 SRM アプライアンスに SRA を設定する必要があります。SRA を正しく設定すると、ディザスタリカバリ管理のために SRM アプライアンスが SRA と通信できるようになります。SRM アプライアンスと SRA の間の通信を有効にするためには、 ONTAP ツールのクレデンシャル（ IP アドレスと管理者パスワード）を SRM アプライアンスに保存する必要があります。</block>
@@ -1472,7 +1420,6 @@
   <block id="60f7799622f57bacad4169ec05a5cf08" category="list-text">Manage Capabilities * ダイアログボックスで、有効にする SRA 拡張機能を選択します。</block>
   <block id="24d416b3da9556f9ce25fb84ea68495c" category="list-text">SRA を導入するには、次のいずれかの方法を使用します。</block>
   <block id="bad42c55fd769862a49a558477587b7e" category="cell">* SRM アプライアンスの場合 *</block>
-  <block id="92a8061393663f953e9e1a4a2d009db3" category="list-text">SRM アプライアンスページにアクセスし、 SRM アプライアンスの Storage Replication Adapters ページに移動します。</block>
   <block id="6e7ce8cda7fca8d5eb6cca98fe90a434" category="list-text">[ 新しいアダプタ ] をクリックします。</block>
   <block id="b1fb84ee8230e3e0cf8f6ea25e31815a" category="list-text">SRA プラグインの .tar.gz_installer を SRM にアップロードします。</block>
   <block id="0556174f0b1b0240e4850cde75df8249" category="list-text">アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。</block>
@@ -1481,7 +1428,6 @@
   <block id="687df20e8eaf962750063460a8076000" category="summary">保護対象サイトとリカバリサイトの間の通信を有効にするには、それらのサイトのフォルダをマッピングする必要があります。</block>
   <block id="16dac3a3c7de93aedd97c33f658f9028" category="doc">フォルダマッピングを設定します</block>
   <block id="975a5d96a32b63ae9e78d2fab188fc7d" category="list-text">[ 管理 ] タブで、 [ * フォルダーマッピング * ] を選択します。</block>
-  <block id="321a111d1dae3f7e0d938394bb51fdd5" category="list-text">をクリックします <block ref="53c809c0b3efdf133f3691c8dadc54b3" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、新しいフォルダマッピングを作成します。</block>
   <block id="11f4ccd371b621a7fd0ddb2b197b1e00" category="paragraph">Create Folder Mapping ウィザードが表示されます。</block>
   <block id="6f39eceaad564346f7c828d828949f3f" category="list-text">Create Folder Mapping ウィザードで、次の手順を実行します。</block>
   <block id="cbe12451cac47906dbec30deb7af9da2" category="list-text">[ 一致する名前を持つフォルダのマッピングを自動的に準備する *] を選択し、 [ 次へ *] をクリックします。</block>
@@ -1513,7 +1459,6 @@
   <block id="3ef179b9c339ebf06db691f18287d220" category="admonition">保護されている仮想マシンと保護されていない仮想マシンを 1 つの vVol データストアに混在させないでください。フェイルオーバー後の再保護処理では、保護されていない原因仮想マシンが削除されます。レプリケーションを使用するときは、 VVOL データストア内のすべての仮想マシンが保護されていることを確認してください。</block>
   <block id="39257a3688316e4fc063d2c22bc315b3" category="paragraph">各 FlexVol ボリュームについて、 VVOL データストアの作成ワークフローでレプリケーショングループが作成されます。VVOL レプリケーションを使用するには、ストレージ機能プロファイルに加え、レプリケーションのステータスとスケジュールを含む仮想マシンストレージポリシーを作成する必要があります。レプリケーショングループには、ディザスタリカバリの一環としてターゲットサイトにレプリケートされる仮想マシンが含まれます。レプリケーショングループは、 DR ワークフロー用の SRM コンソールを使用して、保護グループとリカバリプランを使用して設定できます。</block>
   <block id="e82cdb865c10a6e2846353935c22fcdd" category="admonition">VVOL データストアのディザスタリカバリを使用する場合は、 VASA Provider の機能が拡張されて VVOL のレプリケーションが可能になったため、 Storage Replication Adapter （ SRA ）を別途設定する必要はありません。</block>
-  <block id="045808f0dd6488827a80a9ece7ce8913" category="image-alt">VVOL のレプリケーション</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">はじめに</block>
   <block id="da951ef1610be90b45b31baf7b25b179" category="sidebar">VMware vSphere 向け ONTAP ツールについて説明します</block>
   <block id="3d7fe3e43f9f24fffe5ed0d546d12f13" category="sidebar">ONTAP ツールを導入</block>
@@ -1570,9 +1515,6 @@
   <block id="c6f86e205896dda442288a84af6c1576" category="paragraph"><block ref="c6f86e205896dda442288a84af6c1576" category="inline-link-macro-rx"></block></block>
   <block id="3a7126e89509a7e2ce3446580acdf318" category="paragraph">VMware vSphere 用の ONTAP ツールのログファイルは、 VSC のグラフィカルユーザインターフェイス（ GUI ）のオプションを使用して収集できます。テクニカルサポートに問題のトラブルシューティングを依頼すると、ログファイルの収集を求められることがあります。</block>
   <block id="dcf31c875641db4a234eb4a24983f4eb" category="paragraph">「異なるサブネット間でのデータストアのマウントの有効化」のセクションを参照</block>
-  <block id="5589c3092776301a216aaf2d3ac2d8a8" category="summary">VMware vSphere のタスク用の各種 ONTAP ツールに必要な権限の組み合わせは、 Virtual Storage Console \ （ VSC\ ）固有の権限と vCenter Server の標準権限の組み合わせと異なります。</block>
-  <block id="193c88c1ab14526b933d9caf9484432a" category="paragraph">VMware vSphere のタスクを実行するために必要な ONTAP ツールの権限の組み合わせは、 Virtual Storage Console （ VSC ）に固有の権限と vCenter Server 標準の権限の組み合わせと異なります。</block>
-  <block id="b6d1b0cb2147f5fa73ba96a40d7c5374" category="paragraph">VMware vSphere GUI の ONTAP ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。</block>
   <block id="6b3c5cff95a01171d231d2c77b8852ff" category="doc">VMware vSphere 用の ONTAP ツール用に ONTAP の RBAC を設定する方法</block>
   <block id="7ea79dfc92d95f271e38ad8d0b267dd5" category="paragraph">管理者は、必要に応じてこれらのロールをユーザに割り当てることができます。</block>
   <block id="cf917d8457fcc174b9b969143eda5613" category="cell">* 役割 *</block>
@@ -1666,7 +1608,6 @@
   <block id="5c0c0e72c5e970358a3cd73aa5a6cdfb" category="list-text">保護されていない仮想マシンにアクセスし、 VM ストレージポリシーを編集します。</block>
   <block id="f5d7ddef19ac20f1f403b4e17dd45319" category="list-text">VM ストレージポリシーおよびデータストアを選択します。</block>
   <block id="4577690c09752b0ca7185efe45717b27" category="list-text">保護されていない仮想マシンにレプリケーショングループを追加します。</block>
-  <block id="cc7af6d60ed13eebff9a071d28b7f2db" category="image-alt">既存のデータストアを vVol でレプリケーションする</block>
   <block id="9a58b5aa20d973302c3a17ded0496b1a" category="paragraph">* 注： *</block>
   <block id="c1c8479c1167662eb9257d77ff142920" category="list-text">既存のデータストアのレプリケーションを有効にするように仮想マシンを設定する場合は、設定された VVol がある FlexVol を確認してください。</block>
   <block id="d702ff1bee15d5d3b7250939fe4b588d" category="list-text">既存の仮想マシンの VVol が複数のデータストアに分散している場合は、レプリケーションを有効にする前に、 vMotion を使用してその仮想マシンのすべての VVol を 1 つのデータストアに移動する必要があります。</block>
@@ -1804,7 +1745,6 @@
   <block id="ed9018b2e8611a3d2c03bb6a205b9715" category="sidebar">VMware vSphere 用の ONTAP ツール</block>
   <block id="d9feb2b730ded2731ab499f4b64cca33" category="paragraph"><block ref="ccafd2400edf7c1aa273a76ad605940f" category="inline-link-rx"></block></block>
   <block id="8cd78caf975d066200418cff9639fdef" category="cell">を参照してください<block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block></block>
-  <block id="c84e3f1fce618833b2fe90a7026984c3" category="paragraph">導入した ONTAP ツールの * Summary * タブを使用して、メンテナンスコンソールにアクセスする必要があります。をクリックします <block ref="646d51cfcc95b274401d8044823da1c3" category="inline-image-macro-rx" type="image"></block>をクリックすると、メンテナンスコンソールが起動します。</block>
   <block id="5cd110d372988e6fedf83dab3b77194b" category="list-text">コマンドcd /var/log/vmware/srmを実行して'ログ・ディレクトリに移動します</block>
   <block id="ecf618584c0254b7edf0733670fcb0f8" category="list-text">リカバリサイトの ESXi ホストが FC または iSCSI を使用して Storage Virtual Machine （ SVM ）に適切に接続されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスできる必要があります。同様に、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。</block>
   <block id="785694280aa2f361cd62ad2d7aadb3a7" category="paragraph">そのためには、 ESXi ホストの SVM 上にローカル LUN が接続されていることを確認するか、 SVM 上で「 fcp show initiators 」コマンドまたは「 iscsi show initiators 」コマンドを使用します。ESXiでマッピングされたLUNに対するLUNアクセスを確認し、FCおよびiSCSI接続を確認します。</block>
@@ -1820,7 +1760,6 @@
   <block id="389fed57e0f06c0d1d884e132105585a" category="list-text">vSphere 6.5は廃止され、vSphere 8.xはサポートされないため、vSphere 7.xリリースが必要です。</block>
   <block id="5ccc8ee8b61049069fbdba29f36f4627" category="paragraph">はダウンロードできます<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> のONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名済み証明書を含むファイル<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
   <block id="a22c2344e50a5c512de911f01896192b" category="paragraph">.ova ファイルには ONTAP ツールが含まれています。導入が完了すると、VSC、VASA、SRAの製品が環境にインストールされます。導入モデルを決定し、その要件に基づいて VASA Provider と SRA を有効にするかどうかを選択すると、すぐに VSC が起動します。</block>
-  <block id="5175510162c2e0f1ffaba57ba908e730" category="list-text">vSphere Clientで、*[メニュー]*&gt;*[NetApp ONTAP tools]*[コンソール]をクリックします。</block>
   <block id="74b89574ae17445aac6b10c4285106ea" category="list-text">Internet Control Message Protocol（ICMP）を有効にしておく必要があります。</block>
   <block id="7b0b307b4afc8ee310326b2ac3707a62" category="list-text">[ホーム]*&gt;*[ホストおよびクラスタ]*を選択します。</block>
   <block id="88ba567f89bd6b5781bd16462ced3cfb" category="list-text">目的のデータセンターを右クリックし、*[OVFテンプレートのデプロイ...]*をクリックします。</block>
@@ -1852,13 +1791,7 @@
   <block id="23deb0793155947837dd665446bf1830" category="admonition">ONTAP toolsの最新リリースへのインプレースアップグレードは、既存の9.10以降のバージョンからのみ実行できます。</block>
   <block id="19303f93882b5db590ef2d1f0c5e45a9" category="admonition">ONTAP tools 9.12をアップグレードすると、ストレージシステムのすべての認証および通信のプロセスが、ONTAP ストレージ証明書を自動信頼することでベーシック認証から証明書ベースの認証に変更されます。ユーザによる操作は不要です。</block>
   <block id="909f197f2c195f18181232c0399d961b" category="paragraph">証明書認証を使用しないストレージシステムの追加は制限されています。</block>
-  <block id="311fe9cde51a539ea97916f76833decf" category="paragraph">JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12にアップグレードする場合は、アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。</block>
-  <block id="71e4ca2cd01fd2c9d4ab3b5cbff81743" category="list-text">_security login role create -role &lt;role-name&gt; -cmddirname "security login show"-access all_</block>
-  <block id="3d7bd92214a16594f665e0b81793575b" category="list-text">_security login role create -role &lt;role-name&gt; -cmddirname "security certificate show"-access all_</block>
-  <block id="215f8610c147b8b46e8480a88a6c2afb" category="list-text">_security login role create -role &lt;role-name&gt; -cmddirname " security certificate install "-access all_</block>
   <block id="f0b1836ff9ac15748295aca6a6f17ab6" category="paragraph">JSONファイルを使用してカスタムで作成したSVMスコープのユーザでストレージシステムを追加し、9.12にアップグレードする場合は、 その後、アップグレードの前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。</block>
-  <block id="4e586abae1f8c7ff65a5ba3ce0979275" category="list-text">_security login role create -role &lt;role-name&gt; -cmddirname "security certificate install"-access all -vserver &lt;vserver-name&gt; _</block>
-  <block id="1e27fae79102d8c2fcefadb3df957058" category="list-text">_security login role create -role &lt;role-name&gt; -cmddirname "security certificate show"-access all -vserver &lt;vserver-name&gt; _</block>
   <block id="501ccbce991cb3f09d5c8beab6fe094e" category="list-text">FIPSが有効になっている最新のONTAP toolsリリースにアップグレードしたあとも、FIPSがサポートされていない古いバージョンのvCenterを使用していても、導入は引き続き機能します。ただし、 vCenter を最新の FIPS サポートバージョンにアップグレードした場合に、以前のバージョンの ONTAP ツールを使用していれば、 FIPS が vCenter で無効になっていれば導入は機能します。</block>
   <block id="de0cffd38a1c5c3911e4777672bc89b1" category="cell">ONTAP 9.7、9.8P1以降。</block>
   <block id="9108015548f218fefb6c4357b6fb9447" category="paragraph">VMware Site Recovery Managerとともに使用する仮想アプライアンスを導入する場合は、*をダウンロードしておく必要があります<block ref="d6f1afa70d6145a212d9dc6bc8a2fa64" prefix=" " category="inline-code"></block> SRMアプライアンスを使用している場合はSRAのファイル。</block>
@@ -1997,7 +1930,6 @@
   <block id="8f22fdcdb403a975c8e0128536d37a24" category="paragraph">VMware vSphere GUI の ONTAP ® ツールにアクセスするには、製品レベルの VSC 固有の View 権限が、適切な vSphere オブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、 NetApp アイコンをクリックしたときにエラーメッセージが表示され、 VSC にアクセスできません。View *権限では、VSC GUIにアクセスできます。VSC でタスクを実行することはできません。VSC のタスクを実行するには、タスクで使用する適切な VSC 固有の権限と vCenter Server の標準権限が必要です。</block>
   <block id="b0fc0bed1deb4cd0ac1733c83406a338" category="list-text">ONTAP System Manager 9.8P1以降を使用して、クラスタ管理者またはSVM管理者ロールを作成します。を参照してください <block ref="b36e85751d57920856a667a70fbd44c3" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="36a3e078a9ae64bd58305972fd6b6a14" category="paragraph">新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。ONTAP System Manager 9.8P1以降を使用してONTAP ロールを作成できます。を参照してください <block ref="b36e85751d57920856a667a70fbd44c3" category="inline-link-macro-rx"></block> を参照してください。</block>
-  <block id="41b876a86df6d3c4b1d821b154131297" category="paragraph">View *権限では、VSC GUIにアクセスできます。VSC でタスクを実行することはできません。VSC のタスクを実行するには、タスクで使用する適切な VSC 固有の権限と vCenter Server の標準権限が必要です。</block>
   <block id="057bdc0890b14e869dc32365d6dbda14" category="paragraph">新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。ONTAP System Manager 9.8P1以降を使用してONTAP ロールを作成できます。を参照してください<block ref="b36e85751d57920856a667a70fbd44c3" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="f1ca65352f21d33a199ffdf014a20d67" category="paragraph"><block ref="f1ca65352f21d33a199ffdf014a20d67" category="inline-link-rx"></block></block>
   <block id="1466c5e3d8ac799469615631f5db8a88" category="paragraph">vVolデータストアは、ストレージコンテナ（元のストレージとも呼ばれます）に含まれる1つ以上のFlexVol で構成されます。仮想マシンは 1 つの vVol データストアまたは複数の vVol データストアに分散している場合があります。</block>
@@ -2093,4 +2025,92 @@
   <block id="94694a876801fa4851e5478564de6f4a" category="paragraph">ONTAP ツールは、VMware vCenter Server Virtual Appliance（vCSA）で使用できます。ESXi システムを搭載したサポート対象の vSphere に ONTAP ツールを導入する必要があります。</block>
   <block id="21076231e2fb130435663c1226fafb7f" category="cell">有効にすると、 VASA Provider と Storage Replication Adapter （ SRA ）の両方がこのポートを使用して vCenter Server と通信します。このポートは TCP/IP 設定を取得するためにも必要です。このポートは、バンドルダウンロード、Web-CLIユーザインターフェイス、およびVMwareからVPへの制御パス通信をサポートします。SRAは、指定したポート番号でバックエンドSRAサービスと通信します。</block>
   <block id="9abf7c4d6f8e5b536137c70ad41a5f3b" category="paragraph"><block ref="9abf7c4d6f8e5b536137c70ad41a5f3b" category="inline-link-rx"></block></block>
+  <block id="b90d3b6f6e5b0c0e2c25f2558f90408c" category="paragraph">データストアのプロビジョニングに失敗すると、ONTAP tools for VMware vSphereによって次のエラーメッセージがログに記録されます。</block>
+  <block id="0d488d3f24d754594c736226d7e87fa7" category="image-alt">[Set Recommended Values]画面</block>
+  <block id="7dcb0e2e13022cf76e7deec88d9063e3" category="list-text">vSphere Clientで、*[メニュー]*&gt;*[ NetApp ONTAP tools]*を選択します。</block>
+  <block id="1d2ca8610f741cc034c84d7107647a51" category="summary">vCenter Serverの権限とRole-Based Access Control（RBAC；ロールベースアクセス制御）を簡単に使用できるように、ONTAP toolsには、ONTAP toolsの主要なタスクを実行できる標準のONTAP toolsロールが用意されています。タスクを実行せずに情報を表示できる読み取り専用ロールもあります。</block>
+  <block id="8f4f23d0a5cd74ef1675a76fabde9ddd" category="paragraph">vCenter Serverの権限とRole-Based Access Control（RBAC；ロールベースアクセス制御）を簡単に使用できるように、ONTAP toolsには、主要なONTAPツールタスクを実行できる標準のONTAP toolsロールが用意されています。タスクを実行せずに情報を表示できる読み取り専用ロールもあります。</block>
+  <block id="6676fb7e24cf701fd77e7d703405cabc" category="paragraph">標準のONTAP toolsロールには、ユーザがONTAP toolsタスクを実行するために必要なONTAP tools固有の権限とvCenter Server標準の権限の両方が含まれています。また、サポートされるどのバージョンの vCenter Server でも必要な権限が付与されるように設定されています。</block>
+  <block id="7d389690e3dbf66454c9c49a3cc3e8c3" category="admonition">ONTAP toolsを最新バージョンにアップグレードすると、新しいバージョンのツールで使用できるように標準ロールが自動的にアップグレードされます。</block>
+  <block id="a763466042e50f8cade695949275d67b" category="paragraph">ONTAP toolsの標準ロールを表示するには、vSphere Clientの[ホーム]ページで*[ロール]*をクリックします。</block>
+  <block id="f86b2601acf6e16997dcbdf72820c0d2" category="paragraph">ONTAP toolsのロールで実行できるタスクは次のとおりです。</block>
+  <block id="f7b47ea1582e704ce131905b51e8285e" category="paragraph">すべてのONTAP toolsタスクを実行するために必要なvCenter Server標準の権限とONTAP tools固有の権限がすべて含まれています。</block>
+  <block id="f8a435a9c71e1bdfbe8e26c70a0bd2ec" category="paragraph">ONTAP toolsへの読み取り専用アクセスを許可します。これらのユーザは、アクセス制御されたONTAP toolsアクションを実行できません。</block>
+  <block id="9c2c3026139ccc6286e9dee2750c4e6c" category="paragraph">ストレージのプロビジョニングに必要なvCenter Server標準の権限とONTAP tools固有の権限がすべて含まれています。次のタスクを実行できます。</block>
+  <block id="b86f8f9e5913183792f992ea9acd4a86" category="section-title">ONTAP toolsの標準ロールの使用に関するガイドライン</block>
+  <block id="918a2f5f75f4cc67aa044d83af010497" category="paragraph">標準ロールは直接変更しないでください。このオプションを選択すると、アップグレードするたびにONTAP toolsによって変更が上書きされます。ONTAP toolsをアップグレードするたびに、インストーラによって標準ロール定義が更新されます。これにより、使用しているバージョンのONTAP toolsだけでなく、サポートされるすべてのバージョンのvCenter Serverでロールが最新の状態に維持されます。</block>
+  <block id="de35e57367d1db7f8a42aa3a72ca2537" category="paragraph">ただし、標準のロールを使用して環境に合わせたロールを作成することもできます。これを行うには、ONTAP toolsの標準ロールをコピーしてから、コピーしたロールを編集する必要があります。新しいロールを作成すると、ONTAP tools Windowsサービスを再起動またはアップグレードしても、このロールを維持できます。</block>
+  <block id="0ad1bc8e9e92595e2f696b77b523ea57" category="paragraph">ONTAP toolsの標準ロールを使用する方法には、次のようなものがあります。</block>
+  <block id="086d3d2eb48d608a145a6cfee7c4ff78" category="list-text">ONTAP toolsのすべてのタスクには、標準のONTAP toolsロールを使用します。</block>
+  <block id="0d0f3c3c8ef35720ae4bcdbbf182c9fa" category="paragraph">このシナリオでは、標準ロールには、ONTAP toolsタスクを実行するために必要なすべての権限が含まれています。</block>
+  <block id="5b66efe36dee3f7c37570e36881f1418" category="paragraph">ONTAP toolsの標準ロールの方が細かすぎる場合は、複数のロールを含む上位レベルのグループを作成してロールを拡張できます。</block>
+  <block id="2ba0401845b2e4be3fa7287e7d78031f" category="paragraph">ユーザがvCenter Server標準の追加権限を必要とするONTAP tools以外のタスクを実行する必要がある場合は、それらの権限を提供するロールを作成してグループに追加できます。</block>
+  <block id="b9a5c3223541eb822dbe12039a15d4c1" category="paragraph">標準のONTAP toolsロールよりも制限の厳しいロールを実装する必要がある場合は、ONTAP toolsロールを使用して新しいロールを作成できます。</block>
+  <block id="701208db1c1b3544b650900bb52446c8" category="paragraph">この場合は、必要なONTAP toolsロールのクローンを作成し、そのクローンロールを編集してユーザに必要な権限のみを付与します。</block>
+  <block id="a0f12657c3613cc54b2b058b2d1bc781" category="summary">ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。ONTAP®tools for VMware vSphereでは、ONTAP RBACとvCenter Server RBACにより、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できるONTAP toolsタスクが決まります。</block>
+  <block id="3df2a4200fd2e450e1ba076ffdc903f8" category="paragraph">ONTAP の RBAC を使用すると、特定のストレージシステムへのアクセスとそれらのストレージシステムで実行できる操作を制御できます。ONTAP®tools for VMware vSphereでは、ONTAP RBACとvCenter Server RBACにより、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できるONTAP toolsタスクが決まります。</block>
+  <block id="ef6ceeafacd0db001065bf9d73f2ed8d" category="paragraph">ONTAP toolsでは、ONTAP toolsで設定したクレデンシャル（ユーザ名とパスワード）を使用して各ストレージシステムを認証し、そのストレージシステムで実行できるストレージ操作を判別します。ONTAP toolsでは、ストレージシステムごとに1組のクレデンシャルが使用されます。このクレデンシャルによって、そのストレージシステムで実行できるONTAP toolsタスクが決まります。つまり、このクレデンシャルはONTAP toolsのクレデンシャルであり、個 々 のONTAP toolsユーザのクレデンシャルではありません。</block>
+  <block id="578f14abca26368d9e736e68fb0dbd95" category="paragraph">ONTAP RBACは、ストレージシステムへのアクセスとストレージ関連のONTAP toolsタスク（仮想マシンのプロビジョニングなど）の実行にのみ適用されます。それぞれのストレージシステムに対する適切な ONTAP RBAC 権限がないと、そのストレージシステムでホストされる vSphere オブジェクトに対してタスクを実行することはできません。ONTAP RBACとONTAP tools固有の権限を組み合わせて使用すると、ユーザが実行できるONTAP toolsタスクを制御できます。</block>
+  <block id="349465893e02a4b19c90b99a025a86de" category="paragraph">ONTAP RBACとONTAP tools固有の権限を使用すると、ストレージ主体のセキュリティレイヤをストレージ管理者が管理できるようになります。これにより、 ONTAP RBAC または vCenter Server RBAC のどちらか一方のアクセス制御だけを使用した場合に比べ、よりきめ細かい制御が可能になります。たとえば、 vCenter Server RBAC を使用して、ネットアップストレージでのデータストアのプロビジョニングを vCenterUserB には許可し、 vCenterUserA には許可しないように設定したとします。この場合、特定のストレージシステムのクレデンシャルに対してストレージの作成を禁止すれば、 vCenterUserB と vCenterUserA のどちらもそのストレージシステムでデータストアのプロビジョニングを実行することはできません。</block>
+  <block id="bbae15f5d2f85db376999e05d1a6461c" category="paragraph">ONTAP toolsタスクを開始すると、最初にそのタスクに対する正しいvCenter Serverアクセス許可があるかどうかがONTAP toolsによって検証されます。タスクを実行するための十分なvCenter Serverアクセス許可がない場合、最初のvCenter Serverセキュリティチェックをパスしなかったため、ONTAP toolsでそのストレージシステムのONTAP権限を確認する必要はありません。そのため、ストレージシステムにアクセスできません。</block>
+  <block id="b9a4baf0d8ee948197fc0f935de691a5" category="paragraph">十分なvCenter Serverアクセス許可がある場合、ONTAP toolsは次に、ストレージシステムのクレデンシャル（ユーザ名とパスワード）に関連付けられているONTAP RBAC権限（ONTAPロール）を確認します。 ONTAP toolsタスクに必要なストレージ操作をそのストレージシステムで実行するための十分な権限があるかどうかを確認する。適切なONTAP権限があれば、ストレージシステムにアクセスしてONTAP toolsのタスクを実行できます。ストレージシステムで実行できるONTAP toolsタスクは、ONTAPロールによって決まります。</block>
+  <block id="ee94bbc418cbda9da8f802e12ae95bc5" category="paragraph">多くの場合、ONTAPツールはストレージシステムに関する監査証跡を提供します。これにより、ストレージに対して変更を行ったvCenter Serverユーザまでさかのぼってイベントを追跡できます。</block>
+  <block id="f0e507995b9ca6b0e84fae8adf238dfc" category="paragraph">VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、ONTAP toolsタスクで実行するストレージ処理に必要なONTAP権限が含まれています。</block>
+  <block id="a4a00dc4eea3bf873f1aee5b9c1126b2" category="paragraph">セキュリティ対策として、ONTAP tools固有のONTAPロールは階層構造になっています。最初のロールは最も制限のあるロールで、ONTAP toolsの最も基本的なストレージ処理に関連する権限だけが含まれます。次のロールには、そのロール独自の権限と、前のロールに関連付けられているすべての権限が含まれます。以降、上位のロールほど制限が少なく、より多くのストレージ処理をサポートします。</block>
+  <block id="ffc3fd9f523678979711e4c22959a313" category="paragraph">ONTAP toolsを使用する際に推奨されるONTAP RBACロールの一部を次に示します。ロールを作成したら、仮想マシンのプロビジョニングなど、ストレージに関するタスクを実行する必要があるユーザにそのロールを割り当てることができます。</block>
+  <block id="6ab87189782cbc29731ee36f3e4d8e14" category="summary">vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。ONTAP tools for VMware vSphereでは、vCenter Server RBACとONTAP RBACにより、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できるONTAP toolsタスクが決まります。</block>
+  <block id="dd48842c135ca987d437dd7b3093cb9b" category="paragraph">vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。ONTAP®tools for VMware vSphereでは、vCenter Server RBACとONTAP RBACにより、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できるONTAP toolsタスクが決まります。</block>
+  <block id="58cdc8e25f9268a11f5f61dd2862e506" category="paragraph">タスクを完了するには、適切な vCenter Server RBAC アクセス許可が必要です。タスクの実行中、ONTAP toolsはユーザのvCenter Serverアクセス許可を確認してから、ユーザのONTAP権限を確認します。</block>
+  <block id="53cd97c6e5ca33becf4a87d66fe1fb2b" category="summary">ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools固有の権限とvCenter Server標準の権限の組み合わせが異なります。</block>
+  <block id="1b7ba508f4f8e6ec9de699f1252dfbec" category="doc">ONTAP toolsのタスクに必要な権限</block>
+  <block id="093b094ad16ac0602826f5edad199644" category="paragraph">ONTAP toolsのタスクに必要な権限については、NetAppの技術情報アーティクル1032542を参照してください。</block>
+  <block id="581d333bdd69470cc8cef359697686ea" category="paragraph">ONTAP tools for VMware vSphere GUIにアクセスするには、製品レベルのONTAP tools固有のView権限が、適切なvSphereオブジェクトレベルで割り当てられている必要があります。この権限なしでログインすると、NetAppアイコンをクリックしたときにONTAP toolsにエラーメッセージが表示され、ONTAP toolsにアクセスできなくなります。</block>
+  <block id="641b04545bb04a16c9711b2e2c2f1594" category="paragraph">View *権限では、ONTAPツールGUIにアクセスできます。ONTAP tools内でタスクを実行することはできません。ONTAP toolsのタスクを実行するには、タスクに対して適切なONTAP tools固有の権限とvCenter Server標準の権限が必要です。</block>
+  <block id="e4d17ccf29740331f87b6398478160b6" category="paragraph">割り当てレベルによって、表示できる UI の部分が決まります。ルートオブジェクト（フォルダ）でView権限を割り当てると、NetAppアイコンをクリックしてONTAP toolsにアクセスできるようになります。</block>
+  <block id="96fda33db0e5f4d0564e065655911c1a" category="paragraph">別のvSphereオブジェクトレベルにView権限を割り当てることもできますが、その場合は表示および使用できるONTAP toolsメニューが制限されます。</block>
+  <block id="c044992cd80fcb18a780756977b6bc3f" category="image-alt">権限コンポーネントの図</block>
+  <block id="c583b0e017739fb649bcc5aa5ba5619c" category="list-text">ONTAP tools固有の権限</block>
+  <block id="9b319728af871f2cdb51fe50bfe11375" category="paragraph">これらの権限は、ONTAP toolsの特定のタスク用に定義されています。ONTAPツールに固有の機能です。</block>
+  <block id="af5a3767c40e6a5129711e57494409cf" category="paragraph">ONTAP toolsのタスクには、ONTAP tools固有の権限とvCenter Server標準の権限の両方が必要です。これらの権限は ' ユーザーのロールを構成しますアクセス許可には複数の権限を含めることができます。これらの権限は、 vCenter Server にログインしているユーザを対象としています。</block>
+  <block id="1e88bb00ba0732a2c32a563008aff361" category="admonition">vCenter Server RBACの使用を簡易化するために、ONTAP toolsには、ONTAP toolsのタスクの実行に必要なONTAP tools固有の権限と標準の権限をすべて含む標準ロールがいくつか用意されています。</block>
+  <block id="9c3b83950ecbb194500ebb7d4d7f928a" category="paragraph">ONTAPツールおよびVASA Provider固有のタスクには、いずれも表示権限が必要です。</block>
+  <block id="6184e53410d6b5ab34cba7a9371730c5" category="paragraph">アクセス許可は vSphere オブジェクトに関連付けられます。 vCenter Server 、 ESXi ホスト、仮想マシン、データストア、データセンター、 とフォルダ。任意の vSphere オブジェクトに権限を割り当てることができます。vSphere オブジェクトに割り当てられたアクセス許可に基づいて、そのオブジェクトに対してどのユーザがどのタスクを実行できるかが決まります。ONTAP tools固有のタスクの場合、アクセス許可の割り当てと検証はルートフォルダレベル（vCenter Server）でのみ行われ、他のエンティティでは行われません。ただし VAAI プラグインの処理は例外で、関連する ESXi に対して権限が検証されます。</block>
+  <block id="c96c57a6929739514fab2431c7bbc08d" category="paragraph">ユーザとグループは、 Active Directory （またはローカルの vCenter Server マシン）を使用して設定できます。その後、vCenter Serverアクセス許可を使用してこれらのユーザまたはグループにアクセスを許可し、特定のONTAP toolsタスクを実行できるようにすることができます。</block>
+  <block id="f358a2c90c11b3244eb955405bd0f5a8" category="admonition">これらのvCenter Serverアクセス許可は、ONTAP toolsのvCenterユーザに適用され、VSC管理者には適用されません。VSC 管理者には、デフォルトでフルアクセスが許可されるため、アクセス許可を割り当てる必要はありません。</block>
+  <block id="dc5d790d99534de49ddf3a4c3ac9d8c4" category="paragraph">アクセス許可を割り当てる場所によって、ユーザが実行できるONTAP toolsタスクが決まります。</block>
+  <block id="2f9673497a70f9c3bf375ca62d587891" category="paragraph">作成したアクセス許可は、 vSphere 以外のオブジェクトに適用されます。たとえば、ストレージシステムは vSphere オブジェクトではありません。ストレージシステムの権限環境の場合は、その権限を含むアクセス許可をONTAP toolsのルートオブジェクトに割り当てる必要があります。これは、ストレージシステムを割り当てることができるvSphereオブジェクトがないためです。</block>
+  <block id="ba77066270ccf036939e8215dffdec6b" category="paragraph">たとえば、ONTAP toolsの「Add/Modify/Skip storage systems」などの権限を含むすべての権限は、ルートオブジェクトレベルに割り当てる必要があります。</block>
+  <block id="aec94e0c0770f31b10266f224fde600c" category="summary">ONTAP tools for VMware vSphereでロールベースアクセス制御を使用する場合は、ストレージシステムでONTAPのRBACを設定する必要があります。ONTAP RBAC 機能を使用すると、アクセス権限を制限したカスタムユーザアカウントを 1 つ以上作成できます。</block>
+  <block id="418572ad86a9bb6dd83f90019dd995b1" category="paragraph">ONTAP toolsとSRAは、クラスタレベルまたはStorage Virtual Machine（SVM）レベルでストレージシステムにアクセスできます。クラスタレベルでストレージシステムを追加する場合、必要なすべての機能を使用するには、管理者ユーザのクレデンシャルを指定する必要があります。SVM の詳細を直接追加してストレージシステムを追加する場合は、「 vsadmin 」ユーザには特定のタスクを実行するために必要なすべてのロールと機能が付与されるわけではないことに注意してください。</block>
+  <block id="91b31c927f164960033b3b41be393126" category="paragraph">VASA Provider は、クラスタレベルでのみストレージシステムにアクセスできます。特定のストレージコントローラでVASA Providerが必要な場合は、ONTAPツールまたはSRAを使用している場合でも、クラスタレベルでストレージシステムをONTAP toolsに追加する必要があります。</block>
+  <block id="93f6ac1beb52bbdf9af3cad6d6a1ead8" category="paragraph">作成したストレージシステムのクレデンシャルは、ONTAP tools用にストレージシステムを設定する際に必要になります。ONTAP tools用にストレージシステムを設定するには、ONTAP toolsでクレデンシャルを入力します。これらのクレデンシャルを使用してストレージシステムにログインすると、クレデンシャルの作成時にONTAPで設定したONTAP tools機能に対する権限が付与されます。</block>
+  <block id="cdd4275081291ca377175bcc6d92f1eb" category="list-text">ONTAP toolsにストレージシステムを追加し、作成したユーザのクレデンシャルを指定します</block>
+  <block id="39c9785bf195b5e3416ae69617f8bd06" category="section-title">ONTAP toolsのロール</block>
+  <block id="85f49d93c8f5e500eec52ad263201e61" category="paragraph">ONTAP toolsでは、ONTAPの権限を次のONTAP toolsロールに分類します。</block>
+  <block id="71a8d3467ad2cf960b6e380881dfa0ff" category="paragraph">クラスタをONTAP toolsに追加するときに、ONTAPツールでONTAP RBACロールの権限の初期検証が実行されます。直接接続のSVMストレージIPを追加した場合、ONTAP toolsでは初期検証は実行されません。ONTAP toolsでは、タスクワークフローの後半で権限がチェックされて適用されます。</block>
+  <block id="b30d030b1599225982a98b5e5ae30728" category="paragraph">JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12にアップグレードする場合は、を実行します
+アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP間の証明書ベースの通信を有効にします。</block>
+  <block id="f2103c08f15fe6fa42bcf844c2049013" category="list-text">_security login role create -role &lt;existing-role-name&gt;-cmddirname "security login show"-access all_</block>
+  <block id="c971b61c1ee15c3d48f7ae4c3e20991f" category="list-text">_security login role create -role &lt;existing-role-name&gt;-cmddirname "security certificate show"-access all_</block>
+  <block id="6b424944a9c9af7e5350d367795a1306" category="list-text">_security login role create -role &lt;existing-role-name&gt;-cmddirname " security certificate install "-access all_</block>
+  <block id="273e24f3e69cab8b51170d245172a629" category="list-text">_security login role create -role &lt;existing-role-name&gt;-cmddirname "security certificate install"-access all -vserver &lt;vserver-name&gt;_</block>
+  <block id="ee83a1637d6bc95b51de487e34382d40" category="list-text">_security login role create -role &lt;existing-role-name&gt;-cmddirname "security certificate show"-access all -vserver &lt;vserver-name&gt;_</block>
+  <block id="174f603ffaa2e2f55a79dec8ba83c657" category="list-text">_security login create -user-or-group-name &lt;user&gt;-application http-authentication-method cert -role &lt;existing-role-name&gt;-vserver &lt;vserver-name&gt;_</block>
+  <block id="15fe50c1cf5cc9a20b0c2914724a8ed1" category="list-text">_security login create -user-or-group-name &lt;user&gt;-application ontapi-authentication-method cert -role &lt;existing-role-name&gt;-vserver &lt;vserver-name&gt;_</block>
+  <block id="df3b9e22c3ad1804e7de3391d62fd333" category="list-text">メンテナンスコンソールを起動します。</block>
+  <block id="5b2f94f8fc7fac6c5b65ae92f973ae81" category="paragraph">ONTAP Tools for VMware vSphereのログファイルを収集するには、VSC GUIの「ONTAP tools for VMware vSphereログのエクスポート」機能を使用します。VASA Providerを有効にしてONTAP Tools for VMware vSphere Logバンドルを収集すると、ONTAP Tools for VMware vSphere LogバンドルにもVPログが含まれます。次の手順では、ONTAP tools for VMware vSphereのログファイルを収集する方法を説明します。</block>
+  <block id="6ab0668e8afff4a2efaec36739183097" category="list-text">ONTAP toolsのホームページで、*[設定]*&gt;*[VMware vSphereログ用ONTAPツールのエクスポート]*をクリックします。</block>
+  <block id="f2bf379ad5a0f05a54bbcdb5678a796e" category="inline-image-macro">再生ボタン</block>
+  <block id="f09ce17953135a26f2f12c89bb1b9a79" category="paragraph">導入した ONTAP ツールの * Summary * タブを使用して、メンテナンスコンソールにアクセスする必要があります。をクリックします  <block ref="80abd5c70dec820fc31b07b6e3d6acac" category="inline-image-macro-rx" type="image"></block>をクリックすると、メンテナンスコンソールが起動します。</block>
+  <block id="ad6409a6647b6007d0c59236c9a9526d" category="inline-image-macro">地球儀アイコン</block>
+  <block id="de0b37295bc569e05978d71253c5fc03" category="list-text">をクリックします <block ref="10af7a3d6b71a29635365f6da600da8a" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、新しいネットワークマッピングを作成します。</block>
+  <block id="01a4b38a822503fac9ae3f0ec3e92ed5" category="list-text">VMware SRMアプライアンス管理インターフェイスにアクセスし、SRMアプライアンスの[Storage Replication Adapters]ページに移動します。</block>
+  <block id="a86a5be1650520ca8fdf9ff8bc76967f" category="list-text">既存のONTAPツールアプライアンスを最新リリースにアップグレードします。</block>
+  <block id="ceafa9243433e49b5a0576a4ed1cd4b5" category="list-text">WindowsベースのStorage Replication AdapterをアプライアンスベースのSRAに移行する</block>
+  <block id="81f65208775e1359f20f81e36c085f41" category="list-text">Windows SRMのデータをSRMアプライアンスに移行します。</block>
+  <block id="008e64a5de1742c87435cc61c7288a46" category="image-alt">新規ユーザと既存ユーザのワークフロー</block>
+  <block id="c2a38047ec858944f77ff5e67afebd25" category="image-alt">ONTAPシステムの設定ワークフロー</block>
+  <block id="69e0c20cc370e4f2eb4bdc1e3bc3a684" category="list-text">[フォルダ]アイコンを選択して、新しいフォルダマッピングを作成します。</block>
+  <block id="a4c7d7c61679768abcab3550525c4661" category="inline-image-macro">アイコンを検索して追加します</block>
+  <block id="46f855aaeb43b702265b4d4aae505653" category="list-text">をクリックします <block ref="b95cf97b2492098c584f14080a443ee3" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、新しいプレースホルダデータストアを作成します。</block>
 </blocks>

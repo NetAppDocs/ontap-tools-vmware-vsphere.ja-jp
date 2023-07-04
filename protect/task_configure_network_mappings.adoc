@@ -30,7 +30,7 @@ summary: 保護対象サイトとリカバリサイトの間の通信を有効�
 . vCenter Server にログインし、 * Site Recovery * > * Sites * をクリックします。
 . 保護されたサイトを選択し、 * 管理 * をクリックします。
 . [ 管理 ] タブで、 [ ネットワークマッピング *] を選択します。
-. をクリックします image:../media/new_network_mappings.gif[""] アイコンをクリックして、新しいネットワークマッピングを作成します。
+. をクリックします image:../media/new_network_mappings.gif["地球儀アイコン"] アイコンをクリックして、新しいネットワークマッピングを作成します。
 +
 Create Network Mapping ウィザードが表示されます。
 

@@ -42,17 +42,20 @@ NOTE: ONTAP tools 9.12をアップグレードすると、ストレージシス�
 
 証明書認証を使用しないストレージシステムの追加は制限されています。
 
-JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12にアップグレードする場合は、アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。
+JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12にアップグレードする場合は、を実行します
+アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP間の証明書ベースの通信を有効にします。
 
-. _security login role create -role <role-name> -cmddirname "security login show"-access all_
-. _security login role create -role <role-name> -cmddirname "security certificate show"-access all_
-. _security login role create -role <role-name> -cmddirname " security certificate install "-access all_
+. _security login role create -role <existing-role-name>-cmddirname "security login show"-access all_
+. _security login role create -role <existing-role-name>-cmddirname "security certificate show"-access all_
+. _security login role create -role <existing-role-name>-cmddirname " security certificate install "-access all_
 
 
 JSONファイルを使用してカスタムで作成したSVMスコープのユーザでストレージシステムを追加し、9.12にアップグレードする場合は、 その後、アップグレードの前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。
 
-. _security login role create -role <role-name> -cmddirname "security certificate install"-access all -vserver <vserver-name> _
-. _security login role create -role <role-name> -cmddirname "security certificate show"-access all -vserver <vserver-name> _
+. _security login role create -role <existing-role-name>-cmddirname "security certificate install"-access all -vserver <vserver-name>_
+. _security login role create -role <existing-role-name>-cmddirname "security certificate show"-access all -vserver <vserver-name>_
+. _security login create -user-or-group-name <user>-application http-authentication-method cert -role <existing-role-name>-vserver <vserver-name>_
+. _security login create -user-or-group-name <user>-application ontapi-authentication-method cert -role <existing-role-name>-vserver <vserver-name>_
 
 
 * 手順 *
@@ -65,7 +68,7 @@ JSONファイルを使用してカスタムで作成したSVMスコープのユ�
 
 
 . 導入した ONTAP ツールの [Summary] タブにアクセスします。
-. * をクリックしますimage:../media/launch_maintenance_console.gif[""]* メンテナンスコンソールを起動します。
+. メンテナンスコンソールを起動します。
 . 「ドメインメニュー」プロンプトで、「システム構成」に「 2 」オプションを入力し、「アップグレード」に「 8 」オプションを入力します。
 +
 アップグレードが終了すると、 ONTAP ツールが再起動します。ONTAP ツールは、アップグレード前と同じ IP アドレスで vCenter Server に登録されます。

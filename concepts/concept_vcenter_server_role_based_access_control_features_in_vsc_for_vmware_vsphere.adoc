@@ -2,7 +2,7 @@
 permalink: concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。VMware vSphere 用の ONTAP ® ツールでは、 vCenter Server RBAC と ONTAP RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる VSC タスクが決まります。 
+summary: vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。ONTAP tools for VMware vSphereでは、vCenter Server RBACとONTAP RBACにより、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できるONTAP toolsタスクが決まります。 
 ---
 = ONTAP ツールでのロールベースアクセス制御の概要
 :allow-uri-read: 
@@ -11,8 +11,8 @@ summary: vCenter Server の RBAC を使用すると、 vSphere オブジェク�
 
 
 [role="lead"]
-vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。VMware vSphere 用の ONTAP ® ツールでは、 vCenter Server RBAC と ONTAP RBAC により、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できる VSC タスクが決まります。
+vCenter Server の RBAC を使用すると、 vSphere オブジェクトへのアクセスを制御できます。ONTAP®tools for VMware vSphereでは、vCenter Server RBACとONTAP RBACにより、特定のストレージシステムのオブジェクトに対して特定のユーザが実行できるONTAP toolsタスクが決まります。
 
-タスクを完了するには、適切な vCenter Server RBAC アクセス許可が必要です。VSC でのタスクの実行時、まずユーザの vCenter Server アクセス許可が確認され、次にユーザの ONTAP 権限が確認されます。
+タスクを完了するには、適切な vCenter Server RBAC アクセス許可が必要です。タスクの実行中、ONTAP toolsはユーザのvCenter Serverアクセス許可を確認してから、ユーザのONTAP権限を確認します。
 
 vCenter Server アクセス許可をルートオブジェクト（ルートフォルダ）に対して設定することができます。その後、アクセス許可が不要な子エンティティのアクセスを禁止することでセキュリティを強化できます。

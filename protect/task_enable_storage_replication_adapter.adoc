@@ -30,7 +30,7 @@ VASA Provider と SRA の機能を柔軟に有効化できるため、必要な�
 * 手順 *
 
 . VMware vSphere の Web ユーザインターフェイスにログインします。
-. vSphere Clientで、*[メニュー]*>*[NetApp ONTAP tools]*[コンソール]をクリックします。
+. vSphere Clientで、*[メニュー]*>*[ NetApp ONTAP tools]*を選択します。
 . [* 設定 * ] をクリックします。
 . [ 管理設定 *] タブの [ 機能の管理 *] をクリックします。
 . Manage Capabilities * ダイアログボックスで、有効にする SRA 拡張機能を選択します。
@@ -40,7 +40,7 @@ VASA Provider と SRA の機能を柔軟に有効化できるため、必要な�
 * SRM アプライアンスの場合 *
 
 +
-.. SRM アプライアンスページにアクセスし、 SRM アプライアンスの Storage Replication Adapters ページに移動します。
+.. VMware SRMアプライアンス管理インターフェイスにアクセスし、SRMアプライアンスの[Storage Replication Adapters]ページに移動します。
 .. [ 新しいアダプタ ] をクリックします。
 .. SRA プラグインの .tar.gz_installer を SRM にアップロードします。
 .. アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。
