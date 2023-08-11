@@ -77,7 +77,7 @@ JSONファイルを使用してカスタムで作成したSVMスコープのユ�
 +
 .. ONTAP ツールの登録を解除します。
 .. 登録 * ページを使用して、 ONTAP ツールの IPv6 アドレスを vCenter Server に登録します。
-.. 登録後、 VSC と VASA Provider の証明書を再生成します。
+.. 登録が完了したら、ONTAP toolsとVASA Providerの証明書を再生成します。
 
 
 +

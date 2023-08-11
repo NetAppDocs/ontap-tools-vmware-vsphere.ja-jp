@@ -2,35 +2,35 @@
 permalink: configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 単一の VMware vSphere HTML5 クライアントで複数の vCenter Server インスタンスを管理している環境で ONTAP ® Tools for VMware vSphere を使用している場合は、各 vCenter Server に VSC のインスタンスを 1 つずつ登録して、 VSC と vCenter Server を 1 ： 1 のペアにする必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。 
+summary: 単一のVMware vSphere HTML5クライアントで複数のvCenter Serverインスタンスを管理している環境でONTAP®Tools for VMware vSphereを使用している場合は、 tools ONTAPとvCenter Serverを1：1のペアにするためには、各vCenter ServerにONTAP toolsのインスタンスを1つ登録する必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。 
 ---
-= 複数の vCenter Server 環境で VSC を登録するための要件
+= 複数のvCenter Server環境でONTAP Toolsを登録するための要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-単一の VMware vSphere HTML5 クライアントで複数の vCenter Server インスタンスを管理している環境で VMware vSphere 用の ONTAP ツールを使用している場合は、各 vCenter Server に VSC のインスタンスを 1 つずつ登録して、 VSC と vCenter Server を 1 ： 1 のペアにする必要があります。これにより、vCenter 7.0以降を実行するすべてのサーバを、単一のvSphere HTML5クライアントからリンクモードと非リンクモードの両方で管理できます。
+単一のVMware vSphere HTML5クライアントで複数のvCenter Serverインスタンスを管理している環境でONTAP Tools for VMware vSphereを使用している場合は、 tools ONTAPとvCenter Serverを1：1のペアにするためには、各vCenter ServerにONTAP toolsのインスタンスを1つ登録する必要があります。これにより、vCenter 7.0以降を実行するすべてのサーバを、単一のvSphere HTML5クライアントからリンクモードと非リンクモードの両方で管理できます。
 
 
-NOTE: VSC を vCenter Server で使用する場合は、管理する vCenter Server インスタンスごとに VSC インスタンスを 1 つ設定または登録しておく必要があります。登録する各 VSC インスタンスのバージョンを同じにする必要があります。
+NOTE: vCenter ServerでONTAP toolsを使用する場合は、管理するvCenter Serverインスタンスごとに1つのONTAP toolsインスタンスをセットアップまたは登録しておく必要があります。登録された各ONTAP toolsインスタンスのバージョンが同じである必要があります。
 
 リンクモードは、 vCenter Server の導入時に自動的に設定されます。リンクモードでは、 Microsoft Active Directory Application Mode （ ADAM ）を使用して、複数の vCenter Server システムにわたってデータが格納され、同期されます。
 
-vSphere HTML5 クライアントを使用して複数の vCenter Server で VSC タスクを実行するためには、次の条件を満たす必要があります。
+vSphere HTML5クライアントを使用して複数のvCenter ServerにわたってONTAP toolsタスクを実行するには、次の条件を満たす必要があります。
 
-* VMware インベントリ内の管理対象の各 vCenter Server に 1 つずつ VSC サーバを登録して一意の 1 ： 1 ペアにする必要があります。
+* VMwareインベントリ内の管理対象のvCenter Serverには、それぞれ1つのONTAP toolsサーバを登録して一意の1：1ペアにする必要があります。
 +
-たとえば、 VSC サーバ A を vCenter Server A に登録し、 VSC サーバ B を vCenter Server B に登録し、 VSC サーバ C を vCenter Server C に登録できます。
-
-+
-VSC サーバ A を vCenter Server A と vCenter Server B の両方に登録することはできません
+たとえば、ONTAP toolsサーバAをvCenter Server Aに登録し、ONTAP toolsサーバBをvCenter Server Bに登録し、ONTAP toolsサーバCをvCenter Server Cに登録します。
 
 +
-VMware インベントリに VSC サーバが登録されていない vCenter Server が含まれていて、 VSC に登録されている vCenter Server が 1 つ以上ある場合は、 その後、 VSC が登録された vCenter Server に対する VSC のインスタンスを表示して VSC 処理を実行できます。
+ONTAP toolsサーバAをvCenter Server AとvCenter Server Bの両方に登録することはできません。
 
-* シングルサインオン（ SSO ）に登録された各 vCenter Server に、 VSC 固有の View 権限が必要です。
++
+VMwareインベントリにONTAP toolsサーバが登録されていないvCenter Serverが含まれているが、ONTAP toolsに登録されているvCenter Serverが1つ以上ある場合は、 その後、ONTAP toolsが登録されているvCenter Serverに対して、ONTAP toolsのインスタンスを表示し、ONTAP toolsの処理を実行できます。
+
+* シングルサインオン（SSO）に登録されたvCenter Serverごとに、ONTAP tools固有のView権限が必要です。
 +
 適切な RBAC アクセス許可も必要です。
 
@@ -40,6 +40,6 @@ vCenter Serverの指定を必要とするタスクを実行する場合は、画
 
 ストレージの場所が認識されている場合（たとえば、特定の vCenter Server で管理されているホスト上にデータストアがある状態でプロビジョニングウィザードを使用した場合）は、 vCenter Server の一覧が読み取り専用オプションとして表示されます。これは、 vSphere Web Client で右クリックオプションを使用して項目を選択した場合にのみ該当します。
 
-VSC で管理していないオブジェクトを選択しようとすると警告が表示されます。
+ONTAPツールで管理されていないオブジェクトを選択しようとすると、警告が表示されます。
 
-VSC の概要ページで、特定の vCenter Server に基づいてストレージシステムをフィルタリングできます。概要ページは、 vCenter Server に登録されているすべての VSC インスタンスで表示されます。特定の VSC インスタンスと vCenter Server に関連付けられているストレージシステムを管理できますが、複数の VSC インスタンスを実行する場合は、ストレージシステムごとに登録情報を分けておく必要があります。
+ONTAP toolsの概要ページでは、特定のvCenter Serverに基づいてストレージシステムをフィルタリングできます。概要ページは、vCenter Serverに登録されているすべてのONTAP toolsインスタンスで表示されます。特定のONTAP toolsインスタンスとvCenter Serverに関連付けられているストレージシステムを管理できますが、ONTAP toolsの複数のインスタンスを実行する場合は、ストレージシステムごとに登録情報を分けておく必要があります。

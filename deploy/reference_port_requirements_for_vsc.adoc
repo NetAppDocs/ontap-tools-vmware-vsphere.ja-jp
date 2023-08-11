@@ -2,22 +2,22 @@
 permalink: deploy/reference_port_requirements_for_vsc.html 
 sidebar: sidebar 
 keywords: port requirements 
-summary: ストレージシステムと VMware vCenter Server の間の通信など、 Virtual Storage Console \ （ VSC\ ）のコンポーネント間の通信には、指定のポートがデフォルトで使用されます。ファイアウォールを有効にしている場合は、例外を許可するようにファイアウォールを設定する必要があります。 
+summary: ONTAP toolsのコンポーネント（ストレージシステムとVMware vCenter Serverなど）間の通信には、デフォルトで指定のポートが使用されます。ファイアウォールを有効にしている場合は、例外を許可するようにファイアウォールを設定する必要があります。 
 ---
-= VSC のポート要件
+= ONTAP toolsのポート要件
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-ストレージシステムと VMware vCenter Server の間の通信など、 Virtual Storage Console （ VSC ）のコンポーネント間の通信には、指定のポートがデフォルトで使用されます。ファイアウォールを有効にしている場合は、例外を許可するようにファイアウォールを設定する必要があります。
+ONTAP toolsのコンポーネント（ストレージシステムとVMware vCenter Serverなど）間の通信には、デフォルトで指定のポートが使用されます。ファイアウォールを有効にしている場合は、例外を許可するようにファイアウォールを設定する必要があります。
 
-Windows 以外のファイアウォールについては、 VSC で使用する特定のポートへのアクセスを手動で許可する必要があります。これらのポートへのアクセスを許可しないと、次のようなエラーメッセージが表示されます。
+Windows以外のファイアウォールの場合は、ONTAP toolsが使用する特定のポートへのアクセスを手動で許可する必要があります。これらのポートへのアクセスを許可しないと、次のようなエラーメッセージが表示されます。
 
 「サーバと通信できません。
 
-VSC で使用されるデフォルトの双方向 TCP ポートは次のとおりです。
+ONTAP ツールで使用されるデフォルトの双方向 TCP ポートは次のとおりです。
 
 |===
 
@@ -42,10 +42,10 @@ VSC で使用されるデフォルトの双方向 TCP ポートは次のとお�
  a| 
 8143
  a| 
-VSC は、このポートでセキュアな通信をリスンします。このポートは、クライアント/サーバ間の通信アーキテクチャで使用されます。REST APIを使用する任意のオートメーションクライアントであるクライアントがサーバへの接続を開始し、エンドポイントがデータを交換します。このポートは、VSCサービスおよびVSCサーバログのエクスポートで有効になります。register.htmlページはこのポートでホストされます。REST swaggerはこのポートで公開されています。
+ONTAPツールは、このポートでセキュアな通信をリスンします。このポートは、クライアント/サーバ間の通信アーキテクチャで使用されます。REST APIを使用する任意のオートメーションクライアントであるクライアントがサーバへの接続を開始し、エンドポイントがデータを交換します。このポートは、ONTAP toolsサービスおよびONTAP toolsサーバログのエクスポート用に有効になります。register.htmlページはこのポートでホストされます。REST swaggerはこのポートで公開されています。
 
 |===
 
 NOTE: ONTAP ツールを導入する前に、 Internet Control Message Protocol （ ICMP ）を有効にしておく必要があります。
 
-ICMP が無効になっていると、 ONTAP ツールの初期設定が失敗し、導入後に VSC が VSC サービスと VASA Provider サービスを開始できなくなります。導入後に、 VSC サービスと VASA Provider サービスを手動で有効にする必要があります。
+ICMPが無効になっていると、ONTAP toolsの初期設定が失敗し、ONTAP導入後にONTAP toolsとVASA Providerサービスを開始できなくなります。導入後に、ONTAP toolsとVASA Providerサービスを手動で有効にする必要があります。

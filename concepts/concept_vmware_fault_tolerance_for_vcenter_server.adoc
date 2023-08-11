@@ -1,7 +1,7 @@
 ---
 permalink: concepts/concept_vmware_fault_tolerance_for_vcenter_server.html 
 sidebar: sidebar 
-keywords: VSC 
+keywords: ONTAP tools 
 summary: VMware vSphere フォールトトレランス \ （ FT \ ）機能を使用すると、より高いレベルでハイアベイラビリティ \ （ HA ）を実現し、データや接続が失われないよう仮想マシンを保護することができます。vSphere FT for ONTAP ツールは vCenter Server から有効または無効にする必要があります。 
 ---
 = VMware vSphere フォールトトレランス

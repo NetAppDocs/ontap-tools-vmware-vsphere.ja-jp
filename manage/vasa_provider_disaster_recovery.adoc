@@ -1,0 +1,15 @@
+---
+permalink: manage/vasa_provider_disaster_recovery.html 
+sidebar: sidebar 
+keywords: scope of guide 
+summary: VASA Provider（VP）仮想アプライアンスが失われた場合、アクセスできなくなった場合、または機能しなくなった場合は、VPディザスタリカバリの実行が必要になることがあります。  
+---
+= VASA Providerのディザスタリカバリ
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VASA Provider（VP）仮想アプライアンスが失われた場合、アクセスできなくなった場合、または機能しなくなった場合は、VPディザスタリカバリの実行が必要になることがあります。
+詳細については、を参照してください https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/How_to_perform_a_VASA_Provider_Disaster_Recovery_-_Resolution_Guide["『How to perform a VASA Provider Disaster Recovery - Resolution Guide』"]

@@ -98,6 +98,6 @@ VSC 管理者
 ユーザとグループは、 Active Directory （またはローカルの vCenter Server マシン）を使用して設定できます。その後、vCenter Serverアクセス許可を使用してこれらのユーザまたはグループにアクセスを許可し、特定のONTAP toolsタスクを実行できるようにすることができます。
 
 
-NOTE: これらのvCenter Serverアクセス許可は、ONTAP toolsのvCenterユーザに適用され、VSC管理者には適用されません。VSC 管理者には、デフォルトでフルアクセスが許可されるため、アクセス許可を割り当てる必要はありません。
+NOTE: これらのvCenter Serverアクセス許可は、ONTAP tools管理者ではなく、ONTAP tools vCenterユーザに適用されます。デフォルトでは、ONTAP tools管理者は製品へのフルアクセス権を持ち、権限を割り当てる必要はありません。
 
 ユーザとグループにはロールは割り当てられません。vCenter Server アクセス許可を割り当てることで、間接的にロールが適用されます。

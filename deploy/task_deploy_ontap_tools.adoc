@@ -82,6 +82,14 @@ ONTAP ツールの _.ova ファイルの URL を指定します。
 . ONTAP Tools 仮想マシンの電源をオンにし、 ONTAP ツールを実行している仮想マシンのコンソールを開きます。
 . 導入の完了後に、 ONTAP ツールが実行されていることを確認します。
 . ONTAP toolsがどのvCenter Serverにも登録されていない場合は、を使用します `\https://appliance_ip:8143/Register.html` をクリックしてVSCインスタンスを登録します。Register.htmlに、swaggerページにリダイレクトされます。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。
++
+9.12以降では、POST APIを使用してONTAP toolsをvCenterに登録します。
+
++
+[listing]
+----
+/2.0/plugin/vcenter
+----
 . vSphere Client からログアウトして再度ログインすると、導入した ONTAP ツールが表示されます。
 +
 vSphere Client でプラグインが更新されるまでに数分かかる場合があります。

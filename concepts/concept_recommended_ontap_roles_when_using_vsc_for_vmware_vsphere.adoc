@@ -2,7 +2,7 @@
 permalink: concepts/concept_recommended_ontap_roles_when_using_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: 'VMware vSphere およびロールベースアクセス制御（ RBAC ）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールを設定できます。これらのロールには、 Virtual Storage Console\(VSC\) タスクで実行するストレージ操作に必要な ONTAP 権限が含まれています。' 
+summary: VMware vSphere およびロールベースアクセス制御（ RBAC ）用の ONTAP ® ツールを使用する際に推奨される ONTAP ロールを設定できます。これらのロールには、ONTAP toolsタスクで実行するストレージ処理に必要なONTAP権限が含まれています。 
 ---
 = VMware vSphere 用の ONTAP ツールを使用する際に推奨される ONTAP ロール
 :allow-uri-read: 
@@ -11,15 +11,15 @@ summary: 'VMware vSphere およびロールベースアクセス制御（ RBAC �
 
 
 [role="lead"]
-VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、 Virtual Storage Console （ VSC ）タスクで実行するストレージ処理に必要な ONTAP 権限が含まれています。
+VMware vSphere および Role-Based Access Control （ RBAC ；ロールベースアクセス制御）用の ONTAP ツールを使用する際に推奨される ONTAP ロールをいくつか設定できます。これらのロールには、ONTAP toolsタスクで実行するストレージ処理に必要なONTAP権限が含まれています。
 
 新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。ONTAP System Manager 9.8P1以降を使用してONTAP ロールを作成できます。を参照してくださいlink:../configure/task_configure_user_role_and_privileges.html["ユーザロールと権限を設定"] を参照してください。
 
 各 ONTAP ロールには、ロールのクレデンシャルを構成するユーザ名とパスワードのペアが関連付けられています。このクレデンシャルを使用してログインしないと、ロールに関連付けられたストレージ処理にアクセスできません。
 
-セキュリティ対策として、 VSC 固有の ONTAP ロールは階層構造になっています。最初のロールは最も制限のあるロールで、 VSC の最も基本的なストレージ処理に関連する権限だけを含みます。次のロールには、そのロール独自の権限と、前のロールに関連付けられているすべての権限が含まれます。以降、上位のロールほど制限が少なく、より多くのストレージ処理をサポートします。
+セキュリティ対策として、ONTAP tools固有のONTAPロールは階層構造になっています。最初のロールは最も制限のあるロールで、ONTAP toolsの最も基本的なストレージ処理に関連する権限だけが含まれます。次のロールには、そのロール独自の権限と、前のロールに関連付けられているすべての権限が含まれます。以降、上位のロールほど制限が少なく、より多くのストレージ処理をサポートします。
 
-VSC を使用する際に推奨される ONTAP RBAC ロールのいくつかを次に示します。ロールを作成したら、仮想マシンのプロビジョニングなど、ストレージに関するタスクを実行する必要があるユーザにそのロールを割り当てることができます。
+ONTAP toolsを使用する際に推奨されるONTAP RBACロールの一部を次に示します。ロールを作成したら、仮想マシンのプロビジョニングなど、ストレージに関するタスクを実行する必要があるユーザにそのロールを割り当てることができます。
 
 . 検出
 +

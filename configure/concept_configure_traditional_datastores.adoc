@@ -2,7 +2,7 @@
 permalink: configure/concept_configure_traditional_datastores.html 
 sidebar: sidebar 
 keywords:  
-summary: Virtual Storage Console （ VSC ）を使用して、 vCenter Server でデータストアと仮想マシンを設定できます。VSC でプロビジョニングされたデータストアと仮想マシンは VSC のダッシュボードに表示され、これにより、データストアと仮想マシンの監視と管理を簡単に行うことができます。 
+summary: vCenter Serverでは、ONTAPツールを使用してデータストアと仮想マシンを設定できます。ONTAP toolsでプロビジョニングされたデータストアと仮想マシンは、ONTAP toolsのダッシュボードに表示されます。これにより、データストアと仮想マシンの監視と管理を簡単に行うことができます。 
 ---
 = 従来のデータストアと仮想マシンを設定
 :allow-uri-read: 
@@ -11,4 +11,4 @@ summary: Virtual Storage Console （ VSC ）を使用して、 vCenter Server �
 
 
 [role="lead"]
-Virtual Storage Console （ VSC ）を使用して、 vCenter Server でデータストアと仮想マシンを設定できます。VSC でプロビジョニングされたデータストアと仮想マシンは VSC のダッシュボードに表示され、これにより、データストアと仮想マシンの監視と管理を簡単に行うことができます。
+vCenter Serverでは、ONTAPツールを使用してデータストアと仮想マシンを設定できます。ONTAP toolsでプロビジョニングされたデータストアと仮想マシンは、ONTAP toolsのダッシュボードに表示されます。これにより、データストアと仮想マシンの監視と管理を簡単に行うことができます。

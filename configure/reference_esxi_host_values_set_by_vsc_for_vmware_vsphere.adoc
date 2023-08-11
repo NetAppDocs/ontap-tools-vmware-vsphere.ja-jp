@@ -2,7 +2,7 @@
 permalink: configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。Virtual Storage Console （ VSC\ ）で設定される値は、ネットアップ独自のテスト結果に基づいています。 
+summary: VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。ONTAP ツールで設定される値は、ネットアップ独自のテスト結果に基づいています。 
 ---
 = ONTAP ツールを使用して設定される ESXi ホストの値
 :allow-uri-read: 

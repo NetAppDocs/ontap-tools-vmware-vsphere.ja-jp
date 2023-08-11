@@ -24,16 +24,16 @@ VMware vSphere 用の ONTAP ツールを導入する前に、導入計画を作�
  a| 
 ONTAP ツールを初めて導入する場合
  a| 
-ONTAP ツールを導入すると、 VSC の機能が自動的にインストールされます。
+ONTAP toolsを導入すると、ONTAP toolsの機能が自動的にインストールされます。
 
 link:../deploy/concept_installation_workflow_for_new_users.html["VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー"]
 
 
 
  a| 
-VSC の既存の導入環境からアップグレードする
+ONTAP toolsの既存の導入環境からのアップグレード
  a| 
-VSC の既存の導入環境から ONTAP ツールにアップグレードする場合の手順のバージョンは、 VSC のバージョンと、 ONTAP ツールが導入済みかどうかによって異なります。詳細については、導入ワークフローとアップグレードに関するセクションを参照してください。
+ONTAP toolsの既存の導入環境からONTAP toolsに手順をアップグレードするかどうかは、ONTAP toolsのバージョンとONTAP toolsが導入済みかどうかによって異なります。詳細については、導入ワークフローとアップグレードに関するセクションを参照してください。
 
 link:../deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html["ONTAP ツールの既存ユーザ向けの導入ワークフロー"]
 
@@ -43,16 +43,16 @@ link:../deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.h
 +
 アップグレード後に、すべてのストレージシステムが自動的に検出され、正しいクレデンシャルが付与されていることを確認する必要があります。
 
-* 標準の VSC ロールに変更を加えた場合、変更を保存するにはそのロールをコピーする必要があります。
+* ONTAP toolsの標準ロールを変更した場合は、変更を保存するためにそれらのロールをコピーする必要があります。
 +
-標準のロールは、 VSC サービスを再起動するたびに現在のデフォルトで上書きされます。
+ONTAP tools ONTAPサービスを再起動するたびに、標準ロールが現在のデフォルトで上書きされます。
 
 
 
 
 
  a| 
-VSC の SSL 証明書の再生成
+ONTAP toolsのSSL証明書の再生成
  a| 
 SSL 証明書は、 ONTAP ツールの導入時に自動的に生成されます。サイト専用の証明書を作成するには、 SSL 証明書の再生成が必要になることがあります。
 
@@ -88,9 +88,9 @@ ESXi サーバの値のほとんどはデフォルトで設定されますが、
  a| 
 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）の要件
  a| 
-VSC は、 vCenter Server RBAC と ONTAP RBAC の両方をサポートしています。VSC を vCenter Server に登録する際に使用するアカウント（ https://<appliance_ip>:8143/Register.html` ）は、 vCenter Server 管理者（ vCenter Server の管理者ロールまたは管理者ロールに割り当てられている）である必要があります。管理者として VSC を実行する場合は、すべてのタスクに必要なアクセス許可と権限がすべて付与されている必要があります。
+ONTAP toolsは、vCenter Server RBACとONTAP RBACの両方をサポートしています。ONTAP toolsをvCenter Serverに登録するために使用するアカウント (`https://<appliance_ip>:8143/Register.html`）は、vCenter Server管理者（vCenter Server管理者または管理者ロールに割り当てられている）である必要があります。管理者としてONTAP toolsを実行する場合は、すべてのタスクに必要なすべての権限と権限が必要です。
 
-vSphere オブジェクトへのアクセスを制限する必要がある場合、 vCenter Server の要件に一致する標準の VSC ロールを作成してユーザに割り当てることができます。
+vSphereオブジェクトへのアクセスを制限する必要がある場合は、vCenter Serverの要件を満たすように、標準のONTAP toolsロールを作成してユーザに割り当てることができます。
 
 ONTAP ツールに付属の JSON ファイルを使用して、 ONTAP System Manager で推奨される ONTAP ロールを作成できます。
 
@@ -153,11 +153,11 @@ vCenter Server のパスワードが変更された場合は、 https://<IP>:814
 
 * ONTAP ツールを登録する vCenter Server インスタンスの IP アドレス（ IPv4 または IPv6 ）を指定する必要があります。
 +
-生成される VSC 証明書と VASA 証明書のタイプは、導入時に指定した IP アドレス（ IPv4 または IPv6 ）によって異なります。ONTAP ツールの導入時に静的 IP の詳細と DHCP を入力しなかった場合は、 IPv4 アドレスと IPv6 アドレスの両方がネットワークから提供されます。
+生成されるONTAP toolsとVASA証明書のタイプは、導入時に指定したIPアドレス（IPv4またはIPv6）によって異なります。ONTAP ツールの導入時に静的 IP の詳細と DHCP を入力しなかった場合は、 IPv4 アドレスと IPv6 アドレスの両方がネットワークから提供されます。
 
 * vCenter Server への登録に使用する ONTAP ツールの IP アドレスは、導入ウィザードで入力した vCenter Server の IP アドレスのタイプ（ IPv4 または IPv6 ）によって異なります。
 +
-vCenter Server の登録時に使用したものと同じタイプの IP アドレスを使用して、 VSC と VASA の両方の証明書が生成されます。
+ONTAPツールとVASA証明書は、vCenter Serverの登録時に使用したものと同じタイプのIPアドレスを使用して生成されます。
 
 +
 

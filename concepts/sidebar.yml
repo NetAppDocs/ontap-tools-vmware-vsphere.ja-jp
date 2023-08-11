@@ -18,7 +18,7 @@ entries:
     url: "/concepts/reference_key_points_about_assigning_and_modifying_permissions.html"
   - title: ONTAP ツールに付属の標準ロール
     url: "/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html"
-  - title: VSC タスクに必要な権限
+  - title: ONTAP toolsのタスクに必要な権限
     url: "/concepts/concept_privileges_required_for_vsc_tasks.html"
   - title: ONTAP ストレージシステムおよび vSphere オブジェクトの権限
     url: "/concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html"

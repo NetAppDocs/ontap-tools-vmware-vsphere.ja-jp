@@ -13,7 +13,7 @@ summary: VMware vSphere 用の ONTAP ツール 9.x リリースでは、最新�
 [role="lead"]
 VMware vSphere 用の ONTAP ツール 9.x リリースでは、最新バージョンへのインプレースアップグレードがサポートされています。
 
-Virtual Storage Console 6.x 、 Storage Replication Adapter 2.x 、 3.x 、 4.x 、 VASA Provider 6.x などの個々のアプリケーションの以前のリリースでは、異なるアップグレードプロセスが使用されます。これらの旧バージョンの VSC 、 VASA Provider 、または SRA が環境にインストールされている場合は、次の処理を実行する必要があります。
+Virtual Storage Console 6.x 、 Storage Replication Adapter 2.x 、 3.x 、 4.x 、 VASA Provider 6.x などの個々のアプリケーションの以前のリリースでは、異なるアップグレードプロセスが使用されます。これらの古いバージョンのVSC、VASA Provider、SRAが環境にインストールされている場合は、テクニカルサポートに連絡して次の処理を実行してください。
 
 . 最新リリースの ONTAP ツールを導入します。
 . 既存の設定データを移行します。
@@ -34,7 +34,7 @@ SRA 4.0以前からアップグレードする場合は、次の手順を実行�
 +
 link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["ONTAP ツールの最新リリースにアップグレードします"]
 
-* SRA 2.1 または 3.0 を使用している場合は、最初に既存のサイトの設定をメモしておく必要があります。
+* SRA 2.1 または 3.0 を使用している場合は、最初に既存のサイトの設定をメモしておく必要があります。新規の導入と移行については、テクニカルサポートにお問い合わせください。
 +
 ONTAP リリース向けStorage Replication Adapter（SRA）4.0でもVASA Providerが使用されるため、VASA Providerの登録を解除してから最新バージョンのONTAP toolsを導入する必要があります。サーバーの以前のリリース (`.ova`）は、アップグレードが完了したら削除できます。
 

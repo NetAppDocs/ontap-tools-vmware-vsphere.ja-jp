@@ -13,7 +13,9 @@ summary: VMware vSphere 用の ONTAP ツールは、 VMware クラウド基盤�
 [role="lead"]
 VMware vSphere 用の ONTAP ツールは、 VMware Cloud Foundation （ VCF ）環境に導入できます。VCF の導入の主な目的は、クラウドセットアップで ONTAP ツールを使用し、 vCenter Server なしでコンテナを作成することです。
 
-VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、 REST API を使用してストレージシステムを追加し、コンテナを作成できます。API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。ONTAP tools 9.12では、Swaggerは1.0 APIをサポートしません。これまで1.0で使用されていたポインタは、2.0または3.0 APIに移動されます。
+VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、 REST API を使用してストレージシステムを追加し、コンテナを作成できます。以下の記事に、VCFが有効な場合にONTAP toolsにストレージを追加するための手順が記載されています。 https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Swagger-UIからONTAPツールへのストレージの追加"]。
+
+API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。ONTAP tools 9.12では、Swaggerは1.0 APIをサポートしません。これまで1.0で使用されていたポインタは、2.0または3.0 APIに移動されます。
 
 VCF 展開モードで使用できる API は次のとおりです。
 
