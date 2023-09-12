@@ -38,11 +38,11 @@ VASA Provider のステータスは、アップグレード後も既存の導入
 NOTE: ONTAP toolsの最新リリースへのインプレースアップグレードは、既存の9.10以降のバージョンからのみ実行できます。
 
 
-NOTE: ONTAP tools 9.12をアップグレードすると、ストレージシステムのすべての認証および通信のプロセスが、ONTAP ストレージ証明書を自動信頼することでベーシック認証から証明書ベースの認証に変更されます。ユーザによる操作は不要です。
+NOTE: ONTAP tools 9.12をアップグレードすると、ONTAPストレージ証明書が自動で信頼されるため、すべてのストレージシステムの認証と通信のプロセスがベーシック認証から証明書ベースの認証に変更されます。ユーザによる操作は不要です。
 
 証明書認証を使用しないストレージシステムの追加は制限されています。
 
-JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12にアップグレードする場合は、を実行します
+JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12以降のバージョンにアップグレードする場合
 アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP間の証明書ベースの通信を有効にします。
 
 . _security login role create -role <existing-role-name>-cmddirname "security login show"-access all_
@@ -50,7 +50,8 @@ JSONファイルを使用してカスタムで作成したクラスタを対象�
 . _security login role create -role <existing-role-name>-cmddirname " security certificate install "-access all_
 
 
-JSONファイルを使用してカスタムで作成したSVMスコープのユーザでストレージシステムを追加し、9.12にアップグレードする場合は、 その後、アップグレードの前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP の間の証明書ベースの通信を有効にします。
+JSONファイルを使用してカスタムで作成したSVMを対象としたユーザでストレージシステムを追加し、9.12以降のバージョンにアップグレードする場合
+アップグレード前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAPの間の証明書ベースの通信を有効にします。
 
 . _security login role create -role <existing-role-name>-cmddirname "security certificate install"-access all -vserver <vserver-name>_
 . _security login role create -role <existing-role-name>-cmddirname "security certificate show"-access all -vserver <vserver-name>_

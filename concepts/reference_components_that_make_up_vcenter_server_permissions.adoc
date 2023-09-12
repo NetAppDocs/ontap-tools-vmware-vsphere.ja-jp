@@ -82,7 +82,7 @@ NetApp Virtual Storage Console > Policy Based Management > Management または 
  a| 
 VSC 管理者
  a| 
-ストレージ機能プロファイルおよびしきい値設定に関連する VSC および VASA Provider のタスク。
+ストレージ機能プロファイルとしきい値の設定に関連するONTAPツールとVASA Providerのタスク。
 
 |===
 

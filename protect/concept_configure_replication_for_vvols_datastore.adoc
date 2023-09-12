@@ -13,6 +13,9 @@ summary: ONTAP ツールを使用して、 VVOL データストアのレプリ�
 [role="lead"]
 ONTAP ツールを使用して、 VVOL データストアのレプリケーションを設定できます。VVOL レプリケーションの主な目的は、 VMware Site Recovery Manager （ SRM ）を使用してディザスタリカバリ時に重要な仮想マシンを保護することです。
 
+
+NOTE: vCenter 8.0でSite Recovery Manager（SRM）のワークフローが失敗し、エラーメッセージが表示されます。VVolレプリケーションは、vCenter 7.0u3リリースで想定されるとおりに機能します。
+
 ただし、 ONTAP ツール用に VVOL のレプリケーションを設定するには、 VASA Provider 機能と VVOL のレプリケーションを有効にする必要があります。VASA Provider は、 ONTAP ツールではデフォルトで有効になっています。アレイ・ベースのレプリケーションは FlexVol レベルで実行されます各 VVOL データストアは、 1 つ以上の FlexVol で構成されるストレージコンテナにマッピングされます。FlexVol ボリュームには、 ONTAP から SnapMirror を事前に設定しておく必要があります。
 
 

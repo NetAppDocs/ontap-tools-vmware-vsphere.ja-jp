@@ -1,7 +1,7 @@
 ---
 permalink: concepts/concept_vmware_high_availability_for_vcenter_server.html 
 sidebar: sidebar 
-keywords: VSC 
+keywords: ONTAP tools 
 summary: VMware vSphere 用の ONTAP ツールが導入された vSphere 環境をハイアベイラビリティ（ HA ）構成にすることができます。VMware HA は、仮想環境でハードウェアやオペレーティングシステムの障害が発生した場合にフェイルオーバー保護を提供します。 
 ---
 = VMware vSphere HA の場合

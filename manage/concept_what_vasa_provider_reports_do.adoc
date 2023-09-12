@@ -1,7 +1,7 @@
 ---
 permalink: manage/concept_what_vasa_provider_reports_do.html 
 sidebar: sidebar 
-keywords: VSC, VASA Provider, and SRA 
+keywords: ONTAP tools, VASA Provider, and SRA 
 summary: vVol レポートには、 VMware Virtual Volumes \ （ vVol \ ）データストアと、それらのデータストアに作成された仮想マシンに関する詳細情報が表示されます。vVol ダッシュボードを使用すると、 vCenter Server 内の vVol データストアおよび仮想マシンの潜在的な問題を確認して特定できます。 
 ---
 = vVol レポート

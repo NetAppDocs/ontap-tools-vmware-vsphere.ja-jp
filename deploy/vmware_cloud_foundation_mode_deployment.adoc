@@ -15,7 +15,10 @@ VMware vSphere 用の ONTAP ツールは、 VMware Cloud Foundation （ VCF ）�
 
 VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、 REST API を使用してストレージシステムを追加し、コンテナを作成できます。以下の記事に、VCFが有効な場合にONTAP toolsにストレージを追加するための手順が記載されています。 https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["Swagger-UIからONTAPツールへのストレージの追加"]。
 
-API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。ONTAP tools 9.12では、Swaggerは1.0 APIをサポートしません。これまで1.0で使用されていたポインタは、2.0または3.0 APIに移動されます。
+API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。ONTAP tools 9.12以降では、Swaggerは1.0 APIをサポートしません。これまで1.0で使用されていたポインタは、2.0または3.0 APIに移動されます。
+
+
+NOTE: ONTAP tools for VMware vSphere 9.13リリースでは、2.0ストレージ機能プロファイルAPIは使用できなくなりました。
 
 VCF 展開モードで使用できる API は次のとおりです。
 
@@ -143,13 +146,11 @@ API / SVM
 コンテナ作成 API の実行中に、コンテナに既存のボリュームを追加できます。ただし、既存のボリュームの圧縮と重複排除の値がコンテナのストレージ機能に一致していることを確認する必要があります。値が一致しない場合、仮想マシンの作成は失敗します。次の表に、対応するストレージ機能プロファイルについて、既存のボリュームに必要な値の詳細を示します。
 
 |===
-
-
 | * コンテナストレージ機能プロファイル * | * 重複排除 * | * 圧縮 * 
 
 
  a| 
-プラチナ
+Platinum_AFF_A
  a| 
 両方
  a| 
@@ -158,7 +159,7 @@ API / SVM
 
 
  a| 
-AFF のシック
+Platinum_AFF_C
  a| 
 両方
  a| 
@@ -167,7 +168,7 @@ AFF のシック
 
 
  a| 
-AFF_Default
+Platinum_asa_a
  a| 
 両方
  a| 
@@ -176,7 +177,7 @@ AFF_Default
 
 
  a| 
-AFF_Tiering
+AFF_NVMe_AFF_A
  a| 
 両方
  a| 
@@ -185,7 +186,7 @@ AFF_Tiering
 
 
  a| 
-AFF_encrypted
+AFF_NVMe_AFF_C
  a| 
 両方
  a| 
@@ -194,7 +195,7 @@ AFF_encrypted
 
 
  a| 
-AFF_encrypted_Tiering
+AFF_NVMe_ASA_A
  a| 
 両方
  a| 
@@ -203,7 +204,7 @@ AFF_encrypted_Tiering
 
 
  a| 
-AFF_encrypted_Min50
+AFF_Thick_AFF_A
  a| 
 両方
  a| 
@@ -212,7 +213,25 @@ AFF_encrypted_Min50
 
 
  a| 
-FAS_DEFAULT
+AFF_Thick_AFF_C
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Thick_ASA_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_DEFAULT_AFF_A
  a| 
 背景（ Background ）
  a| 
@@ -221,11 +240,128 @@ FAS_DEFAULT
 
 
  a| 
-FAS_Max20
+AFF_DEFAULT_AFF_C
  a| 
 背景（ Background ）
  a| 
 なし
+
+
+
+ a| 
+AFF_DEFAULT_ASA_A
+ a| 
+背景（ Background ）
+ a| 
+なし
+
+
+
+ a| 
+AFF_Tiering_AFF_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Tiering_AFF_C
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Tiering_ASA_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_AFF_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_AFF_C
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_ASA_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_Tiering_AFF_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_Tiering_AFF_C
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_Tiering_ASA_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_Min50_AFF_A
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_Min50_AFF_C
+ a| 
+両方
+ a| 
+両方
+
+
+
+ a| 
+AFF_Encrypted_Min50_ASA_A
+ a| 
+両方
+ a| 
+両方
 
 
 

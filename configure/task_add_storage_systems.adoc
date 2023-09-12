@@ -2,7 +2,7 @@
 permalink: configure/task_add_storage_systems.html 
 sidebar: sidebar 
 keywords:  
-summary: Virtual Storage Console \ （ VSC\ ）には手動でストレージシステムを追加できます。 
+summary: ONTAP toolsにストレージシステムを手動で追加できます。 
 ---
 = ストレージシステムを追加
 :allow-uri-read: 
@@ -11,21 +11,21 @@ summary: Virtual Storage Console \ （ VSC\ ）には手動でストレージシ
 
 
 [role="lead"]
-Virtual Storage Console （ VSC ）には手動でストレージシステムを追加できます。
+ONTAP toolsにストレージシステムを手動で追加できます。
 
 
 NOTE: ONTAP クラスタでSAMLが有効になっている場合は、ONTAP との通信にベーシック認証が使用されます。
 
 * このタスクについて *
 
-Virtual Storage Console （ VSC ）を起動するたび、または * rediscover all * オプションを選択するたびに、使用可能なストレージシステムが自動的に検出されます。
+ONTAP toolsを起動するか、*[すべて再検出]*オプションを選択すると、使用可能なストレージシステムがONTAP toolsによって自動的に検出されます。
 
 
 NOTE: 直接接続のSVMではVVolデータストアはサポートされません。
 
 * 手順 *
 
-. ONTAP toolsの[ホーム]ページのいずれかのオプションを使用して、VSCにストレージシステムを追加します。
+. ONTAP toolsのホームページのいずれかのオプションを使用して、ONTAP toolsにストレージシステムを追加します。
 +
 ** [ * ストレージ・システム * ] > [ * 追加 ] をクリックします。または
 ** [* 概要 *>] 、 [* はじめに ] の順にクリックし、 [ ストレージシステムの追加 ] の下の [* 追加 ] ボタンをクリックします。
@@ -39,7 +39,7 @@ NOTE: 直接接続のSVMではVVolデータストアはサポートされませ�
 クラスタまたは SVM の IPv6 アドレスを使用してストレージシステムを追加することもできます。
 
 +
-VSCの[ストレージシステム]ページからストレージを追加する場合は、ストレージが配置されているvCenter Serverインスタンスを指定します。Add Storage System ダイアログボックスには、使用可能な vCenter Server インスタンスのドロップダウンリストが表示されます。vCenter Server インスタンスにすでに関連付けられているデータセンターにストレージを追加する場合、このオプションは表示されません。
+ONTAP toolsの[ストレージシステム]ページからストレージを追加する場合は、ストレージが配置されているvCenter Serverインスタンスを指定します。Add Storage System ダイアログボックスには、使用可能な vCenter Server インスタンスのドロップダウンリストが表示されます。vCenter Serverインスタンスにすでに関連付けられているデータセンターにストレージを追加する場合、ONTAP toolsはこのオプションを表示しません。
 
 +
 注

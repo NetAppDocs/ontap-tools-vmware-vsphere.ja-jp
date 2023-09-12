@@ -30,7 +30,7 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * vSphere Client のすべてのブラウザセッションからログアウトして、ブラウザを閉じておきます。また、 ONTAP ツールの導入時にブラウザキャッシュの問題がブラウザキャッシュに表示されないように、ブラウザキャッシュを削除しておく必要があります。
 * Internet Control Message Protocol（ICMP）を有効にしておく必要があります。
 +
-ICMP が無効になっていると、 ONTAP ツールの初期設定が失敗し、導入後に VSC が VSC サービスと VASA Provider サービスを開始できなくなります。導入後に、 VSC サービスと VASA Provider サービスを手動で有効にする必要があります。
+ICMPが無効になっていると、ONTAP toolsの初期設定が失敗し、ONTAP導入後にONTAP toolsとVASA Providerサービスを開始できなくなります。導入後に、ONTAP toolsとVASA Providerサービスを手動で有効にする必要があります。
 
 
 
@@ -81,7 +81,7 @@ ONTAP ツールの _.ova ファイルの URL を指定します。
 
 . ONTAP Tools 仮想マシンの電源をオンにし、 ONTAP ツールを実行している仮想マシンのコンソールを開きます。
 . 導入の完了後に、 ONTAP ツールが実行されていることを確認します。
-. ONTAP toolsがどのvCenter Serverにも登録されていない場合は、を使用します `\https://appliance_ip:8143/Register.html` をクリックしてVSCインスタンスを登録します。Register.htmlに、swaggerページにリダイレクトされます。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。
+. ONTAP toolsがどのvCenter Serverにも登録されていない場合は、を使用します `\https://appliance_ip:8143/Register.html` ONTAP toolsインスタンスを登録します。Register.htmlに、swaggerページにリダイレクトされます。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。
 +
 9.12以降では、POST APIを使用してONTAP toolsをvCenterに登録します。
 

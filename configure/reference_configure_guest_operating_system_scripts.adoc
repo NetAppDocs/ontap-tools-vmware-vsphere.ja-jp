@@ -2,7 +2,7 @@
 permalink: configure/reference_configure_guest_operating_system_scripts.html 
 sidebar: sidebar 
 keywords: Guest operating system 
-summary: ゲストオペレーティングシステム（ OS ）スクリプトの ISO イメージは、 VMware vSphere サーバ用の ONTAP ® ツールにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。 
+summary: ゲストオペレーティングシステム（OS\）スクリプトのISOイメージは、ONTAP tools for VMware vSphereサーバにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。 
 ---
 = ゲストオペレーティングシステムスクリプトを設定する
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ゲストオペレーティングシステム（ OS ）スクリプト�
 
 
 [role="lead"]
-ゲストオペレーティングシステム（ OS ）スクリプトの ISO イメージは、 VMware vSphere サーバ用の ONTAP ® ツールにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。
+ゲストオペレーティングシステム（OS）スクリプトのISOイメージは、Tools for VMware vSphereサーバにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。
 
 |===
 
@@ -45,6 +45,6 @@ Solaris の場合
 \ https://<appliance_ip>:8143/vsc/public/writable/solaris_gos_timeout_190-install.iso
 
 |===
-仮想マシンを管理するvCenter Server（ELM）に登録されているVSCインスタンスのコピーからスクリプトをインストールする必要があります。環境に複数のvCenter Serverが含まれている場合は、ストレージのタイムアウト値を設定する仮想マシンを含むインスタンスを選択する必要があります。
+仮想マシンを管理するvCenter Server（ELM）に登録されているONTAP toolsインスタンスのコピーからスクリプトをインストールする必要があります。環境に複数のvCenter Serverが含まれている場合は、ストレージのタイムアウト値を設定する仮想マシンを含むインスタンスを選択する必要があります。
 
 仮想マシンにログインし、スクリプトを実行してストレージのタイムアウト値を設定します。

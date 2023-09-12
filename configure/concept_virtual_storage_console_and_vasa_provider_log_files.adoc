@@ -15,7 +15,8 @@ summary: エラーが発生した場合は、 /opt/netapp/vscserver/log ディ�
 
 問題の特定には、次の 3 つのログファイルが役立ちます。
 
-* 「 cxf.log 」。 VSC の設定に関する情報が記録された VASA Provider * 「 kaminoPrefs.xml 」との API トラフィックに関する情報が記録されます
+* 「cxf.log」。VASA Providerとの間のAPIトラフィックに関する情報が含まれます
+*'kaminoPrefs.xml'。ONTAPツールの設定に関する情報が含まれています。
 * VASA Provider に関するすべてのログ情報が含まれている「 vvolvp.log 」
 
 
@@ -29,7 +30,7 @@ VMware vSphere 用 ONTAP ツールのメンテナンスメニューでは、要�
 
 ログレベルを設定すると、次のファイルが更新されます。
 
-* VSC サーバ：「 kamino.log 」および「 vvolvp.log 」
+* ONTAP toolsサーバ：「kamino.log」と「vvolvp.log」
 * VASA Provider サーバ： vvolvp.log 、「 error.log 」、「 NetApp.log 」
 
 

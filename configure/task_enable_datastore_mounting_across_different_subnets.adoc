@@ -2,7 +2,7 @@
 permalink: configure/task_enable_datastore_mounting_across_different_subnets.html 
 sidebar: sidebar 
 keywords:  
-summary: NFS または iSCSI を使用していて、 ESXi ホストとストレージシステムとでサブネットが異なる場合は、 VMware vSphere のプリファレンスファイル用の ONTAP ツールを変更する必要があります。プリファレンスファイルを変更しないと、 Virtual Storage Console （ VSC ）でデータストアをマウントできないためにデータストアのプロビジョニングが失敗します。 
+summary: NFS または iSCSI を使用していて、 ESXi ホストとストレージシステムとでサブネットが異なる場合は、 VMware vSphere のプリファレンスファイル用の ONTAP ツールを変更する必要があります。プリファレンスファイルを変更しないと、ONTAP toolsでデータストアをマウントできないためにデータストアのプロビジョニングが失敗します。 
 ---
 = 異なるサブネット間でのデータストアのマウントを有効にする
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: NFS または iSCSI を使用していて、 ESXi ホストとストレ
 
 
 [role="lead"]
-NFS または iSCSI を使用していて、 ESXi ホストとストレージシステムとでサブネットが異なる場合は、 VMware vSphere のプリファレンスファイル用の ONTAP ツールを変更する必要があります。プリファレンスファイルを変更しないと、 Virtual Storage Console （ VSC ）でデータストアをマウントできないためにデータストアのプロビジョニングが失敗します。
+NFS または iSCSI を使用していて、 ESXi ホストとストレージシステムとでサブネットが異なる場合は、 VMware vSphere のプリファレンスファイル用の ONTAP ツールを変更する必要があります。プリファレンスファイルを変更しないと、ONTAP toolsでデータストアをマウントできないためにデータストアのプロビジョニングが失敗します。
 
 * このタスクについて *
 

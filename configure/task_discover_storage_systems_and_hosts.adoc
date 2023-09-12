@@ -2,7 +2,7 @@
 permalink: configure/task_discover_storage_systems_and_hosts.html 
 sidebar: sidebar 
 keywords:  
-summary: vSphere Client で Virtual Storage Console （ VSC\ ）を初めて実行すると、 ESXi ホスト、その LUN と NFS エクスポート、および LUN とエクスポートを所有するネットアップストレージシステムが VSC によって検出されます。 
+summary: vSphere ClientでONTAP toolsを初めて実行すると、ESXiホスト、そのLUNとNFSエクスポート、およびそれらのLUNとエクスポートを所有するNetAppストレージシステムがONTAP toolsによって検出されます。 
 ---
 = ストレージシステムとホストを検出
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: vSphere Client で Virtual Storage Console （ VSC\ ）を初めて実�
 
 
 [role="lead"]
-vSphere Client で Virtual Storage Console （ VSC ）を初めて実行すると、 ESXi ホスト、その LUN と NFS エクスポート、および LUN とエクスポートを所有するネットアップストレージシステムが VSC によって検出されます。
+vSphere ClientでONTAP toolsを初めて実行すると、ESXiホスト、そのLUNとNFSエクスポート、およびそれらのLUNとエクスポートを所有するNetAppストレージシステムがONTAP toolsによって検出されます。
 
 * 必要なもの *
 
@@ -21,16 +21,16 @@ vSphere Client で Virtual Storage Console （ VSC ）を初めて実行する�
 
 * このタスクについて *
 
-新しいストレージシステムの検出や既存のストレージシステムの情報の更新はいつでも実行でき、容量や設定に関する最新の情報を確認することができます。VSC でストレージシステムへのログインに使用されるクレデンシャルを変更することもできます。
+新しいストレージシステムの検出や既存のストレージシステムの情報の更新はいつでも実行でき、容量や設定に関する最新の情報を確認することができます。ONTAP toolsがストレージシステムへのログインに使用するクレデンシャルを変更することもできます。
 
-ストレージシステムの検出時に、 vCenter Server インスタンスで管理している ESXi ホストから情報が収集されます。
+ONTAP toolsは、ストレージシステムを検出する際に、vCenter Serverインスタンスで管理しているESXiホストから情報を収集します。
 
 * 手順 *
 
 . vSphere Client のホームページで、「 * Hosts and Clusters * 」を選択します。
 . 目的のデータセンターを右クリックし、*[NetApp ONTAP tools]*>*[ホストデータとストレージデータの更新]*を選択します。
 +
-接続されているすべてのストレージシステムの検出が再開されることを示す[確認]ダイアログボックスが表示されます。この処理には数分かかることがあります。続行しますか？
+ONTAPツールの[確認]ダイアログボックスに、接続されているすべてのストレージシステムの検出が再開されることを示すメッセージが表示されます。この処理には数分かかることがあります。続行しますか？
 
 . [はい]*をクリックします。
 . 検出されたストレージコントローラのうち、ステータスがのものを選択します `Authentication Failure`をクリックし、* actions *>* Modify *をクリックします。
@@ -40,6 +40,6 @@ vSphere Client で Virtual Storage Console （ VSC ）を初めて実行する�
 
 検出プロセスが完了したら、次の手順を実行します。
 
-* VSC を使用して、 Adapter Settings 列、 MPIO Settings 列、または NFS Settings 列に Alert アイコンが表示されるホストの ESXi ホスト設定を行います。
+* ONTAPツールを使用して、[アダプタ設定]、[MPIO設定]、または[NFS設定]列に[アラート]アイコンが表示されているホストのESXiホストを設定します。
 * ストレージシステムのクレデンシャルを入力します。
 

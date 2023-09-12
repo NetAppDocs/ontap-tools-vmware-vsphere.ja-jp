@@ -23,6 +23,7 @@ SRM アプライアンスで SRA を設定すると、 SRA クレデンシャル
 
 * 手順 *
 
+. vSphere Clientのメニューで、* NetApp ONTAP tools *>* Settings *>* Administrative Settings *>* Manage Capabilities *>* Enable Storage Replication Adapter（SRA）*を選択します。
 . SRM アプライアンス画面で、 * Storage Replication Adapter * > * New Adapter * をクリックします。
 . SRM に .tar.gz_file をアップロードします。
 . アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。

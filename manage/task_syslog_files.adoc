@@ -15,14 +15,15 @@ syslogを使用して、一元化されたロギングサーバにシステム�
 
 * このタスクについて *
 
-ONTAP tools for VMware vSphere 9.12リリースでは、以前の2.0 syslog APIが削除され、相互認証をサポートする3.0 syslog関連APIが新たに追加されています。syslogを設定するには、次の手順に従います。
+ONTAP tools for VMware vSphere 9.12以降では、ONTAP toolsによって以前の2.0 syslog APIが削除されます。これらには、相互認証をサポートする3.0 syslog関連の新しいAPIが含まれています。
+syslogを設定するには、次の手順に従います。
 
 * 手順 *
 
 . セッションIDを取得するには、_POST /2.0/security/user/loginを実行します。
 . 上記の応答で受信したセッションIDを渡して、RUN_POST/3.0/appliance-management/logging-client-certificate_を実行します。
 +
-これにより、VPサーバとVSCサーバの証明書が生成されます。
+これにより、VPサーバおよびONTAP toolsサーバの証明書が生成されます。
 
 . 両方の証明書をsyslogサーバにコピーし、syslogサーバで信頼されるようにします。
 +
