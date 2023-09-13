@@ -2107,7 +2107,6 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="e35bb7c62e5e99a4dd4c45dc7401d654" category="paragraph">ゲストオペレーティングシステム（OS）スクリプトのISOイメージは、Tools for VMware vSphereサーバにマウントされます。ゲスト OS スクリプトを使用して仮想マシンのストレージタイムアウトを設定するには、 vSphere Client からスクリプトをマウントする必要があります。</block>
   <block id="7a7c304e2893cb9575f4c95e13bd9557" category="paragraph">仮想マシンを管理するvCenter Server（ELM）に登録されているONTAP toolsインスタンスのコピーからスクリプトをインストールする必要があります。環境に複数のvCenter Serverが含まれている場合は、ストレージのタイムアウト値を設定する仮想マシンを含むインスタンスを選択する必要があります。</block>
   <block id="955b51e13e470f907369543549a3a405" category="inline-link">ONTAP Tools for VMware vSphere 9.13リリースノート</block>
-  <block id="5e6870560e6c8c9613501cc132ae6c39" category="paragraph">詳細については、を参照してください<block ref="a04b4fbd78e27d3612eea8f3ed389176" category="inline-link-rx"></block>。</block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">オープンソース</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
   <block id="b1659ef2c01d8401d9bc67bd39f2ad1d" category="inline-link">ONTAP Tools for VMware vSphere 9.13に関するお知らせ</block>
@@ -2131,4 +2130,5 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="5693a336860dc6b738a1f289ec743b63" category="sidebar">ONTAP Tools for VMware vSphere 9.13のドキュメント</block>
   <block id="48c1a759d48445c3852e48203f0d0aae" category="sidebar">ONTAPツールとVASA Providerのログファイル</block>
   <block id="b1ea6eb22e631a7bdaef7c4f2b598432" category="sidebar">ONTAP toolsのSSL証明書を再生成する</block>
+  <block id="ccfe3ded2b336756061426e3beb4ea84" category="paragraph">詳細については、を参照してください<block ref="217abffc61852464bf1ed6a3818c434b" category="inline-link-rx"></block>。</block>
 </blocks>

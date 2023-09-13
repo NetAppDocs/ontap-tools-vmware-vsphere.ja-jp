@@ -13,4 +13,4 @@ summary: このリリースの VMware vSphere 用 ONTAP ツールに関する重
 [role="lead"]
 解決済みの問題、既知の問題、注意事項、および制限事項など、 VMware vSphere 用のこのリリースの ONTAP ツールに関する重要な情報を提供します。
 
-詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886293["ONTAP Tools for VMware vSphere 9.13リリースノート"^]。
+詳細については、を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMLP2886292["ONTAP Tools for VMware vSphere 9.13リリースノート"^]。
