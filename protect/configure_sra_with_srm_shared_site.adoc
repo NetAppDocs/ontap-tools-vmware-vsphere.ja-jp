@@ -1,0 +1,18 @@
+---
+permalink: protect/configure_sra_with_srm_shared_site.html 
+sidebar: sidebar 
+keywords: SRA with SRM 
+summary: ONTAP tools for VMware vSphereは、VMware SRM共有リカバリサイト構成をサポートしています。 
+---
+= 共有リカバリサイト設定でのSRAとSRMの設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ONTAP tools for VMware vSphereは、VMwareのSRM共有リカバリサイト構成をサポートしています。詳細については、を参照してください https://docs.vmware.com/en/Site-Recovery-Manager/8.6/com.vmware.srm.install_config.doc/GUID-EBF84252-DF37-43CD-ADC8-E90F5254F315.html["共有リカバリサイト構成のSite Recovery Manager"]。リカバリサイトのSite Recovery Manager Serverインスタンスは、同じvCenter Serverインスタンスに接続します。
+
+SRM共有リカバリサイトの設定では、各SRMサーバに専用のSRAインスタンスが必要です（SRMとSRAは1：1の関係）。各SRMサーバの専用SRAインスタンスとして機能するように、OTVをVCFモードで設定します。また、vCenterに登録され、データストアのプロビジョニングなどのSRA以外のタスクに使用される、SRA非対応のONTAP toolsアプライアンスを導入することもできます。
+
+。 https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["SRM共有リカバリサイトでSRAを設定する方法"] 手順for setting up SRA to support SRM Shared Recovery Site Configurationの詳細は、技術情報アーティクルで説明されています。

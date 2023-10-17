@@ -26,7 +26,7 @@ NOTE: ONTAP 9.9.1 以降で All SAN Array （ ASA ）タイプのストレージ
 
 . vSphere Client のホームページで、 * Hosts and Clusters * をクリックします。
 . ナビゲーションペインで、データストアが含まれているデータセンターを選択します。
-. データストアを右クリックし、 * NetApp ONTAP tools * > * assign QoS * を選択します。
+. データストアを右クリックし、* NetApp ONTAP [vVolツール]*>*[vVol以外のデータストアのサイズ変更]*を選択します。
 . サイズ変更ダイアログボックスで、データストアの新しいサイズを指定し、 * OK * をクリックします。
 +
 Storage Systems （ストレージシステム）メニューの * rediscover all * オプションを実行して、 Storage Systems and dashboard （ストレージシステムおよびダッシュボード）のストレージ・リストを手動で更新したり、次のスケジュールされた更新を待機したりできます。

@@ -13,10 +13,6 @@ summary: Site Recovery Manager 用の Storage Replication Adapter \ （ SRA \ �
 [role="lead"]
 Site Recovery Manager （ SRM ）向け Storage Replication Adapter （ SRA ）を実行するには、事前にストレージシステムのセットアップが必要です。
 
-ONTAP tools for VMware vSphereは、VMwareのSRM共有リカバリサイト構成をサポートしています。詳細については、を参照してください https://docs.vmware.com/en/Site-Recovery-Manager/8.6/com.vmware.srm.install_config.doc/GUID-EBF84252-DF37-43CD-ADC8-E90F5254F315.html["共有リカバリサイト構成のSite Recovery Manager"]。
-
-。 https://kb.netapp.com/mgmt/OTV/SRA/Storage_Replication_Adapter%3A_How_to_configure_SRA_in_a_SRM_Shared_Recovery_Site["SRM共有リカバリサイトでSRAを設定する方法"] 手順for setting up SRA to support SRM Shared Recovery Site Configurationの詳細は、技術情報アーティクルで説明されています。
-
 * 必要なもの *
 
 保護対象サイトとリカバリサイトに次のプログラムがインストールされている必要があります。

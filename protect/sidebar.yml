@@ -10,6 +10,8 @@ entries:
     url: "/protect/task_configure_storage_replication_adapter_for_san_environment.html"
   - title: 大規模な環境向けにストレージを構成
     url: "/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html"
+  - title: 共有リカバリサイト設定でのSRAとSRMの設定
+    url: "/protect/configure_sra_with_srm_shared_site.html"
 - title: SRM アプライアンスで SRA を設定する
   url: "/protect/task_configure_sra_on_srm_appliance.html"
 - title: SRA クレデンシャルを更新する

@@ -15,9 +15,16 @@ ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用�
 
 * 必要なもの *
 
-* https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip を使用して、 ONTAP ツールから ONTAP Privileges ファイルをダウンロードしておく必要があります。
+* 次の手順に従って、ONTAP PrivilegesファイルをONTAP toolsからダウンロードしておく必要があります。
++
+** に移動します https://{virtual_appliance_IP}:9083/vsc/config/[]
+** VSC_ONTAP_User_Privileges.zipファイルをダウンロードします。
+** ダウンロードしたVSC_ONTAP_User_Privileges.zipファイルを展開します。
+** System Managerにアクセスします
 +
 技術情報アーティクル- https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/Virtual_Storage_Console%3A_How_to_retrieve_the_JSON_file_to_configure_user_roles_and_privileges["Virtual Storage Console：ユーザロールと権限を設定するためのJSONファイルの取得方法"] WebCLIからONTAP Privilegesファイルをダウンロードする方法については、を参照してください。
+
+
 
 * ONTAP 9.8P1 以降のストレージを設定しておく必要があります。
 * ストレージシステムの管理者権限でログインしている必要があります。
