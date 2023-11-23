@@ -39,9 +39,9 @@ NOTE: VASA Provider では、スイッチオーバーの実行後にセカンダ
 
 == MetroCluster 構成とSRA
 
-Storage Replication Adapter（SRA）は、FCプロトコルでMetroCluster構成（MCC）を使用する環境をサポートします。
+Storage Replication Adapter（SRA）は、NFS、iSCSI、およびFCPプロトコルを使用するMetroCluster構成（MCC）を使用する環境をサポートします。
 
-MCCとSRAの設定を行うための前提条件として、Storage Virtual Machine（SVM）名はすべてMCCクラスタで一意である必要があります。名前が一意でないと競合が発生し、SRAのワークフローが失敗します。
+MCC SRA設定を行うための前提条件として、Storage Virtual Machine（SVM）名はすべてMCCクラスタで一意である必要があります。名前が一意でないと競合が発生し、SRAのワークフローが失敗します。
 
 必要なアクション：
 

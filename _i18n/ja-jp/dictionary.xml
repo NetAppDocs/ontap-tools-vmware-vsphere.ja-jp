@@ -2128,8 +2128,6 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="b1caae1e6a180ff384d708f6f5f51304" category="admonition">ONTAP toolsのメンテナンスコンソールで管理者パスワードを変更したあと、ONTAP toolsでSRAが有効かつ設定されている場合は手順、 <block ref="1e7a640d1bcd6b5c87262f4ec3ea69d7" category="inline-link-macro-rx"></block> セクション。これらの指示に従わないと、SRMにエラーが報告されます。</block>
   <block id="bdc5a4ba1115f3f724e1f81e7f41eeef" category="list-text">データストアを右クリックし、* NetApp ONTAP [vVolツール]*&gt;*[vVol以外のデータストアのサイズ変更]*を選択します。</block>
   <block id="2d7ee85ca6eba61e2ebc56fcd9749a22" category="section-title">MetroCluster 構成とSRA</block>
-  <block id="566082b04c4b3f59fa2abd9407221d29" category="paragraph">Storage Replication Adapter（SRA）は、FCプロトコルでMetroCluster構成（MCC）を使用する環境をサポートします。</block>
-  <block id="dd316d5ffd2f84622629d92855047e4d" category="paragraph">MCCとSRAの設定を行うための前提条件として、Storage Virtual Machine（SVM）名はすべてMCCクラスタで一意である必要があります。名前が一意でないと競合が発生し、SRAのワークフローが失敗します。</block>
   <block id="a3a5ab624299236efd1aa00751d3e9d9" category="paragraph">必要なアクション：</block>
   <block id="9a5bef2e6baedf8812a9649b615baf1a" category="list-text">MCCスイッチオーバーまたはスイッチバックの実行後、ソースクラスタで_snapmirror list-destinations_commandが新しい&lt;vserver_name&gt;名（svm-mc）を含む適切な出力に表示されることを確認します。このコマンドの実行には最大30分かかることがあります。</block>
   <block id="44a62aa72367cca25b9e3f92da55ace0" category="list-text">他のSRAワークフローに進む前に、SRM UIからdiscoverDevices処理を実行してください。この処理により、スイッチオーバーまたはスイッチバック後のSVM名の変更がSRMで認識されます。</block>
@@ -2154,4 +2152,6 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="c65d22128372567906e7fa3a79c5aa8c" category="list-text">ONTAP Tools for VMware vSphere 9.12以降では、ONTAPによる認証は証明書を使用して行われます。CA署名証明書または自己署名証明書を追加できます。を参照してください <block ref="6424e4a6ccc5b08f64694eae7a99760f" category="inline-link-macro-rx"></block> 手順については、を参照し</block>
   <block id="ce1bc9deb1a63ccda9fedbd2789b5462" category="paragraph">プロパティのデフォルト値は85%に設定されています。* FIPSが有効になっているが、FIPSがサポートされていない古いバージョンのvCenterを使用している最新のONTAP toolsリリースにアップグレードしても、導入は引き続き機能します。
 ただし、 vCenter を最新の FIPS サポートバージョンにアップグレードした場合に、以前のバージョンの ONTAP ツールを使用していれば、 FIPS が vCenter で無効になっていれば導入は機能します。</block>
+  <block id="700f785cc3b0c94782ea099d30974628" category="paragraph">Storage Replication Adapter（SRA）は、NFS、iSCSI、およびFCPプロトコルを使用するMetroCluster構成（MCC）を使用する環境をサポートします。</block>
+  <block id="b0cf503432f798961e23d246f3541857" category="paragraph">MCC SRA設定を行うための前提条件として、Storage Virtual Machine（SVM）名はすべてMCCクラスタで一意である必要があります。名前が一意でないと競合が発生し、SRAのワークフローが失敗します。</block>
 </blocks>
