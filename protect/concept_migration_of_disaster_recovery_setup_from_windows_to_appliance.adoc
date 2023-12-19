@@ -15,7 +15,7 @@ summary: ディザスタリカバリに Windows ベースの Site Recovery Manag
 
 ディザスタリカバリの移行に必要な手順は次のとおりです。
 
-. 既存のONTAPツールアプライアンスを最新リリースにアップグレードします。
+. 既存のONTAP toolsアプライアンスを最新リリースにアップグレードします。
 +
 link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["ONTAP ツールの最新リリースにアップグレードします"]
 

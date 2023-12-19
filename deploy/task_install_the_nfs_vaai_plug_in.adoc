@@ -25,6 +25,7 @@ VMware vSphere 用 ONTAP ツールの GUI を使用して、ネットアップ N
 * vserver nfs modify -vserver vserver_name -vStorage enabled` コマンドを使用して、 Storage Virtual Machine （ SVM ）の vstorage オプションを有効にしておく必要があります。
 * NetApp NFS VAAI Plug-in 2.0 を使用している場合は、 ESXi 7.0 update1 以降が必要です。
 * vSphere 6.5は廃止され、vSphere 8.xはサポートされないため、vSphere 7.xリリースが必要です。
+* vSphere 8.xは、NetApp NFS VAAIプラグイン2.0.1（ビルド16）でサポートされます。
 
 
 * 手順 *

@@ -571,13 +571,6 @@
   <block id="fdb7cb8f657426e7c409bfd6d1a36ce4" category="paragraph">IPv6</block>
   <block id="84352d61ae57e04f51d94168326532bc" category="list-text">選択した SVM 内の IPv6 データ LIF を使用してプロビジョニングが実行されます。</block>
   <block id="abee77fec5734e47dadcf71227420618" category="list-text">SVM に IPv6 データ LIF がない場合、 SVM で使用可能な IPv4 のデータ LIF があれば、プロビジョニングは IPv4 のデータ LIF を介して行われます。</block>
-  <block id="5385433ee01cd2037e0f3275521224ae" category="summary">VMware vSphere 用の ONTAP ® ツールを使用して、 vCenter Server でストレージシステムのデフォルトクレデンシャルを設定できます。</block>
-  <block id="3cabeb9f2dfaeed94f3553f24bb6697f" category="doc">ストレージシステムのデフォルトクレデンシャルを設定</block>
-  <block id="79709e46ab199855d00cbacbb6cc6473" category="paragraph">デフォルトクレデンシャルの作成に使用する vCenter Server を選択しておく必要があります。</block>
-  <block id="975c4484ae2524f3de4c1fe48b561c9e" category="list-text">ONTAP ツールのホームページで、 * 設定 * &gt; * 管理設定 * &gt; * ストレージ・システムのデフォルト・クレデンシャルの設定 * をクリックします。</block>
-  <block id="4753a60fdd29d20db04cca9e9d56fba7" category="list-text">ストレージシステムのデフォルトクレデンシャルダイアログボックスで、ストレージシステムのユーザ名とパスワードを入力します。</block>
-  <block id="b241564d6daa7ecf800e2fce4f75c26d" category="paragraph">ストレージコントローラのクレデンシャルは、ユーザ名とパスワードのペアに基づいて ONTAP で割り当てられます。ストレージコントローラのクレデンシャルは、管理者アカウントまたはロールベースアクセス制御（ RBAC ）を使用するカスタムアカウントのどちらかです。</block>
-  <block id="5d647a0e64f2ce6656770c3697c2e747" category="list-text">OK * をクリックして、デフォルトクレデンシャルを保存します。</block>
   <block id="cee064a38177c0438cb03601edf062b9" category="summary">ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。</block>
   <block id="89a5a7f6d403e822b0f7c5a54be2c63c" category="list-text">ストレージシステムの管理者権限でログインしている必要があります。</block>
   <block id="9f3b5f112da0a41ef067cf24d498af34" category="list-text">ダウンロードした「 \https://{virtual_appliance_IP}:9083/vsc/config/VSC_ONTAP_User_Privileges.zip` 」ファイルを解凍します。</block>
@@ -829,7 +822,6 @@
   <block id="53d2ec82e60f2fa8563f76e1038a66bc" category="list-text">タイムアウトした場合。</block>
   <block id="3d7fb394c85bb4d38079573b5a7dd241" category="paragraph">ログインセッションの有効期限は翌日の午前 0 時までです。</block>
   <block id="89d6409d2df201f4f1ab3e5173030ee0" category="list-text">SSH を使用して diag ユーザとして再度ログインした場合。</block>
-  <block id="ae8542fbf5a656049ee2f2fc888a8431" category="list-text">vCenter Server で、 VASA Provider へのコンソールを開きます。</block>
   <block id="87c93b9816d806cccc58f0b610872eda" category="list-text">「 4 」と入力して、 Support and Diagnostics （サポートと診断）を選択します。</block>
   <block id="4a046628c353b3aadc7da0fe8feb02e5" category="list-text">リモート診断アクセスを有効にするを選択するには '3' を入力します</block>
   <block id="950be4668cb2fcdd834d276e66e90c4d" category="list-text">確認ダイアログボックスに「 y 」と入力して、リモート診断アクセスを有効にします。</block>
@@ -1332,7 +1324,6 @@
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">概念</block>
   <block id="bba5d660126dffb643c6c3cc6300704d" category="sidebar">ディザスタリカバリ用の Storage Replication Adapter</block>
   <block id="99da96b7c57595264a2d5f3ba294a0af" category="sidebar">ロールベースアクセス制御</block>
-  <block id="96ab5f4eecc9217c7e8b30303647f507" category="sidebar">ONTAP ツールのロールベースアクセス制御の概要</block>
   <block id="f15e14b44728511393b49d485af9e88b" category="sidebar">ONTAP ツールのロールベースアクセス制御の設定方法</block>
   <block id="a7c1f19a0afcdde0b988ba73af98d366" category="sidebar">ONTAP ツールを設定する</block>
   <block id="d323122d1d04a198d3dd6ef4bae01b87" category="sidebar">ESXi を設定します</block>
@@ -1359,7 +1350,6 @@
   <block id="3d7d171ecad1cba0c2d8d707b648b023" category="sidebar">保護対象サイトとリカバリサイトを設定</block>
   <block id="6956cfc9382ccb41c8ac57f99255b409" category="sidebar">レプリケートされたストレージシステムを確認</block>
   <block id="77508822eda5d675bed0a20bfe5cf0ff" category="paragraph">「サーバと通信できません。</block>
-  <block id="c741ed49a5385413c6168a727f99799f" category="paragraph">VMware vSphere 用の ONTAP ツールを使用して、 vCenter Server でストレージシステムのデフォルトクレデンシャルを設定できます。</block>
   <block id="32767fdce160df9addbb5084b54551c6" category="paragraph">各種サブネット間でのデータストアのマウントの有効化 * のセクションを参照してください。</block>
   <block id="c6f86e205896dda442288a84af6c1576" category="paragraph"><block ref="c6f86e205896dda442288a84af6c1576" category="inline-link-macro-rx"></block></block>
   <block id="dcf31c875641db4a234eb4a24983f4eb" category="paragraph">「異なるサブネット間でのデータストアのマウントの有効化」のセクションを参照</block>
@@ -1685,7 +1675,6 @@
   <block id="70443b52a86c20ad89a6e02da197f589" category="list-text">が搭載されたすべてのストレージコントローラについて、手順4と5を繰り返します<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> ステータス。</block>
   <block id="b5d3f62910840da363dc00c277bb04bb" category="paragraph">'続行できません。コントローラ上のカーネル IP アドレスとアドレスの相互参照時に IP アドレスが見つかりませんでした。これらのホストへのNFSマウントボリュームに対応するネットワークが見つかりません。'</block>
   <block id="dd21e95246bd9b59a210f7335f293a0f" category="paragraph"><block ref="dd21e95246bd9b59a210f7335f293a0f" category="inline-link-macro-rx"></block></block>
-  <block id="2384e9746fd49297b20eb475ef6c5bce" category="paragraph">を参照してください <block ref="e3114922664a9d29184df9e8de358b9e" category="inline-link-macro-rx"></block>セクション。</block>
   <block id="fdd13b82fb6d2a4ce51b8d8b17c621f9" category="paragraph">クラスタを右クリックし、*[NetApp ONTAP tools]*&gt;*[データストアのプロビジョニング]*を選択します。</block>
   <block id="c3cee4f156cedf6cebe2ab86a8a41d7c" category="paragraph">ホストを右クリックし、*[NetApp ONTAP tools]*&gt;*[データストアのプロビジョニング]*を選択します。</block>
   <block id="d1866eae9a3efecf8de082c109301663" category="paragraph">vVolデータストアは、VASA Provider機能が有効になっている場合にプロビジョニングできます。を参照してください <block ref="b6e18cc642479d1ec82545b2ffe73f70" category="inline-link-macro-rx"></block> を参照してください。vVolデータストアでは、NFS、iSCSI、FC / FEoE、NVMe/FCの各プロトコルがサポートされます。</block>
@@ -1764,7 +1753,6 @@
   <block id="f3f47521549e89ed7cb7b073ea8a7d66" category="list-text">入力するコマンド<block ref="1679091c5a880faf6fb5e6087eb1b2dc" prefix=" " category="inline-code"></block> をクリックして*[管理者ユーザーパスワードの変更]*を選択します。</block>
   <block id="4fe6063d6d8500b42fd9878de1689157" category="list-text">8文字以上30文字以下のパスワードを入力します。パスワードには、上、下、数字、および特殊文字をそれぞれ1文字以上使用する必要があります。パスワードの有効期限の警告は、パスワードをリセットしてから75日後に表示されます。新しいパスワードを最後に使用したパスワードと同じにすることはできません。</block>
   <block id="2223c21ac625f0e9df4fbd3476db44ed" category="paragraph">パスワードの推奨事項に従っていない場合、メンテナンスコンソールのオプションはパスワードの変更に限定されます。パスワードの有効期限が切れると、パスワードの変更を求めるプロンプトが表示されます。</block>
-  <block id="c38b8f955a1f067bf2f51d940354b04d" category="paragraph">を参照してください <block ref="e3114922664a9d29184df9e8de358b9e" category="inline-link-macro-rx"></block>ONTAP tools for VMware vSphereのドキュメント_のセクションを参照してください。</block>
   <block id="9566e142d595702f8d77be59e617fade" category="list-text">ログ整合性レポート</block>
   <block id="e5c7f658fde95383afe704dfbf972436" category="list-text">データストアのタイプ（NFSおよびVMFS）</block>
   <block id="ac48ff6b348f6f42e4ba7777328ae401" category="paragraph">レポートを表示、整理、エクスポートできます。vVolデータストアおよび仮想マシンレポートのデータは、ONTAP から提供されます。</block>
@@ -1901,7 +1889,6 @@
   <block id="f09ce17953135a26f2f12c89bb1b9a79" category="paragraph">導入した ONTAP ツールの * Summary * タブを使用して、メンテナンスコンソールにアクセスする必要があります。をクリックします  <block ref="80abd5c70dec820fc31b07b6e3d6acac" category="inline-image-macro-rx" type="image"></block>をクリックすると、メンテナンスコンソールが起動します。</block>
   <block id="ad6409a6647b6007d0c59236c9a9526d" category="inline-image-macro">地球儀アイコン</block>
   <block id="de0b37295bc569e05978d71253c5fc03" category="list-text">をクリックします <block ref="10af7a3d6b71a29635365f6da600da8a" category="inline-image-macro-rx" type="image"></block> アイコンをクリックして、新しいネットワークマッピングを作成します。</block>
-  <block id="a86a5be1650520ca8fdf9ff8bc76967f" category="list-text">既存のONTAPツールアプライアンスを最新リリースにアップグレードします。</block>
   <block id="ceafa9243433e49b5a0576a4ed1cd4b5" category="list-text">WindowsベースのStorage Replication AdapterをアプライアンスベースのSRAに移行する</block>
   <block id="81f65208775e1359f20f81e36c085f41" category="list-text">Windows SRMのデータをSRMアプライアンスに移行します。</block>
   <block id="008e64a5de1742c87435cc61c7288a46" category="image-alt">新規ユーザと既存ユーザのワークフロー</block>
@@ -1927,9 +1914,6 @@ View *権限では、ONTAPツールGUIにアクセスできます。ONTAP tools�
   <block id="cd407a7dc68ec4931863b0a4b9511c12" category="summary">ONTAP tools for VMware vSphereには、SRA機能をONTAP toolsで使用してディザスタリカバリを設定するためのオプションがあります。</block>
   <block id="75d26898739bfbd118ceb40ee609588b" category="list-text">次のURLを使用してVMware SRMアプライアンス管理インターフェイスにアクセスします。<block ref="65934cfc97d2d08e8dbabc6019658190" category="inline-link-rx"></block>をクリックし、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。</block>
   <block id="fcfc4d0541fcfaef918a6982404c79f6" category="paragraph">VMFSデータストアのサイズ変更時にONTAP toolsでボリュームのサイズを変更できるようにするには、VMFSデータストアの初期プロビジョニング時に[ストレージ属性]セクションの*[既存のボリュームを使用]*オプションを使用せず、データストアごとに新しいボリュームが自動的に作成されるようにします。</block>
-  <block id="0660b9689bf2b0fa8177b2047a37e93b" category="paragraph">ストレージシステムのデフォルトクレデンシャルを設定すると、ONTAP toolsはこれらのクレデンシャルを使用して、ONTAP toolsが検出したストレージシステムにログインします。デフォルトクレデンシャルでログインできない場合は、ストレージシステムに手動でログインする必要があります。ONTAP toolsとSRAは、クラスタレベルまたはSVMレベルでストレージシステムのクレデンシャルの追加をサポートします。ただし、 VASA Provider はクラスタレベルのクレデンシャルとのみ連携します。</block>
-  <block id="4dc8b39d7d7b6d7c31dfedf281c6ce67" category="paragraph">ONTAP toolsを使用して、ストレージコントローラのユーザ名とパスワードのペアに関連付けられているロールを変更することはできません。ONTAP ツールで使用する新しい ONTAP ユーザロールを変更または作成するには、 System Manager を使用します。</block>
-  <block id="abfa917bee29e9d6901145eb371db3c3" category="paragraph">ストレージシステムが報告したためにストレージシステムのクレデンシャルを更新した場合<block ref="b7aa7656b58c3a7862a86f5f8cd10336" prefix=" " category="inline-code"></block> ステータスが表示されたら、[ストレージシステム]ページの*[すべて再検出]*オプションをクリックします。この場合、ONTAP toolsは新しいクレデンシャルを使用してストレージシステムへの接続を試みます。</block>
   <block id="51f5ef577515311d873f15616c367953" category="summary">VASA Provider（VP）仮想アプライアンスが失われた場合、アクセスできなくなった場合、または機能しなくなった場合は、VPディザスタリカバリの実行が必要になることがあります。 </block>
   <block id="b8d4b381d817836a8a1f3e5c51418019" category="doc">VASA Providerのディザスタリカバリ</block>
   <block id="6799b6ec743f9159edf3b43790210a11" category="inline-link">『How to perform a VASA Provider Disaster Recovery - Resolution Guide』</block>
@@ -2154,4 +2138,8 @@ syslogを設定するには、次の手順に従います。</block>
 ただし、 vCenter を最新の FIPS サポートバージョンにアップグレードした場合に、以前のバージョンの ONTAP ツールを使用していれば、 FIPS が vCenter で無効になっていれば導入は機能します。</block>
   <block id="700f785cc3b0c94782ea099d30974628" category="paragraph">Storage Replication Adapter（SRA）は、NFS、iSCSI、およびFCPプロトコルを使用するMetroCluster構成（MCC）を使用する環境をサポートします。</block>
   <block id="b0cf503432f798961e23d246f3541857" category="paragraph">MCC SRA設定を行うための前提条件として、Storage Virtual Machine（SVM）名はすべてMCCクラスタで一意である必要があります。名前が一意でないと競合が発生し、SRAのワークフローが失敗します。</block>
+  <block id="ebfe914a124eb1ec0cc1d8f6d6c420cb" category="list-text">vSphere 8.xは、NetApp NFS VAAIプラグイン2.0.1（ビルド16）でサポートされます。</block>
+  <block id="142666c1fbe08e639361aca9fb6d3d5a" category="list-text">既存のONTAP toolsアプライアンスを最新リリースにアップグレードします。</block>
+  <block id="7ffdc51b9c93dfaa755052457f971d9e" category="list-text">vCenter Serverで、ONTAP toolsアプライアンス仮想マシンへのコンソールを開きます。</block>
+  <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP toolsのロールベースアクセス制御の概要</block>
 </blocks>
