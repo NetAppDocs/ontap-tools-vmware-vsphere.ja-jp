@@ -1,0 +1,2957 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>vVol データストアにストレージを追加する</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="vVol データストアにストレージを追加する" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+	<meta property="og:description" content="ストレージの追加ウィザードを使用して既存の VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームを追加することで、利用可能なストレージ容量を増やすことができます。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="ストレージの追加ウィザードを使用して既存の VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームを追加することで、利用可能なストレージ容量を増やすことができます。">
+  <meta name="keywords" content=" virtual volume datastores"><!-- Icons -->
+  <link rel="icon" href="/ja-jp/ontap-tools-vmware-vsphere/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/ontap-tools-vmware-vsphere/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ja-jp/ontap-tools-vmware-vsphere/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/ontap-tools-vmware-vsphere/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/ontap-tools-vmware-vsphere/js/na-search.js'></script><script src='/ja-jp/ontap-tools-vmware-vsphere/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ja-jp/ontap-tools-vmware-vsphere/js/custom-dropdown.js'></script>
+  <script src='/ja-jp/ontap-tools-vmware-vsphere/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/ontap-tools-vmware-vsphere/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/ontap-tools-vmware-vsphere/js/jszip.min.js'></script><script src='/ja-jp/ontap-tools-vmware-vsphere/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor="">
+    <div class="skip-to-main">
+      <a href="#main" >Skip to main content</a>
+    </div><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ja-jp/ontap-tools-vmware-vsphere/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/ja/">
+                <image id="ie-header-logo" src="/ja-jp/ontap-tools-vmware-vsphere/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/ja/support-and-training/documentation/">ドキュメント</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">日本語</span>
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">すべてのNetApp</span>
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/ja/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">サポート</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb-ja.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">ナレッジ ベース</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">トレーニング</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ja-jp/ontap-tools-vmware-vsphere/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">すべてのドキュメント</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ja-jp/ontap-tools-vmware-vsphere/">-->
+      ONTAP tools for VMware vSphere 9.13
+    <!--</a>-->
+  </div>
+</div>
+
+            
+<div id="ie-selectors"><div id="version-dropdown-new" class="custom-dropdown" >
+  <div class="custom-dropdown-select unselected" title=" 9.13">
+    <label>バージョン</label>
+    <span translate="no" class="notranslate">9.13</span>
+    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown version invisible" />
+    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup version" />
+  </div>
+
+  <ul class="custom-dropdown-menu"><li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.13</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere-912/manage/task_add_storage_to_a_vvol_datastore.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.12</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere-911/manage/task_add_storage_to_a_vvol_datastore.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.11</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere-910/manage/task_add_storage_to_a_vvol_datastore.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.10</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere-98/manage/task_add_storage_to_a_vvol_datastore.html" target="_self">
+        <span translate="no" class="notranslate"><span class="version"> 9.8</span></span>
+      </a>
+                     
+    </li>
+    
+  </ul>
+</div></div>
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ja-jp/ontap-tools-vmware-vsphere/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ja-jp/ontap-tools-vmware-vsphere/search.html" 
+        data-type="widget"
+        data-placeholder="ドキュメントを検索"
+        data-no-results-found="{query}に一致する結果は見つかりませんでした"
+        data-did-you-mean="{suggestion}で検索しています。"
+        data-no-results-found-did-you-mean="{query}に一致する結果は見つかりませんでした。{suggestion}で検索しますか？"
+        data-results-found="{hitCount}件の結果が見つかりました"
+        data-error-message="エラーが発生しました。もう一度お試しください。"
+        data-error-reset="検索をリセット"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Tools for VMware vSphere 9.13のドキュメント"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-tools-vmware-vsphere/index.html">
+        ONTAP Tools for VMware vSphere 9.13のドキュメント
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リリースノート"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/release_notes.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-tools-vmware-vsphere/release_notes.html">
+        リリースノート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概念"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 概念</div>-->
+         概念
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールの概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_virtual_storage_console_overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_virtual_storage_console_overview.html">
+        ONTAP ツールの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL 向けの VASA Provider の設定"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_configure_vvols_datastores.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_configure_vvols_datastores.html">
+        VVOL 向けの VASA Provider の設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ディザスタリカバリ用の Storage Replication Adapter"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_manage_disaster_recovery_setup_using_srm.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_manage_disaster_recovery_setup_using_srm.html">
+        ディザスタリカバリ用の Storage Replication Adapter
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ロールベースアクセス制御"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ロールベースアクセス制御</div>-->
+         ロールベースアクセス制御
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP toolsのロールベースアクセス制御の概要"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_vcenter_server_role_based_access_control_features_in_vsc_for_vmware_vsphere.html">
+        ONTAP toolsのロールベースアクセス制御の概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vCenter Server アクセス許可の要素"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/reference_components_that_make_up_vcenter_server_permissions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/reference_components_that_make_up_vcenter_server_permissions.html">
+        vCenter Server アクセス許可の要素
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vCenter Server のアクセス許可の割り当てと変更に関する要点"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/reference_key_points_about_assigning_and_modifying_permissions.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/reference_key_points_about_assigning_and_modifying_permissions.html">
+        vCenter Server のアクセス許可の割り当てと変更に関する要点
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールに付属の標準ロール"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールに付属の標準ロール
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP toolsのタスクに必要な権限"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_privileges_required_for_vsc_tasks.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_privileges_required_for_vsc_tasks.html">
+        ONTAP toolsのタスクに必要な権限
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ストレージシステムおよび vSphere オブジェクトの権限"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html">
+        ONTAP ストレージシステムおよび vSphere オブジェクトの権限
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールのロールベースアクセス制御の設定方法"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_how_to_configure_data_ontap_role_based_access_control_for_vsc_for_vmware_vsphere.html">
+        ONTAP ツールのロールベースアクセス制御の設定方法
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールのハイアベイラビリティを設定する"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/concept_configure_high_availability_for_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールのハイアベイラビリティを設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールでサポートされる MetroCluster 構成"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールでサポートされる MetroCluster 構成
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを導入してアップグレード"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールを導入してアップグレード</div>-->
+         ONTAP ツールを導入してアップグレード
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/concept_installation_workflow_for_new_users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_installation_workflow_for_new_users.html">
+        VMware vSphere 用 ONTAP ツールの新規ユーザ向けの導入ワークフロー
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールの既存ユーザ向けの導入ワークフロー"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_installation_workflow_for_existing_users_of_ontap_tools.html">
+        ONTAP ツールの既存ユーザ向けの導入ワークフロー
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールの VMware Cloud Foundation 配置モード"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/vmware_cloud_foundation_mode_deployment.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/vmware_cloud_foundation_mode_deployment.html">
+        ONTAP ツールの VMware Cloud Foundation 配置モード
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールクイックスタート"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/qsg.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/qsg.html">
+        ONTAP ツールクイックスタート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを導入するための要件"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールを導入するための要件</div>-->
+         ONTAP ツールを導入するための要件
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP toolsのポート要件"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/reference_port_requirements_for_vsc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/reference_port_requirements_for_vsc.html">
+        ONTAP toolsのポート要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールのスペースとサイジングの要件"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_space_and_sizing_requirements_for_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールのスペースとサイジングの要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールでサポートされているストレージシステム、ライセンス、およびアプリケーション"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/concept_supported_storage_system_and_applications.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_supported_storage_system_and_applications.html">
+        ONTAP ツールでサポートされているストレージシステム、ライセンス、およびアプリケーション
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールの導入に関する考慮事項"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールの導入に関する考慮事項
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを導入"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールを導入</div>-->
+         ONTAP ツールを導入
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールのダウンロード方法"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/concept_how_to_download_ontap_tools.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/concept_how_to_download_ontap_tools.html">
+        ONTAP ツールのダウンロード方法
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールの導入方法"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/task_deploy_ontap_tools.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/task_deploy_ontap_tools.html">
+        ONTAP ツールの導入方法
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="仮想データストアを設定するための VASA Provider の有効化"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html">
+        仮想データストアを設定するための VASA Provider の有効化
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NFS VAAI プラグインをインストールします"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/task_install_the_nfs_vaai_plug_in.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/task_install_the_nfs_vaai_plug_in.html">
+        NFS VAAI プラグインをインストールします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/task_clean_the_vsphere_cached_downloaded_plug_in_packages.html">
+        vSphere にキャッシュされているダウンロード済みプラグインパッケージをクリアします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールをアップグレードする"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールをアップグレードする</div>-->
+         ONTAP ツールをアップグレードする
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールの最新リリースにアップグレードします"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールの最新リリースにアップグレードします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Storage Replication Adapter をアップグレードする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/deploy/task_upgrade_storage_replication_adapter.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/deploy/task_upgrade_storage_replication_adapter.html">
+        Storage Replication Adapter をアップグレードする
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを設定する"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールを設定する</div>-->
+         ONTAP ツールを設定する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを設定するためのワークフロー"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/concept_workflow_for_configuring_the_unified_appliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/concept_workflow_for_configuring_the_unified_appliance.html">
+        ONTAP ツールを設定するためのワークフロー
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi を設定します"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ESXi を設定します</div>-->
+         ESXi を設定します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi サーバのマルチパスとタイムアウトを設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_configure_esx_server_multipathing_and_timeout_settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_configure_esx_server_multipathing_and_timeout_settings.html">
+        ESXi サーバのマルチパスとタイムアウトを設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを使用して設定される ESXi ホストの値"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html">
+        ONTAP ツールを使用して設定される ESXi ホストの値
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ゲストオペレーティングシステムを設定する"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ゲストオペレーティングシステムを設定する</div>-->
+         ゲストオペレーティングシステムを設定する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ゲストオペレーティングシステムスクリプトを設定する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/reference_configure_guest_operating_system_scripts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_configure_guest_operating_system_scripts.html">
+        ゲストオペレーティングシステムスクリプトを設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows ゲストオペレーティングシステムのタイムアウト値を設定します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_run_the_gos_timeout_scripts_for_windows.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_windows.html">
+        Windows ゲストオペレーティングシステムのタイムアウト値を設定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Solaris ゲストオペレーティングシステムのタイムアウト値を設定します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_run_the_gos_timeout_scripts_for_solaris.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_solaris.html">
+        Solaris ゲストオペレーティングシステムのタイムアウト値を設定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Linux ゲストオペレーティングシステムのタイムアウト値を設定します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_run_the_gos_timeout_scripts_for_rhel4_or_sles9.html">
+        Linux ゲストオペレーティングシステムのタイムアウト値を設定します
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="複数のvCenter Server環境でONTAP Toolsを登録するための要件"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html">
+        複数のvCenter Server環境でONTAP Toolsを登録するための要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールプリファレンスファイルを設定します"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールプリファレンスファイルを設定します</div>-->
+         ONTAP ツールプリファレンスファイルを設定します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="プリファレンスファイルを使用して IPv4 または IPv6 を設定してください"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/reference_set_ipv4_or_ipv6.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_set_ipv4_or_ipv6.html">
+        プリファレンスファイルを使用して IPv4 または IPv6 を設定してください
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="別のサブネットを追加してください"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/add_different_subnets.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/add_different_subnets.html">
+        別のサブネットを追加してください
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="異なるサブネット間でのデータストアのマウントを有効にする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_enable_datastore_mounting_across_different_subnets.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_enable_datastore_mounting_across_different_subnets.html">
+        異なるサブネット間でのデータストアのマウントを有効にする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP toolsのSSL証明書を再生成する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_regenerate_an_ssl_certificate_for_vsc.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_regenerate_an_ssl_certificate_for_vsc.html">
+        ONTAP toolsのSSL証明書を再生成する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムを設定する"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ストレージシステムを設定する</div>-->
+         ストレージシステムを設定する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツール用のストレージシステムの概要"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/concept_configure_storage_systems_for_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツール用のストレージシステムの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムを追加"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_add_storage_systems.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_add_storage_systems.html">
+        ストレージシステムを追加
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムを変更"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_modify_storage_system.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_modify_storage_system.html">
+        ストレージシステムを変更
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="証明書を更新します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_update_certificate.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_update_certificate.html">
+        証明書を更新します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムとホストを検出"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_discover_storage_systems_and_hosts.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_discover_storage_systems_and_hosts.html">
+        ストレージシステムとホストを検出
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムの表示を更新します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_refresh_the_storage_system_display.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_refresh_the_storage_system_display.html">
+        ストレージシステムの表示を更新します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="アラームしきい値を設定する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_configure_alarm_thresholds.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_configure_alarm_thresholds.html">
+        アラームしきい値を設定する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ユーザロールと権限を設定"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_configure_user_role_and_privileges.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_configure_user_role_and_privileges.html">
+        ユーザロールと権限を設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージ機能プロファイルを設定する"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ストレージ機能プロファイルを設定する</div>-->
+         ストレージ機能プロファイルを設定する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージ機能プロファイルの概要"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/concept_configure_storage_capability_profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/concept_configure_storage_capability_profiles.html">
+        ストレージ機能プロファイルの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージ機能プロファイルを作成する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_create_storage_capability_profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_create_storage_capability_profiles.html">
+        ストレージ機能プロファイルを作成する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージ機能プロファイルを自動的に生成する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_automatically_generating_scps.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_automatically_generating_scps.html">
+        ストレージ機能プロファイルを自動的に生成する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアを設定する"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> データストアを設定する</div>-->
+         データストアを設定する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="従来のデータストアをプロビジョニングする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_provision_datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_provision_datastores.html">
+        従来のデータストアをプロビジョニングする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアとストレージ機能プロファイルのマッピング"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_map_storage_to_storage_capability_profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_map_storage_to_storage_capability_profiles.html">
+        データストアとストレージ機能プロファイルのマッピング
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="QoS ポリシーを割り当てる"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_assign_qos_policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_assign_qos_policies.html">
+        QoS ポリシーを割り当てる
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="マッピングしたストレージ機能プロファイルにデータストアが準拠しているかどうかを確認する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_check_for_datastore_compliance_with_the_mapped_storage_capability_profile.html">
+        マッピングしたストレージ機能プロファイルにデータストアが準拠しているかどうかを確認する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vVol データストアをプロビジョニングする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/task_provision_vvols_datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/task_provision_vvols_datastores.html">
+        vVol データストアをプロビジョニングする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVol データストアのリバランシング"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/reference_rebalance_vvols_datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_rebalance_vvols_datastore.html">
+        VVol データストアのリバランシング
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vVolデータストアを削除する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/configure/reference_delete_vvols.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/configure/reference_delete_vvols.html">
+        vVolデータストアを削除する
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアと仮想マシンを保護"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> データストアと仮想マシンを保護</div>-->
+         データストアと仮想マシンを保護
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアを保護するには、 Storage Replication Adapter を有効にします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_enable_storage_replication_adapter.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_enable_storage_replication_adapter.html">
+        データストアを保護するには、 Storage Replication Adapter を有効にします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ディザスタリカバリ用にストレージシステムを設定する"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ディザスタリカバリ用にストレージシステムを設定する</div>-->
+         ディザスタリカバリ用にストレージシステムを設定する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SAN および NAS のストレージシステムを設定する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_storage_replication_adapter_for_san_environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_storage_replication_adapter_for_san_environment.html">
+        SAN および NAS のストレージシステムを設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="大規模な環境向けにストレージを構成"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/reference_configure_storage_replication_adapter_for_highly_scaled_environment.html">
+        大規模な環境向けにストレージを構成
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="共有リカバリサイト設定でのSRAとSRMの設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/configure_sra_with_srm_shared_site.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_sra_with_srm_shared_site.html">
+        共有リカバリサイト設定でのSRAとSRMの設定
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRM アプライアンスで SRA を設定する"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_sra_on_srm_appliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_sra_on_srm_appliance.html">
+        SRM アプライアンスで SRA を設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SRA クレデンシャルを更新する"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_update_sra_credentials.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_update_sra_credentials.html">
+        SRA クレデンシャルを更新する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows SRM を SRM アプライアンスに移行します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/concept_migration_of_disaster_recovery_setup_from_windows_to_appliance.html">
+        Windows SRM を SRM アプライアンスに移行します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/concept_configure_replication_for_vvols_datastore.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/concept_configure_replication_for_vvols_datastore.html">
+        仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="既存のデータストア用に VVol レプリケーションを設定する"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/configure_vvols_replication_existing_datastore.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/configure_vvols_replication_existing_datastore.html">
+        既存のデータストア用に VVol レプリケーションを設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護されていない仮想マシンを保護"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_protect_non_protected_virtual_machines.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_protect_non_protected_virtual_machines.html">
+        保護されていない仮想マシンを保護
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護対象サイトとリカバリサイトを設定"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 保護対象サイトとリカバリサイトを設定</div>-->
+         保護対象サイトとリカバリサイトを設定
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="仮想マシンストレージポリシーを設定"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_vm_storage_policies.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_vm_storage_policies.html">
+        仮想マシンストレージポリシーを設定
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護グループを設定します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_protection_groups.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_protection_groups.html">
+        保護グループを設定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護対象サイトとリカバリサイトをペアリング"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_pair_protected_and_recovery_sites.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_pair_protected_and_recovery_sites.html">
+        保護対象サイトとリカバリサイトをペアリング
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保護対象サイトとリカバリサイトのリソースを設定"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-3  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 保護対象サイトとリカバリサイトのリソースを設定</div>-->
+         保護対象サイトとリカバリサイトのリソースを設定
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ネットワークマッピングを設定します"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_network_mappings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_network_mappings.html">
+        ネットワークマッピングを設定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="フォルダマッピングを設定します"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_folder_mappings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_folder_mappings.html">
+        フォルダマッピングを設定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リソースマッピングを設定する"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_resource_mappings.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_resource_mappings.html">
+        リソースマッピングを設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージポリシーをマッピングする"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_map_storage_policies.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_map_storage_policies.html">
+        ストレージポリシーをマッピングする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="プレースホルダデータストアを設定します"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_placeholder_datastores.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_placeholder_datastores.html">
+        プレースホルダデータストアを設定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="アレイマネージャを使用して SRA を設定する"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_configure_array_manager.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_configure_array_manager.html">
+        アレイマネージャを使用して SRA を設定する
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="レプリケートされたストレージシステムを確認"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/protect/task_verify_the_replicated_storage_environment.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/protect/task_verify_the_replicated_storage_environment.html">
+        レプリケートされたストレージシステムを確認
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールを管理します"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールを管理します</div>-->
+         ONTAP ツールを管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアを管理します"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> データストアを管理します</div>-->
+         データストアを管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアを追加のホストにマウントする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_mount_datastores_on_host.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_mount_datastores_on_host.html">
+        データストアを追加のホストにマウントする
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアのサイズを変更"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_resize_datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_resize_datastores.html">
+        データストアのサイズを変更
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vVol データストアを編集する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_edit_a_vvol_datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_edit_a_vvol_datastore.html">
+        vVol データストアを編集する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vVol データストアにストレージを追加する"
+      data-li-level="3#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html">
+        vVol データストアにストレージを追加する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vVol データストアからストレージを削除する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_remove_storage_from_a_vvols_datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_remove_storage_from_a_vvols_datastore.html">
+        vVol データストアからストレージを削除する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VVOL データストアをマウントする"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_mount_a_vvols_datastore.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_mount_a_vvols_datastore.html">
+        VVOL データストアをマウントする
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="仮想マシンを管理"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 仮想マシンを管理</div>-->
+         仮想マシンを管理
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="仮想マシンの移行またはクローニングに関する考慮事項"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/reference_considerations_for_migrating_virtual_machines.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/reference_considerations_for_migrating_virtual_machines.html">
+        仮想マシンの移行またはクローニングに関する考慮事項
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="従来の仮想マシンを VVOL データストアに移行する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_migrate_standard_virtual_machines_to_vvols_datastores.html">
+        従来の仮想マシンを VVOL データストアに移行する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="以前のストレージ機能プロファイルを使用して仮想マシンを移行する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_migrate_virtual_machines_with_older_storage_capability_profiles.html">
+        以前のストレージ機能プロファイルを使用して仮想マシンを移行する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VASAクリーンアップ"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_delete_virtual_machines.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_delete_virtual_machines.html">
+        VASAクリーンアップ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ESXi ホストの設定の変更"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_edit_esxi_host_settings.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_edit_esxi_host_settings.html">
+        ESXi ホストの設定の変更
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールのメンテナンスコンソールにアクセスします"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ONTAP ツールのメンテナンスコンソールにアクセスします</div>-->
+         ONTAP ツールのメンテナンスコンソールにアクセスします
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP ツールメンテナンスコンソールの概要"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/reference_maintenance_console_of_ontap_tools_for_vmware_vsphere.html">
+        ONTAP ツールメンテナンスコンソールの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAPツールとVASA Providerのログファイル"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/concept_virtual_storage_console_and_vasa_provider_log_files.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/concept_virtual_storage_console_and_vasa_provider_log_files.html">
+        ONTAPツールとVASA Providerのログファイル
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="管理者パスワードを変更します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_change_the_administrative_password.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_change_the_administrative_password.html">
+        管理者パスワードを変更します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SSH を使用するように VASA Provider を設定する"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_configure_vasa_provider_to_work_with_ssh.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_configure_vasa_provider_to_work_with_ssh.html">
+        SSH を使用するように VASA Provider を設定する
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リモート診断アクセスを設定します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_configure_vasa_provider_to_use_ssh_for_remote_diag_access.html">
+        リモート診断アクセスを設定します
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ログファイルを収集します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_collect_the_log_files.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_collect_the_log_files.html">
+        ログファイルを収集します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="syslogを管理します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_syslog_files.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_syslog_files.html">
+        syslogを管理します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="データストアと VVol レポートのパフォーマンスを監視する"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-2  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/ontap-tools-vmware-vsphere/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> データストアと VVol レポートのパフォーマンスを監視する</div>-->
+         データストアと VVol レポートのパフォーマンスを監視する
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAP Tools のデータストアと仮想マシンレポートの概要"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/concept_virtual_storage_console_reports.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/concept_virtual_storage_console_reports.html">
+        ONTAP Tools のデータストアと仮想マシンレポートの概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="従来のダッシュボードを使用してパフォーマンスデータを分析"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_monitor_datastores_using_the_traditional_dashboard.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_monitor_datastores_using_the_traditional_dashboard.html">
+        従来のダッシュボードを使用してパフォーマンスデータを分析
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="vVol ダッシュボードを使用してパフォーマンスデータを分析します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/task_monitor_vvols_datastores_and_virtual_machines_using_vvols_dashboard.html">
+        vVol ダッシュボードを使用してパフォーマンスデータを分析します
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="VASA Providerのディザスタリカバリ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/manage/vasa_provider_disaster_recovery.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/ontap-tools-vmware-vsphere/manage/vasa_provider_disaster_recovery.html">
+        VASA Providerのディザスタリカバリ
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法的通知"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/manage/task_add_storage_to_a_vvol_datastore.html" 
+      dale-entry-url="/legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/ontap-tools-vmware-vsphere/legal-notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ja-jp/ontap-tools-vmware-vsphere"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ja-jp/ontap-tools-vmware-vsphere"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ja-jp/ontap-tools-vmware-vsphere/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">vVol データストアにストレージを追加する</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2023-09-12 09:24:08 +0000">09/12/2023</time>
+        
+    
+    
+        <span>共同作成者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ja-jp/ontap-tools-vmware-vsphere/images/discuss-sm.svg" alt="" class="github-icon" />変更を提案</span>
+        <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere.ja-jp/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ja-jp/ontap-tools-vmware-vsphere/manage/task_add_storage_to_a_vvol_datastore.html&page-title=vVol データストアにストレージを追加する" class="page-nav-contribute-link" role="button">ドキュメントの変更をリクエスト</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/ontap-tools-vmware-vsphere/blob/main/manage/task_add_storage_to_a_vvol_datastore.adoc" class="page-nav-contribute-link" role="button">このページを編集</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >フィードバックを送るには</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ja-jp/ontap-tools-vmware-vsphere/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/fullsite-sidebar/VMware_vSphere_ドキュメント用の_ONTAP_ツール.pdf" >
+                    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>このドキュメント ページのPDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/概念.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            概念
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ロールベースアクセス制御.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ロールベースアクセス制御
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールを導入してアップグレード.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールを導入してアップグレード
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールを導入するための要件.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールを導入するための要件
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールを導入.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールを導入
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールをアップグレードする.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールをアップグレードする
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールを設定する
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ESXi_を設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ESXi を設定します
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ゲストオペレーティングシステムを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ゲストオペレーティングシステムを設定する
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールプリファレンスファイルを設定します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールプリファレンスファイルを設定します
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ストレージシステムを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ストレージシステムを設定する
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ストレージ機能プロファイルを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ストレージ機能プロファイルを設定する
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/データストアを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            データストアを設定する
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/データストアと仮想マシンを保護.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            データストアと仮想マシンを保護
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ディザスタリカバリ用にストレージシステムを設定する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ディザスタリカバリ用にストレージシステムを設定する
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/保護対象サイトとリカバリサイトを設定.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            保護対象サイトとリカバリサイトを設定
+          </a>
+          
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/保護対象サイトとリカバリサイトのリソースを設定.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            保護対象サイトとリカバリサイトのリソースを設定
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールを管理します
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/データストアを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            データストアを管理します
+          </a>
+          
+
+
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/仮想マシンを管理.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            仮想マシンを管理
+          </a>
+          
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/ONTAP_ツールのメンテナンスコンソールにアクセスします.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ONTAP ツールのメンテナンスコンソールにアクセスします
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/ontap-tools-vmware-vsphere/pdfs/sidebar/データストアと_VVol_レポートのパフォーマンスを監視する.pdf" 
+            
+          >
+            <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-icon.png" alt="" width="16" height="16"/>
+            データストアと VVol レポートのパフォーマンスを監視する
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ja-jp/ontap-tools-vmware-vsphere/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>PDF版ドキュメントのセット<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+
+
+
+<div class="content-to-index">
+<div class="paragraph lead">
+<p>ストレージの追加ウィザードを使用して既存の VMware 仮想ボリューム（ vVol ）データストアに FlexVol ボリュームを追加することで、利用可能なストレージ容量を増やすことができます。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>このタスクについて *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>FlexVol ボリュームを追加する際、そのボリュームに関連付けられるストレージ機能プロファイルを変更することもできます。VASA Provider の自動生成機能を使用してボリュームの新しいプロファイルを作成する方法と、既存のいずれかのプロファイルをボリュームに割り当てる方法があります。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-tools-vmware-vsphere/images/note.svg" alt="メモ">
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>レプリケーション機能を使用して VVOL データストアを拡張する場合、新しい FlexVol は作成できませんが、設定済みの FlexVol ボリュームだけを既存のリストから選択できます。</p>
+</li>
+<li>
+<p>スペース不足が原因で、 VVOL レプリケーションを使用するデータストアに導入されている保護対象の仮想マシンのクローニングが失敗する場合は、 FlexVol のサイズを増やす必要があります。</p>
+</li>
+<li>
+<p>AFFまたはASAクラスタにvVolデータストアを作成した場合、自動生成のストレージ機能プロファイルが設定された別のFlexVolボリュームでデータストアを拡張することはできません。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ストレージ機能プロファイルが事前に作成されている FlexVol を使用して、 VVOL データストアを拡張することができます。</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>手順 *</p>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>vSphere Client のホームページで、 * Hosts and Clusters * をクリックします。</p>
+</li>
+<li>
+<p>VVOL データストアを右クリックし、 * NetApp ONTAP tools * &gt; * Expand Storage of Vvol Datastore * を選択します。</p>
+</li>
+<li>
+<p>vVol データストアのストレージの拡張ページで、既存の FlexVol を vVol データストアに追加するか、データベースに追加する新しい FlexVol を作成することができます。</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* を選択した場合 *</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">* 次の手順を実行します。 *</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>ボリュームを選択します</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>vVol データストアに追加する FlexVol を選択します。</p>
+</li>
+<li>
+<p>ストレージ機能プロファイル列で、ドロップダウンリストを使用して、 FlexVol ボリュームに基づいて新しいプロファイルを作成するか、既存のプロファイルのいずれかを選択します。</p>
+<div class="paragraph">
+<p>自動生成機能を使用すると、その FlexVol に関連付けられたストレージ機能に基づいてプロファイルが作成されます。たとえば、ディスクタイプ、高可用性、ディザスタリカバリ、パフォーマンス機能、重複排除などです。</p>
+</div>
+</li>
+</ol>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>新しいボリュームを作成する</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>FlexVol の名前、サイズ、およびストレージ機能プロファイルを入力します。</p>
+<div class="paragraph">
+<p>選択したストレージ機能プロファイルに基づいて、アグリゲートが選択されます。</p>
+</div>
+</li>
+<li>
+<p>「 * Auto grow * 」オプションを選択し、最大サイズを指定します。</p>
+</li>
+<li>
+<p>FlexVol をボリュームのリストに追加するには、 * add * をクリックします。</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>注意： VVOL データストアに追加する FlexVol は、すべて同じ Storage Virtual Machine （ SVM 、旧 Vserver ）のものでなければなりません。</p>
+<div class="paragraph">
+<p>FlexVol ボリュームを作成したら、 * Modify * ボタンをクリックしてボリュームを編集できます。削除することもできます。</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>仮想マシンの作成時に使用するデフォルトのストレージ機能プロファイルを選択し、 * Next * をクリックして、 VVOL データストアに追加されたストレージの概要を確認します。</p>
+</li>
+<li>
+<p>[ 完了 ] をクリックします。</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>結果 *</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>指定したストレージが vVol データストアに追加されます。処理が完了すると、成功メッセージが表示されます。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/ontap-tools-vmware-vsphere/images/note.svg" alt="メモ">
+</td>
+<td class="content">
+ESXi ストレージの再スキャンなどの必要な処理は、 vVol データストアのストレージの拡張ウィザードで自動的に実行されます。VVOL データストアは論理エンティティであり、 VASA Provider で制御されるため、 FlexVol を追加するだけでストレージコンテナの容量を拡張することができます。
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+
+
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ja-jp/ontap-tools-vmware-vsphere/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ja-jp/ontap-tools-vmware-vsphere/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">このページ</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2024 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">ご利用規約</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">このページに関するフィードバックをお寄せください</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/ontap-tools-vmware-vsphere/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/ontap-tools-vmware-vsphere/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/ontap-tools-vmware-vsphere/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/ontap-tools-vmware-vsphere/js/ie-tabbed-blocks.js'></script>
+    <script src='/ja-jp/ontap-tools-vmware-vsphere/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
