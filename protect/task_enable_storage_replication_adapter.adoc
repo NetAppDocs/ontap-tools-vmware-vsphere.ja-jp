@@ -40,7 +40,7 @@ VASA Provider と SRA の機能を柔軟に有効化できるため、必要な�
 * SRM アプライアンスの場合 *
 
 +
-.. 次のURLを使用してVMware SRMアプライアンス管理インターフェイスにアクセスします。 https://:<srm_ip>:5480[]をクリックし、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。
+.. URL：\https：//：<srm_ip>：5480を使用してVMware SRMアプライアンス管理インターフェイスにアクセスし、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。
 .. [ 新しいアダプタ ] をクリックします。
 .. SRA プラグインの .tar.gz_installer を SRM にアップロードします。
 .. アダプタを再スキャンして、 [SRM Storage Replication Adapters] ページで詳細が更新されていることを確認します。

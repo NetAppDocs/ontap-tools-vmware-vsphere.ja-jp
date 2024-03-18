@@ -34,4 +34,4 @@ VMware vSphere 用 ONTAP ツールのメンテナンスメニューでは、要�
 * VASA Provider サーバー： vvolvp.log ' error.log ' および NetApp.log
 
 
-また、 VASA Provider Web コマンドラインインターフェイス（ CLI ）ページで、実行された API 呼び出し、返されたエラー、パフォーマンス関連のいくつかのカウンタを確認できます。Web CLI ページは https://<IP_address_or_hostname>:9083/stats` にあります
+また、 VASA Provider Web コマンドラインインターフェイス（ CLI ）ページで、実行された API 呼び出し、返されたエラー、パフォーマンス関連のいくつかのカウンタを確認できます。Web CLI ページには、からアクセスできます `\https://<IP_address_or_hostname>:9083/stats`。

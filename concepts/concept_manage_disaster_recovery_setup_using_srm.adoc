@@ -32,7 +32,7 @@ quick_resyncフラグを有効にすると、SRAで再保護とリストアの�
 quick_resyncフラグを有効にするには、次の手順に従います。
 
 .手順
-. コントロールパネル（_https://<IP address> ：9083_）にログインし、[WebベースのCLIインターフェイス]をクリックします。
+. コントロールパネルにログインします。 `/https://<IP address>:9083` [Web based CLI interface]をクリックします。
 . コマンドを実行します `vp updateconfig -key=snapmirror.quick.resync.enabled -value=true`。
 . コマンドを実行します `vp reloadconfig`。
 

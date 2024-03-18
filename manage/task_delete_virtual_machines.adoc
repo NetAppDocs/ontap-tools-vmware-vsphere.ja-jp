@@ -18,7 +18,7 @@ NOTE: VASAクリーンアップを実行する前に、VVOLデータストアを
 
 * 手順 *
 
-. に移動してプラグインの登録を解除します https://OTV_IP:8143/Register.html[]
+. に移動してプラグインの登録を解除します `\https://OTV_IP:8143/Register.html`
 . プラグインがvCenterで使用できなくなったことを確認します。
 . ONTAP Tools for VMware vSphere VMをシャットダウンします
 . ONTAP Tools for VMware vSphere VMを削除します

@@ -88,7 +88,7 @@ ESXi サーバの値のほとんどはデフォルトで設定されますが、
  a| 
 Role-Based Access Control （ RBAC ；ロールベースアクセス制御）の要件
  a| 
-ONTAP toolsは、vCenter Server RBACとONTAP RBACの両方をサポートしています。ONTAP toolsをvCenter Serverに登録するために使用するアカウント (`https://<appliance_ip>:8143/Register.html`）は、vCenter Server管理者（vCenter Server管理者または管理者ロールに割り当てられている）である必要があります。管理者としてONTAP toolsを実行する場合は、すべてのタスクに必要なすべての権限と権限が必要です。
+ONTAP toolsは、vCenter Server RBACとONTAP RBACの両方をサポートしています。ONTAP toolsをvCenter Serverに登録するために使用するアカウント (`\https://<appliance_ip>:8143/Register.html`）は、vCenter Server管理者（vCenter Server管理者または管理者ロールに割り当てられている）である必要があります。管理者としてONTAP toolsを実行する場合は、すべてのタスクに必要なすべての権限と権限が必要です。
 
 vSphereオブジェクトへのアクセスを制限する必要がある場合は、vCenter Serverの要件を満たすように、標準のONTAP toolsロールを作成してユーザに割り当てることができます。
 

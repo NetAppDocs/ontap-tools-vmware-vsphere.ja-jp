@@ -523,7 +523,6 @@
   <block id="dd4ec0ac4e58f7c32a01244ae91150b1" category="list-text">トレース</block>
   <block id="9ff27fc85a44a3274e7e779c13f7577a" category="paragraph">ログレベルを設定すると、次のファイルが更新されます。</block>
   <block id="f1f409d06227655b44db47cffc05ae2f" category="list-text">VASA Provider サーバ： vvolvp.log 、「 error.log 」、「 NetApp.log 」</block>
-  <block id="82ad51135403b59dbf2e19b9982d1c0f" category="paragraph">また、 VASA Provider Web コマンドラインインターフェイス（ CLI ）ページで、実行された API 呼び出し、返されたエラー、パフォーマンス関連のいくつかのカウンタを確認できます。Web CLI ページには、からアクセスできます <block ref="60696c971270edd12bf40744ca6e0cf8" category="inline-link-rx"></block>。</block>
   <block id="25dc594dc60849e3010a2396a876551b" category="doc">ストレージ機能プロファイルを作成する</block>
   <block id="6e511cfe87a95df884e3eeb9f86e7f6c" category="paragraph">* 必要なもの *</block>
   <block id="e13eaca2ea54236660ad55aad46c56ca" category="paragraph">プロファイルを設定したら、必要に応じてプロファイルを編集できます。</block>
@@ -793,7 +792,6 @@
   <block id="6b1851f65452d7945430bced7c8dc2a1" category="list-text"><block ref="6b1851f65452d7945430bced7c8dc2a1" category="inline-link-macro-rx"></block></block>
   <block id="5577ca03df0e06ba951c23f12a4b1ee5" category="section-title">導入に関するその他の考慮事項</block>
   <block id="aa0daf1da4e1f1fa66af28051a66af18" category="paragraph">導入 ONTAP ツールをカスタマイズするときは、いくつかの要件について考慮する必要があります。</block>
-  <block id="193d005cb01e094b239bfe309208043b" category="paragraph">vCenter Server のパスワードが変更された場合は、 https://&lt;IP&gt;:8143/Register.html` の URL を使用して管理者のパスワードを更新できます。 IP アドレスは、導入時に指定した ONTAP ツールの IP アドレスです。</block>
   <block id="cb0b3fe7df304baf3d39da385a4ec459" category="summary">このリリースの VMware vSphere 用 ONTAP ツールに関する重要な情報を提供します。新機能と機能拡張、解決済みの問題、既知の問題、注意事項、および制限事項が含まれます。</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="doc">リリースノート</block>
   <block id="01de6d9be7e1aa419839bb0c0de0ebde" category="paragraph">解決済みの問題、既知の問題、注意事項、および制限事項など、 VMware vSphere 用のこのリリースの ONTAP ツールに関する重要な情報を提供します。</block>
@@ -1006,7 +1004,6 @@
   <block id="4d8ecd07a11e4292fdaa38add537c853" category="paragraph">エラーが発生した場合は、「 /opt/NetApp/vscserver/log 」ディレクトリと「 /opt/NetApp/smserver/log' 」ディレクトリでログファイルを確認できます。</block>
   <block id="12debcad98cde6bc76a4aa6bac9742ee" category="list-text">vvolvp.log ： VASA Provider に関するすべてのログ情報が含まれます</block>
   <block id="8b28bb54fe2fc80e5ec8e4e48ed0accb" category="list-text">VASA Provider サーバー： vvolvp.log ' error.log ' および NetApp.log</block>
-  <block id="de33e3a6ad25d740280844d02cc80048" category="paragraph">また、 VASA Provider Web コマンドラインインターフェイス（ CLI ）ページで、実行された API 呼び出し、返されたエラー、パフォーマンス関連のいくつかのカウンタを確認できます。Web CLI ページは https://&lt;IP_address_or_hostname&gt;:9083/stats` にあります</block>
   <block id="0d4c7a909a42ee4216c9dc3a711d6f9c" category="summary">データセンター内の既存の仮想マシンを移行する場合の考慮事項について理解しておく必要があります。</block>
   <block id="c45246acdace6bcc85573e22b969f50b" category="doc">仮想マシンの移行またはクローニングに関する考慮事項</block>
   <block id="39f552e7cb4d162813d312b5f0d5fb70" category="paragraph">データセンター内の既存の仮想マシンを移行する際の考慮事項について理解しておく必要があります。</block>
@@ -1434,7 +1431,6 @@
   <block id="ec2fa05ad1e1cd992e000b32058b54e0" category="list-text">ONTAP ツールでは、 ASA および ONTAP 9.8 以降を実行する承認済みの AFF システムで使用する場合、 VMFS5 および VMFS6 のデータストアのプロビジョニングがサポートされます。最大 VMFS LUN およびボリュームサイズは 64TB です。</block>
   <block id="1e188467952fdbff98e3068f89af769c" category="summary">ONTAP ツールは、データセンター内の FlexVol ボリュームのリバランシングコマンドをサポートします。主な目的は、 FlexVol ボリューム間でスペースを均等に利用できるようにすることです。ONTAP ツールは、スペース使用量、シンプロビジョニング、 LUN 数、およびストレージ機能プロファイルに基づいて、既存のボリュームに VVOL を再配分します。</block>
   <block id="fa9a1fa5791bef6093574e858ba2d47b" category="list-text">コンテナのリバランシング処理でタイムアウトが発生した場合に、 VASA Provider の property_enable.update.vvol.through .discovery_to true を設定すると、 ONTAP ツールと ONTAP の間で整合性のあるデータを取得できます。</block>
-  <block id="60afe711e6d90f5258f84b999aac0489" category="paragraph">VVol で使用する場合は、ストレージ機能プロファイルによって個々の仮想マシンのストレージパフォーマンスも設定され、パフォーマンス要件を最も満たす VVol データストアの FlexVol に仮想マシンが配置されます。QoS ポリシーにパフォーマンスの最小 IOPS または最大 IOPS を指定できます。仮想マシンを最初にプロビジョニングするときはデフォルトのポリシーを使用できます。また、ビジネス要件の変化に応じてあとから VM ストレージポリシーを変更することもできます。このリリースの ONTAP ツールのデフォルトのストレージ機能プロファイルは次のとおりです。</block>
   <block id="a0df72576daf9a1137d39f7553d36e82" category="list-text">ブロンズ</block>
   <block id="ae430c36b97e2fb5fad06eb10d89e8f4" category="paragraph">ONTAP ツールでは、すべての仮想ボリューム（ VVol ）データストアを新しいストレージ機能プロファイルで設定できます。これにより、同じ VVol データストアに IOPS 要件が異なる複数の仮想マシンをプロビジョニングすることができます。IOPS の要件がある VM のプロビジョニングワークフローを実行する際には、互換性があるデータストアのリストにすべての vVol データストアが表示されます。</block>
   <block id="c6f512f075fd780d9ff517c7dab198c4" category="list-text">QoS 指標は仮想ボリューム（ VVol ）データストアレベルで設定できます。</block>
@@ -1496,7 +1492,6 @@
   <block id="a9ded1e5ce5d75814730bb4caaf49419" category="paragraph">背景（ Background ）</block>
   <block id="6adf97f83acf6453d4a6a4b1070f3754" category="paragraph">なし</block>
   <block id="e67d8326d1f77267e6e78263e9cb1ec1" category="paragraph">ONTAP パッチ API を使用して適切な値を設定できます。</block>
-  <block id="dbc193f27160367293b40befb64f71f4" category="paragraph">https://&lt;machine_IP&gt;/api/storage/volumes/{uuid}`</block>
   <block id="dc6f079855bc9a7477861302bbb0343f" category="image-alt">VMware Cloud Foundation の導入ワークフロー</block>
   <block id="6e87afa480416c8595b0460888551386" category="paragraph"><block ref="6e87afa480416c8595b0460888551386" category="inline-link-macro-rx"></block></block>
   <block id="1415c1c83a97d2309236d6acbf410723" category="list-text">Kerberos認証を使用する場合は、次のものが必要です。</block>
@@ -1544,7 +1539,6 @@
   <block id="c012b5b3ff136d3277c106ffd47bf52e" category="list-text"><block ref="c012b5b3ff136d3277c106ffd47bf52e" category="inline-link-macro-rx"></block></block>
   <block id="a88efd6c9b7763df783d278ede79c4a6" category="list-text">SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block>ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。</block>
   <block id="092016eb57c00c965fc19b3bff7ff343" category="list-text"><block ref="4222690b3b5a5c9afb047223bc02154e" prefix="" category="inline-code"></block></block>
-  <block id="b8e3b3982008f247b4868b6fd9b104d8" category="list-text">次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="4222690b3b5a5c9afb047223bc02154e" prefix=" " category="inline-code"></block></block>
   <block id="0e28dc8bb869d015f17f333c6255226d" category="list-text">NFS Plug-in for VAAIのインストールパッケージをダウンロードしておく必要があります <block ref="d7d0fd6d41e4cc9c277d6e7d82ae6981" prefix="(" category="inline-code"></block>）をNetApp Support Site から取得します。<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block></block>
   <block id="389fed57e0f06c0d1d884e132105585a" category="list-text">vSphere 6.5は廃止され、vSphere 8.xはサポートされないため、vSphere 7.xリリースが必要です。</block>
   <block id="5ccc8ee8b61049069fbdba29f36f4627" category="paragraph">はダウンロードできます<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block> のONTAP tools for VMware vSphereのバイナリ（_.ova_）と署名済み証明書を含むファイル<block ref="c28762f698ce57f013f1f9dff01575ab" category="inline-link-rx"></block>。</block>
@@ -1722,7 +1716,6 @@
   <block id="dde1ab39b3b1ff05662ea4c283967fca" category="list-text">ONTAP 9.7以降を使用している。</block>
   <block id="c301bc2e4655439adfd195c651966633" category="paragraph">導入後、メンテナンスコンソールを使用して ONTAP ツールの管理者パスワードを変更することができます。パスワードは90日後に期限切れになります。</block>
   <block id="f3f47521549e89ed7cb7b073ea8a7d66" category="list-text">入力するコマンド<block ref="1679091c5a880faf6fb5e6087eb1b2dc" prefix=" " category="inline-code"></block> をクリックして*[管理者ユーザーパスワードの変更]*を選択します。</block>
-  <block id="4fe6063d6d8500b42fd9878de1689157" category="list-text">8文字以上30文字以下のパスワードを入力します。パスワードには、上、下、数字、および特殊文字をそれぞれ1文字以上使用する必要があります。パスワードの有効期限の警告は、パスワードをリセットしてから75日後に表示されます。新しいパスワードを最後に使用したパスワードと同じにすることはできません。</block>
   <block id="2223c21ac625f0e9df4fbd3476db44ed" category="paragraph">パスワードの推奨事項に従っていない場合、メンテナンスコンソールのオプションはパスワードの変更に限定されます。パスワードの有効期限が切れると、パスワードの変更を求めるプロンプトが表示されます。</block>
   <block id="9566e142d595702f8d77be59e617fade" category="list-text">ログ整合性レポート</block>
   <block id="e5c7f658fde95383afe704dfbf972436" category="list-text">データストアのタイプ（NFSおよびVMFS）</block>
@@ -1756,7 +1749,6 @@
   <block id="97fc3f527fcf5f2673ee38cac43498eb" category="summary">VASAのクリーンアップを実行するには、このセクションの手順を使用します。</block>
   <block id="9f64b9be27f2e46d6913ffbc8b3b03af" category="doc">VASAクリーンアップ</block>
   <block id="11d1a9834ac9b448ace82c1a42780815" category="admonition">VASAクリーンアップを実行する前に、VVOLデータストアを削除することを推奨します。</block>
-  <block id="2c734b5da4f9e3b7fcbf2c02a71c6e53" category="list-text">に移動してプラグインの登録を解除します<block ref="60aa91ba7cfb922f9bc759ea6fa20945" category="inline-link-rx"></block></block>
   <block id="d7475ffdd032873add1b8a5a4d38f4b7" category="list-text">プラグインがvCenterで使用できなくなったことを確認します。</block>
   <block id="d86275478cf593221823bb3a9cfc752c" category="list-text">ONTAP Tools for VMware vSphere VMをシャットダウンします</block>
   <block id="1cc37019e315de376331f2c623d689df" category="list-text">ONTAP Tools for VMware vSphere VMを削除します</block>
@@ -1768,7 +1760,6 @@
   <block id="1c52dcdd4491d0706b3364ecaca3636e" category="list-text">再同期のソースでボリューム効率化が有効になっていない場合。</block>
   <block id="9fff6c8ee7fb3c43cbe3124a1d4883a7" category="list-text">再同期時間を短縮することが、ネットワークで可能なすべてのストレージ効率を維持するよりも重要な場合。</block>
   <block id="91a71eb29f05d0e0d765dd24efd35e07" category="paragraph">quick_resyncフラグを有効にするには、次の手順に従います。</block>
-  <block id="992e4c552a6e3e8132e2ff5dcf4d9ba2" category="list-text">コントロールパネル（_https://&lt;IP address&gt; ：9083_）にログインし、[WebベースのCLIインターフェイス]をクリックします。</block>
   <block id="933360919bcc7a54c2c15a9ba3062f75" category="list-text">コマンドを実行します<block ref="a20fbe11e2f20ab8ef5cc0bc3aa22e41" prefix=" " category="inline-code"></block>。</block>
   <block id="ba2a1e4d95dc56709260e82cca20a789" category="list-text">コマンドを実行します<block ref="6d83e9fce5e947159c3c34b9f499e80e" prefix=" " category="inline-code"></block>。</block>
   <block id="bec4fe8b0a1c02393fd0700875750a56" category="list-text">既存のvSphere Web ClientまたはvSphere UIからログアウトします。</block>
@@ -1883,7 +1874,6 @@ View *権限では、ONTAPツールGUIにアクセスできます。ONTAP tools�
   <block id="2ecc9eaf40eeff2a5d5bfdebc62550bb" category="inline-link">SRM共有リカバリサイトでSRAを設定する方法</block>
   <block id="15057a3e38aae03f9f465ba7ab620903" category="paragraph">。<block ref="5415c0f790a03b5f7964b877faa0433d" category="inline-link-rx"></block> 手順for setting up SRA to support SRM Shared Recovery Site Configurationの詳細は、技術情報アーティクルで説明されています。</block>
   <block id="cd407a7dc68ec4931863b0a4b9511c12" category="summary">ONTAP tools for VMware vSphereには、SRA機能をONTAP toolsで使用してディザスタリカバリを設定するためのオプションがあります。</block>
-  <block id="75d26898739bfbd118ceb40ee609588b" category="list-text">次のURLを使用してVMware SRMアプライアンス管理インターフェイスにアクセスします。<block ref="65934cfc97d2d08e8dbabc6019658190" category="inline-link-rx"></block>をクリックし、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。</block>
   <block id="fcfc4d0541fcfaef918a6982404c79f6" category="paragraph">VMFSデータストアのサイズ変更時にONTAP toolsでボリュームのサイズを変更できるようにするには、VMFSデータストアの初期プロビジョニング時に[ストレージ属性]セクションの*[既存のボリュームを使用]*オプションを使用せず、データストアごとに新しいボリュームが自動的に作成されるようにします。</block>
   <block id="51f5ef577515311d873f15616c367953" category="summary">VASA Provider（VP）仮想アプライアンスが失われた場合、アクセスできなくなった場合、または機能しなくなった場合は、VPディザスタリカバリの実行が必要になることがあります。 </block>
   <block id="b8d4b381d817836a8a1f3e5c51418019" category="doc">VASA Providerのディザスタリカバリ</block>
@@ -1917,7 +1907,6 @@ View *権限では、ONTAPツールGUIにアクセスできます。ONTAP tools�
   <block id="68ebbba5fb36a973cd5157cd94e42fc9" category="list-text">ONTAP toolsの標準ロールを変更した場合は、変更を保存するためにそれらのロールをコピーする必要があります。</block>
   <block id="f66ea2f32309f5fd90d089228f08f046" category="paragraph">ONTAP tools ONTAPサービスを再起動するたびに、標準ロールが現在のデフォルトで上書きされます。</block>
   <block id="b071f3cf67c6e55902fe91a4007f42ae" category="paragraph">ONTAP toolsのSSL証明書の再生成</block>
-  <block id="6e8b75f6c005f85260a875936558a351" category="paragraph">ONTAP toolsは、vCenter Server RBACとONTAP RBACの両方をサポートしています。ONTAP toolsをvCenter Serverに登録するために使用するアカウント <block ref="7bf1a148120c785c8303f17e0bb4f7eb" prefix="(" category="inline-code"></block>）は、vCenter Server管理者（vCenter Server管理者または管理者ロールに割り当てられている）である必要があります。管理者としてONTAP toolsを実行する場合は、すべてのタスクに必要なすべての権限と権限が必要です。</block>
   <block id="d28eff23707dc2a1b9f4540d883d2254" category="paragraph">vSphereオブジェクトへのアクセスを制限する必要がある場合は、vCenter Serverの要件を満たすように、標準のONTAP toolsロールを作成してユーザに割り当てることができます。</block>
   <block id="1582cc9629306ba6f3639270bdf4eb44" category="paragraph">生成されるONTAP toolsとVASA証明書のタイプは、導入時に指定したIPアドレス（IPv4またはIPv6）によって異なります。ONTAP ツールの導入時に静的 IP の詳細と DHCP を入力しなかった場合は、 IPv4 アドレスと IPv6 アドレスの両方がネットワークから提供されます。</block>
   <block id="86bb68a12bd0cf7f26f81f22d3f0750c" category="paragraph">ONTAPツールとVASA証明書は、vCenter Serverの登録時に使用したものと同じタイプのIPアドレスを使用して生成されます。</block>
@@ -2087,7 +2076,6 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="cb0eb789784bc1c28019248b139aa546" category="list-text">プラットフォームタイプが*フラッシュハイブリッドアレイ*で非対称フラグがNAの場合、FASタイプのストレージシステムが考慮されます。</block>
   <block id="f1ce8dcec161ff2f113d348ca0cb13b7" category="paragraph">以降の画面のオプションは、選択したストレージシステムのタイプに応じて更新されます。</block>
   <block id="4c562d1bf4f44c1dea6880cf5f7c1b38" category="list-text">次の手順に従って、ONTAP PrivilegesファイルをONTAP toolsからダウンロードしておく必要があります。</block>
-  <block id="50fce173a632a46be0efad62b804d700" category="list-text">に移動します<block ref="f8da18b508d6d7bd8607d1819bb6853a" category="inline-link-rx"></block></block>
   <block id="17bddb22e3ffe2551674423453213a3c" category="list-text">VSC_ONTAP_User_Privileges.zipファイルをダウンロードします。</block>
   <block id="4f6121e5bb76cb70c000ee442fa10d0b" category="list-text">ダウンロードしたVSC_ONTAP_User_Privileges.zipファイルを展開します。</block>
   <block id="06960d6ada7a46af36237c9d1496b5d3" category="list-text">System Managerにアクセスします</block>
@@ -2105,7 +2093,6 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="142666c1fbe08e639361aca9fb6d3d5a" category="list-text">既存のONTAP toolsアプライアンスを最新リリースにアップグレードします。</block>
   <block id="7ffdc51b9c93dfaa755052457f971d9e" category="list-text">vCenter Serverで、ONTAP toolsアプライアンス仮想マシンへのコンソールを開きます。</block>
   <block id="d0119a1425315c47822975d16de6de70" category="sidebar">ONTAP toolsのロールベースアクセス制御の概要</block>
-  <block id="b98d139729a71b493dcd4c3f860f1947" category="paragraph">VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、REST APIを使用して、ストレージシステムの追加、削除、変更、コンテナの作成を行うことができます。以下の記事に、VCFが有効な場合にONTAP toolsにストレージを追加するための手順が記載されています。<block ref="3ac4be985d9966f37c32d23f811ada05" category="inline-link-rx"></block>。</block>
   <block id="32f68a60cef40faedbc6af20298c1a1e" category="paragraph">削除</block>
   <block id="3e75383a5992a6d15fb81e872e46e256" category="paragraph">PUT</block>
   <block id="3609cc991ef06b80256315c4e79537aa" category="paragraph">Platinum_ASA_C</block>
@@ -2118,4 +2105,20 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="eb8ad81730e4bb2e83e5a8fd73176d69" category="paragraph">AFF_Encrypted_Min50_ASA_C</block>
   <block id="f5117d7744e4edc2e74fa77f9eff59ed" category="paragraph">たとえば、ビジネスクリティカルなアプリケーションには、AFFやASAプラットフォームなど、より高いパフォーマンスをサポートする機能を備えたプロファイルが必要です。テストやトレーニングに使用するデータストアでは、低パフォーマンスのフラッシュアレイハイブリッドプラットフォームを使用するプロファイルを使用し、すべてのストレージ効率化機能と階層化を有効にしてコストを抑えることができます。
 プラットフォームタイプと非対称フラグの組み合わせによって、SCPのタイプが決まります。例：Platinum_ASA_A、Platinum_ASA_C、Platinum_AFF_A、Platinum_AFF_C。</block>
+  <block id="27f262ec74ac82537b4fcf302c54dd8a" category="paragraph">VCF モードでは、 vCenter Server を使用せずにストレージ用のコンテナを作成できます。VCF モードで ONTAP ツールを導入したあと、 VASA Provider はデフォルトで有効になります。導入が完了したら、REST APIを使用して、ストレージシステムの追加、削除、変更、コンテナの作成を行うことができます。</block>
+  <block id="0217011105625dba328834ca1b076000" category="admonition">ストレージシステムの変更と削除は、ONTAP tools for VMware vSphere 9.13P1リリース以降でサポートされます。</block>
+  <block id="e76565c604215fd9c06d43c315eb188d" category="paragraph">以下の記事に、VCFが有効な場合にONTAP toolsにストレージを追加するための手順が記載されています。<block ref="3ac4be985d9966f37c32d23f811ada05" category="inline-link-rx"></block>。</block>
+  <block id="4bbb01941f5b07d2c77548cf3627e172" category="paragraph"><block ref="8869387a67183bd24545ffe85b9a9099" prefix="" category="inline-code"></block></block>
+  <block id="a53757e05292decc5f6fbbac2023d065" category="paragraph">ONTAP toolsは、vCenter Server RBACとONTAP RBACの両方をサポートしています。ONTAP toolsをvCenter Serverに登録するために使用するアカウント <block ref="9e93c09e34f4524b408348d13e66e374" prefix="(" category="inline-code"></block>）は、vCenter Server管理者（vCenter Server管理者または管理者ロールに割り当てられている）である必要があります。管理者としてONTAP toolsを実行する場合は、すべてのタスクに必要なすべての権限と権限が必要です。</block>
+  <block id="6d8436bffc0c48236c84f818b9aaae0b" category="paragraph">vCenter Serverのパスワードが変更された場合は、次のURLを使用して管理者のパスワードを更新できます。<block ref="fcb4077147c7d02d070a79e490ef6b9c" prefix=" " category="inline-code"></block> IPアドレスは、導入時に指定するONTAP ツールのIPアドレスです。</block>
+  <block id="72b2d9b8e8dba06573c834c69c8207cf" category="list-text">コントロールパネルにログインします。<block ref="dfe4a562f2165dbf9c7017bc505a6f5c" prefix=" " category="inline-code"></block> [Web based CLI interface]をクリックします。</block>
+  <block id="dfa8f17815ffab3fe541542d5b0f37e5" category="paragraph">また、 VASA Provider Web コマンドラインインターフェイス（ CLI ）ページで、実行された API 呼び出し、返されたエラー、パフォーマンス関連のいくつかのカウンタを確認できます。Web CLI ページには、からアクセスできます<block ref="18344335552dd6e1ba0bd43973f07969" prefix=" " category="inline-code"></block>。</block>
+  <block id="3467919a817c841564b809d390b05b2f" category="list-text">に移動します<block ref="a1afc5f2659cc45b14fe27c88adc3dcc" prefix=" " category="inline-code"></block></block>
+  <block id="55790f65126c3a4269e6740e4f1a44da" category="paragraph">VVol で使用する場合は、ストレージ機能プロファイルによって個々の仮想マシンのストレージパフォーマンスも設定され、パフォーマンス要件を最も満たす VVol データストアの FlexVol に仮想マシンが配置されます。QoS ポリシーにパフォーマンスの最小 IOPS または最大 IOPS を指定できます。仮想マシンを最初にプロビジョニングするときはデフォルトのポリシーを使用できます。また、ビジネス要件の変化に応じてあとから VM ストレージポリシーを変更することもできます。</block>
+  <block id="84e0c68591a59a6230fff09d282535b1" category="admonition">ASA-Cストレージ機能プロファイルは、ONTAP tools for VMware vSphere 9.13P1以降でサポートされます。</block>
+  <block id="6a171e02a385dc4d31b563dd71329f38" category="paragraph">このリリースの ONTAP ツールのデフォルトのストレージ機能プロファイルは次のとおりです。</block>
+  <block id="8b0a036d076285ea830ca8290e260a77" category="list-text">に移動してプラグインの登録を解除します<block ref="3668afd07686ea27a6f1590042360bee" prefix=" " category="inline-code"></block></block>
+  <block id="4b8bd3e99bfcc26c0f74b6bf405ef012" category="list-text">8文字以上30文字以下のパスワードを入力します。パスワードには、上、下、数字、および特殊文字をそれぞれ1文字以上使用する必要があります。パスワードの有効期限の警告は、パスワードをリセットしてから75日後に表示されます。新しいパスワードを最後に使用したパスワードと同じにすることはできません。パスワードは90日ごとに変更する必要があります。</block>
+  <block id="062f397773db685232413bdf1cdc77d6" category="list-text">URL：\https：//：&lt;srm_ip&gt;：5480を使用してVMware SRMアプライアンス管理インターフェイスにアクセスし、VMware SRMアプライアンス管理インターフェイスで[Storage Replication Adapters]に移動します。</block>
+  <block id="02d748a182bd49eb68c66826e023ae52" category="list-text">次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。<block ref="80e6857610e0d41189fe70adcfa7e87b" prefix=" " category="inline-code"></block></block>
 </blocks>
