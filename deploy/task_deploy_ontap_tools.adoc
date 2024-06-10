@@ -68,7 +68,9 @@ ONTAP ツールの _.ova ファイルの URL を指定します。
 |===
 . 詳細を入力して、導入ウィザードをカスタマイズします。
 +
-（オプション） Configure vCenter （ vCenter の構成）または Enable VCF （ VCF を有効にする）セクションで、 * Enable VMware Cloud Foundation （ VCF ） * チェックボックスを選択し、 ONTAP ツールの資格情報のパスワードを入力します。IP アドレスを指定する必要はありませんが、パスワードを指定する必要があります。詳細については、以下を参照してください。
+（オプション） Configure vCenter （ vCenter の構成）または Enable VCF （ VCF を有効にする）セクションで、 * Enable VMware Cloud Foundation （ VCF ） * チェックボックスを選択し、 ONTAP ツールの資格情報のパスワードを入力します。ONTAP toolsは、エンコードされた形式でユーザの詳細を格納します。ONTAPツールからvCenterへの通信には、これらのvCenterユーザの詳細が使用されます。
+IP アドレスを指定する必要はありませんが、パスワードを指定する必要があります。
+詳細については、以下を参照してください。
 
 +
 ** link:../deploy/reference_considerations_for_deploying_ontap_tools_for_vmware_vsphere.html["導入のカスタマイズに関する考慮事項"]
@@ -80,6 +82,10 @@ ONTAP ツールの _.ova ファイルの URL を指定します。
 展開が完了するまで待つ間に、 [ タスク ] タブから展開の進行状況を表示できます。
 
 . ONTAP Tools 仮想マシンの電源をオンにし、 ONTAP ツールを実行している仮想マシンのコンソールを開きます。
++
+
+NOTE: ONTAP tools仮想マシンを管理しているVVOLデータストアには格納しないでください。
+
 . 導入の完了後に、 ONTAP ツールが実行されていることを確認します。
 . ONTAP toolsがどのvCenter Serverにも登録されていない場合は、を使用します `\https://appliance_ip:8143/Register.html` ONTAP toolsインスタンスを登録します。Register.htmlに、swaggerページにリダイレクトされます。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。
 +

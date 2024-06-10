@@ -185,7 +185,8 @@ SRA は Windows SRM サーバまたは 8.2 SRM アプライアンスに導入で
 . root ユーザ「 root 」に切り替えます
 . ログの場所で、次のコマンドを入力して、 SRA Docker で使用される Docker ID を取得します。 `d Occker PS-l`
 . コンテナ ID 「 dOccker exec-it-u SRM <container ID> sh 」にログインします
-. SRMにONTAP toolsのIPアドレスとパスワードを設定します。 `perl command.pl -I <otv-IP> administrator <otv-password>`ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。
+. SRMにONTAP toolsのIPアドレスとパスワードを設定します。 `perl command.pl -I <otv-IP> administrator <otv-password>`。パスワードの値は一重引用符で囲む必要があります。
+ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。SRA は、指定された IP アドレス、ポート、およびクレデンシャルを使用して SRA サーバと通信できます。
 
 
 
@@ -202,7 +203,10 @@ SRA は Windows SRM サーバまたは 8.2 SRM アプライアンスに導入で
 . perl コマンドを実行して、 SRA に新しいクレデンシャルを設定します。
 +
 .. 「 cd /SRM/SRA/ 」
-.. `perl command.pl -I <otv-IP> administrator <otv-password>`
+.. `perl command.pl -I <otv-IP> administrator <otv-password>`。パスワードの値は一重引用符で囲む必要があります。
++
+ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。SRA は、指定された IP アドレス、ポート、およびクレデンシャルを使用して SRA サーバと通信できます。
+
 
 
 

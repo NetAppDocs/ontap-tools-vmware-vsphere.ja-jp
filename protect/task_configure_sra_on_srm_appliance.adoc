@@ -32,7 +32,7 @@ SRM アプライアンスで SRA を設定すると、 SRA クレデンシャル
 . コマンドcd /var/log/vmware/srmを実行して'ログ・ディレクトリに移動します
 . ログの場所で次のコマンドを入力して、 SRA で使用されている Docker ID を取得します：「 docker ps -l 」
 . コンテナ ID にログインするには、次のコマンドを入力します。「 docker exec-it-u SRM <container id>sh`
-. 次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。 `perl command.pl -I administrator '<otv-password>'`
+. 次のコマンドを使用して、SRMにONTAP toolsのIPアドレスとパスワードを設定します。 `perl command.pl -I <otv-IP> administrator <otv-password>`。パスワードの値は一重引用符で囲む必要があります。
 +
 ストレージクレデンシャルが保存されたことを示す成功メッセージが表示されます。SRA は、指定された IP アドレス、ポート、およびクレデンシャルを使用して SRA サーバと通信できます。
 

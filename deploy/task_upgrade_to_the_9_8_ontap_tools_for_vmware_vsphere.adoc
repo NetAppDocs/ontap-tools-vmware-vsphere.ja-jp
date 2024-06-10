@@ -50,8 +50,7 @@ JSONファイルを使用してカスタムで作成したクラスタを対象�
 . _security login role create -role <existing-role-name>-cmddirname " security certificate install "-access all_
 
 
-JSONファイルを使用してカスタムで作成したSVMを対象としたユーザでストレージシステムを追加し、9.12以降のバージョンにアップグレードする場合
-アップグレード前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAPの間の証明書ベースの通信を有効にします。
+JSONファイルを使用してカスタムで作成したSVMを対象としたユーザでストレージシステムを追加し、9.12以降のバージョンにアップグレードする場合は、次の手順を実行します。 その後、アップグレードの前に、ONTAP CLIでクラスタ管理者アクセスで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAPの間の証明書ベースの通信を有効にします。
 
 . _security login role create -role <existing-role-name>-cmddirname "security certificate install"-access all -vserver <vserver-name>_
 . _security login role create -role <existing-role-name>-cmddirname "security certificate show"-access all -vserver <vserver-name>_

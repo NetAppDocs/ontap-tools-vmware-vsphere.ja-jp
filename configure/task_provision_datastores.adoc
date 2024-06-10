@@ -35,7 +35,7 @@ summary: データストアをプロビジョニングすると、仮想マシ�
 
 * NFSv3 および NFSv4.1
 * VMFS5 および VMFS6
-* vSphere 8.0リリース以降では、NVMe/FCプロトコルがサポートされます。
+* vSphere 8.0リリース以降では、VVOLデータストアでNVMe/FCプロトコルがサポートされます。
 
 
 ONTAP toolsでは、NFSボリュームまたはLUN上にデータストアを作成できます。
