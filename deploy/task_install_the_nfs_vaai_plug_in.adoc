@@ -41,6 +41,6 @@ VMware vSphere 用 ONTAP ツールの GUI を使用して、ネットアップ N
 
 . インストールが終了したら、 ESXi ホストをリブートします。
 +
-ESXiホストをリブートすると、ONTAP toolsによってNFS VAAIプラグインが自動的に検出されます。プラグインを有効にするための追加の手順は必要ありません。
+ESXiホストをリブートすると、ONTAP Tools for VMware vSphereでNFS VAAIプラグインが自動的に検出されます。プラグインを有効にするための追加の手順は必要ありません。
 
 

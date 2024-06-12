@@ -52,7 +52,7 @@ vSphere Client のホームページ
 
 
  a| 
-ESXi Host Systems ポートレット
+[ESXiホストシステム]ポートレット
  a| 
 .. ONTAP toolsの[Overview]セクションにある*[Traditional dashboard]*タブをクリックします。
 .. ESXi ホスト設定の編集 * をクリックします。

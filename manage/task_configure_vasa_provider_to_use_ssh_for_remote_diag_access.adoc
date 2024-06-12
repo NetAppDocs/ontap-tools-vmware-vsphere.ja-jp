@@ -35,7 +35,7 @@ SSH を使用して diag ユーザアカウントにアクセスする際は次�
 
 * 手順 *
 
-. vCenter Serverで、ONTAP toolsアプライアンス仮想マシンへのコンソールを開きます。
+. vCenter Serverで、ONTAP tools for VMware vSphereアプライアンス仮想マシンへのコンソールを開きます。
 . maintenance ユーザとしてログインします。
 . 「 4 」と入力して、 Support and Diagnostics （サポートと診断）を選択します。
 . リモート診断アクセスを有効にするを選択するには '3' を入力します

@@ -17,7 +17,7 @@ ESXi ホストでは、次の値を設定できます。
 
 
 
-== ESXi の高度な設定
+== ESXiホストの高度な設定
 
 * * VMFS3.HardwareAcceleratedLocking *
 +

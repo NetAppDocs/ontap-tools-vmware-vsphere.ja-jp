@@ -2,7 +2,7 @@
 permalink: concepts/reference_metrocluster_configurations_supported_by_ontap_tools_for_vmware_vsphere.html 
 sidebar: sidebar 
 keywords:  
-summary: VMware vSphere 用の ONTAP ツールでは、 ONTAP の MetroCluster IP 構成と FC 構成を使用する環境がサポートされます。このサポートはほぼ自動的に行われます。ただし、MetroCluster環境でONTAPツールとVASA Providerを使用している場合は、いくつかの違いがあります。 
+summary: VMware vSphere 用の ONTAP ツールでは、 ONTAP の MetroCluster IP 構成と FC 構成を使用する環境がサポートされます。このサポートはほぼ自動的に行われます。ただし、MetroCluster環境でONTAP Tools for VMware vSphereおよびVASA Providerを使用している場合は、いくつかの違いがあります。 
 ---
 = ONTAP ツールでサポートされる MetroCluster 構成
 :allow-uri-read: 
@@ -11,18 +11,18 @@ summary: VMware vSphere 用の ONTAP ツールでは、 ONTAP の MetroCluster I
 
 
 [role="lead"]
-VMware vSphere 用の ONTAP ツールでは、 ONTAP の MetroCluster IP 構成と FC 構成を使用する環境がサポートされます。このサポートはほぼ自動的に行われます。ただし、MetroCluster環境でONTAPツールとVASA Providerを使用している場合は、いくつかの違いがあります。
+VMware vSphere 用の ONTAP ツールでは、 ONTAP の MetroCluster IP 構成と FC 構成を使用する環境がサポートされます。このサポートはほぼ自動的に行われます。ただし、MetroCluster環境でONTAP Tools for VMware vSphereおよびVASA Providerを使用している場合は、いくつかの違いがあります。
 
 
 
 == MetroClusterの構成とONTAPツール
 
-プライマリサイトとセカンダリサイトでONTAP toolsがストレージシステムコントローラを検出することを確認する必要があります。通常、ONTAP toolsはストレージコントローラを自動的に検出します。クラスタ管理LIFを使用している場合は、ONTAP toolsが両方のサイトでクラスタを検出したことを確認することを推奨します。それ以外の場合は、ONTAP toolsに手動でストレージコントローラを追加できます。ONTAP toolsがストレージコントローラへの接続に使用するユーザ名とパスワードのペアを変更することもできます。
+プライマリサイトとセカンダリサイトでONTAP toolsがストレージシステムコントローラを検出することを確認する必要があります。通常、ONTAP Tools for VMware vSphereはストレージコントローラを自動的に検出します。クラスタ管理LIFを使用している場合は、ONTAP toolsが両方のサイトでクラスタを検出したことを確認することを推奨します。それ以外の場合は、ONTAP toolsに手動でストレージコントローラを追加できます。ONTAP toolsがストレージコントローラへの接続に使用するユーザ名とパスワードのペアを変更することもできます。
 
 スイッチオーバーが発生した場合、セカンダリサイトの SVM がテイクオーバーします。これらの SVM には、名前に「 -mc 」というサフィックスがつけられています。データストアのプロビジョニングなどの処理の実行中にスイッチオーバー処理が発生すると、データストアが存在する SVM の名前が「 -mc 」サフィックスのついたものに変わります。スイッチバックが発生してプライマリサイトの SVM に制御が戻ると、このサフィックスは削除されます。
 
 
-NOTE: MetroCluster構成の直接接続SVMをONTAP toolsに追加した場合は、スイッチオーバー後にSVM名の変更（サフィックス「-mc」の追加）が反映されません。他のスイッチオーバー操作は、いずれも引き続き通常どおりに実行されます。
+NOTE: MetroCluster構成を使用するSVMユーザをONTAP toolsに追加した場合は、スイッチオーバー後にSVM名の変更（サフィックス「-mc」の追加）が反映されません。他のスイッチオーバー操作は、いずれも引き続き通常どおりに実行されます。
 
 スイッチオーバーまたはスイッチバックの発生時に、ONTAP toolsでクラスタが自動的に検出されて検出されるまでに数分かかることがあります。データストアのプロビジョニングなど、ONTAP toolsの処理を実行中にこのエラーが発生すると、処理に遅れが生じることがあります。
 
@@ -30,7 +30,7 @@ NOTE: MetroCluster構成の直接接続SVMをONTAP toolsに追加した場合は
 
 == MetroCluster 構成と VASA Provider
 
-VASA Provider では、 MetroCluster 構成を使用する環境が自動的にサポートされます。VASA Provider 環境では、スイッチオーバーは透過的に行われます。直接接続 SVM を VASA Provider に追加することはできません。
+VASA Provider では、 MetroCluster 構成を使用する環境が自動的にサポートされます。VASA Provider 環境では、スイッチオーバーは透過的に行われます。SVMユーザをVASA Providerに追加することはできません。
 
 
 NOTE: VASA Provider では、スイッチオーバーの実行後にセカンダリサイトの SVM の名前に「 -mc 」というサフィックスが付加されません。

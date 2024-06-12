@@ -2,7 +2,7 @@
 permalink: configure/task_configure_user_role_and_privileges.html 
 sidebar: sidebar 
 keywords: user roles 
-summary: ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。 
+summary: ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。 
 ---
 = ユーザロールと権限を設定
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ONTAP ツールと ONTAP System Manager に付属の JSON ファイル�
 
 
 [role="lead"]
-ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。
+ONTAP tools for VMware vSphereおよびONTAP System Managerに付属のJSONファイルを使用して、ストレージシステムの管理に使用する新しいユーザロールを設定できます。
 
 * 必要なもの *
 
@@ -22,7 +22,7 @@ ONTAP ツールと ONTAP System Manager に付属の JSON ファイルを使用�
 ** ダウンロードしたVSC_ONTAP_User_Privileges.zipファイルを展開します。
 ** System Managerにアクセスします
 +
-技術情報アーティクル- https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/Virtual_Storage_Console%3A_How_to_retrieve_the_JSON_file_to_configure_user_roles_and_privileges["Virtual Storage Console：ユーザロールと権限を設定するためのJSONファイルの取得方法"] WebCLIからONTAP Privilegesファイルをダウンロードする方法については、を参照してください。
+技術情報アーティクル- https://kb.netapp.com/mgmt/OTV/Virtual_Storage_Console/Virtual_Storage_Console%3A_How_to_retrieve_the_JSON_file_to_configure_user_roles_and_privileges["Virtual Storage Console：ユーザロールと権限を設定するためのJSONファイルの取得方法"] Web-CLIからONTAP Privilegesファイルをダウンロードする方法については、を参照してください。
 
 
 

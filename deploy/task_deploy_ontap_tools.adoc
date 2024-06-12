@@ -2,7 +2,7 @@
 permalink: deploy/task_deploy_ontap_tools.html 
 sidebar: sidebar 
 keywords:  
-summary: アプライアンスを使用するには、環境に ONTAP ツールを導入し、必要なパラメータを指定する必要があります。 
+summary: ONTAP tools for VMware vSphereアプライアンスを使用するには、環境にONTAP tools for VMware vSphereを導入し、必要なパラメータを指定します。 
 ---
 = ONTAP ツールの導入方法
 :allow-uri-read: 
@@ -11,14 +11,14 @@ summary: アプライアンスを使用するには、環境に ONTAP ツール�
 
 
 [role="lead"]
-アプライアンスを使用するには、環境に ONTAP ツールを導入し、必要なパラメータを指定する必要があります。
+ONTAP tools for VMware vSphereアプライアンスを使用するには、環境にONTAP tools for VMware vSphereを導入し、必要なパラメータを指定します。
 
 * 必要なもの *
 
-* サポートされているリリースの vCenter Server が実行されている必要があります。
+* サポートされているリリースのvCenter Serverが必要です。
 +
 
-NOTE: ONTAP ツールは、 Windows 環境の vCenter Server または VMware vCenter Server Virtual Appliance （ vCSA ）環境に登録できます。
+NOTE: ONTAP tools for VMware vSphereは、Windows環境のvCenter ServerまたはVMware vCenter Server Virtual Appliance（vCSA）環境に登録できます。
 
 +
 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]
@@ -30,13 +30,13 @@ https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src
 * vSphere Client のすべてのブラウザセッションからログアウトして、ブラウザを閉じておきます。また、 ONTAP ツールの導入時にブラウザキャッシュの問題がブラウザキャッシュに表示されないように、ブラウザキャッシュを削除しておく必要があります。
 * Internet Control Message Protocol（ICMP）を有効にしておく必要があります。
 +
-ICMPが無効になっていると、ONTAP toolsの初期設定が失敗し、ONTAP導入後にONTAP toolsとVASA Providerサービスを開始できなくなります。導入後に、ONTAP toolsとVASA Providerサービスを手動で有効にする必要があります。
+ICMPが無効になっていると、ONTAP tools for VMware vSphereの初期設定が失敗します。導入後に、ONTAP tools for VMware vSphereサービスとVASA Providerサービスを手動で有効にする必要があります。
 
 
 
 * このタスクについて *
 
-ONTAP ツールを新規に導入する場合は、デフォルトで VASA Provider が有効になります。ただし、以前のリリースの ONTAP ツールからアップグレードする場合は、アップグレード前の VASA Provider の状態が維持されるため、 VASA Provider を手動で有効にしなければならないことがあります。
+ONTAP tools for VMware vSphereを新規にインストールすると、VASA Providerがデフォルトで有効になります。ただし、以前のリリースからアップグレードする場合は状態が維持されるため、VASA Providerを手動で有効にしなければならない場合があります。
 
 link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html["仮想データストアを設定するための VASA Provider の有効化"]
 
@@ -45,6 +45,10 @@ link:../deploy/task_enable_vasa_provider_for_configuring_virtual_datastores.html
 . vSphere Client にログインします。
 . [ホーム]*>*[ホストおよびクラスタ]*を選択します。
 . 目的のデータセンターを右クリックし、*[OVFテンプレートのデプロイ...]*をクリックします。
++
+
+NOTE: 管理対象のVVOLデータストアには、ONTAP tools VMware vSphere仮想マシンを導入しないでください。
+
 . ONTAP ツールの導入ファイルを提供する方法を選択し、 * 次へ * をクリックします。
 +
 |===
@@ -82,10 +86,6 @@ IP アドレスを指定する必要はありませんが、パスワードを�
 展開が完了するまで待つ間に、 [ タスク ] タブから展開の進行状況を表示できます。
 
 . ONTAP Tools 仮想マシンの電源をオンにし、 ONTAP ツールを実行している仮想マシンのコンソールを開きます。
-+
-
-NOTE: ONTAP tools仮想マシンを管理しているVVOLデータストアには格納しないでください。
-
 . 導入の完了後に、 ONTAP ツールが実行されていることを確認します。
 . ONTAP toolsがどのvCenter Serverにも登録されていない場合は、を使用します `\https://appliance_ip:8143/Register.html` ONTAP toolsインスタンスを登録します。Register.htmlに、swaggerページにリダイレクトされます。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。
 +

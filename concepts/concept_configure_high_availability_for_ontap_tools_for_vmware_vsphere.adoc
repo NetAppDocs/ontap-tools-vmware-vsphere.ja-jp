@@ -23,7 +23,7 @@ ONTAP ツールは、 VMware vSphere のハイアベイラビリティ（ HA ）
 
 高可用性を実現するために ONTAP ツールを使用する場合、追加の設定は必要ありません。要件に応じて、 vCenter Server ホストと ESXi ホストで VMware vSphere HA または vSphere FT を設定する必要があります。HA と FT のどちらにも、クラスタホストと共有ストレージが必要です。FT には追加の要件と制限事項があります。
 
-VMware vSphere HA 解決策および vSphere FT 解決策に加え、 ONTAP ツールを使用することで、 ONTAP Tools のサービスを常時実行できます。ONTAP ツールの watchdog プロセスが 3 つのサービスをすべて定期的に監視し、何らかの障害を検出するとサービスを自動的に再起動します。これにより、アプリケーションの障害を防止できます。
+VMware vSphere HA解決策およびvSphere FT解決策に加えて、ONTAP Tools for VMware vSphereは、ONTAP toolsサービスの常時実行にも役立ちます。ONTAP ツールの watchdog プロセスが 3 つのサービスをすべて定期的に監視し、何らかの障害を検出するとサービスを自動的に再起動します。これにより、アプリケーションの障害を防止できます。
 
 
 NOTE: vCenter HA は、 ONTAP ツールではサポートされていません。

@@ -2,7 +2,7 @@
 permalink: concepts/concept_privileges_required_for_vsc_tasks.html 
 sidebar: sidebar 
 keywords:  
-summary: ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools固有の権限とvCenter Server標準の権限の組み合わせが異なります。 
+summary: ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools for VMware vSphere固有の権限とvCenter Server標準の権限の組み合わせが異なります。 
 ---
 = ONTAP toolsのタスクに必要な権限
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools固有
 
 
 [role="lead"]
-ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools固有の権限とvCenter Server標準の権限の組み合わせが異なります。
+ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools for VMware vSphere固有の権限とvCenter Server標準の権限の組み合わせが異なります。
 
 ONTAP toolsのタスクに必要な権限については、NetAppの技術情報アーティクル1032542を参照してください。
 

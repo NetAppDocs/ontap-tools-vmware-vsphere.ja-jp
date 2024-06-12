@@ -39,11 +39,11 @@ vCenter Server のパスワードが変更になった場合、 URL ： \https:/
 
 * ONTAP ツールを登録する vCenter Server インスタンスの IP アドレス（ IPv4 または IPv6 ）を指定する必要があります。
 +
-生成されるONTAP toolsとVASA証明書のタイプは、導入時に指定したIPアドレス（IPv4またはIPv6）によって異なります。ONTAP ツールの導入時に静的 IP の詳細と DHCP を入力しなかった場合は、 IPv4 アドレスと IPv6 アドレスの両方がネットワークから提供されます。
+生成されるONTAP Tools for VMware vSphere証明書とVASA証明書のタイプは、導入時に指定したIPアドレス（IPv4またはIPv6）によって異なります。ONTAP ツールの導入時に静的 IP の詳細と DHCP を入力しなかった場合は、 IPv4 アドレスと IPv6 アドレスの両方がネットワークから提供されます。
 
 * vCenter Server への登録に使用する ONTAP ツールの IP アドレスは、導入ウィザードで入力した vCenter Server の IP アドレスのタイプ（ IPv4 または IPv6 ）によって異なります。
 +
-ONTAPツールとVASA証明書は、vCenter Serverの登録時に使用したものと同じタイプのIPアドレスを使用して生成されます。
+ONTAP Tools for VMware vSphere証明書とVASA証明書は、どちらもvCenter Serverの登録時に使用したIPアドレスを使用して生成されます。
 
 +
 
@@ -55,4 +55,4 @@ NOTE: ： IPv6 は vCenter Server 6.7 以降でのみサポートされます。
 
 == アプライアンスのネットワーク・プロパティ
 
-DHCP を使用していない場合は、有効な DNS ホスト名（非修飾）と ONTAP ツールの静的 IP アドレス、およびその他のネットワークパラメータを指定します。これらのパラメータはすべて、適切なインストールと運用のために必要です。
+DHCPを使用していない場合は、ONTAP tools for VMware vSphereの有効なDNSホスト名（非修飾）と静的IPアドレス、およびその他のネットワークパラメータを指定します。これらのパラメータはすべて、適切なインストールと運用のために必要です。

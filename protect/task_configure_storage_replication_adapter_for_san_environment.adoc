@@ -36,7 +36,8 @@ https://www.vmware.com/support/pubs/srm_pubs.html["VMware Site Recovery Manager 
 . プライマリ・ストレージ・システムで、「 ostype 」オプションが _vmware_ に設定されている igroup に、 LUN が含まれていることを確認します。
 . リカバリサイトの ESXi ホストが FC または iSCSI を使用して Storage Virtual Machine （ SVM ）に適切に接続されていることを確認します。セカンダリサイトのESXiホストはセカンダリサイトのストレージにアクセスできる必要があります。同様に、プライマリサイトのESXiホストはプライマリサイトのストレージにアクセスできる必要があります。
 +
-そのためには、 ESXi ホストの SVM 上にローカル LUN が接続されていることを確認するか、 SVM 上で「 fcp show initiators 」コマンドまたは「 iscsi show initiators 」コマンドを使用します。ESXiでマッピングされたLUNに対するLUNアクセスを確認し、FCおよびiSCSI接続を確認します。
+そのためには、ESXiホストのローカルLUNがSVM上で接続されていることを確認するか、を使用します `fcp show initiators` コマンドまたはを実行します `iscsi show initiators` SVMでコマンドを実行します。
+ESXiホストでマッピングされたLUNへのLUNアクセスをチェックして、FC接続とiSCSI接続を確認します。
 
 
 

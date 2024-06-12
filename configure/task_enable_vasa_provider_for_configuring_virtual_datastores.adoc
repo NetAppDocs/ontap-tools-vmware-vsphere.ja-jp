@@ -31,7 +31,7 @@ ONTAP ツール 9.7.1 にアップグレードする前に VASA Provider 機能�
 . [ 管理設定 ] タブの [ 機能の管理 ] をクリックします。
 . Manage Capabilities ダイアログボックスで、有効にする VASA Provider 拡張機能を選択します。
 . VVOL データストアのレプリケーション機能を使用する場合は、「 * VVol レプリケーションを有効にする * 」切り替えボタンを使用します。
-. ONTAP ツールの IP アドレスと管理者パスワードを入力し、 * 適用 * をクリックします。
+. ONTAP tools for VMware vSphereのIPアドレスと管理者パスワードを入力し、*[適用]*をクリックします。
 +
 
 NOTE: VASA Provider拡張機能を有効にしたあともVASA Providerのステータスが「オフライン」と表示される場合は、/var/log/vmware/vmware-sps/sps.logファイルでVASA Providerとの接続エラーを確認するか、「vmware-sps」サービスを再起動してください。

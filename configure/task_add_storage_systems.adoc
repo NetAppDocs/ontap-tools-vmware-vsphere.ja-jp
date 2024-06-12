@@ -18,10 +18,10 @@ NOTE: ONTAP クラスタでSAMLが有効になっている場合は、ONTAP と�
 
 * このタスクについて *
 
-ONTAP toolsを起動するか、*[すべて再検出]*オプションを選択すると、使用可能なストレージシステムがONTAP toolsによって自動的に検出されます。
+ONTAP toolsを起動するか、*[すべて再検出]*オプションを選択すると、使用可能なストレージシステムがONTAP tools for VMware vSphereによって自動的に検出されます。
 
 
-NOTE: 直接接続のSVMではVVolデータストアはサポートされません。
+NOTE: SVMユーザではVVolデータストアはサポートされません。
 
 * 手順 *
 

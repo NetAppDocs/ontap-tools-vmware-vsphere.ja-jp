@@ -17,7 +17,7 @@ ONTAP ツールは vSphere Client と統合されており、シングルサイ�
 
 ONTAP ツールの各コンポーネントは、ストレージをより効率的に管理するための機能を提供します。
 
-VMware vSphere Clientリモートプラグインツールは、vCenter Server内で実行することなく、プラグイン機能をvSphere Clientに統合するように設計されています。これにより、プラグインが分離され、大規模なvSphere環境で動作するプラグインをスケールアウトできます。
+VMware vSphere Clientプラグインツールは、vCenter Server内で実行することなく、プラグイン機能をvSphere Clientに統合するように設計されています。これにより、プラグインが分離され、大規模なvSphere環境で動作するプラグインをスケールアウトできます。
 
 
 

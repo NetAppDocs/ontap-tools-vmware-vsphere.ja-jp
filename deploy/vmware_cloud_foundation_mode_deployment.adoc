@@ -476,7 +476,7 @@ ONTAP パッチ API を使用して適切な値を設定できます。
 
 `\https://<machine_IP>/api/storage/volumes/{uuid}`
 
-ONTAP ツールの VCF 配置では、コンテナ作成ワークフローのみが可能です。データストアのプロビジョニング、ストレージ機能プロファイルの作成、ディザスタリカバリなど、他のワークフローを使用する場合は、swaggerページを使用してONTAP toolsをvCenter Serverに登録する必要があります。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。VCFモードのONTAP toolsの制限事項は、プラグインを登録するまでディザスタリカバリ用にSRAを設定できないことです。VCFモードを使用せずにONTAP ツールを展開すると、登録が自動的に行われます。
+ONTAP tools for VMware vSphereのVCF導入では、コンテナ作成ワークフローのみが可能です。データストアのプロビジョニング、ストレージ機能プロファイルの作成、ディザスタリカバリなど、他のワークフローを使用する場合は、swaggerページを使用してONTAP toolsをvCenter Serverに登録する必要があります。ONTAP tools 9.12以降では、SwaggerページからvCenterへのONTAP toolsの登録が行われます。VCFモードのONTAP toolsの制限事項は、プラグインを登録するまでディザスタリカバリ用にSRAを設定できないことです。VCFモードを使用せずにONTAP ツールを展開すると、登録が自動的に行われます。
 
 
 NOTE: ONTAP toolsの今後のリリースでは、Register.htmlが削除されます。

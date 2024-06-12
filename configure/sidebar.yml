@@ -4,9 +4,9 @@ title: ONTAP ツールを設定する
 entries:
 - title: ONTAP ツールを設定するためのワークフロー
   url: "/configure/concept_workflow_for_configuring_the_unified_appliance.html"
-- title: ESXi を設定します
+- title: ESXiホストの設定
   entries:
-  - title: ESXi サーバのマルチパスとタイムアウトを設定
+  - title: ESXiホストサーバのマルチパスとタイムアウトの設定
     url: "/configure/task_configure_esx_server_multipathing_and_timeout_settings.html"
   - title: ONTAP ツールを使用して設定される ESXi ホストの値
     url: "/configure/reference_esxi_host_values_set_by_vsc_for_vmware_vsphere.html"

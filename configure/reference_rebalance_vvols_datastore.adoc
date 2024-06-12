@@ -36,7 +36,27 @@ rebalance コマンドは、空の FlexVol を削除して他のデータスト�
 
 
 * FlexVol ボリュームに Snapshot がある場合、 vVol のリバランシング処理中に、スペース使用率の詳細が十分でないために vVol が正しくリバランシングされません。
-* コンテナのリバランシング処理でタイムアウトが発生した場合に、 VASA Provider の property_enable.update.vvol.through .discovery_to true を設定すると、 ONTAP ツールと ONTAP の間で整合性のあるデータを取得できます。
+* VASA Providerのproperty_enable.update.vvol.through.discovery_をtrueに設定すると、コンテナのリバランシング処理でタイムアウトが発生したときにONTAP tools for VMware vSphereとONTAP間で整合性のあるデータを取得できます。
+* VVolデータストアのリバランシングを行うREST APIは公開されていません。
 
 
 ====
+.* 始める前に *
+* メンテナンスコンソールからWeb-CLIトークンを生成します。
++
+.. maintコンソールにログインします。
+.. オプション* 1 *アプライアンス構成を選択します。
+.. オプション* 12 * Generate Web-CLI Authentication tokenを選択します。
+
+
+* vCenterまたはWeb-CLIからコンテナ名とFlexVol Volume名を取得します。
+コンテナに接続されているFlexVol Volumeのリストを取得するには、Web CLIからcommand_container list_を実行します。container rebalanceコマンドの詳細については、Web-CLIページを参照してください。
+
+
+
+NOTE: コンテナに接続されているすべてのFlexVolボリュームでリバランシングを実行するには、コンテナ名を指定する必要があります。ただし、FlexVolボリュームパラメータを指定した場合、リバランシングは指定したFlexVolボリューム間でのみ実行されます。
+
+.* 手順 *
+. URLを使用したWeb-CLIからのログイン `\https://<OTV-IP>:9083/`
+. 次のコマンドを実行します。_container rebalance -container_name =<container-name>_
+

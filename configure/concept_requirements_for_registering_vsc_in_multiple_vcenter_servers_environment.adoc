@@ -2,7 +2,7 @@
 permalink: configure/concept_requirements_for_registering_vsc_in_multiple_vcenter_servers_environment.html 
 sidebar: sidebar 
 keywords:  
-summary: 単一のVMware vSphere HTML5クライアントで複数のvCenter Serverインスタンスを管理している環境でONTAP®Tools for VMware vSphereを使用している場合は、 tools ONTAPとvCenter Serverを1：1のペアにするためには、各vCenter ServerにONTAP toolsのインスタンスを1つ登録する必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。 
+summary: 単一のVMware vSphere HTML5クライアントで複数のvCenter Serverインスタンスを管理している環境でONTAP®Tools for VMware vSphereを使用している場合は、 ONTAP tools for VMware vSphereとvCenter Serverを1：1のペアにするためには、各vCenter ServerにONTAP toolsのインスタンスを1つ登録する必要があります。そうすることで、 vCenter 6.0 以降を実行するすべてのサーバを、単一の vSphere HTML5 クライアントからリンクモードと非リンクモードの両方で管理することができます。 
 ---
 = 複数のvCenter Server環境でONTAP Toolsを登録するための要件
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: 単一のVMware vSphere HTML5クライアントで複数のvCenter Serv
 
 
 [role="lead"]
-単一のVMware vSphere HTML5クライアントで複数のvCenter Serverインスタンスを管理している環境でONTAP Tools for VMware vSphereを使用している場合は、 tools ONTAPとvCenter Serverを1：1のペアにするためには、各vCenter ServerにONTAP toolsのインスタンスを1つ登録する必要があります。これにより、vCenter 7.0以降を実行するすべてのサーバを、単一のvSphere HTML5クライアントからリンクモードと非リンクモードの両方で管理できます。
+単一のVMware vSphere HTML5クライアントで複数のvCenter Serverインスタンスを管理している環境でONTAP Tools for VMware vSphereを使用している場合は、 ONTAP tools for VMware vSphereとvCenter Serverを1：1のペアにするためには、各vCenter ServerにONTAP toolsのインスタンスを1つ登録する必要があります。これにより、vCenter 7.0以降を実行するすべてのサーバを、単一のvSphere HTML5クライアントからリンクモードと非リンクモードの両方で管理できます。
 
 
 NOTE: vCenter ServerでONTAP toolsを使用する場合は、管理するvCenter Serverインスタンスごとに1つのONTAP toolsインスタンスをセットアップまたは登録しておく必要があります。登録された各ONTAP toolsインスタンスのバージョンが同じである必要があります。
@@ -28,7 +28,7 @@ vSphere HTML5クライアントを使用して複数のvCenter Serverにわた�
 ONTAP toolsサーバAをvCenter Server AとvCenter Server Bの両方に登録することはできません。
 
 +
-VMwareインベントリにONTAP toolsサーバが登録されていないvCenter Serverが含まれているが、ONTAP toolsに登録されているvCenter Serverが1つ以上ある場合は、 その後、ONTAP toolsが登録されているvCenter Serverに対して、ONTAP toolsのインスタンスを表示し、ONTAP toolsの処理を実行できます。
+VMwareインベントリにONTAP toolsサーバが登録されていないvCenter Serverが含まれているが、ONTAP toolsに登録されているvCenter Serverが1つ以上ある場合は、 その後、ONTAP tools for VMware vSphereのインスタンスを表示し、ONTAP toolsが登録されているvCenter Serverに対してONTAP toolsの処理を実行できます。
 
 * シングルサインオン（SSO）に登録されたvCenter Serverごとに、ONTAP tools固有のView権限が必要です。
 +
