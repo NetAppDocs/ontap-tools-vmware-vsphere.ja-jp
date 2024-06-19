@@ -732,28 +732,19 @@
   <block id="fa43d63ba917729629ab7f912cf6f6ca" category="paragraph">大規模な環境で最適なパフォーマンスを実現するには、 Storage Replication Adapter （ SRA ）の推奨設定に従ってストレージのタイムアウト間隔を設定する必要があります。</block>
   <block id="383c9f9f08441de49a64fa51e25ad9c9" category="section-title">ストレージプロバイダの設定</block>
   <block id="68c185224c05d2129a14987da1b847a6" category="paragraph">拡張環境の SRM について、次のタイムアウト値を設定する必要があります。</block>
-  <block id="fe4c6a5e7bd6793b37370e4e46daf998" category="cell">詳細設定</block>
-  <block id="2d454f7be17f2289142fb73539ba0c06" category="cell">タイムアウト値</block>
-  <block id="cfb1af8547e34b1470b19edbde9418b8" category="paragraph">StorageProvider.resignatureTimeout</block>
   <block id="341bac145cc58ec7a7ab03eba3971c0b" category="paragraph">設定の値を 900 秒から 12000 秒に増やします。</block>
-  <block id="084a7cbae7a12c6ad6f1f66a39e88f9b" category="paragraph">StorageProvider.hostRescanDelaySec</block>
   <block id="072b030ba126b2f4b2374f342be9ed44" category="paragraph">60</block>
-  <block id="aa18dc2961636b24cb5d5f9e925404a9" category="paragraph">StorageProvider.hostRescanRepeatCnt</block>
   <block id="98f13708210194c475687be6106a3b84" category="paragraph">20</block>
-  <block id="c1533677fede32792c4b54cf81865145" category="paragraph">StorageProvider.hostRescanTimeoutSec</block>
   <block id="9df3b59d2f557fab39346b37532a0832" category="paragraph">高い値を設定します（例： 99999 ）</block>
-  <block id="3868919c1577c6c9fcb90f12ff7241a9" category="paragraph">また、 StorageProvider.autoResignatureMode オプションを有効にする必要があります。</block>
   <block id="7ab0999b0811be49a9148b1092cf0095" category="paragraph">ストレージプロバイダの設定を変更する方法の詳細については、 VMware のドキュメントを参照してください。</block>
   <block id="7ceb96cf2f53ab82cf68115087e42798" category="inline-link">VMware vSphere のドキュメント：「ストレージプロバイダ設定の変更</block>
   <block id="6b9647887381f9ce12a57a287e1bafbd" category="paragraph"><block ref="6b9647887381f9ce12a57a287e1bafbd" category="inline-link-rx"></block></block>
   <block id="6deaa5e1cafca832bac1b468485b9454" category="section-title">ストレージ設定</block>
-  <block id="202667bd06a4b1c9918ebf1e566e60f2" category="paragraph">大規模な環境では、 storage.commandTimeout と storage.maxConcurrentCommandCnt のタイムアウト間隔を 99 、 999 秒に設定する必要があります。</block>
   <block id="00a510939945fb6eb144a70baf6f9fd4" category="admonition">指定したタイムアウト間隔が最大値です。最大タイムアウトに達することはありません。ほとんどのコマンドは、設定された最大タイムアウト間隔内に終了します。</block>
   <block id="e8e75924ea6b1743aedaf9cdc60f2811" category="paragraph">また、 vvol.properties ファイル offtap.operation.timeout.period.seconds=86400 で、 SRA が 1 回の処理を実行する最大時間を設定する必要があります。</block>
   <block id="0a757269d3671e08f4647a4a3f39c7af" category="inline-link">ネットアップナレッジベースの回答 1001111 ：「 NetApp Storage Replication Adapter 4.0/7.X for ONTAP Sizing Guide</block>
   <block id="b2dacb077897e6e20eab5019528b0b4d" category="paragraph">詳細については、 SAN プロバイダの設定の変更に関する VMware のドキュメントを参照してください。</block>
   <block id="c106a2cd545fb9665a990784905584ee" category="inline-link">VMware Site Recovery Manager のドキュメント：「ストレージ設定の変更</block>
-  <block id="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="paragraph"><block ref="5ae0fbc5a94ef2dc0c2a09ad3529481f" category="inline-link-rx"></block></block>
   <block id="578d9149fa04c3d4f2229ad419fbfec3" category="doc">ONTAP ツールを導入するための要件</block>
   <block id="147526bf2b5a3f09ae14e12840a1138e" category="summary">ONTAP ツールの導入またはアップグレード後にプラグインが自動的に更新されない場合は、ブラウザおよび vCenter Server 上にキャッシュされているダウンロード済みプラグインパッケージをクリーンアップして、 vCenter Server プラグインの問題を解決する必要があります。</block>
   <block id="a0616a23fd099dfad3eb5032733a31a3" category="list-text">ブラウザキャッシュを削除します。</block>
@@ -1263,7 +1254,6 @@
   <block id="abc76e74279f9441a4a6c363c930ab48" category="paragraph">'torageProvider.hostRescanRepeatCnt'</block>
   <block id="d9ad1cd9ed6154c08811ffdbeec40f42" category="paragraph">'torageProvider.hostRescanTimeoutSec'</block>
   <block id="c30b7c029fe2d9044307db1e0f6ea417" category="paragraph">また、「 torageProvider.autoResignatureMode` 」オプションを有効にする必要があります。</block>
-  <block id="686f64fc789747485a424cbfcfd51b54" category="paragraph">大規模な環境では、「 torage.commandTimeout` 」および「 storage-.maxConcurrentCommandCnt 」のタイムアウト間隔の値を 99 、 999 秒に設定する必要があります。</block>
   <block id="21f42d9016dfb5108147b0d1fd86ab98" category="summary">ONTAP ツールを使用して、 VVOL データストアのレプリケーションを設定できます。VVOL レプリケーションの主な目的は、 VMware Site Recovery Manager\ （ SRM \ ）を使用して、ディザスタリカバリ時に重要な仮想マシンを保護することです。</block>
   <block id="0e96e89e8bdbddc24e1527490b23a25f" category="doc">仮想マシンを保護するように VVOL データストアのレプリケーションを設定してください</block>
   <block id="83e09c19742d5aebbbeca5a4592f4483" category="paragraph">ONTAP ツールを使用して、 VVOL データストアのレプリケーションを設定できます。VVOL レプリケーションの主な目的は、 VMware Site Recovery Manager （ SRM ）を使用してディザスタリカバリ時に重要な仮想マシンを保護することです。</block>
@@ -1410,7 +1400,6 @@
   <block id="2efb0fa4cef9462e9a212abf6778b626" category="list-text">iSCSI Subnets Access に対して上記の手順を繰り返し、 * Apply * をクリックします。</block>
   <block id="e9df7d5252c2104198351b64e368569b" category="paragraph">VMware vSphere 用の ONTAP ツールを使用して ESXi ホストにタイムアウト値やその他の値を設定することで、最適なパフォーマンスが得られ、フェイルオーバーが正常に実行されるようにすることができます。ONTAP ツールで設定される値は、ネットアップ独自のテスト結果に基づいています。</block>
   <block id="56cfa018d4e9a7aa0b73e64b0dd88f77" category="paragraph">「異なるサブネット間でのデータストアのマウントの有効化」を参照してください。</block>
-  <block id="ec2fa05ad1e1cd992e000b32058b54e0" category="list-text">ONTAP ツールでは、 ASA および ONTAP 9.8 以降を実行する承認済みの AFF システムで使用する場合、 VMFS5 および VMFS6 のデータストアのプロビジョニングがサポートされます。最大 VMFS LUN およびボリュームサイズは 64TB です。</block>
   <block id="1e188467952fdbff98e3068f89af769c" category="summary">ONTAP ツールは、データセンター内の FlexVol ボリュームのリバランシングコマンドをサポートします。主な目的は、 FlexVol ボリューム間でスペースを均等に利用できるようにすることです。ONTAP ツールは、スペース使用量、シンプロビジョニング、 LUN 数、およびストレージ機能プロファイルに基づいて、既存のボリュームに VVOL を再配分します。</block>
   <block id="a0df72576daf9a1137d39f7553d36e82" category="list-text">ブロンズ</block>
   <block id="ae430c36b97e2fb5fad06eb10d89e8f4" category="paragraph">ONTAP ツールでは、すべての仮想ボリューム（ VVol ）データストアを新しいストレージ機能プロファイルで設定できます。これにより、同じ VVol データストアに IOPS 要件が異なる複数の仮想マシンをプロビジョニングすることができます。IOPS の要件がある VM のプロビジョニングワークフローを実行する際には、互換性があるデータストアのリストにすべての vVol データストアが表示されます。</block>
@@ -1743,7 +1732,6 @@
   <block id="5547d8d27b62c49e4555e1f79122a342" category="paragraph"><block ref="9e427bf42ac054021120757914ef1809" prefix="" category="inline-code"></block></block>
   <block id="b8ace162f3094fd5ac1138ced112d7a7" category="list-text">VMware vSphere Clientサービスを開始します。<block ref="bfbe7f4b006f6fcfc7bb66e075309067" prefix=" " category="inline-code"></block></block>
   <block id="02026f27af003e00469addac855d370b" category="paragraph">最新リリースのONTAP toolsを導入する場合は、のトピックを参照してください <block ref="44969696c082c6abaae247e8c1723287" category="inline-link-macro-rx"></block>。トピック <block ref="6db555bae030dd891aa85762ae9d5b14" category="inline-link-macro-rx"></block> インプレースアップグレードの実行方法については、を参照してください。</block>
-  <block id="36716d5924fd9465137a810fd76c2f48" category="paragraph">有効にすると、 VASA Provider と Storage Replication Adapter （ SRA ）の両方がこのポートを使用して vCenter Server と通信します。このポートは TCP/IP 設定を取得するためにも必要です。このポートは、VPサポートバンドルのダウンロード、Web CLIユーザインターフェイスへのアクセス、およびVMwareからVPへのパス通信の制御に使用されます。</block>
   <block id="71a6973fa992a434c0d25fb07bd6f07d" category="paragraph">クレデンシャルの設定方法によっては、 VMware vCenter Server とストレージシステムがこのポートでセキュアな通信をリスンします。このポートは、クライアント/サーバ間の通信アーキテクチャで使用されます。443ポートは、セキュアな接続に対してデフォルトで有効になっています。REST APIを使用する任意のオートメーションクライアントであるクライアントがサーバへの接続を開始し、エンドポイントがデータを交換します。</block>
   <block id="94694a876801fa4851e5478564de6f4a" category="paragraph">ONTAP ツールは、VMware vCenter Server Virtual Appliance（vCSA）で使用できます。ESXi システムを搭載したサポート対象の vSphere に ONTAP ツールを導入する必要があります。</block>
   <block id="9abf7c4d6f8e5b536137c70ad41a5f3b" category="paragraph"><block ref="9abf7c4d6f8e5b536137c70ad41a5f3b" category="inline-link-rx"></block></block>
@@ -2162,4 +2150,6 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="c4d7bfe92b4693a00e8289e45547ab0d" category="paragraph">SRM共有リカバリサイトの設定では、各SRMサーバに専用のSRAインスタンスが必要です（SRMとSRAは1：1の関係）。各SRMサーバの専用SRAインスタンスとして機能するように、OTVをVCFモードで設定します。また、vCenterに登録され、データストアのプロビジョニングなどのSRA以外のタスクに使用される、SRA以外のONTAP Tools for VMware vSphereアプライアンスを導入することもできます。</block>
   <block id="ffb65cab8d95fee8d80abc7ceaa0a0ec" category="list-text">再保護処理の実行後にONTAP tools for VMware vSphereにデータストアが表示されない場合は、ストレージシステムの検出を実行するか、スケジュールされた次回の検出処理が実行されるまで待ちます。</block>
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">ESXiホストの設定</block>
+  <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">タイムアウトに達した場合は、<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> および<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 値を大きくします。</block>
+  <block id="7e2e86e08ed241dcd1c4a60663089958" category="list-text">ONTAP toolsをONTAP 9.8以降を実行するすべてのASAシステムおよびONTAP 9.12.1P2以降を実行する他のすべてのシステムで使用すると、VMFS5およびVMFS6のデータストアのプロビジョニングがサポートされ、VMFS LUNとボリュームの最大サイズは64TBになります。</block>
 </blocks>

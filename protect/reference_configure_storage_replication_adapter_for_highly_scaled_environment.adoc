@@ -62,7 +62,7 @@ https://docs.vmware.com/en/Site-Recovery-Manager/6.5/com.vmware.srm.admin.doc/GU
 
 == ストレージ設定
 
-大規模な環境では、「 torage.commandTimeout` 」および「 storage-.maxConcurrentCommandCnt 」のタイムアウト間隔の値を 99 、 999 秒に設定する必要があります。
+タイムアウトに達した場合は、 `storage.commandTimeout` および `storage.maxConcurrentCommandCnt` 値を大きくします。
 
 
 NOTE: 指定したタイムアウト間隔が最大値です。最大タイムアウトに達することはありません。ほとんどのコマンドは、設定された最大タイムアウト間隔内に終了します。
