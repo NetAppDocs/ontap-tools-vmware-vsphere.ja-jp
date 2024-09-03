@@ -15,6 +15,8 @@ summary: ここに記載されている手順に従って、既存の9.10以降�
 
 * 必要なもの *
 
+サポートされるONTAP、vCenter Server、ESXiホスト、プラグインアプリケーション、およびSite Recovery Manager（SRM）のバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。 https://imt.netapp.com/matrix/imt.jsp?components=105475;&solution=1777&isHWU&src=IMT["Interoperability Matrix Tool で確認してください"^]サポートされるすべてのアップグレードパス情報については、を参照してください。
+
 * 最新リリースの ONTAP ツールの .iso ファイルをダウンロードしておく必要があります。
 * ONTAP ツールがアップグレード後に最適に機能するためには、 12GB 以上の RAM を確保する必要があります。
 * vSphere Client のブラウザキャッシュをクリーンアップする必要があります。

@@ -2152,4 +2152,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="1030a4736944c363305ecfdc816d75b0" category="sidebar">ESXiホストの設定</block>
   <block id="5f479a62f2104046972d10f2cbf88255" category="paragraph">タイムアウトに達した場合は、<block ref="e7a7316b2dab3875c5aa0977c256ae38" prefix=" " category="inline-code"></block> および<block ref="b6c033f4806640a2a2858512cf9f8c1b" prefix=" " category="inline-code"></block> 値を大きくします。</block>
   <block id="7e2e86e08ed241dcd1c4a60663089958" category="list-text">ONTAP toolsをONTAP 9.8以降を実行するすべてのASAシステムおよびONTAP 9.12.1P2以降を実行する他のすべてのシステムで使用すると、VMFS5およびVMFS6のデータストアのプロビジョニングがサポートされ、VMFS LUNとボリュームの最大サイズは64TBになります。</block>
+  <block id="df5910bf5ed161a784cc7b4fb3fc0a84" category="list-text">* SunRPC.MaxConnPerIP*</block>
+  <block id="4a8c1c4202dd77901215a87452e10629" category="paragraph">vSphere 7.0以降を使用している場合は、この値を128に設定します。</block>
+  <block id="34881aef32159ff28f8619a31ff308a3" category="paragraph">サポートされるONTAP、vCenter Server、ESXiホスト、プラグインアプリケーション、およびSite Recovery Manager（SRM）のバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。<block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block>サポートされるすべてのアップグレードパス情報については、を参照してください。</block>
 </blocks>
