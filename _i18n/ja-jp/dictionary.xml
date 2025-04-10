@@ -6,8 +6,6 @@
   <block id="07e195d60b7b7cc8a76a0e66e6ec1692" category="paragraph">スイッチオーバーが発生した場合、セカンダリサイトの SVM がテイクオーバーします。これらの SVM には、名前に「 -mc 」というサフィックスがつけられています。データストアのプロビジョニングなどの処理の実行中にスイッチオーバー処理が発生すると、データストアが存在する SVM の名前が「 -mc 」サフィックスのついたものに変わります。スイッチバックが発生してプライマリサイトの SVM に制御が戻ると、このサフィックスは削除されます。</block>
   <block id="25a08ebfd4f1cc837be8e7fd29c9e2a1" category="section-title">MetroCluster 構成と VASA Provider</block>
   <block id="aa01ce52a20efe46b8d9f8d571874ece" category="admonition">VASA Provider では、スイッチオーバーの実行後にセカンダリサイトの SVM の名前に「 -mc 」というサフィックスが付加されません。</block>
-  <block id="6b894d7e8f2bb219ece874c3c249c3f7" category="inline-link">Virtual Storage Console 用の RBAC の設定方法</block>
-  <block id="14d107055fdbd0aa4ef3c23300469f88" category="paragraph"><block ref="14d107055fdbd0aa4ef3c23300469f88" category="inline-link-rx"></block></block>
   <block id="74d56f13e9a7c977cac9a88a879fcbfc" category="paragraph">View 権限を含むアクセス許可は、ルートオブジェクトに割り当てることを推奨します。</block>
   <block id="2bf690158e044812ab33988c70464eba" category="summary">ONTAP ツールはハイアベイラビリティ（ HA ）構成をサポートしており、障害時に ONTAP ツールが中断なく機能するようにします。</block>
   <block id="08bab46947b750954e0eb5a840fc8f07" category="doc">ONTAP ツールのハイアベイラビリティを設定する</block>
@@ -1419,7 +1417,6 @@
   <block id="1242e163636ceb52703fad8214a2bedc" category="list-text">ONTAP 9.8P1 以降のストレージを設定しておく必要があります。</block>
   <block id="2dc470ea65bfb20ee49093121123d780" category="list-text">最新リリースの ONTAP ツールの .iso ファイルをダウンロードしておく必要があります。</block>
   <block id="c24f54bbbe4e8d99ba7daa84a6860772" category="list-text">以前のバージョンから最新リリースの ONTAP ツールにアップグレードすると 'vvol.rebalance .threshold プロパティーが vvol.properties ファイルにないことがわかります</block>
-  <block id="a7189062665fe6b8b3263ee857e62834" category="paragraph">VMware を初めて導入し、ネットアップの ONTAP ツール製品を使用したことがない場合は、 ONTAP ツールを導入して設定する前に、 vCenter Server を設定して ESXi ホストをセットアップする必要があります。</block>
   <block id="78b9c306d2b9e90dc4612872a3412b17" category="image-alt">新規ユーザの導入</block>
   <block id="7f92b985b9e4bff91f2d31ae0cc7bdd7" category="list-text">SRA 4.0P1 を使用している場合は、まず SRA 9.6 にアップグレードしてから、 SRA 9.6 リリースのインプレースアップグレードを実行する必要があります。あとで、 ONTAP ツールの最新リリースにアップグレードできます。</block>
   <block id="e2444e964cdc125f0e5e638cd372f502" category="paragraph">VSC 、 VASA Provider 、 SRA 仮想アプライアンス 7.2 または 7.2.1 が稼働している場合は、統合アプライアンス 9.7P1 以降のリリースに直接アップグレードできません。最初に既存の環境を仮想アプライアンス 9.7 にアップグレードしてから、最新リリースにアップグレードする必要があります。</block>
@@ -1650,7 +1647,6 @@
   <block id="148d96a120a3dbbdac7376feadd4f4e7" category="paragraph">トピックに記載されている手順を実行しておく必要があります <block ref="a7b1731ee7a384d42899d1089c98fcd0" category="inline-link-macro-rx"></block></block>
   <block id="50344e3c61009efb2aa76acc2330e318" category="list-text">vSphere Clientページで、*[ポリシーとプロファイル]*をクリックします。</block>
   <block id="f9945d9a9730b8841a7d9375a4e7d470" category="list-text">[仮想マシンストレージポリシー]ページで、*[作成]*をクリックします。</block>
-  <block id="ef9991a7cf13c45bcebdc7db419b4a5b" category="summary">VMware vSphere 用の ONTAP ツールは、ネットアップストレージシステムを使用する VMware 環境の仮想マシンに対して、エンドツーエンドのライフサイクル管理を提供します。管理者はvCenter Server内でストレージを直接管理できるため、VMware環境のストレージとデータの管理が簡易化されます。</block>
   <block id="35b93a81a0436a7a2cfd708e05194805" category="paragraph">ONTAP ツールは vSphere Client と統合されており、シングルサインオン（ SSO ）サービスを利用できます。vCenter Serverインスタンスが複数ある環境では、管理する各vCenter ServerインスタンスにONTAP toolsの独自のインスタンスを登録する必要があります。</block>
   <block id="b0fc0bed1deb4cd0ac1733c83406a338" category="list-text">ONTAP System Manager 9.8P1以降を使用して、クラスタ管理者またはSVM管理者ロールを作成します。を参照してください <block ref="b36e85751d57920856a667a70fbd44c3" category="inline-link-macro-rx"></block> を参照してください。</block>
   <block id="36a3e078a9ae64bd58305972fd6b6a14" category="paragraph">新しいユーザロールを作成するには、 ONTAP を実行しているストレージシステムに管理者としてログインする必要があります。ONTAP System Manager 9.8P1以降を使用してONTAP ロールを作成できます。を参照してください <block ref="b36e85751d57920856a667a70fbd44c3" category="inline-link-macro-rx"></block> を参照してください。</block>
@@ -2155,4 +2151,9 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="df5910bf5ed161a784cc7b4fb3fc0a84" category="list-text">* SunRPC.MaxConnPerIP*</block>
   <block id="4a8c1c4202dd77901215a87452e10629" category="paragraph">vSphere 7.0以降を使用している場合は、この値を128に設定します。</block>
   <block id="34881aef32159ff28f8619a31ff308a3" category="paragraph">サポートされるONTAP、vCenter Server、ESXiホスト、プラグインアプリケーション、およびSite Recovery Manager（SRM）のバージョンの最新情報については、Interoperability Matrix Tool（IMT）を参照してください。<block ref="c4e3c5dd56e9c0925a46d52133eef091" category="inline-link-rx"></block>サポートされるすべてのアップグレードパス情報については、を参照してください。</block>
+  <block id="dc00c7eca4a9deab6a54899a9976ba3a" category="inline-link">ONTAP Tools for VMware vSphere：RBACの設定</block>
+  <block id="788b65c29277d612dded28375da10d63" category="paragraph"><block ref="788b65c29277d612dded28375da10d63" category="inline-link-rx"></block></block>
+  <block id="7230ef1fabe08177b3b9d5485ebc25c0" category="summary">ONTAP Tools for VMware vSphereは、NetAppストレージシステムを使用するVMware環境で、仮想マシンのエンドツーエンドのライフサイクル管理機能を提供します。管理者はvCenter Server内でストレージを直接管理できるため、VMware環境のストレージとデータの管理が簡易化されます。</block>
+  <block id="47635be81cb27fe24be3c1541e49e8c2" category="doc">ONTAPツールの概要</block>
+  <block id="693059892f5ca1ab1683c98e037ee404" category="summary">VMwareを初めて導入し、NetApp ONTAP tools製品を使用したことがない場合は、ONTAP toolsを導入して設定する前に、vCenter Serverを設定してESXiホストをセットアップする必要があります。</block>
 </blocks>
