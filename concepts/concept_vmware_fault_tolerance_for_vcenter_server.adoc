@@ -23,4 +23,4 @@ vCenter Server インスタンスで vSphere FT を設定するには、シス�
 
 HA を設定する手順は、 vCenter Server のバージョンによって異なります。HA の設定手順を確認するには、次の参照先で必要な vCenter Server のバージョンを選択してください。
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-57929CF0-DA9B-407A-BF2E-E7B72708D825.html["VMware vSphere のドキュメント：「 Fault Tolerance の要件、制限、およびライセンス"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-availability.html["Fault Tolerance Requirements, Limits, and Licensing"]

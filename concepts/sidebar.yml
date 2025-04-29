@@ -2,7 +2,7 @@
 section: concepts
 title: 概念
 entries:
-- title: ONTAP ツールの概要
+- title: ONTAPツールの概要
   url: "/concepts/concept_virtual_storage_console_overview.html"
 - title: VVOL 向けの VASA Provider の設定
   url: "/concepts/concept_configure_vvols_datastores.html"

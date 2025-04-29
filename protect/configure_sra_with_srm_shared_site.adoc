@@ -11,7 +11,7 @@ summary: ONTAP tools for VMware vSphereは、VMware SRM共有リカバリサイ�
 
 
 [role="lead"]
-ONTAP tools for VMware vSphereは、VMwareのSRM共有リカバリサイト構成をサポートしています。詳細については、を参照してください https://docs.vmware.com/en/Site-Recovery-Manager/8.6/com.vmware.srm.install_config.doc/GUID-EBF84252-DF37-43CD-ADC8-E90F5254F315.html["共有リカバリサイト構成のSite Recovery Manager"]。リカバリサイトのSite Recovery Manager Serverインスタンスは、同じvCenter Serverインスタンスに接続します。
+ONTAP tools for VMware vSphereは、VMwareのSRM共有リカバリサイト構成をサポートしています。詳細については、を参照してください https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8.html["共有リカバリサイト構成のSite Recovery Manager"]。リカバリサイトのSite Recovery Manager Serverインスタンスは、同じvCenter Serverインスタンスに接続します。
 
 SRM共有リカバリサイトの設定では、各SRMサーバに専用のSRAインスタンスが必要です（SRMとSRAは1：1の関係）。各SRMサーバの専用SRAインスタンスとして機能するように、OTVをVCFモードで設定します。また、vCenterに登録され、データストアのプロビジョニングなどのSRA以外のタスクに使用される、SRA以外のONTAP Tools for VMware vSphereアプライアンスを導入することもできます。
 

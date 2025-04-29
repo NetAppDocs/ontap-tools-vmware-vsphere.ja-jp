@@ -17,4 +17,4 @@ VMware vSphere 用の ONTAP ツールを導入した vSphere 環境をハイア�
 
 VMware HA を設定する手順は、 vCenter Server のバージョンによって異なります。VMware HA の設定手順を確認するには、次の参照先で必要な vCenter Server のバージョンを選択してください。
 
-https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["VMware vSphere のドキュメント：「 vSphere HA クラスタの作成と使用"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-availability.html["vSphere HAクラスタの作成と使用"]

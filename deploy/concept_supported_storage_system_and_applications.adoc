@@ -34,5 +34,5 @@ SRA のテストフェイルオーバー処理を実行するためには、 Fle
 データストアの IOPS を表示するには、 Storage I/O Control を有効にするか、 Storage I/O Control の設定でストレージ I/O 統計の収集を無効にするチェックボックスをオフにする必要があります。Storage I/O Control は、 VMware の Enterprise Plus ライセンスがある場合にのみ有効にできます。
 
 * https://kb.vmware.com/s/article/1022091["Storage I/O Control のトラブルシューティング"]
-* https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.resmgmt.doc/GUID-37CC0E44-7BC7-479C-81DC-FFFC21C1C4E3.html["Storage I/O Control の要件"]
+* https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/6-5/vsphere-resource-management-6-5.html["vSphereリソース管理"]
 
