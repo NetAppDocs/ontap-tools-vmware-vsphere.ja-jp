@@ -1123,7 +1123,6 @@
   <block id="56d43ad1a280ada5e16fd2960ae44b32" category="list-text">SRM の場合</block>
   <block id="1eb176cea5abcd7b2040e0863742d426" category="paragraph">SRM のインストールに関するドキュメントは、 VMware のサイトで入手できます。</block>
   <block id="4617dd5a7193927c5552182931541c9c" category="inline-link">VMware Site Recovery Manager のドキュメント</block>
-  <block id="2b27cdd9529ad91885c6c019ee8329ee" category="paragraph"><block ref="2b27cdd9529ad91885c6c019ee8329ee" category="inline-link-rx"></block></block>
   <block id="406292f3c5b20715e348f48fa5e6d6e3" category="list-text">SRA</block>
   <block id="1a4c02d907de9cf09a31d1f5f6ab334f" category="paragraph">SRM と SRA サーバにアダプタをインストールします。</block>
   <block id="bdeb77edc25aca768d0b70a5251e91d6" category="list-text">保護対象サイトのデータストアに、 vCenter Server に登録された仮想マシンがあることを確認します。</block>
@@ -1161,7 +1160,6 @@
   <block id="39b58596949c4b9771bc20ef05dffce8" category="list-text">SRM で保護対象サイトとリカバリサイトをペアリングしておく必要があります。</block>
   <block id="0fef91ca040522ee258c514383b22085" category="list-text">アレイマネージャを設定する前に、ストレージを設定しておく必要があります。</block>
   <block id="c57d1578817fecd8541ae081dd3b752e" category="list-text">保護対象サイトとリカバリサイト間の SnapMirror 関係を設定およびレプリケートしておく必要があります。</block>
-  <block id="43195d9f7cab578cb244f5f740f6e085" category="list-text">マルチテナンシーを有効にするには、 SVM 管理 LIF を有効にしておく必要があります。</block>
   <block id="7945c1d153109a7470a701147eb9bf91" category="paragraph">SRA では、クラスタレベルの管理と SVM レベルの管理がサポートされます。クラスタレベルでストレージを追加する場合は、クラスタ内のすべての SVM を検出し、それらに対して処理を実行できます。SVM レベルでストレージを追加する場合は、特定の SVM だけを管理できます。</block>
   <block id="e074ce1ed2ac873058a796fcf283eedd" category="admonition">VMware では、 SRM に対して NFS4.1 プロトコルがサポートされません。</block>
   <block id="7fdab6ccf999bb53d546254efa8e925a" category="list-text">SRM で、 [* Array Managers* ] をクリックし、 [* Add Array Manager* ] をクリックします。</block>
@@ -1947,7 +1945,6 @@ syslogを設定するには、次の手順に従います。</block>
   <block id="9854c166539f1bb4ba9e61f895f32a6f" category="paragraph">API 呼び出しを認証する _apply-api-token_ を生成する新しい API が導入されました。既存の API の中には、 _apply-api-token_header が含まれるように変更されたものもあります。ONTAP tools 9.12以降では、Swaggerは1.0 APIをサポートしません。これまで1.0で使用されていたポインタは、2.0または3.0 APIに移動されます。</block>
   <block id="ca98aaad89f286b4cde26867bc59bed4" category="admonition">ONTAP tools for VMware vSphere 9.13リリースでは、2.0ストレージ機能プロファイルAPIは使用できなくなりました。</block>
   <block id="92ac68c3c800987e3d8470f227aef494" category="paragraph">.ova ファイルには ONTAP ツールが含まれています。導入が完了すると、ONTAPツール、VASA、SRA製品が環境にインストールされます。デフォルトでは、後続の導入モデルを決定し、要件に基づいてVASA ProviderとSRAを有効にするかどうかを選択すると、すぐにONTAP toolsが機能し始めます。</block>
-  <block id="47036403afaaf8ca717ff4a9ab5e937f" category="admonition">ONTAP tools 9.12をアップグレードすると、ONTAPストレージ証明書が自動で信頼されるため、すべてのストレージシステムの認証と通信のプロセスがベーシック認証から証明書ベースの認証に変更されます。ユーザによる操作は不要です。</block>
   <block id="58219ebdf648f85e26c26438bb61d686" category="paragraph">JSONファイルを使用してカスタムで作成したクラスタを対象としたユーザでストレージシステムを追加し、9.12以降のバージョンにアップグレードする場合
 アップグレード前にONTAP CLIで次のコマンドを実行して、ONTAP tools for VMware vSphereとONTAP間の証明書ベースの通信を有効にします。</block>
   <block id="89ee3f6f60ef2fe23bff96f279b6d85a" category="summary">ONTAP toolsをダウンロードしてVMware vSphere環境に導入し、その後、ONTAP tools、VASA Provider、SRAを使用して実行するタスクに基づいて必要なアプリケーションを設定する必要があります。</block>
@@ -2153,4 +2150,7 @@ ESXiホストでマッピングされたLUNへのLUNアクセスをチェック�
   <block id="d2a8cc12733d837b21d04e966da18849" category="inline-link">Site Recovery Managerのインストールと設定Site Recovery Manager</block>
   <block id="aa7e72b3419247f39d0e6b1a10ecde90" category="paragraph"><block ref="e8cde9e1b38fd82f2c0a7be37ca3e90f" category="inline-link-rx"></block>詳細情報があります。</block>
   <block id="1131b5ba310f0132fa89f2e2bc52cb0c" category="paragraph">SnapMirrorのファンアウト構成は、ソースボリュームが2つの異なるデスティネーションにレプリケートされる構成です。SRMがデスティネーションから仮想マシンをリカバリする必要がある場合、リカバリ中に問題が発生します。* 手順 *</block>
+  <block id="e9137eaa9a63d9c4bceed13dfb01d6db" category="admonition">ONTAP Tools 9.12以降にアップグレードすると、すべてのストレージ システムの認証および通信プロセスが、ベーシック認証からONTAPストレージ証明書を自動的に信頼する証明書ベースの認証に変更されます。</block>
+  <block id="04afb3bdbc4139cf45256b44141b1a77" category="list-text">マルチテナントをサポートするには、SVM 管理 LIF を有効にする必要があります。</block>
+  <block id="0d6d5f3b6b0d7149732baa366c9a237a" category="paragraph"><block ref="0d6d5f3b6b0d7149732baa366c9a237a" category="inline-link-rx"></block></block>
 </blocks>
