@@ -22,7 +22,7 @@ VMware vCenter Site Recovery Manager （ SRM ）向け Storage Replication Adapt
 SRM のインストールに関するドキュメントは、 VMware のサイトで入手できます。
 
 +
-https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-7/site-recovery-manager-installation-and-configuration-8-7/overview-of-vmware-site-recovery-manager.html["VMware Site Recovery Manager のドキュメント"]
+https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-7/site-recovery-manager-installation-and-configuration-8-7/overview-of-vmware-site-recovery-manager.html["VMware Site Recovery Manager のドキュメント"^]
 
 * SRA
 +
@@ -38,4 +38,4 @@ SRM と SRA サーバにアダプタをインストールします。
 . リカバリサイトの各 ESXi ホストで ping コマンドを実行して、 SVM が NFS エクスポートへの接続に使用する IP アドレスにホストの VMkernel ポートからアクセスできることを確認します。
 
 
-https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]
+https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"^]

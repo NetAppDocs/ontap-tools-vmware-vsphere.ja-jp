@@ -213,14 +213,14 @@ NOTE: 従来のデータストアに含まれる FlexGroup を既存のサイズ
 
 * 関連情報 *
 
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Datastore_inaccessible_when_volume_status_is_changed_to_offline["ボリュームステータスがオフラインになるとデータストアにアクセスできなくなります"]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/Virtual_Storage_Console_for_VMware_vSphere/Datastore_inaccessible_when_volume_status_is_changed_to_offline["ボリュームステータスがオフラインになるとデータストアにアクセスできなくなります"^]
 
-https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-support-kerberos-concept.html["ONTAP での Kerberos のサポート"]
+https://docs.netapp.com/us-en/ontap/nfs-admin/ontap-support-kerberos-concept.html["ONTAP での Kerberos のサポート"^]
 
 https://docs.netapp.com/us-en/ontap/nfs-admin/requirements-configuring-kerberos-concept.html["NFS で Kerberos を設定するための要件"]
 
-https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/concept_kerberos_realm_services.html["System Manager - ONTAP 9.7 以前を使用して Kerberos Realm サービスを管理します"]
+https://docs.netapp.com/us-en/ontap-sm-classic/online-help-96-97/concept_kerberos_realm_services.html["System Manager - ONTAP 9.7 以前を使用して Kerberos Realm サービスを管理します"^]
 
-https://docs.netapp.com/us-en/ontap/nfs-config/create-kerberos-config-task.html["データ LIF で Kerberos を有効にします"]
+https://docs.netapp.com/us-en/ontap/nfs-config/create-kerberos-config-task.html["データ LIF で Kerberos を有効にします"^]
 
-https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0.html["vSphere Storage"]
+https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/vsphere-storage-7-0.html["vSphere Storage"^]

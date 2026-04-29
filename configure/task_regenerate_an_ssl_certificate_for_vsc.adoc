@@ -17,7 +17,7 @@ SSL証明書は、ONTAP toolsのインストール時に生成されます。こ
 
 メンテナンスコンソールを使用してリモート診断を有効にして、サイト固有の証明書を生成することができます。
 
-https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_vasa_provider/virtual_storage_console%3a_implementing_ca_signed_certificates["Virtual Storage Console ： CA 署名証明書の実装"]
+https://kb.netapp.com/advice_and_troubleshooting/data_storage_software/vsc_and_vasa_provider/virtual_storage_console%3a_implementing_ca_signed_certificates["Virtual Storage Console ： CA 署名証明書の実装"^]
 
 * 手順 *
 

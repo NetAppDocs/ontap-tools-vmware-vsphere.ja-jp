@@ -35,7 +35,7 @@ ONTAP toolsの既存の導入環境からのアップグレード
  a| 
 ONTAP toolsの既存の導入環境からONTAP toolsに手順をアップグレードするかどうかは、ONTAP toolsのバージョンとONTAP toolsが導入済みかどうかによって異なります。詳細については、導入ワークフローとアップグレードに関するセクションを参照してください。
 
-link:concept_installation_workflow_for_existing_users_of_vsc.html["ONTAP ツールの既存ユーザ向けの導入ワークフロー"]
+link:concept_installation_workflow_for_existing_users_of_ontap_tools.html["ONTAP ツールの既存ユーザ向けの導入ワークフロー"]
 
 アップグレード前に実施しておくべき作業：
 
@@ -96,7 +96,7 @@ ONTAP ツールに付属の JSON ファイルを使用して、 ONTAP System Man
 
 適切な権限とアクセス許可を持たないユーザがタスクを実行しようとした場合、そのタスクのオプションはグレー表示されます。
 
-* link:../concepts/concept_standard_roles_packaged_with_virtual_appliance_for_vsc_vp_and_sra.html["ONTAP ツールに付属の標準ロール"]
+* link:../concepts/concept_standard_roles_packaged_with_ontap_tools_for_vmware_vsphere.html["ONTAP ツールに付属の標準ロール"]
 * link:../concepts/concept_ontap_role_based_access_control_feature_for_ontap_tools.html["ONTAP ストレージシステムおよび vSphere オブジェクトの権限"]
 
 

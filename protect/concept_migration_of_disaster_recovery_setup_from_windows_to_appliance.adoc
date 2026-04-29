@@ -23,4 +23,4 @@ link:../deploy/task_upgrade_to_the_9_8_ontap_tools_for_vmware_vsphere.html["ONTA
 . Windows SRMのデータをSRMアプライアンスに移行します。
 
 
-詳細な手順については、を参照 https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8.html["Site Recovery Managerのインストールと設定"]
+詳細な手順については https://techdocs.broadcom.com/us/en/vmware-cis/live-recovery/site-recovery-manager/8-8/site-recovery-manager-installation-and-configuration-8-8.html["Site Recovery Managerのインストールと設定"^]を参照してください

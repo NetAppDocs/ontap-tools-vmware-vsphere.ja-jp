@@ -40,4 +40,4 @@ NOTE: VASA Provider 拡張機能を有効にしても VASA Provider のステー
 
 * 関連情報 *
 
-https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]
+https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"^]

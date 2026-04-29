@@ -15,7 +15,7 @@ VMware vSphere 用 ONTAP ツールの GUI を使用して、ネットアップ N
 
 * 必要なもの *
 
-* NFS Plug-in for VAAIのインストールパッケージをダウンロードしておく必要があります (``.vib`）をNetApp Support Site から取得します。 https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]
+* VAAI 用 NFS プラグインのインストール パッケージ(``.vib`をNetApp Support Site からダウンロードしておく必要があります。 https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"^]
 * ESXi ホスト 6.5 以降と ONTAP 9.1 以降をインストールしておく必要があります。
 * ESXi ホストの電源をオンにし、 NFS データストアをマウントしておく必要があります。
 * 「 ataMover.HardwareAcceleratedMove 」、「 DataMover.HardwareAcceleratedInit 」、および「 VMFS3.HardwareAcceleratedLocking 」の値を「 1` 」に設定しておく必要があります。

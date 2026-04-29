@@ -15,7 +15,7 @@ ONTAP Tools for VMware vSphereのタスクごとに、ONTAP Tools for VMware vSp
 
 ONTAP toolsのタスクに必要な権限については、NetAppの技術情報アーティクル1032542を参照してください。
 
-https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/VSC_VASA_and_SRA_ONTAP_RBAC_Configuration["ONTAP Tools for VMware vSphere：RBACの設定"]
+https://kb.netapp.com/data-mgmt/OTV/VSC_Kbs/VSC_VASA_and_SRA_ONTAP_RBAC_Configuration["ONTAP Tools for VMware vSphere：RBACの設定"^]
 
 
 
